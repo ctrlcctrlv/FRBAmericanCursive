@@ -1,0 +1,3 @@
+[submodule "scripts/fontforge_UI/QuickAnchors"]
+	path = scripts/fontforge_UI/QuickAnchors
+	url = https://github.com/ctrlcctrlv/QuickAnchors

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_ha.high" format="2">
+  <advance width="437"/>
+  <outline>
+    <contour>
+      <point x="0" y="171.16" type="move"/>
+      <point x="116.848" y="171.16"/>
+      <point x="109" y="263.85"/>
+      <point x="196.695" y="264.48" type="curve" smooth="yes"/>
+      <point x="259.093" y="264.929"/>
+      <point x="270.255" y="236"/>
+      <point x="225.489" y="140" type="curve" smooth="yes"/>
+      <point x="182.123" y="47"/>
+      <point x="104.902" y="0"/>
+      <point x="59.3018" y="0" type="curve" smooth="yes"/>
+      <point x="14.9023" y="0"/>
+      <point x="7.70215" y="20"/>
+      <point x="0.501953" y="37" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="421" y="172" type="move" smooth="yes"/>
+      <point x="434.363" y="210.826"/>
+      <point x="432" y="264.48"/>
+      <point x="376.494" y="264.48" type="curve" smooth="yes"/>
+      <point x="345" y="264.48"/>
+      <point x="273.607" y="234.271"/>
+      <point x="225.489" y="140" type="curve" smooth="yes"/>
+      <point x="179.664" y="50.2197"/>
+      <point x="197.809" y="0"/>
+      <point x="237" y="0" type="curve" smooth="yes"/>
+      <point x="326" y="0"/>
+      <point x="377" y="34.6523"/>
+      <point x="437" y="76.6641" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

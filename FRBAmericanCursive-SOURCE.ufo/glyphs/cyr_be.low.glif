@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_be.low" format="2">
+  <advance width="457"/>
+  <outline>
+    <contour>
+      <point x="0" y="76.6641" type="move" smooth="yes"/>
+      <point x="98.6338" y="145.729"/>
+      <point x="259.692" y="259.799"/>
+      <point x="327.293" y="259.799" type="curve"/>
+      <point x="388.167" y="259.799"/>
+      <point x="410.35" y="229.568"/>
+      <point x="408.305" y="200.317" type="curve"/>
+      <point x="410.626" y="233.519"/>
+      <point x="383.167" y="259.799"/>
+      <point x="327.293" y="259.799" type="curve" smooth="yes"/>
+      <point x="263.167" y="259.799"/>
+      <point x="169.718" y="185.964"/>
+      <point x="161.692" y="71.1963" type="curve" smooth="yes"/>
+      <point x="159.044" y="33.3184"/>
+      <point x="182.295" y="-4.67383"/>
+      <point x="230.857" y="-4.67383" type="curve" smooth="yes"/>
+      <point x="410.062" y="-4.67383"/>
+      <point x="403.464" y="323.402"/>
+      <point x="559.963" y="502" type="curve" smooth="yes"/>
+      <point x="584.801" y="530.346"/>
+      <point x="630.807" y="540.662"/>
+      <point x="721.827" y="540.953" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

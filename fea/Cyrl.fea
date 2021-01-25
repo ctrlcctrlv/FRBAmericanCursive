@@ -1,0 +1,33 @@
+lookup CyrlMedi {
+    sub @Cyrl_lower by @Cyrl_lower_low;
+} CyrlMedi;
+
+lookup CyrlMediHS {
+    sub @Cyrl_signs by @Cyrl_signs_finalow;
+} CyrlMediHS;
+
+lookup CyrlHigh {
+    sub @Cyrl_lower_low by @Cyrl_lower_high;
+} CyrlHigh;
+
+feature ccmp {
+    lookup ccmp2_1 {
+        sub @Cyrl_all @Cyrl_lower' lookup CyrlMedi @Cyrl_all;
+        sub @Cyrl_all @Cyrl_signs' lookup CyrlMediHS @Cyrl_all;
+    } ccmp2_1;
+
+    lookup ccmp2_2 {
+        sub @Cyrl_all @Cyrl_lower' lookup CyrlMedi;
+        sub @Cyrl_all @Cyrl_signs' lookup CyrlMediHS;
+    } ccmp2_2;
+
+    lookup ccmp2_3 {
+        sub [@cyr_ve @cyr_o] @Cyrl_lower_low' lookup CyrlHigh;
+    } ccmp2_3;
+
+    lookup ccmp2_4 {
+        pos @Cyrl_all_signs 80 @Cyrl_all;
+    } ccmp2_4;
+} ccmp;
+
+# vim: set ts=4 sw=4 expandtab:

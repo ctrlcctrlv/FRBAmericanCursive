@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_er.low" format="2">
+  <advance width="572"/>
+  <outline>
+    <contour>
+      <point x="0" y="76.6641" type="move"/>
+      <point x="108.292" y="152.491"/>
+      <point x="179.644" y="201.412"/>
+      <point x="240" y="264.48" type="curve"/>
+      <point x="42" y="-268" type="line" smooth="yes"/>
+      <point x="174" y="76.6641" type="line" smooth="yes"/>
+      <point x="214" y="181"/>
+      <point x="279.569" y="264.48"/>
+      <point x="392" y="264.48" type="curve" smooth="yes"/>
+      <point x="494.932" y="264.48"/>
+      <point x="285.516" y="0"/>
+      <point x="390" y="0" type="curve" smooth="yes"/>
+      <point x="478.091" y="0"/>
+      <point x="509.105" y="32.625"/>
+      <point x="572" y="76.6641" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

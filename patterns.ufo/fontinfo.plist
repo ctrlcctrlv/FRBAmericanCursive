@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>familyName</key>
+    <string>arrow</string>
+    <key>styleName</key>
+    <string>Regular</string>
+    <key>styleMapFamilyName</key>
+    <string>arrow</string>
+    <key>versionMajor</key>
+    <integer>1</integer>
+    <key>versionMinor</key>
+    <integer>0</integer>
+    <key>copyright</key>
+    <string>Copyright (c) 2021, Unknown</string>
+    <key>unitsPerEm</key>
+    <integer>1000</integer>
+    <key>ascender</key>
+    <integer>800</integer>
+    <key>descender</key>
+    <integer>-200</integer>
+    <key>italicAngle</key>
+    <real>0</real>
+    <key>note</key>
+    <string>2021-1-9: Created with FontForge (http://fontforge.org)</string>
+    <key>openTypeHeadCreated</key>
+    <string>2021/01/09 23:36:07</string>
+    <key>openTypeHheaAscender</key>
+    <integer>239</integer>
+    <key>openTypeHheaDescender</key>
+    <integer>-55</integer>
+    <key>openTypeHheaLineGap</key>
+    <integer>0</integer>
+    <key>openTypeNameVersion</key>
+    <string>Version 1.000</string>
+    <key>postscriptFontName</key>
+    <string>arrow</string>
+    <key>postscriptFullName</key>
+    <string>arrow</string>
+    <key>postscriptWeightName</key>
+    <string>Regular</string>
+    <key>postscriptUnderlineThickness</key>
+    <integer>50</integer>
+    <key>postscriptUnderlinePosition</key>
+    <integer>-100</integer>
+    <key>guidelines</key>
+    <array/>
+  </dict>
+</plist>

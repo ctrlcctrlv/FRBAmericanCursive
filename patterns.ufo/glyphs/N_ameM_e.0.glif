@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="NameMe.0" format="2">
+  <advance width="1000"/>
+  <outline>
+    <contour>
+      <point x="408" y="265" type="move"/>
+    </contour>
+    <contour>
+      <point x="0" y="0" type="line"/>
+      <point x="0" y="52" type="line"/>
+      <point x="594" y="52" type="line"/>
+      <point x="594" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="0" y="102" type="line"/>
+      <point x="0" y="154" type="line"/>
+      <point x="594" y="154" type="line"/>
+      <point x="594" y="102" type="line"/>
+    </contour>
+    <contour>
+      <point x="520" y="202" type="line"/>
+      <point x="557" y="239" type="line"/>
+      <point x="668" y="128" type="line"/>
+      <point x="557" y="18" type="line"/>
+      <point x="520" y="54" type="line"/>
+      <point x="594" y="128" type="line"/>
+    </contour>
+  </outline>
+</glyph>

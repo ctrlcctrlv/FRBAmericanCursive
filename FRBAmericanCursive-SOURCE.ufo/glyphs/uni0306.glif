@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0306" format="2">
+  <advance width="0"/>
+  <unicode hex="0306"/>
+  <outline>
+    <contour>
+      <point x="-85" y="76.6641" type="move" smooth="yes"/>
+      <point x="-85" y="19"/>
+      <point x="-41" y="0"/>
+      <point x="-0.200195" y="0" type="curve" smooth="yes"/>
+      <point x="45.4004" y="0"/>
+      <point x="99" y="9"/>
+      <point x="99" y="76.6641" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

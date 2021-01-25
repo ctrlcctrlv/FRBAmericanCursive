@@ -1,0 +1,20 @@
+\begin[papersize=8in x 3in]{document}
+\script[src=packages/color-fonts]
+\script{
+SILE.settings.set("document.spaceskip", SILE.length("1spc"))
+SILE.settings.set("shaper.spacestretchfactor",  0)
+SILE.settings.set("shaper.spaceshrinkfactor",  0)
+}
+\font[filename=dist/FRBAmericanCursive-500-Medium.otf]
+\neverindent\nofolios
+\par \font[size=3em]{FRB American Cursive}
+\bigskip
+\par Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+\par abcdefghijklmnopqrstuvwxyz
+\par 1234567890 !@#$\%&*() []{};':",./ \\
+\par The quick brown fox jumps over the lazy dog.
+\par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
+\par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+\font[family=TT2020Base]
+\par FRBAmericanCursive-500-Medium.otf
+\end{document}

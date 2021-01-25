@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_tse.low" format="2">
+  <advance width="535"/>
+  <outline>
+    <contour>
+      <point x="0" y="76.6641" type="move"/>
+      <point x="104.622" y="149.921"/>
+      <point x="174.997" y="265"/>
+      <point x="215" y="265" type="curve" smooth="yes"/>
+      <point x="295.002" y="265"/>
+      <point x="201.859" y="184.768"/>
+      <point x="201.859" y="132.605" type="curve" smooth="yes"/>
+      <point x="201.859" y="99.7676"/>
+      <point x="221.658" y="92"/>
+      <point x="255" y="92" type="curve" smooth="yes"/>
+      <point x="290.899" y="92"/>
+      <point x="369.813" y="159"/>
+      <point x="419" y="264.48" type="curve"/>
+      <point x="321.784" y="56" type="line" smooth="yes"/>
+      <point x="300.053" y="9.39648"/>
+      <point x="336" y="0"/>
+      <point x="370.784" y="0" type="curve" smooth="yes"/>
+      <point x="443" y="0"/>
+      <point x="496.885" y="49.9756"/>
+      <point x="535" y="76.6641" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

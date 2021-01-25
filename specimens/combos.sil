@@ -1,0 +1,260 @@
+\begin[papersize=1.4ft x 0.8ft]{document}
+    \script[src=packages/color-fonts]
+    \script[src=packages/rules]
+    \font[filename=dist/FRBAmericanCursive-GuidelinesArrows-Regular.otf,size=1.5em]{
+        \par aa ab ac ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az
+        \par ba bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz
+        \par ca cb cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz
+        \par da db dc dd de df dg dh di dj dk dl dm dn do dp dq dr ds dt du dv dw dx dy dz
+        \par ea eb ec ed ee ef eg eh ei ej ek el em en eo ep eq er es et eu ev ew ex ey ez
+        \par fa fb fc fd fe ff fg fh fi fj fk fl fm fn fo fp fq fr fs ft fu fv fw fx fy fz
+        \par ga gb gc gd ge gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz
+        \par ha hb hc hd he hf hg hh hi hj hk hl hm hn ho hp hq hr hs ht hu hv hw hx hy hz
+        \par ia ib ic id ie if ig ih ii ij ik il im in io ip iq ir is it iu iv iw ix iy iz
+        \par ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw jx jy jz
+        \par ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw kx ky kz
+        \par la lb lc ld le lf lg lh li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ly lz
+        \par ma mb mc md me mf mg mh mi mj mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz
+        \par na nb nc nd ne nf ng nh ni nj nk nl nm nn no np nq nr ns nt nu nv nw nx ny nz
+        \par oa ob oc od oe of og oh oi oj ok ol om on oo op oq or os ot ou ov ow ox oy oz
+        \par pa pb pc pd pe pf pg ph pi pj pk pl pm pn po pp pq pr ps pt pu pv pw px py pz
+        \par qa qb qc qd qe qf qg qh qi qj qk ql qm qn qo qp qq qr qs qt qu qv qw qx qy qz
+        \par ra rb rc rd re rf rg rh ri rj rk rl rm rn ro rp rq rr rs rt ru rv rw rx ry rz
+        \par sa sb sc sd se sf sg sh si sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz
+        \par ta tb tc td te tf tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz
+        \par ua ub uc ud ue uf ug uh ui uj uk ul um un uo up uq ur us ut uu uv uw ux uy uz
+        \par va vb vc vd ve vf vg vh vi vj vk vl vm vn vo vp vq vr vs vt vu vv vw vx vy vz
+        \par wa wb wc wd we wf wg wh wi wj wk wl wm wn wo wp wq wr ws wt wu wv ww wx wy wz
+        \par xa xb xc xd xe xf xg xh xi xj xk xl xm xn xo xp xq xr xs xt xu xv xw xx xy xz
+        \par ya yb yc yd ye yf yg yh yi yj yk yl ym yn yo yp yq yr ys yt yu yv yw yx yy yz
+        \par za zb zc zd ze zf zg zh zi zj zk zl zm zn zo zp zq zr zs zt zu zv zw zx zy zz
+        \par\hrule[width=100%fw,height=0.1em]
+        \par a b c d e f g h i j k l m n o p q r s t u v w x y z
+        \eject
+        \par Aa Ab Ac Ad Ae Af Ag Ah Ai Aj Ak Al Am An Ao Ap Aq Ar As At Au Av Aw Ax Ay Az
+        \par Ba Bb Bc Bd Be Bf Bg Bh Bi Bj Bk Bl Bm Bn Bo Bp Bq Br Bs Bt Bu Bv Bw Bx By Bz
+        \par Ca Cb Cc Cd Ce Cf Cg Ch Ci Cj Ck Cl Cm Cn Co Cp Cq Cr Cs Ct Cu Cv Cw Cx Cy Cz
+        \par Da Db Dc Dd De Df Dg Dh Di Dj Dk Dl Dm Dn Do Dp Dq Dr Ds Dt Du Dv Dw Dx Dy Dz
+        \par Ea Eb Ec Ed Ee Ef Eg Eh Ei Ej Ek El Em En Eo Ep Eq Er Es Et Eu Ev Ew Ex Ey Ez
+        \par Fa Fb Fc Fd Fe Ff Fg Fh Fi Fj Fk Fl Fm Fn Fo Fp Fq Fr Fs Ft Fu Fv Fw Fx Fy Fz
+        \par Ga Gb Gc Gd Ge Gf Gg Gh Gi Gj Gk Gl Gm Gn Go Gp Gq Gr Gs Gt Gu Gv Gw Gx Gy Gz
+        \par Ha Hb Hc Hd He Hf Hg Hh Hi Hj Hk Hl Hm Hn Ho Hp Hq Hr Hs Ht Hu Hv Hw Hx Hy Hz
+        \par Ia Ib Ic Id Ie If Ig Ih Ii Ij Ik Il Im In Io Ip Iq Ir Is It Iu Iv Iw Ix Iy Iz
+        \par Ja Jb Jc Jd Je Jf Jg Jh Ji Jj Jk Jl Jm Jn Jo Jp Jq Jr Js Jt Ju Jv Jw Jx Jy Jz
+        \par Ka Kb Kc Kd Ke Kf Kg Kh Ki Kj Kk Kl Km Kn Ko Kp Kq Kr Ks Kt Ku Kv Kw Kx Ky Kz
+        \par La Lb Lc Ld Le Lf Lg Lh Li Lj Lk Ll Lm Ln Lo Lp Lq Lr Ls Lt Lu Lv Lw Lx Ly Lz
+        \par Ma Mb Mc Md Me Mf Mg Mh Mi Mj Mk Ml Mm Mn Mo Mp Mq Mr Ms Mt Mu Mv Mw Mx My Mz
+        \par Na Nb Nc Nd Ne Nf Ng Nh Ni Nj Nk Nl Nm Nn No Np Nq Nr Ns Nt Nu Nv Nw Nx Ny Nz
+        \par Oa Ob Oc Od Oe Of Og Oh Oi Oj Ok Ol Om On Oo Op Oq Or Os Ot Ou Ov Ow Ox Oy Oz
+        \par Pa Pb Pc Pd Pe Pf Pg Ph Pi Pj Pk Pl Pm Pn Po Pp Pq Pr Ps Pt Pu Pv Pw Px Py Pz
+        \par Qa Qb Qc Qd Qe Qf Qg Qh Qi Qj Qk Ql Qm Qn Qo Qp Qq Qr Qs Qt Qu Qv Qw Qx Qy Qz
+        \par Ra Rb Rc Rd Re Rf Rg Rh Ri Rj Rk Rl Rm Rn Ro Rp Rq Rr Rs Rt Ru Rv Rw Rx Ry Rz
+        \par Sa Sb Sc Sd Se Sf Sg Sh Si Sj Sk Sl Sm Sn So Sp Sq Sr Ss St Su Sv Sw Sx Sy Sz
+        \par Ta Tb Tc Td Te Tf Tg Th Ti Tj Tk Tl Tm Tn To Tp Tq Tr Ts Tt Tu Tv Tw Tx Ty Tz
+        \par Ua Ub Uc Ud Ue Uf Ug Uh Ui Uj Uk Ul Um Un Uo Up Uq Ur Us Ut Uu Uv Uw Ux Uy Uz
+        \par Va Vb Vc Vd Ve Vf Vg Vh Vi Vj Vk Vl Vm Vn Vo Vp Vq Vr Vs Vt Vu Vv Vw Vx Vy Vz
+        \par Wa Wb Wc Wd We Wf Wg Wh Wi Wj Wk Wl Wm Wn Wo Wp Wq Wr Ws Wt Wu Wv Ww Wx Wy Wz
+        \par Xa Xb Xc Xd Xe Xf Xg Xh Xi Xj Xk Xl Xm Xn Xo Xp Xq Xr Xs Xt Xu Xv Xw Xx Xy Xz
+        \par Ya Yb Yc Yd Ye Yf Yg Yh Yi Yj Yk Yl Ym Yn Yo Yp Yq Yr Ys Yt Yu Yv Yw Yx Yy Yz
+        \par Za Zb Zc Zd Ze Zf Zg Zh Zi Zj Zk Zl Zm Zn Zo Zp Zq Zr Zs Zt Zu Zv Zw Zx Zy Zz
+        \par\hrule[width=100%fw,height=0.1em]
+        \par A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+        \eject
+        \par AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ
+        \par BA BB BC BD BE BF BG BH BI BJ BK BL BM BN BO BP BQ BR BS BT BU BV BW BX BY BZ
+        \par CA CB CC CD CE CF CG CH CI CJ CK CL CM CN CO CP CQ CR CS CT CU CV CW CX CY CZ
+        \par DA DB DC DD DE DF DG DH DI DJ DK DL DM DN DO DP DQ DR DS DT DU DV DW DX DY DZ
+        \par EA EB EC ED EE EF EG EH EI EJ EK EL EM EN EO EP EQ ER ES ET EU EV EW EX EY EZ
+        \par FA FB FC FD FE FF FG FH FI FJ FK FL FM FN FO FP FQ FR FS FT FU FV FW FX FY FZ
+        \par GA GB GC GD GE GF GG GH GI GJ GK GL GM GN GO GP GQ GR GS GT GU GV GW GX GY GZ
+        \par HA HB HC HD HE HF HG HH HI HJ HK HL HM HN HO HP HQ HR HS HT HU HV HW HX HY HZ
+        \par IA IB IC ID IE IF IG IH II IJ IK IL IM IN IO IP IQ IR IS IT IU IV IW IX IY IZ
+        \par JA JB JC JD JE JF JG JH JI JJ JK JL JM JN JO JP JQ JR JS JT JU JV JW JX JY JZ
+        \par KA KB KC KD KE KF KG KH KI KJ KK KL KM KN KO KP KQ KR KS KT KU KV KW KX KY KZ
+        \par LA LB LC LD LE LF LG LH LI LJ LK LL LM LN LO LP LQ LR LS LT LU LV LW LX LY LZ
+        \par MA MB MC MD ME MF MG MH MI MJ MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ
+        \par NA NB NC ND NE NF NG NH NI NJ NK NL NM NN NO NP NQ NR NS NT NU NV NW NX NY NZ
+        \par OA OB OC OD OE OF OG OH OI OJ OK OL OM ON OO OP OQ OR OS OT OU OV OW OX OY OZ
+        \par PA PB PC PD PE PF PG PH PI PJ PK PL PM PN PO PP PQ PR PS PT PU PV PW PX PY PZ
+        \par QA QB QC QD QE QF QG QH QI QJ QK QL QM QN QO QP QQ QR QS QT QU QV QW QX QY QZ
+        \par RA RB RC RD RE RF RG RH RI RJ RK RL RM RN RO RP RQ RR RS RT RU RV RW RX RY RZ
+        \par SA SB SC SD SE SF SG SH SI SJ SK SL SM SN SO SP SQ SR SS ST SU SV SW SX SY SZ
+        \par TA TB TC TD TE TF TG TH TI TJ TK TL TM TN TO TP TQ TR TS TT TU TV TW TX TY TZ
+        \par UA UB UC UD UE UF UG UH UI UJ UK UL UM UN UO UP UQ UR US UT UU UV UW UX UY UZ
+        \par VA VB VC VD VE VF VG VH VI VJ VK VL VM VN VO VP VQ VR VS VT VU VV VW VX VY VZ
+        \par WA WB WC WD WE WF WG WH WI WJ WK WL WM WN WO WP WQ WR WS WT WU WV WW WX WY WZ
+        \par XA XB XC XD XE XF XG XH XI XJ XK XL XM XN XO XP XQ XR XS XT XU XV XW XX XY XZ
+        \par YA YB YC YD YE YF YG YH YI YJ YK YL YM YN YO YP YQ YR YS YT YU YV YW YX YY YZ
+        \par ZA ZB ZC ZD ZE ZF ZG ZH ZI ZJ ZK ZL ZM ZN ZO ZP ZQ ZR ZS ZT ZU ZV ZW ZX ZY ZZ
+        \par\hrule[width=100%fw,height=0.1em]
+        \par FRBFRBFRBFRBFRBFRBFRBFRBFRBFRBFRBFRB
+        \eject
+        \par 000 001 002 003 004 005 006 007 008 009 100 101 102 103 104 105 106 107 108 109
+        \par 010 011 012 013 014 015 016 017 018 019 110 111 112 113 114 115 116 117 118 119
+        \par 020 021 022 023 024 025 026 027 028 029 120 121 122 123 124 125 126 127 128 129
+        \par 030 031 032 033 034 035 036 037 038 039 130 131 132 133 134 135 136 137 138 139
+        \par 040 041 042 043 044 045 046 047 048 049 140 141 142 143 144 145 146 147 148 149
+        \par 050 051 052 053 054 055 056 057 058 059 150 151 152 153 154 155 156 157 158 159
+        \par 060 061 062 063 064 065 066 067 068 069 160 161 162 163 164 165 166 167 168 169
+        \par 070 071 072 073 074 075 076 077 078 079 170 171 172 173 174 175 176 177 178 179
+        \par 080 081 082 083 084 085 086 087 088 089 180 181 182 183 184 185 186 187 188 189
+        \par 090 091 092 093 094 095 096 097 098 099 190 191 192 193 194 195 196 197 198 199
+        \par 200 201 202 203 204 205 206 207 208 209 300 301 302 303 304 305 306 307 308 309
+        \par 210 211 212 213 214 215 216 217 218 219 310 311 312 313 314 315 316 317 318 319
+        \par 220 221 222 223 224 225 226 227 228 229 320 321 322 323 324 325 326 327 328 329
+        \par 230 231 232 233 234 235 236 237 238 239 330 331 332 333 334 335 336 337 338 339
+        \par 240 241 242 243 244 245 246 247 248 249 340 341 342 343 344 345 346 347 348 349
+        \par 250 251 252 253 254 255 256 257 258 259 350 351 352 353 354 355 356 357 358 359
+        \par 260 261 262 263 264 265 266 267 268 269 360 361 362 363 364 365 366 367 368 369
+        \par 270 271 272 273 274 275 276 277 278 279 370 371 372 373 374 375 376 377 378 379
+        \par 280 281 282 283 284 285 286 287 288 289 380 381 382 383 384 385 386 387 388 389
+        \par 290 291 292 293 294 295 296 297 298 299 390 391 392 393 394 395 396 397 398 399
+        \par 400 401 402 403 404 405 406 407 408 409 500 501 502 503 504 505 506 507 508 509
+        \par 410 411 412 413 414 415 416 417 418 419 510 511 512 513 514 515 516 517 518 519
+        \par 420 421 422 423 424 425 426 427 428 429 520 521 522 523 524 525 526 527 528 529
+        \par 430 431 432 433 434 435 436 437 438 439 530 531 532 533 534 535 536 537 538 539
+        \par 440 441 442 443 444 445 446 447 448 449 540 541 542 543 544 545 546 547 548 549
+        \par 450 451 452 453 454 455 456 457 458 459 550 551 552 553 554 555 556 557 558 559
+        \par 460 461 462 463 464 465 466 467 468 469 560 561 562 563 564 565 566 567 568 569
+        \par 470 471 472 473 474 475 476 477 478 479 570 571 572 573 574 575 576 577 578 579
+        \par 480 481 482 483 484 485 486 487 488 489 580 581 582 583 584 585 586 587 588 589
+        \par 490 491 492 493 494 495 496 497 498 499 590 591 592 593 594 595 596 597 598 599
+        \par 600 601 602 603 604 605 606 607 608 609 700 701 702 703 704 705 706 707 708 709
+        \par 610 611 612 613 614 615 616 617 618 619 710 711 712 713 714 715 716 717 718 719
+        \par 620 621 622 623 624 625 626 627 628 629 720 721 722 723 724 725 726 727 728 729
+        \par 630 631 632 633 634 635 636 637 638 639 730 731 732 733 734 735 736 737 738 739
+        \par 640 641 642 643 644 645 646 647 648 649 740 741 742 743 744 745 746 747 748 749
+        \par 650 651 652 653 654 655 656 657 658 659 750 751 752 753 754 755 756 757 758 759
+        \par 660 661 662 663 664 665 666 667 668 669 760 761 762 763 764 765 766 767 768 769
+        \par 670 671 672 673 674 675 676 677 678 679 770 771 772 773 774 775 776 777 778 779
+        \par 680 681 682 683 684 685 686 687 688 689 780 781 782 783 784 785 786 787 788 789
+        \par 690 691 692 693 694 695 696 697 698 699 790 791 792 793 794 795 796 797 798 799
+        \par 800 801 802 803 804 805 806 807 808 809 900 901 902 903 904 905 906 907 908 909
+        \par 810 811 812 813 814 815 816 817 818 819 910 911 912 913 914 915 916 917 918 919
+        \par 820 821 822 823 824 825 826 827 828 829 920 921 922 923 924 925 926 927 928 929
+        \par 830 831 832 833 834 835 836 837 838 839 930 931 932 933 934 935 936 937 938 939
+        \par 840 841 842 843 844 845 846 847 848 849 940 941 942 943 944 945 946 947 948 949
+        \par 850 851 852 853 854 855 856 857 858 859 950 951 952 953 954 955 956 957 958 959
+        \par 860 861 862 863 864 865 866 867 868 869 960 961 962 963 964 965 966 967 968 969
+        \par 870 871 872 873 874 875 876 877 878 879 970 971 972 973 974 975 976 977 978 979
+        \par 880 881 882 883 884 885 886 887 888 889 980 981 982 983 984 985 986 987 988 989
+        \par 890 891 892 893 894 895 896 897 898 899 990 991 992 993 994 995 996 997 998 999
+        \par 00 01 02 03 04 05 06 07 08 09 00 01 02 03 04 05 06 07 08 09
+        \par 10 11 12 13 14 15 16 17 18 19 10 11 12 13 14 15 16 17 18 19
+        \par 20 21 22 23 24 25 26 27 28 29 20 21 22 23 24 25 26 27 28 29
+        \par 30 31 32 33 34 35 36 37 38 39 30 31 32 33 34 35 36 37 38 39
+        \par 40 41 42 43 44 45 46 47 48 49 40 41 42 43 44 45 46 47 48 49
+        \par 50 51 52 53 54 55 56 57 58 59 50 51 52 53 54 55 56 57 58 59
+        \par 60 61 62 63 64 65 66 67 68 69 60 61 62 63 64 65 66 67 68 69
+        \par 70 71 72 73 74 75 76 77 78 79 70 71 72 73 74 75 76 77 78 79
+        \par 80 81 82 83 84 85 86 87 88 89 80 81 82 83 84 85 86 87 88 89
+        \par 90 91 92 93 94 95 96 97 98 99 90 91 92 93 94 95 96 97 98 99
+        \eject
+        \eject
+        \par аа аб ав аг ад ае аж аз аи ай ак ал ам ан ао ап ар ас ат ау аф ах ац ач аш ащ аъ аы аь аэ аю ая
+        \par ба бб бв бг бд бе бж бз би бй бк бл бм бн бо бп бр бс бт бу бф бх бц бч бш бщ бъ бы бь бэ бю бя
+        \par ва вб вв вг вд ве вж вз ви вй вк вл вм вн во вп вр вс вт ву вф вх вц вч вш вщ въ вы вь вэ вю вя
+        \par га гб гв гг гд ге гж гз ги гй гк гл гм гн го гп гр гс гт гу гф гх гц гч гш гщ гъ гы гь гэ гю гя
+        \par да дб дв дг дд де дж дз ди дй дк дл дм дн до дп др дс дт ду дф дх дц дч дш дщ дъ ды дь дэ дю дя
+        \par еа еб ев ег ед ее еж ез еи ей ек ел ем ен ео еп ер ес ет еу еф ех ец еч еш ещ еъ еы еь еэ ею ея
+        \par жа жб жв жг жд же жж жз жи жй жк жл жм жн жо жп жр жс жт жу жф жх жц жч жш жщ жъ жы жь жэ жю жя
+        \par за зб зв зг зд зе зж зз зи зй зк зл зм зн зо зп зр зс зт зу зф зх зц зч зш зщ зъ зы зь зэ зю зя
+        \par иа иб ив иг ид ие иж из ии ий ик ил им ин ио ип ир ис ит иу иф их иц ич иш ищ иъ иы иь иэ ию ия
+        \par йа йб йв йг йд йе йж йз йи йй йк йл йм йн йо йп йр йс йт йу йф йх йц йч йш йщ йъ йы йь йэ йю йя
+        \par ка кб кв кг кд ке кж кз ки кй кк кл км кн ко кп кр кс кт ку кф кх кц кч кш кщ къ кы кь кэ кю кя
+        \par ла лб лв лг лд ле лж лз ли лй лк лл лм лн ло лп лр лс лт лу лф лх лц лч лш лщ лъ лы ль лэ лю ля
+        \par ма мб мв мг мд ме мж мз ми мй мк мл мм мн мо мп мр мс мт му мф мх мц мч мш мщ мъ мы мь мэ мю мя
+        \par на нб нв нг нд не нж нз ни нй нк нл нм нн но нп нр нс нт ну нф нх нц нч нш нщ нъ ны нь нэ ню ня
+        \par оа об ов ог од ое ож оз ои ой ок ол ом он оо оп ор ос от оу оф ох оц оч ош ощ оъ оы оь оэ ою оя
+        \par па пб пв пг пд пе пж пз пи пй пк пл пм пн по пп пр пс пт пу пф пх пц пч пш пщ пъ пы пь пэ пю пя
+        \par ра рб рв рг рд ре рж рз ри рй рк рл рм рн ро рп рр рс рт ру рф рх рц рч рш рщ ръ ры рь рэ рю ря
+        \par са сб св сг сд се сж сз си сй ск сл см сн со сп ср сс ст су сф сх сц сч сш сщ съ сы сь сэ сю ся
+        \par та тб тв тг тд те тж тз ти тй тк тл тм тн то тп тр тс тт ту тф тх тц тч тш тщ тъ ты ть тэ тю тя
+        \par уа уб ув уг уд уе уж уз уи уй ук ул ум ун уо уп ур ус ут уу уф ух уц уч уш ущ уъ уы уь уэ ую уя
+        \par фа фб фв фг фд фе фж фз фи фй фк фл фм фн фо фп фр фс фт фу фф фх фц фч фш фщ фъ фы фь фэ фю фя
+        \par ха хб хв хг хд хе хж хз хи хй хк хл хм хн хо хп хр хс хт ху хф хх хц хч хш хщ хъ хы хь хэ хю хя
+        \par ца цб цв цг цд це цж цз ци цй цк цл цм цн цо цп цр цс цт цу цф цх цц цч цш цщ цъ цы ць цэ цю ця
+        \par ча чб чв чг чд че чж чз чи чй чк чл чм чн чо чп чр чс чт чу чф чх чц чч чш чщ чъ чы чь чэ чю чя
+        \par ша шб шв шг шд ше шж шз ши шй шк шл шм шн шо шп шр шс шт шу шф шх шц шч шш шщ шъ шы шь шэ шю шя
+        \par ща щб щв щг щд ще щж щз щи щй щк щл щм щн що щп щр щс щт щу щф щх щц щч щш щщ щъ щы щь щэ щю щя
+        \par ъа ъб ъв ъг ъд ъе ъж ъз ъи ъй ък ъл ъм ън ъо ъп ър ъс ът ъу ъф ъх ъц ъч ъш ъщ ъъ ъы ъь ъэ ъю ъя
+        \par ыа ыб ыв ыг ыд ые ыж ыз ыи ый ык ыл ым ын ыо ып ыр ыс ыт ыу ыф ых ыц ыч ыш ыщ ыъ ыы ыь ыэ ыю ыя
+        \par ьа ьб ьв ьг ьд ье ьж ьз ьи ьй ьк ьл ьм ьн ьо ьп ьр ьс ьт ьу ьф ьх ьц ьч ьш ьщ ьъ ьы ьь ьэ ью ья
+        \par эа эб эв эг эд эе эж эз эи эй эк эл эм эн эо эп эр эс эт эу эф эх эц эч эш эщ эъ эы эь ээ эю эя
+        \par юа юб юв юг юд юе юж юз юи юй юк юл юм юн юо юп юр юс ют юу юф юх юц юч юш ющ юъ юы юь юэ юю юя
+        \par яа яб яв яг яд яе яж яз яи яй як ял ям ян яо яп яр яс ят яу яф ях яц яч яш ящ яъ яы яь яэ яю яя
+        \par\hrule[width=100%fw,height=0.1em]
+        \par а б в г д е ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+        \eject
+        \par Аа Аб Ав Аг Ад Ае Аж Аз Аи Ай Ак Ал Ам Ан Ао Ап Ар Ас Ат Ау Аф Ах Ац Ач Аш Ащ Аъ Аы Аь Аэ Аю Ая
+        \par Ба Бб Бв Бг Бд Бе Бж Бз Би Бй Бк Бл Бм Бн Бо Бп Бр Бс Бт Бу Бф Бх Бц Бч Бш Бщ Бъ Бы Бь Бэ Бю Бя
+        \par Ва Вб Вв Вг Вд Ве Вж Вз Ви Вй Вк Вл Вм Вн Во Вп Вр Вс Вт Ву Вф Вх Вц Вч Вш Вщ Въ Вы Вь Вэ Вю Вя
+        \par Га Гб Гв Гг Гд Ге Гж Гз Ги Гй Гк Гл Гм Гн Го Гп Гр Гс Гт Гу Гф Гх Гц Гч Гш Гщ Гъ Гы Гь Гэ Гю Гя
+        \par Да Дб Дв Дг Дд Де Дж Дз Ди Дй Дк Дл Дм Дн До Дп Др Дс Дт Ду Дф Дх Дц Дч Дш Дщ Дъ Ды Дь Дэ Дю Дя
+        \par Еа Еб Ев Ег Ед Ее Еж Ез Еи Ей Ек Ел Ем Ен Ео Еп Ер Ес Ет Еу Еф Ех Ец Еч Еш Ещ Еъ Еы Еь Еэ Ею Ея
+        \par Жа Жб Жв Жг Жд Же Жж Жз Жи Жй Жк Жл Жм Жн Жо Жп Жр Жс Жт Жу Жф Жх Жц Жч Жш Жщ Жъ Жы Жь Жэ Жю Жя
+        \par За Зб Зв Зг Зд Зе Зж Зз Зи Зй Зк Зл Зм Зн Зо Зп Зр Зс Зт Зу Зф Зх Зц Зч Зш Зщ Зъ Зы Зь Зэ Зю Зя
+        \par Иа Иб Ив Иг Ид Ие Иж Из Ии Ий Ик Ил Им Ин Ио Ип Ир Ис Ит Иу Иф Их Иц Ич Иш Ищ Иъ Иы Иь Иэ Ию Ия
+        \par Йа Йб Йв Йг Йд Йе Йж Йз Йи Йй Йк Йл Йм Йн Йо Йп Йр Йс Йт Йу Йф Йх Йц Йч Йш Йщ Йъ Йы Йь Йэ Йю Йя
+        \par Ка Кб Кв Кг Кд Ке Кж Кз Ки Кй Кк Кл Км Кн Ко Кп Кр Кс Кт Ку Кф Кх Кц Кч Кш Кщ Къ Кы Кь Кэ Кю Кя
+        \par Ла Лб Лв Лг Лд Ле Лж Лз Ли Лй Лк Лл Лм Лн Ло Лп Лр Лс Лт Лу Лф Лх Лц Лч Лш Лщ Лъ Лы Ль Лэ Лю Ля
+        \par Ма Мб Мв Мг Мд Ме Мж Мз Ми Мй Мк Мл Мм Мн Мо Мп Мр Мс Мт Му Мф Мх Мц Мч Мш Мщ Мъ Мы Мь Мэ Мю Мя
+        \par На Нб Нв Нг Нд Не Нж Нз Ни Нй Нк Нл Нм Нн Но Нп Нр Нс Нт Ну Нф Нх Нц Нч Нш Нщ Нъ Ны Нь Нэ Ню Ня
+        \par Оа Об Ов Ог Од Ое Ож Оз Ои Ой Ок Ол Ом Он Оо Оп Ор Ос От Оу Оф Ох Оц Оч Ош Ощ Оъ Оы Оь Оэ Ою Оя
+        \par Па Пб Пв Пг Пд Пе Пж Пз Пи Пй Пк Пл Пм Пн По Пп Пр Пс Пт Пу Пф Пх Пц Пч Пш Пщ Пъ Пы Пь Пэ Пю Пя
+        \par Ра Рб Рв Рг Рд Ре Рж Рз Ри Рй Рк Рл Рм Рн Ро Рп Рр Рс Рт Ру Рф Рх Рц Рч Рш Рщ Ръ Ры Рь Рэ Рю Ря
+        \par Са Сб Св Сг Сд Се Сж Сз Си Сй Ск Сл См Сн Со Сп Ср Сс Ст Су Сф Сх Сц Сч Сш Сщ Съ Сы Сь Сэ Сю Ся
+        \par Та Тб Тв Тг Тд Те Тж Тз Ти Тй Тк Тл Тм Тн То Тп Тр Тс Тт Ту Тф Тх Тц Тч Тш Тщ Тъ Ты Ть Тэ Тю Тя
+        \par Уа Уб Ув Уг Уд Уе Уж Уз Уи Уй Ук Ул Ум Ун Уо Уп Ур Ус Ут Уу Уф Ух Уц Уч Уш Ущ Уъ Уы Уь Уэ Ую Уя
+        \par Фа Фб Фв Фг Фд Фе Фж Фз Фи Фй Фк Фл Фм Фн Фо Фп Фр Фс Фт Фу Фф Фх Фц Фч Фш Фщ Фъ Фы Фь Фэ Фю Фя
+        \par Ха Хб Хв Хг Хд Хе Хж Хз Хи Хй Хк Хл Хм Хн Хо Хп Хр Хс Хт Ху Хф Хх Хц Хч Хш Хщ Хъ Хы Хь Хэ Хю Хя
+        \par Ца Цб Цв Цг Цд Це Цж Цз Ци Цй Цк Цл Цм Цн Цо Цп Цр Цс Цт Цу Цф Цх Цц Цч Цш Цщ Цъ Цы Ць Цэ Цю Ця
+        \par Ча Чб Чв Чг Чд Че Чж Чз Чи Чй Чк Чл Чм Чн Чо Чп Чр Чс Чт Чу Чф Чх Чц Чч Чш Чщ Чъ Чы Чь Чэ Чю Чя
+        \par Ша Шб Шв Шг Шд Ше Шж Шз Ши Шй Шк Шл Шм Шн Шо Шп Шр Шс Шт Шу Шф Шх Шц Шч Шш Шщ Шъ Шы Шь Шэ Шю Шя
+        \par Ща Щб Щв Щг Щд Ще Щж Щз Щи Щй Щк Щл Щм Щн Що Щп Щр Щс Щт Щу Щф Щх Щц Щч Щш Щщ Щъ Щы Щь Щэ Щю Щя
+        \par Ъа Ъб Ъв Ъг Ъд Ъе Ъж Ъз Ъи Ъй Ък Ъл Ъм Ън Ъо Ъп Ър Ъс Ът Ъу Ъф Ъх Ъц Ъч Ъш Ъщ Ъъ Ъы Ъь Ъэ Ъю Ъя
+        \par Ыа Ыб Ыв Ыг Ыд Ые Ыж Ыз Ыи Ый Ык Ыл Ым Ын Ыо Ып Ыр Ыс Ыт Ыу Ыф Ых Ыц Ыч Ыш Ыщ Ыъ Ыы Ыь Ыэ Ыю Ыя
+        \par Ьа Ьб Ьв Ьг Ьд Ье Ьж Ьз Ьи Ьй Ьк Ьл Ьм Ьн Ьо Ьп Ьр Ьс Ьт Ьу Ьф Ьх Ьц Ьч Ьш Ьщ Ьъ Ьы Ьь Ьэ Ью Ья
+        \par Эа Эб Эв Эг Эд Эе Эж Эз Эи Эй Эк Эл Эм Эн Эо Эп Эр Эс Эт Эу Эф Эх Эц Эч Эш Эщ Эъ Эы Эь Ээ Эю Эя
+        \par Юа Юб Юв Юг Юд Юе Юж Юз Юи Юй Юк Юл Юм Юн Юо Юп Юр Юс Ют Юу Юф Юх Юц Юч Юш Ющ Юъ Юы Юь Юэ Юю Юя
+        \par Яа Яб Яв Яг Яд Яе Яж Яз Яи Яй Як Ял Ям Ян Яо Яп Яр Яс Ят Яу Яф Ях Яц Яч Яш Ящ Яъ Яы Яь Яэ Яю Яя
+        \par\hrule[width=100%fw,height=0.1em]
+        \par А Б В Г Д Е Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+        \eject
+        \par АА АБ АВ АГ АД АЕ АЖ АЗ АИ АЙ АК АЛ АМ АН АО АП АР АС АТ АУ АФ АХ АЦ АЧ АШ АЩ АЪ АЫ АЬ АЭ АЮ АЯ
+        \par БА ББ БВ БГ БД БЕ БЖ БЗ БИ БЙ БК БЛ БМ БН БО БП БР БС БТ БУ БФ БХ БЦ БЧ БШ БЩ БЪ БЫ БЬ БЭ БЮ БЯ
+        \par ВА ВБ ВВ ВГ ВД ВЕ ВЖ ВЗ ВИ ВЙ ВК ВЛ ВМ ВН ВО ВП ВР ВС ВТ ВУ ВФ ВХ ВЦ ВЧ ВШ ВЩ ВЪ ВЫ ВЬ ВЭ ВЮ ВЯ
+        \par ГА ГБ ГВ ГГ ГД ГЕ ГЖ ГЗ ГИ ГЙ ГК ГЛ ГМ ГН ГО ГП ГР ГС ГТ ГУ ГФ ГХ ГЦ ГЧ ГШ ГЩ ГЪ ГЫ ГЬ ГЭ ГЮ ГЯ
+        \par ДА ДБ ДВ ДГ ДД ДЕ ДЖ ДЗ ДИ ДЙ ДК ДЛ ДМ ДН ДО ДП ДР ДС ДТ ДУ ДФ ДХ ДЦ ДЧ ДШ ДЩ ДЪ ДЫ ДЬ ДЭ ДЮ ДЯ
+        \par ЕА ЕБ ЕВ ЕГ ЕД ЕЕ ЕЖ ЕЗ ЕИ ЕЙ ЕК ЕЛ ЕМ ЕН ЕО ЕП ЕР ЕС ЕТ ЕУ ЕФ ЕХ ЕЦ ЕЧ ЕШ ЕЩ ЕЪ ЕЫ ЕЬ ЕЭ ЕЮ ЕЯ
+        \par ЖА ЖБ ЖВ ЖГ ЖД ЖЕ ЖЖ ЖЗ ЖИ ЖЙ ЖК ЖЛ ЖМ ЖН ЖО ЖП ЖР ЖС ЖТ ЖУ ЖФ ЖХ ЖЦ ЖЧ ЖШ ЖЩ ЖЪ ЖЫ ЖЬ ЖЭ ЖЮ ЖЯ
+        \par ЗА ЗБ ЗВ ЗГ ЗД ЗЕ ЗЖ ЗЗ ЗИ ЗЙ ЗК ЗЛ ЗМ ЗН ЗО ЗП ЗР ЗС ЗТ ЗУ ЗФ ЗХ ЗЦ ЗЧ ЗШ ЗЩ ЗЪ ЗЫ ЗЬ ЗЭ ЗЮ ЗЯ
+        \par ИА ИБ ИВ ИГ ИД ИЕ ИЖ ИЗ ИИ ИЙ ИК ИЛ ИМ ИН ИО ИП ИР ИС ИТ ИУ ИФ ИХ ИЦ ИЧ ИШ ИЩ ИЪ ИЫ ИЬ ИЭ ИЮ ИЯ
+        \par ЙА ЙБ ЙВ ЙГ ЙД ЙЕ ЙЖ ЙЗ ЙИ ЙЙ ЙК ЙЛ ЙМ ЙН ЙО ЙП ЙР ЙС ЙТ ЙУ ЙФ ЙХ ЙЦ ЙЧ ЙШ ЙЩ ЙЪ ЙЫ ЙЬ ЙЭ ЙЮ ЙЯ
+        \par КА КБ КВ КГ КД КЕ КЖ КЗ КИ КЙ КК КЛ КМ КН КО КП КР КС КТ КУ КФ КХ КЦ КЧ КШ КЩ КЪ КЫ КЬ КЭ КЮ КЯ
+        \par ЛА ЛБ ЛВ ЛГ ЛД ЛЕ ЛЖ ЛЗ ЛИ ЛЙ ЛК ЛЛ ЛМ ЛН ЛО ЛП ЛР ЛС ЛТ ЛУ ЛФ ЛХ ЛЦ ЛЧ ЛШ ЛЩ ЛЪ ЛЫ ЛЬ ЛЭ ЛЮ ЛЯ
+        \par МА МБ МВ МГ МД МЕ МЖ МЗ МИ МЙ МК МЛ ММ МН МО МП МР МС МТ МУ МФ МХ МЦ МЧ МШ МЩ МЪ МЫ МЬ МЭ МЮ МЯ
+        \par НА НБ НВ НГ НД НЕ НЖ НЗ НИ НЙ НК НЛ НМ НН НО НП НР НС НТ НУ НФ НХ НЦ НЧ НШ НЩ НЪ НЫ НЬ НЭ НЮ НЯ
+        \par ОА ОБ ОВ ОГ ОД ОЕ ОЖ ОЗ ОИ ОЙ ОК ОЛ ОМ ОН ОО ОП ОР ОС ОТ ОУ ОФ ОХ ОЦ ОЧ ОШ ОЩ ОЪ ОЫ ОЬ ОЭ ОЮ ОЯ
+        \par ПА ПБ ПВ ПГ ПД ПЕ ПЖ ПЗ ПИ ПЙ ПК ПЛ ПМ ПН ПО ПП ПР ПС ПТ ПУ ПФ ПХ ПЦ ПЧ ПШ ПЩ ПЪ ПЫ ПЬ ПЭ ПЮ ПЯ
+        \par РА РБ РВ РГ РД РЕ РЖ РЗ РИ РЙ РК РЛ РМ РН РО РП РР РС РТ РУ РФ РХ РЦ РЧ РШ РЩ РЪ РЫ РЬ РЭ РЮ РЯ
+        \par СА СБ СВ СГ СД СЕ СЖ СЗ СИ СЙ СК СЛ СМ СН СО СП СР СС СТ СУ СФ СХ СЦ СЧ СШ СЩ СЪ СЫ СЬ СЭ СЮ СЯ
+        \par ТА ТБ ТВ ТГ ТД ТЕ ТЖ ТЗ ТИ ТЙ ТК ТЛ ТМ ТН ТО ТП ТР ТС ТТ ТУ ТФ ТХ ТЦ ТЧ ТШ ТЩ ТЪ ТЫ ТЬ ТЭ ТЮ ТЯ
+        \par УА УБ УВ УГ УД УЕ УЖ УЗ УИ УЙ УК УЛ УМ УН УО УП УР УС УТ УУ УФ УХ УЦ УЧ УШ УЩ УЪ УЫ УЬ УЭ УЮ УЯ
+        \par ФА ФБ ФВ ФГ ФД ФЕ ФЖ ФЗ ФИ ФЙ ФК ФЛ ФМ ФН ФО ФП ФР ФС ФТ ФУ ФФ ФХ ФЦ ФЧ ФШ ФЩ ФЪ ФЫ ФЬ ФЭ ФЮ ФЯ
+        \par ХА ХБ ХВ ХГ ХД ХЕ ХЖ ХЗ ХИ ХЙ ХК ХЛ ХМ ХН ХО ХП ХР ХС ХТ ХУ ХФ ХХ ХЦ ХЧ ХШ ХЩ ХЪ ХЫ ХЬ ХЭ ХЮ ХЯ
+        \par ЦА ЦБ ЦВ ЦГ ЦД ЦЕ ЦЖ ЦЗ ЦИ ЦЙ ЦК ЦЛ ЦМ ЦН ЦО ЦП ЦР ЦС ЦТ ЦУ ЦФ ЦХ ЦЦ ЦЧ ЦШ ЦЩ ЦЪ ЦЫ ЦЬ ЦЭ ЦЮ ЦЯ
+        \par ЧА ЧБ ЧВ ЧГ ЧД ЧЕ ЧЖ ЧЗ ЧИ ЧЙ ЧК ЧЛ ЧМ ЧН ЧО ЧП ЧР ЧС ЧТ ЧУ ЧФ ЧХ ЧЦ ЧЧ ЧШ ЧЩ ЧЪ ЧЫ ЧЬ ЧЭ ЧЮ ЧЯ
+        \par ША ШБ ШВ ШГ ШД ШЕ ШЖ ШЗ ШИ ШЙ ШК ШЛ ШМ ШН ШО ШП ШР ШС ШТ ШУ ШФ ШХ ШЦ ШЧ ШШ ШЩ ШЪ ШЫ ШЬ ШЭ ШЮ ШЯ
+        \par ЩА ЩБ ЩВ ЩГ ЩД ЩЕ ЩЖ ЩЗ ЩИ ЩЙ ЩК ЩЛ ЩМ ЩН ЩО ЩП ЩР ЩС ЩТ ЩУ ЩФ ЩХ ЩЦ ЩЧ ЩШ ЩЩ ЩЪ ЩЫ ЩЬ ЩЭ ЩЮ ЩЯ
+        \par ЪА ЪБ ЪВ ЪГ ЪД ЪЕ ЪЖ ЪЗ ЪИ ЪЙ ЪК ЪЛ ЪМ ЪН ЪО ЪП ЪР ЪС ЪТ ЪУ ЪФ ЪХ ЪЦ ЪЧ ЪШ ЪЩ ЪЪ ЪЫ ЪЬ ЪЭ ЪЮ ЪЯ
+        \par ЫА ЫБ ЫВ ЫГ ЫД ЫЕ ЫЖ ЫЗ ЫИ ЫЙ ЫК ЫЛ ЫМ ЫН ЫО ЫП ЫР ЫС ЫТ ЫУ ЫФ ЫХ ЫЦ ЫЧ ЫШ ЫЩ ЫЪ ЫЫ ЫЬ ЫЭ ЫЮ ЫЯ
+        \par ЬА ЬБ ЬВ ЬГ ЬД ЬЕ ЬЖ ЬЗ ЬИ ЬЙ ЬК ЬЛ ЬМ ЬН ЬО ЬП ЬР ЬС ЬТ ЬУ ЬФ ЬХ ЬЦ ЬЧ ЬШ ЬЩ ЬЪ ЬЫ ЬЬ ЬЭ ЬЮ ЬЯ
+        \par ЭА ЭБ ЭВ ЭГ ЭД ЭЕ ЭЖ ЭЗ ЭИ ЭЙ ЭК ЭЛ ЭМ ЭН ЭО ЭП ЭР ЭС ЭТ ЭУ ЭФ ЭХ ЭЦ ЭЧ ЭШ ЭЩ ЭЪ ЭЫ ЭЬ ЭЭ ЭЮ ЭЯ
+        \par ЮА ЮБ ЮВ ЮГ ЮД ЮЕ ЮЖ ЮЗ ЮИ ЮЙ ЮК ЮЛ ЮМ ЮН ЮО ЮП ЮР ЮС ЮТ ЮУ ЮФ ЮХ ЮЦ ЮЧ ЮШ ЮЩ ЮЪ ЮЫ ЮЬ ЮЭ ЮЮ ЮЯ
+        \par ЯА ЯБ ЯВ ЯГ ЯД ЯЕ ЯЖ ЯЗ ЯИ ЯЙ ЯК ЯЛ ЯМ ЯН ЯО ЯП ЯР ЯС ЯТ ЯУ ЯФ ЯХ ЯЦ ЯЧ ЯШ ЯЩ ЯЪ ЯЫ ЯЬ ЯЭ ЯЮ ЯЯ
+        \par\hrule[width=100%fw,height=0.1em]
+        \par ~ ¡ ¢ £ ¥ ¦ § « ­ ° µ ¶ · » ¿ Æ Ç × Ø Þ ß æ ç ð ÷ ø þ ı Œ œ ȷ   ! @ # $ % ^ & * ( ) { } < > ? /
+}
+\end{document}
+

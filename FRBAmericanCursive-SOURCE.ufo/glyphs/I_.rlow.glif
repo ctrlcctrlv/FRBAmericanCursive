@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="I.rlow" format="2">
+  <advance width="794"/>
+  <outline>
+    <contour>
+      <point x="240.449" y="162.45" type="move"/>
+      <point x="172.05" y="154.303"/>
+      <point x="52.8047" y="172.71"/>
+      <point x="18.1494" y="258.21" type="curve"/>
+      <point x="18.1494" y="258.21"/>
+      <point x="21.5693" y="0"/>
+      <point x="249" y="0" type="curve" smooth="yes"/>
+      <point x="471.3" y="0"/>
+      <point x="715.829" y="372.664"/>
+      <point x="715.829" y="485.641" type="curve" smooth="yes"/>
+      <point x="715.829" y="517.275"/>
+      <point x="696.164" y="547.2"/>
+      <point x="664.529" y="547.2" type="curve" smooth="yes"/>
+      <point x="555.09" y="547.2"/>
+      <point x="424.199" y="351.405"/>
+      <point x="424.199" y="189.811" type="curve" smooth="yes"/>
+      <point x="424.199" y="94.9053"/>
+      <point x="427.718" y="22.3047"/>
+      <point x="497.729" y="-41.04" type="curve" smooth="yes"/>
+      <point x="564" y="-101"/>
+      <point x="717.686" y="23.2285"/>
+      <point x="794" y="76.6641" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

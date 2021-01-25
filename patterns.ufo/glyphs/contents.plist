@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>NameMe.0</key>
+    <string>N_ameM_e.0.glif</string>
+    <key>arrow</key>
+    <string>arrow.glif</string>
+    <key>dot</key>
+    <string>dot.glif</string>
+    <key>pencil</key>
+    <string>pencil.glif</string>
+    <key>arrow2</key>
+    <string>arrow2.glif</string>
+  </dict>
+</plist>

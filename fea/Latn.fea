@@ -1,0 +1,99 @@
+lookup LatnMedi {
+    lookupflag IgnoreMarks;
+    sub @Latn_lower by @Latn_lower_low;
+} LatnMedi;
+
+lookup LatnFina {
+    #lookupflag IgnoreMarks;
+    sub a by a.low tail.lowwide;
+    sub b by b.low tail.high;
+    sub c by c.low tail.low;
+    sub d by d.low tail.lowwide;
+    sub e by e.low tail.low;
+    sub f by f.low tail.low;
+    sub g by g.low tail.lowwide;
+    sub h by h.low tail.lowwide;
+    sub i by i.low tail.lowwide;
+    sub j by j.low tail.lowwide;
+    sub k by k.low tail.low;
+    sub l by l.low tail.lowwide;
+    sub m by m.low tail.lowwide;
+    sub n by n.low tail.lowwide;
+    sub o by o.low tail.high;
+    sub p by p.low tail.low;
+    sub q by q.low tail.low;
+    sub r by r.low tail.lowwide;
+    sub s by s.low tail.lowwide;
+    sub t by t.low tail.lowwide;
+    sub u by u.low tail.lowwide;
+    sub v by v.low tail.high;
+    sub w by w.low tail.high;
+    sub x by x.low tail.lowwide;
+    sub y by y.low tail.lowwide;
+    sub z by z.low tail.lowwide;
+    sub dotlessi by dotlessi.low tail.lowwide;
+    sub dotlessj by dotlessj.low tail.lowwide;
+    sub germandbls by germandbls.low tail.lowwide;
+    sub thorn by thorn.low tail.lowwide;
+    sub oslash by oslash.low tail.high;
+    sub ae by ae.low tail.low;
+    sub oe by oe.low tail.low;
+    sub ccedilla by ccedilla tail.lowwide;
+    sub eth by eth.high tail.high;
+} LatnFina;
+
+lookup LatnHigh {
+    lookupflag IgnoreMarks;
+    sub @Latn_lower_low by @Latn_lower_high;
+} LatnHigh;
+
+lookup LatnRhigh {
+    lookupflag IgnoreMarks;
+    sub @Latn_upper_high by @Latn_upper_rhigh;
+} LatnRhigh;
+
+lookup LatnRlow {
+    lookupflag IgnoreMarks;
+    sub @Latn_upper_low by @Latn_upper_rlow;
+} LatnRlow;
+
+feature ccmp {
+    lookup ccmp1_1 {
+        lookupflag IgnoreMarks;
+        sub @Latn_all @Latn_lower' lookup LatnMedi @Latn_all;
+    } ccmp1_1;
+
+    lookup ccmp1_2 {
+        lookupflag IgnoreMarks;
+        sub @Latn_all @Latn_lower' lookup LatnFina;
+    } ccmp1_2;
+
+    lookup ccmp1_3 {
+        lookupflag IgnoreMarks;
+        sub @bovw @Latn_lower_low' lookup LatnHigh;
+    } ccmp1_3;
+
+    lookup ccmp1_4 {
+        lookupflag IgnoreMarks;
+        sub @Latn_upper_high' lookup LatnRhigh @Latn_lower_low' lookup LatnHigh;
+        sub @Latn_upper_low' lookup LatnRlow @Latn_lower_low;
+    } ccmp1_4;
+
+    lookup ccmp1_5 {
+        lookupflag IgnoreMarks;
+        sub [@Latn_lower_low @Latn_upper_low @Latn_upper_joinable @Latn_upper_joinable_rlow @Latn_upper_rlowlow] @Latn_upper_joinable' by @Latn_upper_rlowlow;
+        sub [@Latn_lower_low @Latn_upper_low @Latn_upper_joinable @Latn_upper_joinable_rlow @Latn_upper_rlowlow] @Latn_upper_joinable_rlow' by @Latn_upper_rlowlow;
+    } ccmp1_5;
+ 
+    lookup ccmp1_6 {
+        lookupflag IgnoreMarks;
+        sub @Latn_upper_low' @Latn_upper_rlowlow by @Latn_upper_rlow;
+    } ccmp1_6;
+    
+    lookup ccmp1_7 {
+        lookupflag IgnoreMarks;
+        sub at @Latn_lower' by @Latn_lower_low;
+    } ccmp1_7;
+} ccmp;
+
+# vim: set ts=4 sw=4 expandtab:

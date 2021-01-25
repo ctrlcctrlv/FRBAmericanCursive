@@ -1,0 +1,16 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem cyrl dflt;
+
+#table GDEF {
+#  GlyphClassDef @GDEF_Simple, , , ;
+#
+#} GDEF;
+
+include(../fea/classes.fea);
+include(../fea/mark.fea);
+include(../fea/ccmp.fea);
+include(../fea/Latn.fea);
+include(../fea/Cyrl.fea);
+
+# vim: set ts=4 sw=4 expandtab:

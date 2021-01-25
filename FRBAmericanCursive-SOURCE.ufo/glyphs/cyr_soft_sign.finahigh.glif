@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_soft_sign.finahigh" format="2">
+  <advance width="249"/>
+  <outline>
+    <contour>
+      <point x="41" y="113" type="move" smooth="yes"/>
+      <point x="57" y="146"/>
+      <point x="101" y="171.16"/>
+      <point x="165.4" y="171.16" type="curve" smooth="yes"/>
+      <point x="232.6" y="171.16"/>
+      <point x="247.466" y="108.596"/>
+      <point x="231.8" y="75" type="curve" smooth="yes"/>
+      <point x="215.013" y="39"/>
+      <point x="172" y="0"/>
+      <point x="109" y="0" type="curve" smooth="yes"/>
+      <point x="53.7998" y="0"/>
+      <point x="35.7998" y="48"/>
+      <point x="37.6045" y="94" type="curve" smooth="yes"/>
+      <point x="40.5996" y="167"/>
+      <point x="133" y="264.48"/>
+      <point x="133" y="264.48" type="curve"/>
+      <point x="81.4004" y="206"/>
+      <point x="63" y="171"/>
+      <point x="0" y="171.16" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

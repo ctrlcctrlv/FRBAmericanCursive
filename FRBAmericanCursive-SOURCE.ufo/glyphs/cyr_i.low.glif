@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_i.low" format="2">
+  <advance width="526"/>
+  <outline>
+    <contour>
+      <point x="-1" y="76" type="move" smooth="yes"/>
+      <point x="78.1562" y="131.426"/>
+      <point x="144.623" y="197.47"/>
+      <point x="187" y="257" type="curve"/>
+      <point x="187" y="257"/>
+      <point x="89.8809" y="98.6533"/>
+      <point x="89.8809" y="31.6953" type="curve" smooth="yes"/>
+      <point x="89.8809" y="2.79883"/>
+      <point x="117.678" y="-4.86719"/>
+      <point x="141.232" y="-4.86719" type="curve" smooth="yes"/>
+      <point x="221" y="-4.86719"/>
+      <point x="372.126" y="160.33"/>
+      <point x="438" y="253" type="curve"/>
+      <point x="438" y="253"/>
+      <point x="404" y="211"/>
+      <point x="396" y="197" type="curve" smooth="yes"/>
+      <point x="396" y="197"/>
+      <point x="331.972" y="87.458"/>
+      <point x="331.972" y="30.3076" type="curve" smooth="yes"/>
+      <point x="331.972" y="22.3887"/>
+      <point x="333.201" y="15.4766"/>
+      <point x="336" y="10" type="curve"/>
+      <point x="336" y="10"/>
+      <point x="339" y="-2.75"/>
+      <point x="361.375" y="-2.75" type="curve" smooth="yes"/>
+      <point x="381.971" y="-2.75"/>
+      <point x="462.647" y="31.9395"/>
+      <point x="527" y="77" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

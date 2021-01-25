@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyr_en" format="2">
+  <advance width="484"/>
+  <unicode hex="043D"/>
+  <outline>
+    <contour>
+      <point x="167" y="264.48" type="move"/>
+      <point x="124.796" y="172.861"/>
+      <point x="83.9936" y="86.4064"/>
+      <point x="43.2044" y="0" type="curve"/>
+      <point x="64" y="42"/>
+      <point x="101" y="125"/>
+      <point x="196" y="125" type="curve" smooth="yes"/>
+      <point x="282" y="125"/>
+      <point x="299" y="154"/>
+      <point x="358" y="264.48" type="curve"/>
+      <point x="326" y="194"/>
+      <point x="188" y="0"/>
+      <point x="286" y="0" type="curve" smooth="yes"/>
+      <point x="351" y="0"/>
+      <point x="457.427" y="58.0571"/>
+      <point x="484" y="76.6639" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

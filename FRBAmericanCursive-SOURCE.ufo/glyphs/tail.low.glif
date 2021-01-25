@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tail.low" format="2">
+  <advance width="171"/>
+  <outline>
+    <contour>
+      <point x="-1" y="75.6641" type="move" smooth="yes"/>
+      <point x="66.998" y="123.276"/>
+      <point x="122" y="201"/>
+      <point x="171" y="264" type="curve"/>
+    </contour>
+  </outline>
+</glyph>
