@@ -1,4 +1,7 @@
 # FRB American Cursive
+![](https://raw.githubusercontent.com/ctrlcctrlv/FRBAmericanCursive/main/specimens/hello.png)
+* [Specimen](https://raw.githubusercontent.com/ctrlcctrlv/FRBAmericanCursive/main/specimens/FRBAmericanCursive-specimen.pdf)
+* [Character map](https://github.com/ctrlcctrlv/FRBAmericanCursive/blob/main/specimens/pr-FRBAmericanCursive-Regular.pdf)
 
 © 2021 Fredrick R. Brennan. Licensed under the GNU GPL v3.
 
