@@ -850,5 +850,15 @@
     <string>E_th.rhigh.glif</string>
     <key>_Euro</key>
     <string>_E_uro.glif</string>
+    <key>_Bitcoin</key>
+    <string>_B_itcoin.glif</string>
+    <key>_Peso</key>
+    <string>_P_eso.glif</string>
+    <key>_JpnPostalMark</key>
+    <string>_J_pnP_ostalM_ark.glif</string>
+    <key>uni20B9</key>
+    <string>uni20B_9.glif</string>
+    <key>_MathPi</key>
+    <string>_M_athP_i.glif</string>
   </dict>
 </plist>

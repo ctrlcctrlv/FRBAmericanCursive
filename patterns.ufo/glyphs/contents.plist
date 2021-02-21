@@ -12,5 +12,9 @@
     <string>pencil.glif</string>
     <key>arrow2</key>
     <string>arrow2.glif</string>
+    <key>serif</key>
+    <string>serif.glif</string>
+    <key>cjk</key>
+    <string>cjk.glif</string>
   </dict>
 </plist>

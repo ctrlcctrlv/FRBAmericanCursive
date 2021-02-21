@@ -1,8 +1,16 @@
+.ONESHELL: all
 all:
 	make regen
 	make monoline
 	make svgs
+	make patterned
 	make colrcpal
+	make specimens
+	#
+	find dist -type f|parallel --bar python3 -m cffsubr -o {}_cffsubr {}
+	find dist -type f -iname "*.otf"|parallel --bar mv {}_cffsubr {}
+	rm -f FRBAmericanCursive.zip
+	zip FRBAmericanCursive.zip dist/*
 
 # Regenerates some feature files, pulls glyphs out of SFD and puts them into UFO. Always use after you edit glyphs in SFD.
 .PHONY: regen
@@ -15,7 +23,7 @@ regen:
 # Build all the monoline fonts in dist/
 .PHONY: monoline
 monoline:
-	parallel --bar -a build_data/monoline.tsv --colsep '\t' './scripts/gen_weight.py {1} {2} {3}; ./scripts/gen_monoline.sh {1} {3}'
+	parallel --bar -a build_data/monoline.tsv --colsep '\t' './scripts/gen_weight.py {1} {2} {3} && PRODUCTION=y ./scripts/gen_monoline.sh {1} {3}'
 
 # Regenerate the OpenType classes used in the feature files. You need this if you add glyphs to the SFD and want them to be shaped properly based on their names.
 .PHONY: fee-classes

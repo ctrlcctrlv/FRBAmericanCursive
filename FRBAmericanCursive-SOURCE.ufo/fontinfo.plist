@@ -697,7 +697,7 @@ copy of the Program in return for a fee.
 	<key>openTypeNameLicenseURL</key>
 	<string>https://www.gnu.org/licenses/gpl-3.0.txt</string>
 	<key>openTypeNameVersion</key>
-	<string>Version 1.000</string>
+	<string>Version 1.01</string>
 	<key>postscriptFontName</key>
 	<string>FRBAmericanCursive-Regular</string>
 	<key>postscriptFullName</key>
@@ -719,6 +719,6 @@ copy of the Program in return for a fee.
 	<key>versionMajor</key>
 	<integer>1</integer>
 	<key>versionMinor</key>
-	<integer>0</integer>
+	<integer>1</integer>
 </dict>
 </plist>

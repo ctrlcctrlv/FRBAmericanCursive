@@ -35,15 +35,19 @@ shutil.copytree("FRBAmericanCursive-SOURCE.ufo", outname)
 
 f = fontforge.open("FRBAmericanCursive.sfd")
 f.selection.all()
-# No magic here in terms of building the list. They looked wrong without it, manual verification.
-removeOverlap = lambda gn: "none" if gn not in ["section", "ampersand", "dollar", "cyr_ER.rlow", "cent", "Ccedilla", "Ccedilla.rlow", "eth", "eth.high", "eth.low"] else "layer"
-# Don't remove internal contour for combining ring above
-removeInternal = lambda gn: False if gn in ["uni030A"] else True
+removeInternal = lambda gn: False if gn in ["uni030A", "degree"] else True
 if int(strokewidth) != 0:
     for g in f.glyphs():
         print("Stroking {}".format(g.glyphname), file=sys.stderr)
-        g.stroke("circular", int(strokewidth), "round", "round", simplify=False, removeoverlap=removeOverlap(g.glyphname), removeinternal=removeInternal(g.glyphname), accuracy=0.10)
-    f.correctDirection()
+        g.stroke("circular", int(strokewidth), "round", "round", simplify=False, removeoverlap="none", removeinternal=removeInternal(g.glyphname), accuracy=0.10)
+        # We want every stroke forced clockwise, unless there should be holes. This prevents holes at intersecting strokes.
+        if not removeInternal(g.glyphname): continue
+        l = fontforge.layer()
+        for c in g.foreground:
+            if c.isClockwise() in [-1, 0]: # indeterminate ones are actually clockwise from Skef's stroker, I determined
+                c.reverseDirection()
+            l += c
+        g.foreground = l
 
 # Add anchors for all marks
 with open("build_data/top_marks") as topf:
