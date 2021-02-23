@@ -3,17 +3,15 @@
 <plist version="1.0">
   <dict>
     <key>familyName</key>
-    <string>arrow</string>
+    <string>patterns</string>
     <key>styleName</key>
     <string>Regular</string>
     <key>styleMapFamilyName</key>
-    <string>arrow</string>
+    <string>patterns</string>
     <key>versionMajor</key>
     <integer>1</integer>
     <key>versionMinor</key>
     <integer>0</integer>
-    <key>copyright</key>
-    <string>Copyright (c) 2021, Unknown</string>
     <key>unitsPerEm</key>
     <integer>1000</integer>
     <key>ascender</key>
@@ -29,15 +27,15 @@
     <key>openTypeHheaAscender</key>
     <integer>580</integer>
     <key>openTypeHheaDescender</key>
-    <integer>-55</integer>
+    <integer>-70</integer>
     <key>openTypeHheaLineGap</key>
     <integer>0</integer>
     <key>openTypeNameVersion</key>
     <string>Version 1.000</string>
     <key>postscriptFontName</key>
-    <string>arrow</string>
+    <string>patterns</string>
     <key>postscriptFullName</key>
-    <string>arrow</string>
+    <string>patterns</string>
     <key>postscriptWeightName</key>
     <string>Regular</string>
     <key>postscriptUnderlineThickness</key>

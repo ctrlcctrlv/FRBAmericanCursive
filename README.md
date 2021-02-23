@@ -40,6 +40,7 @@ Like all my fonts except my earliest work, no non-free software was used at any 
 * GNU find
 * GNU make
 * FontForge (w/Python API)
+* [`sfdnormalize`](https://github.com/ctrlcctrlv/sfdnormalize)
 * MFEK/stroke (for building the dotted fonts and fonts with arrows for outlines)
 * Inkscape (for building the color fonts)
 * xq (for some SVG stuff, only used in color fonts)

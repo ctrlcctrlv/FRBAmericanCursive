@@ -14,7 +14,9 @@
     <string>arrow2.glif</string>
     <key>serif</key>
     <string>serif.glif</string>
-    <key>cjk</key>
-    <string>cjk.glif</string>
+    <key>cjk_uptick</key>
+    <string>cjk_uptick.glif</string>
+    <key>longarrow</key>
+    <string>longarrow.glif</string>
   </dict>
 </plist>

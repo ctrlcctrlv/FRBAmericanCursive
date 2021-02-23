@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cjk_uptick" format="2">
+  <advance width="1000"/>
+  <outline>
+    <contour>
+      <point x="151" y="402" type="move"/>
+      <point x="310" y="402" type="line"/>
+      <point x="381" y="473" type="line"/>
+      <point x="483" y="372" type="line"/>
+      <point x="483" y="360" type="line"/>
+      <point x="151" y="360" type="line"/>
+    </contour>
+  </outline>
+</glyph>

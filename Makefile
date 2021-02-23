@@ -19,6 +19,9 @@ regen:
 	./scripts/tsv_to_mark.py build_data/top.tsv > fea/mark.fea
 	./scripts/build_ccmp.py > fea/ccmp.fea
 	./scripts/regenerate_ufo_glyphs_from_sfd.py
+	# Patterns
+	fontforge -lang=py -c 'f=fontforge.open("patterns.sfd");f.generate("patterns.ufo")'
+	sfdnormalize patterns.sfd patterns_temp.sfd && mv patterns_temp.sfd patterns.sfd
 
 # Build all the monoline fonts in dist/
 .PHONY: monoline
