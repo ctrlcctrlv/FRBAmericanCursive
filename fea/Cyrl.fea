@@ -2,6 +2,37 @@ lookup CyrlMedi {
     sub @Cyrl_lower by @Cyrl_lower_low;
 } CyrlMedi;
 
+lookup CyrlFina {
+    #lookupflag IgnoreMarks;
+    sub cyr_a by cyr_a.low tail.lowwide;
+    sub cyr_ve by cyr_ve.low tail.high;
+    sub cyr_ghe by cyr_ghe.low tail.low;
+    sub cyr_de by cyr_de.low tail.lowwide;
+    sub cyr_ie by cyr_ie.low tail.lowwide;
+    sub cyr_zhe by cyr_zhe.low tail.lowwide;
+    sub cyr_ze by cyr_ze.low tail.lowwide;
+    sub cyr_i by cyr_i.low tail.lowwide;
+    sub cyr_short_i by cyr_short_i.low tail.lowwide;
+    sub cyr_ka by cyr_ka.low tail.low;
+    sub cyr_el by cyr_el.low tail.low;
+    sub cyr_em by cyr_em.low tail.low;
+    sub cyr_en by cyr_en.low tail.low;
+    sub cyr_o by cyr_o.low tail.high;
+    sub cyr_pe by cyr_pe.low tail.lowwide;
+    sub cyr_er by cyr_er.low tail.low;
+    sub cyr_es by cyr_es.low tail.low;
+    sub cyr_te by cyr_te.low tail.lowwide;
+    sub cyr_u by cyr_u.low tail.lowwide;
+    sub cyr_ef by cyr_ef.low tail.low;
+    sub cyr_ha by cyr_ha.low tail.low;
+    sub cyr_tse by cyr_tse.low tail.lowwide;
+    sub cyr_che by cyr_che.low tail.low;
+    sub cyr_sha by cyr_sha.low tail.lowwide;
+    sub cyr_shcha by cyr_shcha.low tail.lowwide;
+    sub cyr_yeru by cyr_yeru.low tail.lowwide;
+    sub cyr_ya by cyr_ya.low tail.lowwide;
+} CyrlFina;
+
 lookup CyrlMediHS {
     sub @Cyrl_signs by @Cyrl_signs_finalow;
 } CyrlMediHS;
@@ -10,16 +41,26 @@ lookup CyrlHigh {
     sub @Cyrl_lower_low by @Cyrl_lower_high;
 } CyrlHigh;
 
+lookup CyrlRhigh {
+    lookupflag IgnoreMarks;
+    sub @Cyrl_upper_high by @Cyrl_upper_rhigh;
+} CyrlRhigh;
+
+lookup CyrlRlow {
+    lookupflag IgnoreMarks;
+    sub @Cyrl_upper_low by @Cyrl_upper_rlow;
+} CyrlRlow;
+
 feature ccmp {
     lookup ccmp2_1 {
         sub @Cyrl_all @Cyrl_lower' lookup CyrlMedi @Cyrl_all;
         sub @Cyrl_all @Cyrl_signs' lookup CyrlMediHS @Cyrl_all;
     } ccmp2_1;
 
-    lookup ccmp2_2 {
-        sub @Cyrl_all @Cyrl_lower' lookup CyrlMedi;
-        sub @Cyrl_all @Cyrl_signs' lookup CyrlMediHS;
-    } ccmp2_2;
+    lookup ccmp2_6 {
+        lookupflag IgnoreMarks;
+        sub @Cyrl_all @Cyrl_lower' lookup CyrlFina;
+    } ccmp2_6;
 
     lookup ccmp2_3 {
         sub [@cyr_ve @cyr_o] @Cyrl_lower_low' lookup CyrlHigh;
@@ -28,6 +69,12 @@ feature ccmp {
     lookup ccmp2_4 {
         pos @Cyrl_all_signs 80 @Cyrl_all;
     } ccmp2_4;
+
+    lookup ccmp2_5 {
+        lookupflag IgnoreMarks;
+        sub @Cyrl_upper_high' lookup CyrlRhigh @Cyrl_lower_low' lookup CyrlHigh;
+        sub @Cyrl_upper_low' lookup CyrlRlow @Cyrl_lower_low;
+    } ccmp2_5;
 } ccmp;
 
 # vim: set ts=4 sw=4 expandtab:
