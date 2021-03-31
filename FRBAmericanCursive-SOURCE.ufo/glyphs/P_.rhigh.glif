@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="P.rhigh" format="2">
-  <advance width="565"/>
+  <advance width="665"/>
   <outline>
     <contour>
       <point x="37.25" y="282.149" type="move"/>
@@ -22,8 +22,8 @@
       <point x="252.71" y="235.979"/>
       <point x="213.38" y="262.484" type="curve"/>
       <point x="310" y="210"/>
-      <point x="372" y="171.16"/>
-      <point x="565" y="171.16" type="curve"/>
+      <point x="472" y="171.16"/>
+      <point x="665" y="171.16" type="curve"/>
     </contour>
   </outline>
 </glyph>

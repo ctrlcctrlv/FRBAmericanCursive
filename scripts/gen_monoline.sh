@@ -5,7 +5,7 @@ else
 	WEIGHT=$1
 fi
 
-if [ -z $PRODUCTION ]; then
+if [[ $PRODUCTION =~ "y" ]]; then
 	ARGS='--keep-overlaps --optimize-cff 1 --cff-round-tolerance 0'
 else
 	ARGS='--optimize-cff 1 --cff-round-tolerance 0'

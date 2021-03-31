@@ -59,6 +59,7 @@ print('<path d="M 0 {h} L {} {h}" stroke="#00b2c2" stroke-width="5" stroke-dasha
 print('<path d="M 0 {h} L {} {h}" stroke="#00b2c2" stroke-width="5" fill="none"/>\n'.format(width, h=height+291))
 print('</g>')
 
+"""
 print('<g inkscape:label="Arrows" inkscape:groupmode="layer" id="arrows">')
 floating_single_point_idxs = []
 for i in range(0,len(paths)):
@@ -104,6 +105,7 @@ print('</g>')
 
 for idx in reversed(floating_single_point_idxs):
     paths.pop(idx)
+"""
 
 print('<g inkscape:label="Path" inkscape:groupmode="layer" id="path">')
 for i in range(0,len(paths)):

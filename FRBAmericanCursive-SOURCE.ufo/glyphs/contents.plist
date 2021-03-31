@@ -860,5 +860,11 @@
     <string>uni20B_9.glif</string>
     <key>_MathPi</key>
     <string>_M_athP_i.glif</string>
+    <key>cyr_che.alt</key>
+    <string>cyr_che.alt.glif</string>
+    <key>cyr_che.alt.high</key>
+    <string>cyr_che.alt.high.glif</string>
+    <key>cyr_che.alt.low</key>
+    <string>cyr_che.alt.low.glif</string>
   </dict>
 </plist>

@@ -4,7 +4,7 @@
   <outline>
     <contour>
       <point x="0" y="76.6641" type="move"/>
-      <point x="183.58" y="205.208"/>
+      <point x="232.729" y="239.623"/>
       <point x="297.045" y="308.948"/>
       <point x="434.6" y="547.2" type="curve"/>
       <point x="161" y="0" type="line"/>
