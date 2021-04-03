@@ -1,5 +1,7 @@
 # FRB American Cursive
 ![](https://raw.githubusercontent.com/ctrlcctrlv/FRBAmericanCursive/main/specimens/hello.png)
+
+* **[Download the fonts](https://github.com/ctrlcctrlv/FRBAmericanCursive/archive/refs/heads/main.zip)** (fonts are in `dist/` directory of `main.zip`)
 * [Specimen](https://raw.githubusercontent.com/ctrlcctrlv/FRBAmericanCursive/main/specimens/FRBAmericanCursive-specimen.pdf)
 * [Character map](https://github.com/ctrlcctrlv/FRBAmericanCursive/blob/main/specimens/pr-FRBAmericanCursive-Regular.pdf)
 
