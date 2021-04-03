@@ -38,9 +38,48 @@ lookup LatnFina {
     sub oslash by oslash.low tail.high;
     sub ae by ae.low tail.low;
     sub oe by oe.low tail.low;
-    sub ccedilla by ccedilla tail.lowwide;
+    sub ccedilla by ccedilla.low tail.lowwide;
     sub eth by eth.high tail.high;
 } LatnFina;
+
+lookup LatnIsolFina {
+    #lookupflag IgnoreMarks;
+    sub a by a tail.lowwide;
+    sub b by b tail.high;
+    sub c by c tail.low;
+    sub d by d tail.lowwide;
+    sub e by e tail.low;
+    sub f by f tail.low;
+    sub g by g tail.lowwide;
+    sub h by h tail.lowwide;
+    sub i by i tail.lowwide;
+    sub j by j tail.lowwide;
+    sub k by k tail.low;
+    sub l by l tail.lowwide;
+    sub m by m tail.lowwide;
+    sub n by n tail.lowwide;
+    sub o by o tail.high;
+    sub p by p tail.low;
+    sub q by q tail.low;
+    sub r by r tail.lowwide;
+    sub s by s tail.lowwide;
+    sub t by t tail.lowwide;
+    sub u by u tail.lowwide;
+    sub v by v tail.high;
+    sub w by w tail.high;
+    sub x by x tail.lowwide;
+    sub y by y tail.lowwide;
+    sub z by z tail.lowwide;
+    sub dotlessi by dotlessi tail.lowwide;
+    sub dotlessj by dotlessj tail.lowwide;
+    sub germandbls by germandbls tail.lowwide;
+    sub thorn by thorn tail.lowwide;
+    sub oslash by oslash tail.high;
+    sub ae by ae tail.low;
+    sub oe by oe tail.low;
+    sub ccedilla by ccedilla tail.lowwide;
+    sub eth by eth.high tail.high;
+} LatnIsolFina;
 
 lookup LatnHigh {
     lookupflag IgnoreMarks;
@@ -56,6 +95,12 @@ lookup LatnRlow {
     lookupflag IgnoreMarks;
     sub @Latn_upper_low by @Latn_upper_rlow;
 } LatnRlow;
+
+lookup LatnNullTail {
+    sub tail.low by NULL;
+    sub tail.lowwide by NULL;
+    sub tail.high by NULL;
+} LatnNullTail;
 
 feature ccmp {
     lookup ccmp1_1 {
@@ -94,6 +139,22 @@ feature ccmp {
         lookupflag IgnoreMarks;
         sub at @Latn_lower' by @Latn_lower_low;
     } ccmp1_7;
+
+    lookup ccmp1_8 {
+        lookupflag IgnoreMarks;
+        ignore sub @Latn_lower' @Latn_lower_low;
+        ignore sub @Latn_lower' @Latn_lower_high;
+        sub @Latn_lower' lookup LatnIsolFina;        
+    } ccmp1_8;
+
+    lookup ccmp1_9 {
+        lookupflag IgnoreMarks;
+        sub [tail.low tail.lowwide tail.high]' lookup LatnNullTail quotesingle @Latn_lower;
+    } ccmp1_9;
+
+    lookup ccmp1_10 {
+        pos quotesingle [m v] -110;
+    } ccmp1_10;
 } ccmp;
 
 # vim: set ts=4 sw=4 expandtab:

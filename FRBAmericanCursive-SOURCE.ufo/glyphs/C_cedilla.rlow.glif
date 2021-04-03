@@ -15,6 +15,9 @@
     <contour>
       <point x="542.7" y="547.2" type="move"/>
       <point x="532.44" y="504.45" type="line"/>
+    </contour>
+    <contour>
+      <point x="532.44" y="504.45" type="move"/>
       <point x="532.44" y="504.45"/>
       <point x="522" y="552.33"/>
       <point x="433.261" y="552.33" type="curve" smooth="yes"/>

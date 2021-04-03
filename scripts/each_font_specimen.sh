@@ -1,7 +1,10 @@
 #!/bin/bash
 rm -f /tmp/eachfontFRBAmericanCursive-*.pdf specimens/FRBAmericanCursive-specimen.pdf
-for f in `ls dist`; do
-	(cat specimens/eachfont.sil | sed 's/FRBAmericanCursive-500-Medium.otf/'`basename "$f"`'/g') > /tmp/eachfont"$f".sil
-	sile /tmp/eachfont"$f".sil
-done
-pdftk /tmp/eachfontFRBAmericanCursive-*.pdf cat output specimens/FRBAmericanCursive-specimen.pdf
+
+find dist -type f -iname "*.otf" | parallel --bar '
+	export STYLE=`ftdump -n {}|grep family|head -n1|sed "s/.*FRB American Cursive *//;s/\s+$//"` &&
+	(sed "s/&&FONT&&/{/}/g; s/&&STYLE&&/$STYLE/" < specimens/eachfont.sil) > /tmp/eachfont{/}.sil &&
+	sile /tmp/eachfont{/}.sil
+'
+
+pdftk `ls /tmp/eachfontFRBAmericanCursive-*.pdf|sort -V` cat output specimens/FRBAmericanCursive-specimen.pdf

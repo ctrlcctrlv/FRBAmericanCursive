@@ -5,9 +5,14 @@ from beziers.path import BezierPath
 from beziers.cubicbezier import CubicBezier
 from beziers.path.representations.fontparts import FontParts
 from fontParts.world import OpenFont
+from fontParts.fontshell.glyph import RGlyph
 from beziers.point import Point
 
-import sys
+import re
+import sys, os
+
+def format_glifname(glifname):
+    return re.sub("([A-Z])", "\\1_", glifname)
 
 dotradius   = 5
 dotspacing  = 8
@@ -18,9 +23,13 @@ glyphname   = sys.argv[1]
 height      = 650
 vmargin     = 350
 
-font = OpenFont(fontpath)
-paths = FontParts.fromFontpartsGlyph(font[glyphname])
-width = font[glyphname].width
+# This is a lot faster than loading the whole font into memory every time.
+with open(fontpath+os.sep+"glyphs"+os.sep+format_glifname(glyphname)+".glif") as f:
+    glifdata = f.read()
+    glyph = RGlyph()
+    glyph._loadFromGLIF(glifdata)
+paths = FontParts.fromFontpartsGlyph(glyph)
+width = glyph.width
 
 print("""<?xml version="1.0" standalone="no"?>
 <svg width="%dpx" height="%dpx" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
@@ -59,6 +68,7 @@ print('<path d="M 0 {h} L {} {h}" stroke="#00b2c2" stroke-width="5" stroke-dasha
 print('<path d="M 0 {h} L {} {h}" stroke="#00b2c2" stroke-width="5" fill="none"/>\n'.format(width, h=height+291))
 print('</g>')
 
+# The below arrows code has been superseded by MFEKstroke PAP+CWS.
 """
 print('<g inkscape:label="Arrows" inkscape:groupmode="layer" id="arrows">')
 floating_single_point_idxs = []
@@ -107,11 +117,14 @@ for idx in reversed(floating_single_point_idxs):
     paths.pop(idx)
 """
 
+# Using Inkscape to stroke paths has been superseded by MFEKstroke CWS.
+"""
 print('<g inkscape:label="Path" inkscape:groupmode="layer" id="path">')
 for i in range(0,len(paths)):
   segs = paths[i].asSegments()
   print('<path d="%s" stroke="black" stroke-width="5" fill="none"/>\n' % path2svg(segs))
 print('</g>')
+"""
 
 print('<g inkscape:label="Beginnings" inkscape:groupmode="layer" id="beginnings">')
 for i in range(0,len(paths)):

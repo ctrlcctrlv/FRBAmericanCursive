@@ -28,6 +28,9 @@
       <point x="185.241" y="-8.96033"/>
       <point x="142.002" y="14.4193"/>
       <point x="127" y="31" type="curve"/>
+    </contour>
+    <contour>
+      <point x="127" y="31" type="move"/>
       <point x="158.197" y="-1.02096"/>
       <point x="209.301" y="-13.008"/>
       <point x="266.795" y="-13.008" type="curve" smooth="yes"/>

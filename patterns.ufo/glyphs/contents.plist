@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>NameMe.0</key>
+    <key>_unused</key>
     <string>N_ameM_e.0.glif</string>
     <key>arrow</key>
     <string>arrow.glif</string>
@@ -18,5 +18,9 @@
     <string>cjk_uptick.glif</string>
     <key>longarrow</key>
     <string>longarrow.glif</string>
+    <key>line</key>
+    <string>line.glif</string>
+    <key>arrowhead</key>
+    <string>arrowhead.glif</string>
   </dict>
 </plist>

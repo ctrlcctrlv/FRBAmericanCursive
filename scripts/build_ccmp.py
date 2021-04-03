@@ -24,8 +24,7 @@ def create_and_build_placeholders(f):
         f.createChar(i, "uni{:04X}".format(i))
         g = f[f.findEncodingSlot(i)]
         # This is a cursive font, so it's okay (even preferred) to draw ď as d + ◌̌
-        g.user_decomp = "".join([chr(f[gg].unicode) for gg in L])
-        g.build()
+        g.width = 1000
 
 if __name__ == "__main__":
     f = fontforge.open("FRBAmericanCursive.sfd")

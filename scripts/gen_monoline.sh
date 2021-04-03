@@ -1,14 +1,9 @@
 #!/bin/bash
-if [ -z $1 ]; then
-	WEIGHT=Regular
-else
-	WEIGHT=$1
-fi
+ARGS=`./scripts/fontmake_args.sh`
 
-if [[ $PRODUCTION =~ "y" ]]; then
-	ARGS='--keep-overlaps --optimize-cff 1 --cff-round-tolerance 0'
-else
-	ARGS='--optimize-cff 1 --cff-round-tolerance 0'
-fi
-
-fontmake --verbose DEBUG -u build/FRBAmericanCursive-"$1".ufo --output-path dist/FRBAmericanCursive-"$2"-"$1".otf -o otf $ARGS
+# Stroke all glyphs, removing internal contours (useful for !, i, j, ?, …, :, etc.)
+find FRBAmericanCursive-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel MFEKstroke CWS -i {} -o build/FRBAmericanCursive-"$1".ufo/glyphs/{/} -w "$2" --remove-internal
+# Restroke glyphs which shouldn't have their internal contours removed
+find FRBAmericanCursive-SOURCE.ufo/glyphs/ -iname 'zero.glif' -or -iname 'degree.glif' -or -iname 'uni030A_.glif' | parallel MFEKstroke CWS -i {} -o build/FRBAmericanCursive-"$1".ufo/glyphs/{/} -w "$2"
+# Generate OTF
+fontmake --verbose DEBUG -u build/FRBAmericanCursive-"$1".ufo --output-path dist/FRBAmericanCursive-"$3"-"$1".otf -o otf $ARGS

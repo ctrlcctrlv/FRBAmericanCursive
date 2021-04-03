@@ -8,6 +8,9 @@
       <point x="349" y="541"/>
       <point x="308.62" y="478.54"/>
       <point x="308.62" y="478.54" type="curve"/>
+    </contour>
+    <contour>
+      <point x="308.62" y="478.54" type="move"/>
       <point x="338.62" y="525"/>
       <point x="401" y="548.91"/>
       <point x="501.851" y="548.91" type="curve" smooth="yes"/>

@@ -856,8 +856,8 @@
     <string>_P_eso.glif</string>
     <key>_JpnPostalMark</key>
     <string>_J_pnP_ostalM_ark.glif</string>
-    <key>uni20B9</key>
-    <string>uni20B_9.glif</string>
+    <key>_Rupee</key>
+    <string>_R_upee.glif</string>
     <key>_MathPi</key>
     <string>_M_athP_i.glif</string>
     <key>cyr_che.alt</key>
@@ -866,5 +866,11 @@
     <string>cyr_che.alt.high.glif</string>
     <key>cyr_che.alt.low</key>
     <string>cyr_che.alt.low.glif</string>
+    <key>_Won</key>
+    <string>_W_on.glif</string>
+    <key>uni20BD</key>
+    <string>uni20B_D_.glif</string>
+    <key>_Lira</key>
+    <string>_L_ira.glif</string>
   </dict>
 </plist>

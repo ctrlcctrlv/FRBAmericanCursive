@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="x.low" format="2">
-  <advance width="468"/>
+  <advance width="518"/>
   <outline>
     <contour>
       <point x="-1" y="76" type="move" smooth="yes"/>
@@ -13,12 +13,12 @@
       <point x="308.094" y="159.908"/>
       <point x="244.824" y="84.7568"/>
       <point x="244.824" y="39.6562" type="curve" smooth="yes"/>
-      <point x="244.824" y="18.3486"/>
-      <point x="258.019" y="-0.873971"/>
+      <point x="244.824" y="13.3486"/>
+      <point x="256.019" y="-0.873971"/>
       <point x="282.062" y="-0.873971" type="curve" smooth="yes"/>
-      <point x="326.966" y="-0.873971"/>
-      <point x="402.733" y="31.2992"/>
-      <point x="468" y="77" type="curve" smooth="yes"/>
+      <point x="346.966" y="-0.873971"/>
+      <point x="436.347" y="19.8259"/>
+      <point x="518" y="77" type="curve" smooth="yes"/>
     </contour>
     <contour>
       <point x="418" y="257" type="move"/>

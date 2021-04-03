@@ -5,9 +5,11 @@ SILE.settings.set("document.spaceskip", SILE.length("1spc"))
 SILE.settings.set("shaper.spacestretchfactor",  0)
 SILE.settings.set("shaper.spaceshrinkfactor",  0)
 }
-\font[filename=dist/FRBAmericanCursive-500-Medium.otf]
+\font[filename=dist/&&FONT&&]
 \neverindent\nofolios
 \par \font[size=3em]{FRB American Cursive}
+\bigskip
+\par &&STYLE&&
 \bigskip
 \par Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
 \par abcdefghijklmnopqrstuvwxyz
@@ -16,5 +18,5 @@ SILE.settings.set("shaper.spaceshrinkfactor",  0)
 \par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
 \font[family=TT2020Base]
-\par FRBAmericanCursive-500-Medium.otf
+\par &&FONT&&
 \end{document}

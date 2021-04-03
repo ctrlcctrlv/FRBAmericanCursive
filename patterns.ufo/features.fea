@@ -1,7 +1,8 @@
 
 #Mark attachment classes (defined in GDEF, used in lookupflags)
 
-@GDEF_Simple = [\NameMe.0 \arrow \dot \pencil \arrow2 \serif \cjk_uptick \longarrow ];
+@GDEF_Simple = [\_unused \arrow \dot \pencil \arrow2 \serif \cjk_uptick \longarrow 
+	\line \arrowhead ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , , ;

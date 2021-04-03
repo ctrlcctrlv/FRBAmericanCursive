@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Note: This script may return an error concerning the fact that FontForge's UFO features.fea include(..) statements are contrary to spec. They can be safely ignored, this script doesn't manipulate/overwrite OTL features.
 
 import fontforge
 import os

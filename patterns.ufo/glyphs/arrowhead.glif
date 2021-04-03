@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arrowhead" format="2">
+  <advance width="1000"/>
+  <outline>
+    <contour>
+      <point x="290" y="294" type="move"/>
+      <point x="290" y="211" type="line"/>
+      <point x="144" y="357" type="line"/>
+      <point x="290" y="503" type="line"/>
+      <point x="290" y="420" type="line"/>
+    </contour>
+  </outline>
+</glyph>

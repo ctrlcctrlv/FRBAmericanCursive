@@ -40,9 +40,9 @@ UnicodeInterp: none
 NameList: AGL For New Fonts
 BeginPrivate: 0
 EndPrivate
-BeginChars: 8 8
+BeginChars: 10 10
 
-StartChar: NameMe.0
+StartChar: _unused
 Encoding: 0 -1 0
 GlifName: N_ameM_e.0
 Width: 1000
@@ -384,6 +384,34 @@ SplineSet
  0 13 l 1
  780 13 l 1
  741 52 l 1
+EndSplineSet
+EndChar
+
+StartChar: line
+Encoding: 8 -1 8
+Width: 104
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+0 13 m 1
+NamedP: "T"
+ 54 13 l 1025
+EndSplineSet
+EndChar
+
+StartChar: arrowhead
+Encoding: 9 -1 9
+Width: 1000
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+290 294 m 25
+ 290 211 l 25
+ 144 357 l 25
+ 290 503 l 1
+ 290 420 l 1049
 EndSplineSet
 EndChar
 EndChars

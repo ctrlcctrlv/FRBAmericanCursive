@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_Won" format="2">
+  <advance width="861"/>
+  <unicode hex="20A9"/>
+  <outline>
+    <contour>
+      <point x="137" y="264.48" type="move"/>
+      <point x="754" y="264.48" type="line"/>
+    </contour>
+    <contour>
+      <point x="252" y="540.953" type="move"/>
+      <point x="226" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="226" y="0" type="move"/>
+      <point x="547.806" y="540.953" type="line"/>
+    </contour>
+    <contour>
+      <point x="547.806" y="540.953" type="move"/>
+      <point x="531" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="531" y="0" type="move"/>
+      <point x="853.272" y="540.953" type="line"/>
+    </contour>
+  </outline>
+</glyph>

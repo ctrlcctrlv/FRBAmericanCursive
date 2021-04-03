@@ -7,6 +7,9 @@
       <point x="147.447" y="179.908"/>
       <point x="192" y="219"/>
       <point x="254.372" y="249.471" type="curve"/>
+    </contour>
+    <contour>
+      <point x="254.372" y="249.471" type="move"/>
       <point x="202.859" y="225.593"/>
       <point x="139.714" y="161.538"/>
       <point x="139.714" y="71.1963" type="curve" smooth="yes"/>

@@ -5,7 +5,7 @@
 
 © 2021 Fredrick R. Brennan. Licensed under the GNU GPL v3.
 
-Thanks to: Matthew Blanchard (MFEKstroke), Simon Cozens (FEE, beziers.py)
+Thanks to: Matthew Blanchard (MFEKstroke), Simon Cozens (FEE)
 
 FRB American Cursive is an extremely technically complex cursive font family that consists of 50+ fonts. It is in the style of a "textbook hand", a font family used primarily for education. However, it can be used anywhere a cursive is called for. I call it an "American" cursive not out of any sense of patriotism, but out of a sense of the history of textbook hands: this font most heavily takes its design inspiration from Zaner–Bloser cursive. However, I also integrated elements of D'Nealian and Palmer Method. What this means is that FRB American Cursive is a traditional American textbook hand which puts a lot of emphasis on the idea that the writer should lift their hand from the page as seldom as possible. Using OpenType Layout, I made it so each glyph has at least 3 versions. Unlike many textbook hands, even educational ones, my font connects capital letters and lowercase letters. It connects some capital letters with eachother where possible as well.
 
@@ -37,12 +37,19 @@ Like all my fonts except my earliest work, no non-free software was used at any 
 ### Needed software
 
 * GNU Parallel
-* GNU find
-* GNU make
+* GNU `bash`, `find`, `make`, and `sed`&dagger;
+* MFEKstroke&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
 * FontForge (w/Python API)
-* [`sfdnormalize`](https://github.com/ctrlcctrlv/sfdnormalize)
-* MFEK/stroke (for building the dotted fonts and fonts with arrows for outlines)
+* [`glifpathlen`](https://github.com/ctrlcctrlv/glifpathlen)&Dagger;
+* [`sfdnormalize`](https://github.com/alerque/sfdnormalize)
+* [`sfd2ufo`](https://github.com/alif-type/sfdLib)
 * Inkscape (for building the color fonts)
 * xq (for some SVG stuff, only used in color fonts)
-* SILE (for specimen generation)
-* ImageMagick (for specimen generation)
+
+#### For specimens
+* SILE
+* ImageMagick
+* hb-view (`harfbuzz`)
+* ftdump (`freetype2-demos`)
+
+<sub>&dagger; These should be standard on most Linux distributions and on Windows under MSYS2.</sub>
