@@ -1,7 +1,7 @@
 \begin[papersize=1.4ft x 0.8ft]{document}
     \script[src=packages/color-fonts]
     \script[src=packages/rules]
-    \font[filename=dist/FRBAmericanCursive-GuidelinesArrows-Regular.otf,size=1.5em]{
+    \font[filename=dist/FRBAmericanCursive-400-GuidelinesArrowsRegular.otf,size=1.5em]{
         \par aa ab ac ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az
         \par ba bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz
         \par ca cb cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz
@@ -254,7 +254,7 @@
         \par ЮА ЮБ ЮВ ЮГ ЮД ЮЕ ЮЖ ЮЗ ЮИ ЮЙ ЮК ЮЛ ЮМ ЮН ЮО ЮП ЮР ЮС ЮТ ЮУ ЮФ ЮХ ЮЦ ЮЧ ЮШ ЮЩ ЮЪ ЮЫ ЮЬ ЮЭ ЮЮ ЮЯ
         \par ЯА ЯБ ЯВ ЯГ ЯД ЯЕ ЯЖ ЯЗ ЯИ ЯЙ ЯК ЯЛ ЯМ ЯН ЯО ЯП ЯР ЯС ЯТ ЯУ ЯФ ЯХ ЯЦ ЯЧ ЯШ ЯЩ ЯЪ ЯЫ ЯЬ ЯЭ ЯЮ ЯЯ
         \par\hrule[width=100%fw,height=0.1em]
-        \par ~ ¡ ¢ £ ¥ ¦ § « ­ ° µ ¶ · » ¿ Æ Ç × Ø Þ ß æ ç ð ÷ ø þ ı Œ œ ȷ   ! @ # $ % ^ & * ( ) { } < > ? /
+        \par ~ ¡ ¢ £ ¥ ¦ § « ­ ° µ ¶ · » ¿ Æ Ç × Ø Þ ß æ ç ð ÷ ø þ ı Œ œ ȷ   ! @ # $ \% ^ & * ( ) { } < > ? /
 }
 \end{document}
 

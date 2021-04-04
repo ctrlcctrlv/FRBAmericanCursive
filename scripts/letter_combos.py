@@ -7,7 +7,7 @@ print(r"""
 \begin[papersize=1.4ft x 0.8ft]{document}
     \script[src=packages/color-fonts]
     \script[src=packages/rules]
-    \font[filename=dist/FRBAmericanCursive-GuidelinesArrows-Regular.otf,size=1.5em]{"""[1:])
+    \font[filename=dist/FRBAmericanCursive-400-GuidelinesArrowsRegular.otf,size=1.5em]{"""[1:])
 
 combos_from_string=lambda s: [list(zip(e*len(s), s)) for e in s]
 lets=combos_from_string(string.ascii_lowercase)
@@ -51,7 +51,7 @@ print((" "*8)+PAR+(" ".join(cyrl_upper)))
 print((" "*8)+EJECT)
 print(((" "*8)+PAR)+("\n"+((" "*8)+PAR)).join([c.upper() for c in cyrl_combos]))
 print((" "*8)+HRULE)
-miscs="~¡¢£¥¦§«­°µ¶·»¿ÆÇ×ØÞßæçð÷øþıŒœȷ !@#$%^&*(){}<>?/"
+miscs=list("~¡¢£¥¦§«­°µ¶·»¿ÆÇ×ØÞßæçð÷øþıŒœȷ !@#$")+[r"\%"]+list("^&*(){}<>?/")
 print((" "*8)+PAR+(" ".join(miscs)))
 
 print(r"""}
