@@ -1,4 +1,4 @@
-SplineFontDB: 3.0
+SplineFontDB: 3.2
 FontName: patterns
 FullName: patterns
 FamilyName: patterns
@@ -40,7 +40,7 @@ UnicodeInterp: none
 NameList: AGL For New Fonts
 BeginPrivate: 0
 EndPrivate
-BeginChars: 10 10
+BeginChars: 11 11
 
 StartChar: _unused
 Encoding: 0 -1 0
@@ -412,6 +412,21 @@ SplineSet
  144 357 l 25
  290 503 l 1
  290 420 l 1049
+EndSplineSet
+EndChar
+
+StartChar: penis
+Encoding: 10 -1 10
+Width: 1000
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+379 128.5 m 25
+ 361.5 128.5 l 17
+ 361.5 68.5 134.5 277.5 212.5 277.5 c 1
+ 134.5 277.5 361.5 486.5 361.5 426.5 c 9
+ 379 426.5 l 1049
 EndSplineSet
 EndChar
 EndChars

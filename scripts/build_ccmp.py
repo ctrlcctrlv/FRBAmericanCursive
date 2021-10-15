@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import unicodedata
-import fontforge
+from fontTools import ufoLib
+import sys, shutil
 
 # Find glyphs in this range with at least one combining character, create characters for them with systematic uniXXXX names
 CCMP_REPLACEMENTS = {"i": "dotlessi", "j": "dotlessj"}
@@ -12,26 +13,41 @@ def ccmp_placeholders(f):
         if not any(["M" in unicodedata.category(chr(u)) for u in decomp]):
             continue
         try:
-            decomp_glyphs = [f[f.findEncodingSlot(u)].glyphname for u in decomp]
-        except TypeError as _:
+            cm = f.getCharacterMapping()
+            decomp_glyphs = [cm[u][0] for u in decomp]
+        except:
             continue
         decomp_glyphs = [CCMP_REPLACEMENTS[gn] if gn in CCMP_REPLACEMENTS else gn for gn in decomp_glyphs]
         placeholders[i] = decomp_glyphs
     return placeholders
 
 def create_and_build_placeholders(f):
-    for i, L in ccmp_placeholders(f).items():
-        f.createChar(i, "uni{:04X}".format(i))
-        g = f[f.findEncodingSlot(i)]
-        # This is a cursive font, so it's okay (even preferred) to draw ď as d + ◌̌
+    gs = f.getGlyphSet()
+    Glyph = gs.glyphClass
+    placeholders = ccmp_placeholders(f)
+    for i, L in placeholders.items():
+        g = Glyph(glyphName="uni{:04X}".format(i), glyphSet=gs)
         g.width = 1000
+        g.unicodes = [i]
+        gs.writeGlyph("uni{:04X}".format(i), g)
+    gs.writeContents()
+    return placeholders
 
 if __name__ == "__main__":
-    f = fontforge.open("FRBAmericanCursive.sfd")
+
+    _, ufodir, outdir = sys.argv
+
+    if ufodir != outdir:
+        try:
+            shutil.rmtree(outdir)
+        except OSError: pass
+
+    shutil.copytree(ufodir, outdir)
+    ufo = ufoLib.UFOReaderWriter(outdir)
+    placeholders = create_and_build_placeholders(ufo)
     print("feature ccmp {")
     print("    lookup ccmp_placeholders {")
-    for (i, vals) in ccmp_placeholders(f).items():
+    for (i, vals) in placeholders.items():
         print((" "*8)+"sub uni{:04X} by {};".format(i, " ".join(vals)))
     print("    } ccmp_placeholders;")
     print("} ccmp;")
-    f.close()

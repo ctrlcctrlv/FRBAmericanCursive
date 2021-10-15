@@ -2,7 +2,7 @@
 #Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\_unused \arrow \dot \pencil \arrow2 \serif \cjk_uptick \longarrow 
-	\line \arrowhead ];
+	\line \arrowhead \penis ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , , ;

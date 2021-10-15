@@ -1,5 +1,6 @@
 #!/bin/bash
 
+PYTHON="${PYTHON:-python3}"
 FONT=$1
 OS2WEIGHT=$2
 NAMEDWEIGHT=`echo $FONT | sed 's/\.ufo$//; s/.*-//'`
@@ -24,14 +25,12 @@ for f in build/COLR_glyphs/*; do
 	fi
 done
 
-# We combine the glyphs in the font this font will be based on on the glyphs which exist for CPAL purpose.
-./scripts/combine_plists.py build/COLR_glyphs/contents.plist build/"$FONT"/glyphs/contents.plist > build/"$FONT_GA"/glyphs/contents.plist
-./scripts/fudge_fontinfo.py build/"$FONT_GA" GuidelinesArrows $OS2WEIGHT $NAMEDWEIGHT
+./scripts/regen_glyphs_plist.py build/"$FONT_GA"/glyphs > build/"$FONT_GA"/glyphs/contents.plist
+./scripts/fudge_fontinfo.py build/"$FONT_GA" GuidelinesArrows"$NAMEDWEIGHT" "$OS2WEIGHT"
 # ufonormalizer build/"$FONT_GA"
-pypy3 -m fontmake --verbose DEBUG -u build/"$FONT_GA" --output-path "$FONT_GA_OTF" -o otf $ARGS
+$PYTHON -m fontmake --keep-overlaps --verbose DEBUG -u build/"$FONT_GA" --output-path "$FONT_GA_OTF" -o otf $ARGS
 
 # We only copied the guidelines so we have to regenerate the contents.plist from the contents.
 ./scripts/regen_glyphs_plist.py build/"$FONT_G"/glyphs > build/"$FONT_G"/glyphs/contents.plist
-./scripts/fudge_fontinfo.py build/"$FONT_G" Guidelines $OS2WEIGHT $NAMEDWEIGHT
-# ufonormalizer build/"$FONT_G"
-pypy3 -m fontmake --verbose DEBUG -u build/"$FONT_G" --output-path "$FONT_G_OTF" -o otf $ARGS
+./scripts/fudge_fontinfo.py build/"$FONT_G" Guidelines"$NAMEDWEIGHT" "$OS2WEIGHT"
+$PYTHON -m fontmake --keep-overlaps --verbose DEBUG -u build/"$FONT_G" --output-path "$FONT_G_OTF" -o otf $ARGS

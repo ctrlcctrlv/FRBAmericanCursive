@@ -3,8 +3,8 @@
   <advance width="401"/>
   <outline>
     <contour>
-      <point x="-0.124023" y="171.16" type="move"/>
-      <point x="53" y="171.16"/>
+      <point x="0" y="171.16" type="move"/>
+      <point x="53.124" y="171.16"/>
       <point x="92.9323" y="200"/>
       <point x="123" y="264.48" type="curve"/>
       <point x="108.038" y="231"/>

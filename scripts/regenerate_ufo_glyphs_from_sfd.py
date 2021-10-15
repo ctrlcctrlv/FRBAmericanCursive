@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
+# THIS SCRIPT IS DEPRECATED…EDIT .glif FILES DIRECTLY WITH MFEKglif
 import fontforge
 import tempfile
 import os
 import shutil
 
-tempufodir = tempfile.mkdtemp()
-ufoname = tempufodir+os.sep+"FRBAmericanCursive.ufo"
+fontfamily = os.environ["FONTFAMILY"]
 
-f = fontforge.open("FRBAmericanCursive.sfd")
+tempufodir = tempfile.mkdtemp()
+ufoname = tempufodir+os.sep+fontfamily+".ufo"
+
+f = fontforge.open(fontfamily+".sfd")
 f.generate(ufoname)
 
 try:
-    shutil.rmtree("FRBAmericanCursive-SOURCE.ufo/glyphs")
+    shutil.rmtree(fontfamily+"-SOURCE.ufo/glyphs")
 except OSError: pass
 
-shutil.copytree(ufoname+os.sep+"glyphs", "FRBAmericanCursive-SOURCE.ufo/glyphs")
+shutil.copytree(ufoname+os.sep+"glyphs", fontfamily+"-SOURCE.ufo/glyphs")
 shutil.rmtree(tempufodir)

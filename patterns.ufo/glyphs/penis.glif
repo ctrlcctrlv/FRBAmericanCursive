@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="penis" format="2">
+  <advance width="1000"/>
+  <outline>
+    <contour>
+      <point x="379" y="128.5" type="move"/>
+      <point x="361.5" y="128.5" type="line"/>
+      <point x="361.5" y="68.5"/>
+      <point x="134.5" y="277.5"/>
+      <point x="212.5" y="277.5" type="curve"/>
+      <point x="134.5" y="277.5"/>
+      <point x="361.5" y="486.5"/>
+      <point x="361.5" y="426.5" type="curve"/>
+      <point x="379" y="426.5" type="line"/>
+    </contour>
+  </outline>
+</glyph>

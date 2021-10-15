@@ -41,12 +41,8 @@ Like all my fonts except my earliest work, no non-free software was used at any 
 * GNU Parallel
 * GNU `bash`, `find`, `make`, and `sed`&dagger;
 * MFEKstroke&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
-* FontForge (w/Python API)
+* MFEKglif&Dagger; (to edit glyphs)
 * [`glifpathlen`](https://github.com/ctrlcctrlv/glifpathlen)&Dagger;
-* [`sfdnormalize`](https://github.com/alerque/sfdnormalize)
-* [`sfd2ufo`](https://github.com/alif-type/sfdLib)
-* Inkscape (for building the color fonts)
-* xq (for some SVG stuff, only used in color fonts)
 
 #### For specimens
 * SILE

@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 import csv
 import sys
-import fontforge
+from fontTools import ufoLib
+
+_, csv_fn, ufo_fn = sys.argv
 
 with open("build_data/top_marks") as f:
     top_marks = f.read().strip().split()
     print("@top_marks = [{}];".format(' '.join(top_marks)))
 
 gdefsimple = list()
-f = fontforge.open("FRBAmericanCursive.sfd")
-for g in f.glyphs():
-    if g.glyphname not in top_marks:
-        gdefsimple.append(g.glyphname)
+f = ufoLib.UFOReaderWriter(ufo_fn)
+for _, g in f.getCharacterMapping().items():
+    for gg in g:
+        if gg not in top_marks:
+            gdefsimple.append(gg)
 
 print("@GDEFSimple = [{}];".format(" ".join(gdefsimple)))
 
@@ -24,7 +27,7 @@ table GDEF {
 print("feature mark {")
 print("    markClass @top_marks <anchor 0 0> @top;")
 
-with open(sys.argv[1]) as csvf:
+with open(csv_fn) as csvf:
     r = csv.reader(csvf, delimiter="\t")
     for row in r:
         (glyph, x, y) = row

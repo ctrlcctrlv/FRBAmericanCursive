@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-# MFEKstroke PAP -m single --pattern /tmp/tmpjzrfe8zx.glif --path FRBAmericanCursive-SOURCE.ufo/glyphs/Q_.glif --out /tmp/Q_.glif --noffset=-50 --toffset=-5 -s 3 --simplify true --sx 0.5 --sy 0.5
 from xml.etree.ElementTree import ElementTree
 
 import os
@@ -89,11 +88,16 @@ out = subprocess.run(["MFEKstroke", "cws", "-i", outpath, "-w", "30", "-o", outp
 
 if finalfn is not None:
     shutil.copyfile(outpath_cws, finalfn)
+    os.unlink(outpath_cws)
+else:
+    print(outpath_cws)
 
-print(contours)
-print(split_glifs)
-print(split_glif_lengths)
-print(arrow_glyphs)
-print(output_arrows)
-print(outpath)
-print(outpath_cws)
+#print(contours)
+#print(split_glifs)
+#print(arrow_glyphs)
+#print(output_arrows)
+#print(split_glif_lengths)
+[os.unlink(fn) for fn in split_glifs]
+[os.unlink(fn) for fn in arrow_glyphs]
+[os.unlink(fn) for fn in output_arrows]
+os.unlink(outpath)
