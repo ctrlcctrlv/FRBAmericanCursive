@@ -11,11 +11,11 @@ import re
 
 glyphs = dict()
 
-for f in glob.glob(glyphsdir+"/*"):
+for f in glob.glob(glyphsdir+"/*.glif"):
     f = f[f.rindex(os.sep)+1:]
-    if f == "contents.plist": continue
     ff = f.removesuffix(".glif")
     m = re.sub(r"([A-Z])_", r"\1", ff)
     glyphs[m] = f
 
-print(plistlib.dumps(glyphs).decode("utf-8"))
+with open(glyphsdir+"/contents.plist", "w+b") as fp:
+    plistlib.dump(glyphs, fp)

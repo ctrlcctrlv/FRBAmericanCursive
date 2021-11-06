@@ -20,9 +20,9 @@ patterned-ap:
 .PHONY .ONESHELL: patterned-template
 patterned-template:
 	rm -rf build/$(FONTFAMILY)-$(STYLENAME).ufo
-	cp -r build/$(FONTFAMILY)-Regular.ufo build/$(FONTFAMILY)-$(STYLENAME).ufo
+	cp -r build/$(FONTFAMILY)-`./scripts/os2weight_to_namedweight.py $(OS2WEIGHT)`.ufo build/$(FONTFAMILY)-$(STYLENAME).ufo
 	./scripts/fudge_fontinfo.py build/$(FONTFAMILY)-$(STYLENAME).ufo $(STYLENAME) $(OS2WEIGHT)
-	parallel --bar 'MFEKstroke PAP --out build/$(FONTFAMILY)-$(STYLENAME).ufo/glyphs/{/} --path $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} --pattern $(PATTERN) -m repeated --sx $(MFEKSTROKE_SCALE) --sy $(MFEKSTROKE_SCALE) -s 1 --spacing 15 --stretch true' <<< "$$GLYPHS"
+	parallel --bar 'MFEKstroke PAP --out build/$(FONTFAMILY)-$(STYLENAME).ufo/glyphs/{/} --path $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} --pattern $(PATTERN) -m repeated --sx $(MFEKSTROKE_SCALE) --sy $(MFEKSTROKE_SCALE) -s 0 --spacing 15 --overdraw 15%% -Q' <<< "$$GLYPHS"
 	ARGS=`./scripts/fontmake_args.sh`
 	$(PYTHON) -m fontmake --keep-overlaps --verbose DEBUG -u build/$(FONTFAMILY)-$(STYLENAME).ufo --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$ARGS && printf '\033[1;31m Generated $(FONTFAMILY)-$(STYLENAME).ufo\033[0m\n'
 

@@ -6,8 +6,12 @@ if [[ -z $FONTFAMILY ]]; then
 fi
 
 # Stroke all glyphs, removing internal contours (useful for !, i, j, ?, …, :, etc.)
-find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel MFEKstroke CWS -i {} -o build/$FONTFAMILY-"$1".ufo/glyphs/{/} -w "$2" --remove-internal
+NAMEDWEIGHT=$1
+WIDTH=$2
+OS2WEIGHT=$3
+
+find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel MFEKstroke CWS -i {} -o build/$FONTFAMILY-"$NAMEDWEIGHT".ufo/glyphs/{/} -w "$WIDTH" --remove-internal
 # Restroke glyphs which shouldn't have their internal contours removed
-find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname 'zero.glif' -or -iname 'degree.glif' -or -iname 'uni030A_.glif' -or -iname 'O_slash*' | parallel MFEKstroke CWS -i {} -o build/$FONTFAMILY-"$1".ufo/glyphs/{/} -w "$2"
+find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname 'zero.glif' -or -iname 'degree.glif' -or -iname 'uni030A_.glif' -or -iname 'O_slash*' | parallel MFEKstroke CWS -i {} -o build/$FONTFAMILY-"$NAMEDWEIGHT".ufo/glyphs/{/} -w "$WIDTH"
 # Generate OTF
-python3 -m fontmake --verbose DEBUG -u build/$FONTFAMILY-"$1".ufo --output-path dist/$FONTFAMILY-"$3"-"$1".otf -o otf $ARGS
+python3 -m fontmake --verbose DEBUG -u build/$FONTFAMILY-"$NAMEDWEIGHT".ufo --output-path dist/$FONTFAMILY-"$OS2WEIGHT"-"$NAMEDWEIGHT".otf -o otf $ARGS

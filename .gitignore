@@ -1,0 +1,14 @@
+__pycache__/
+py_environment/
+# nuitka
+*.bin/
+*.build/
+*.dist/
+#
+/inspiration/
+/build/
+.build/
+.dist/
+*.zip
+*.bak
+*.ufo/**/*.svg

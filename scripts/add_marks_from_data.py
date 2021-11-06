@@ -27,7 +27,7 @@ for m in topmarks:
 csvf = open("build_data/top.tsv")
 r = csv.reader(csvf, delimiter="\t")
 for row in r:
-    (glyph, x, y) = row
+    (glyph, x, y, class_) = row
     glif_fn = ufo+"/glyphs/"+glyphNameToFileName(glyph, None)
     with open(glif_fn) as f:
         glif = f.read()

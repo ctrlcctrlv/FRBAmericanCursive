@@ -27,7 +27,9 @@ This isn't your grandmother's Fontographer font. It is best to think of it as a 
 
 Like all my fonts except my earliest work, no non-free software was used at any point during development.
 
-### Needed pip packages
+Warning: FRB American Cursive generates *a lot* of files during compilation. On my machine, these files required a combined 1.3GB of space. You have been warned.
+
+### Needed pip (Python 3) packages
 
 * ufo-extractor
 * defcon
@@ -43,6 +45,7 @@ Like all my fonts except my earliest work, no non-free software was used at any 
 * MFEKstroke&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
 * MFEKglif&Dagger; (to edit glyphs)
 * [`glifpathlen`](https://github.com/ctrlcctrlv/glifpathlen)&Dagger;
+* [Xidel](https://github.com/benibela/xidel)
 
 #### For specimens
 * SILE
@@ -50,6 +53,9 @@ Like all my fonts except my earliest work, no non-free software was used at any 
 * ImageMagick
 * hb-view (`harfbuzz`)
 * ftdump (`freetype2-demos`)
+
+#### For physics
+FRB American Cursive v2 optionally requires a physics simulator to figure out the correct placement of its stroke numbers. This saves a lot of time for the designer, but can be a bit cumbersome to set up, so building is possible without it. v2 uses the Java version of [Processing](https://processing.org/) plus [toxiclibs](https://toxiclibs.org) as its physics engine; you'll also need to install [geomerative](http://www.ricardmarxer.com/geomerative/geomerative-39.zip) to `sketchbook/libraries`. This might change in future releases.
 
 <sub>&dagger; These should be standard on most Linux distributions and on Windows under MSYS2.</sub>
 <sub>&Dagger; These are Rust projects and need to be compiled by <kbd>cargo</kbd> and installed into your <kbd>PATH</kbd>.</sub>

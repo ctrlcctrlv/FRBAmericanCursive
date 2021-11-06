@@ -1,138 +1,138 @@
-a	343	400
-A	531	650
-A.alt	532	650
-a.high	330	400
-a.low	356	400
-A.rlow	553	650
-B	544	650
-b	584	650
-B.fina	502	650
-b.high	369	650
-B.highfina	546	650
-b.low	446	650
-B.lowfina	621	650
-B.rlow	554	650
-B.rlowhigh	561	650
-B.rlowlow	633	650
-c	214	400
-C	436	650
-c.high	234	400
-c.low	309	400
-C.rlow	451	650
-d	489	650
-D	582	650
-d.high	505	650
-d.low	563	650
-dotlessi	401	400
-dotlessi.high	254	400
-dotlessi.low	268	400
-dotlessj	409	400
-dotlessj.high	229	400
-dotlessj.low	246	400
-D.rhigh	606	650
-e	222	400
-E	412	650
-e.high	201	400
-e.low	215	400
-E.rlow	423	650
-f	388	650
-F	537	650
-f.high	352	650
-f.low	426	650
-F.rlow	533	650
-g	314	400
-G	644	650
-g.high	323	400
-g.low	379	400
-G.rlow	547	650
-H	537	650
-h	620	650
-h.high	412	650
-h.low	460	650
-H.rhigh	540	650
-I	682	650
-I.rlow	700	650
-J	349	650
-J.rlow	329	650
-K	486	650
-k	625	650
-k.high	390	650
-k.low	451	650
-K.rlow	461	650
-l	346	650
-L	592	650
-l.high	335	650
-l.low	431	650
-L.rlow	579	650
-m	578	400
-M	600	650
-m.high	490	400
-m.low	544	400
-M.rlow	543	650
-N	459	650
-n	514	400
-n.high	354	400
-n.low	409	400
-N.rlow	430	650
-o	262	400
-O	530	650
-o.alt	240	400
-o.high	277	400
-o.low	393	400
-O.rhigh	459	650
-P	512	650
-p	527	400
-p.high	396	400
-p.low	470	400
-P.rhigh	515	650
-q	321	400
-Q	378	650
-q.high	325	400
-q.low	366	400
-Q.rlow	386	650
-r	490	400
-R	556	650
-r.high	235	400
-r.low	345	400
-R.rlow	526	650
-R.rlowhigh	566	650
-R.rlowlow	626	650
-s	403	400
-S	682	650
-s.high	301	400
-s.low	276	400
-S.rhigh	686	650
-t	273	650
-T	558	650
-t.alt	550	650
-t.high	375	650
-t.low	425	650
-T.rhigh	547	650
-u	335	400
-U	526	650
-u.alt	558	400
-u.high	348	400
-u.low	364	400
-U.rlow	457	650
-v	498	400
-V	508	650
-v.high	295	400
-v.low	421	400
-w	613	400
-W	715	650
-w.high	422	400
-w.low	443	400
-x	439	400
-X	498	650
-x.high	271	400
-x.low	369	400
-y	538	400
-Y	554	650
-y.high	372	400
-y.low	413	400
-Y.rlow	452	650
-z	359	400
-Z	419	650
-z.high	250	400
-z.low	284	400
-Z.rlow	390	650
+a	343	400	top
+A	531	650	top
+A.alt	532	650	top
+a.high	330	400	top
+a.low	356	400	top
+A.rlow	553	650	top
+B	544	650	top
+b	584	650	top
+B.fina	502	650	top
+b.high	369	650	top
+B.highfina	546	650	top
+b.low	446	650	top
+B.lowfina	621	650	top
+B.rlow	554	650	top
+B.rlowhigh	561	650	top
+B.rlowlow	633	650	top
+c	214	400	top
+C	436	650	top
+c.high	234	400	top
+c.low	309	400	top
+C.rlow	451	650	top
+d	489	650	top
+D	582	650	top
+d.high	505	650	top
+d.low	563	650	top
+dotlessi	401	400	top
+dotlessi.high	254	400	top
+dotlessi.low	268	400	top
+dotlessj	409	400	top
+dotlessj.high	229	400	top
+dotlessj.low	246	400	top
+D.rhigh	606	650	top
+e	222	400	top
+E	412	650	top
+e.high	201	400	top
+e.low	215	400	top
+E.rlow	423	650	top
+f	388	650	top
+F	537	650	top
+f.high	352	650	top
+f.low	426	650	top
+F.rlow	533	650	top
+g	314	400	top
+G	644	650	top
+g.high	323	400	top
+g.low	379	400	top
+G.rlow	547	650	top
+H	537	650	top
+h	620	650	top
+h.high	412	650	top
+h.low	460	650	top
+H.rhigh	540	650	top
+I	682	650	top
+I.rlow	700	650	top
+J	349	650	top
+J.rlow	329	650	top
+K	486	650	top
+k	625	650	top
+k.high	390	650	top
+k.low	451	650	top
+K.rlow	461	650	top
+l	346	650	top
+L	592	650	top
+l.high	335	650	top
+l.low	431	650	top
+L.rlow	579	650	top
+m	578	400	top
+M	600	650	top
+m.high	490	400	top
+m.low	544	400	top
+M.rlow	543	650	top
+N	459	650	top
+n	514	400	top
+n.high	354	400	top
+n.low	409	400	top
+N.rlow	430	650	top
+o	262	400	top
+O	530	650	top
+o.alt	240	400	top
+o.high	277	400	top
+o.low	393	400	top
+O.rhigh	459	650	top
+P	512	650	top
+p	527	400	top
+p.high	396	400	top
+p.low	470	400	top
+P.rhigh	515	650	top
+q	321	400	top
+Q	378	650	top
+q.high	325	400	top
+q.low	366	400	top
+Q.rlow	386	650	top
+r	490	400	top
+R	556	650	top
+r.high	235	400	top
+r.low	345	400	top
+R.rlow	526	650	top
+R.rlowhigh	566	650	top
+R.rlowlow	626	650	top
+s	403	400	top
+S	682	650	top
+s.high	301	400	top
+s.low	276	400	top
+S.rhigh	686	650	top
+t	273	650	top
+T	558	650	top
+t.alt	550	650	top
+t.high	375	650	top
+t.low	425	650	top
+T.rhigh	547	650	top
+u	335	400	top
+U	526	650	top
+u.alt	558	400	top
+u.high	348	400	top
+u.low	364	400	top
+U.rlow	457	650	top
+v	498	400	top
+V	508	650	top
+v.high	295	400	top
+v.low	421	400	top
+w	613	400	top
+W	715	650	top
+w.high	422	400	top
+w.low	443	400	top
+x	439	400	top
+X	498	650	top
+x.high	271	400	top
+x.low	369	400	top
+y	538	400	top
+Y	554	650	top
+y.high	372	400	top
+y.low	413	400	top
+Y.rlow	452	650	top
+z	359	400	top
+Z	419	650	top
+z.high	250	400	top
+z.low	284	400	top
+Z.rlow	390	650	top

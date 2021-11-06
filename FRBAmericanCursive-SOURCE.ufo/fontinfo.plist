@@ -11,7 +11,7 @@
 	<key>capHeight</key>
 	<integer>540</integer>
 	<key>openTypeOS2TypoDescender</key>
-	<integer>291</integer>
+	<integer>-350</integer>
 	<key>copyright</key>
 	<string>Copyright 2021 Fredrick R. Brennan</string>
 	<key>familyName</key>
@@ -151,7 +151,7 @@ modification follow.
 (Due to the technical limitations of the `name` table, it is impossible
 to put the full license text here. Please see the LICENSE file in the
 archive for the full terms and conditions, or visit
-&lt;https://www.gnu.org/licenses/gpl-3.0.txt&gt;.)
+&lt;https://www.gnu.org/licenses/gpl-3.0.txt&gt;.)"
 	</string>
 	<key>openTypeNameLicenseURL</key>
 	<string>https://www.gnu.org/licenses/gpl-3.0.txt</string>

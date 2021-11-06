@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="5.0">
+<axes>
+  <axis default="12" minimum="12" maximum="48" name="Optical Size" tag="opsz"/>
+</axes>
+<sources>
+  <source filename="$FONT">
+    <location>
+      <dimension name="Optical Size" xvalue="12"/>
+    </location>
+  </source>
+  <source filename="$FONT">
+    <location>
+      <dimension name="Optical Size" xvalue="48"/>
+    </location>
+  </source>
+</sources>
+<!-- This rule is only here to create the needed OpenType FeatureVariations table with a lookup ready to go to be switched out by rewrite_feature_substitutions.py -->
+<rules processing="last">
+    <rule name="named.rule.1">
+        <condition minimum="48" maximum="48" name="Optical Size" />
+        <sub name="A" with="A.alt"/>
+    </rule>
+</rules>
+</designspace>

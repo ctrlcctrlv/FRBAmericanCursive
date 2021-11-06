@@ -1,10 +1,12 @@
-FONTFAMILY=FRBAmericanCursive
-
 .PHONY: regen
 regen:
 	mkdir -p build dist
-	./scripts/tsv_to_mark.py build_data/top.tsv $(FONTFAMILY)-SOURCE.ufo > fea/mark.fea
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
+	for f in numbers.ufo/glyphs/__combstroke[0123456789].glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
+	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
+	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
+	./scripts/tsv_to_mark.py build_data/top.tsv > fea/mark.fea
+	./scripts/stroke_count_fea.sh > fea/strokes.fea
 
 .PHONY: regen-from-deprecated-fontforge-files
 regen-from-deprecated-fontforge-files:

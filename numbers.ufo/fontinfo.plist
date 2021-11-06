@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>familyName</key>
+    <string>numbers</string>
+    <key>styleName</key>
+    <string>Regular</string>
+    <key>styleMapFamilyName</key>
+    <string>numbers</string>
+    <key>styleMapStyleName</key>
+    <string>regular</string>
+    <key>versionMajor</key>
+    <integer>1</integer>
+    <key>versionMinor</key>
+    <integer>0</integer>
+    <key>copyright</key>
+    <string>Copyright 2021, Fredrick R. Brennan. This font is a build file of FRB American Cursive.</string>
+    <key>unitsPerEm</key>
+    <integer>1000</integer>
+    <key>ascender</key>
+    <integer>800</integer>
+    <key>descender</key>
+    <integer>-200</integer>
+    <key>italicAngle</key>
+    <real>0</real>
+    <key>note</key>
+    <string>2021-10-18: Created with FontForge (http://fontforge.org)</string>
+    <key>openTypeHeadCreated</key>
+    <string>2021/10/18 07:13:40</string>
+    <key>openTypeHheaAscender</key>
+    <integer>60</integer>
+    <key>openTypeHheaDescender</key>
+    <integer>-49</integer>
+    <key>openTypeHheaLineGap</key>
+    <integer>90</integer>
+    <key>openTypeNameVersion</key>
+    <string>Version 1.000</string>
+    <key>openTypeOS2WidthClass</key>
+    <integer>5</integer>
+    <key>openTypeOS2WeightClass</key>
+    <integer>400</integer>
+    <key>openTypeOS2VendorID</key>
+    <string>QQQQ</string>
+    <key>openTypeOS2FamilyClass</key>
+    <array>
+      <integer>0</integer>
+      <integer>0</integer>
+    </array>
+    <key>openTypeOS2Type</key>
+    <array/>
+    <key>openTypeOS2TypoAscender</key>
+    <integer>800</integer>
+    <key>openTypeOS2TypoDescender</key>
+    <integer>-200</integer>
+    <key>openTypeOS2TypoLineGap</key>
+    <integer>90</integer>
+    <key>openTypeOS2WinAscent</key>
+    <integer>60</integer>
+    <key>openTypeOS2WinDescent</key>
+    <integer>49</integer>
+    <key>postscriptFontName</key>
+    <string>numbers</string>
+    <key>postscriptFullName</key>
+    <string>numbers</string>
+    <key>postscriptWeightName</key>
+    <string>Regular</string>
+    <key>postscriptUnderlineThickness</key>
+    <integer>50</integer>
+    <key>postscriptUnderlinePosition</key>
+    <integer>-100</integer>
+    <key>guidelines</key>
+    <array/>
+  </dict>
+</plist>

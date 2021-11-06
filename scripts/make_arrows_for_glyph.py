@@ -9,11 +9,15 @@ import sys
 import subprocess
 import tempfile
 
+import make_arrow_glyph
+
 if len(sys.argv) == 2:
     (_, gliffn) = sys.argv
     finalfn = None
-elif len(sys.argv) == 3:
-    (_, gliffn, finalfn) = sys.argv
+    target_size = -25
+elif len(sys.argv) == 4:
+    (_, gliffn, finalfn, target_size_i) = sys.argv
+    target_size = (int(target_size_i)/2)+25
 else:
     raise NotImplementedError
 
@@ -36,7 +40,7 @@ split_glifs = list()
 for i, contour in enumerate(contours):
     root.find("outline").clear()
     root.find("outline").append(contour)
-    fn = os.sep+"tmp"+os.sep+gliffn.split(os.sep)[-1]+str(i)
+    fn = tempfile.mkstemp()[1]
     with open(fn, "wb+") as f:
         dom.write(f)
     split_glifs.append(fn)
@@ -52,22 +56,23 @@ for glif in split_glifs:
 arrow_glyphs = list()
 
 for length in split_glif_lengths:
-    arrowglif = subprocess.run(["python3", "./scripts/make_arrow_glyph.py", str(length-70)], capture_output=True)
-    stdout = arrowglif.stdout
-    arrow_glyphs.append(stdout.decode("utf-8").strip())
+    if length-70 > make_arrow_glyph.MAXLEN:
+        arrow_glyphs.append("build_data/arrow_{}.glif".format(make_arrow_glyph.MAXLEN))
+    else:
+        arrow_glyphs.append( make_arrow_glyph.run(length-70) )
 
 # Then we need to call MFEKstroke
 output_arrows = list()
 for i, arrow in enumerate(arrow_glyphs):
-    out = subprocess.run(["MFEKstroke", "PAP", "-m", "single", "--pattern", arrow, "--path", split_glifs[i], "--out", split_glifs[i]+"_arrow", "--noffset=-50", "--toffset=-5", "-s", "4", "--sx", "0.5", "--sy", "0.5"])
+    out = subprocess.run(["MFEKstroke", "PAP", "-m", "single", "--pattern", arrow, "--path", split_glifs[i], "--out", split_glifs[i]+"_arrow", "--noffset=-"+str(target_size), "--toffset=-5", "-s", "4", "--sx", "0.5", "--sy", "0.5"])
     output_arrows.append(split_glifs[i]+"_arrow")
 
 # Then we need to join all the glif files
-gliffnb = gliffn.split(os.sep)[-1]
-outfile = gliffnb[:gliffnb.rindex(".")]+"_arrows.glif"
+outfile = gliffn.split(os.sep)[-1]
 outfile_cws = outfile[:outfile.rindex(".")]+"_cws.glif"
-outpath = os.sep + "tmp" + os.sep + outfile
-outpath_cws = os.sep + "tmp" + os.sep + outfile_cws
+#outpath = "build" + os.sep + "arrow_glyphs" + os.sep + outfile
+outpath = finalfn.replace("COLR", "arrow")
+outpath_cws = tempfile.mkstemp()[1]
 
 with open(output_arrows[0], "rb") as af:
     dom = ElementTree(file=af)
@@ -84,7 +89,7 @@ for arrow in output_arrows[1:]:
 with open(outpath, "wb+") as f:
     dom.write(f)
 
-out = subprocess.run(["MFEKstroke", "cws", "-i", outpath, "-w", "30", "-o", outpath_cws, "-s", "square", "-e", "patterns.ufo/glyphs/arrowhead.glif"])
+out = subprocess.run(["MFEKstroke", "CWS", "-i", outpath, "-w", "20", "-o", outpath_cws, "-s", "square", "-e", "patterns.ufo/glyphs/arrowhead.glif"])
 
 if finalfn is not None:
     shutil.copyfile(outpath_cws, finalfn)
@@ -98,6 +103,5 @@ else:
 #print(output_arrows)
 #print(split_glif_lengths)
 [os.unlink(fn) for fn in split_glifs]
-[os.unlink(fn) for fn in arrow_glyphs]
+[os.unlink(fn) for fn in arrow_glyphs if "build_data" not in fn]
 [os.unlink(fn) for fn in output_arrows]
-os.unlink(outpath)
