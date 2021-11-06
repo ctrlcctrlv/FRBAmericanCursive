@@ -60,18 +60,6 @@ FRB American Cursive v2 optionally requires a physics simulator to figure out th
 <sub>&dagger; These should be standard on most Linux distributions and on Windows under MSYS2.</sub>
 <sub>&Dagger; These are Rust projects and need to be compiled by <kbd>cargo</kbd> and installed into your <kbd>PATH</kbd>.</sub>
 
-### Note on Python interpreter
-
-Right now the Makefiles are expecting you to have `fontmake` installed _through PyPy_. `fontmake` is noticeably faster through PyPy, which matters quite a lot when building ≈70 fonts.
-
-I installed it like this:
-
-```bash
-pypy3 -m pip install --user fontmake
-```
-
-PyPy may not be convenient for you. If not, just remove it from the Makefile's. Patch welcome to add a Python interpreter flag to the Makefile's, I didn't have time. Note that you need _both_ CPython and PyPy, because FontForge only works via CPython and a lot of scripts early in the build process require the FontForge API. (`make regen` etc.)
-
 ### Build process
 
 On `make`, this is the general flow:
