@@ -42,9 +42,9 @@ Warning: FRB American Cursive generates *a lot* of files during compilation. On 
 
 * GNU Parallel
 * GNU `bash`, `find`, `make`, and `sed`&dagger;
+* MFEKmetadata&Dagger; (used to build arrows)
 * MFEKstroke&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
 * MFEKglif&Dagger; (to edit glyphs)
-* [`glifpathlen`](https://github.com/ctrlcctrlv/glifpathlen)&Dagger;
 * [Xidel](https://github.com/benibela/xidel)
 
 #### For specimens

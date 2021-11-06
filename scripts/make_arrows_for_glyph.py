@@ -45,11 +45,10 @@ for i, contour in enumerate(contours):
         dom.write(f)
     split_glifs.append(fn)
 
-# Then we need to measure the contours. Using glifpathlen: https://github.com/ctrlcctrlv/glifpathlen
 split_glif_lengths = list()
 
 for glif in split_glifs:
-    length = subprocess.run(["glifpathlen", glif], capture_output=True).stdout
+    length = subprocess.run(["MFEKmetadata", glif, "glyphpathlen"], capture_output=True).stdout
     split_glif_lengths.append(float(length))
 
 # Then we need to make arrow glyphs for each contour length
