@@ -10,7 +10,7 @@ print(r"""
 \begin[papersize=1.4ft x 0.8ft]{{document}}
     \script[src=packages/color-fonts]
     \script[src=packages/rules]
-    \font[filename=dist/{}-400-GuidelinesArrowsRegular.otf,size=1.5em]{{""".format(fontfamily)[1:])
+    \font[filename=dist/{}-400-GuidelinesArrowsRegular_NOVF.ttf,size=1.5em]{{""".format(fontfamily)[1:])
 
 combos_from_string=lambda s: [list(zip(e*len(s), s)) for e in s]
 lets=combos_from_string(string.ascii_lowercase)

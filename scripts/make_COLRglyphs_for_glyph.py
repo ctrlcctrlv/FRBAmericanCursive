@@ -44,6 +44,7 @@ with open(gliffn) as f:
     firsts = [c[0] for c in glyph.contours]
     lasts = [c[-1] for c in glyph.contours]
     glyph.clearContours()
+
     p.moveTo((0, 0))
     p.lineTo((glyph.width, 0))
     p.endPath()
@@ -58,8 +59,10 @@ with open(gliffn) as f:
     tempf = tempfile.mkstemp()[1]
     with open(tempf, "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
-    if glyph.width == 0:
-        shutil.copyfile(tempf, glf)
+    if glyph.width <= 0:
+        glyph.clearContours()
+        with open(glf, "w+") as f:
+            print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke CWS -i {} -o {} -w 30".format(tempf, glf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
@@ -72,7 +75,9 @@ with open(gliffn) as f:
     with open(tempf, "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
     if glyph.width <= 30:
-        shutil.copyfile(tempf, xhf)
+        glyph.clearContours()
+        with open(xhf, "w+") as f:
+            print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke PaP --pattern patterns.ufo/glyphs/dot.glif --path {} --out {} -m repeated --sx 0.5 --sy 0.5 --spacing 30 --stretch spacing".format(tempf, xhf), **SUBPROCESS_KWARGS)
     glyph.clearContours()

@@ -27,12 +27,16 @@ done
 function make_combined() {
 	FONT=$1
 	OTF=$2
+	OTF_NOVF=${OTF%%.otf}_NOVF.ttf
+	DESIGNSPACE=`mktemp --suffix=.designspace`
 	echo Writing to $FONT $OTF
 	./scripts/regen_glyphs_plist.py build/"$FONT"/glyphs
 	./scripts/fudge_fontinfo.py build/"$FONT" GuidelinesArrows"$NAMEDWEIGHT" "$OS2WEIGHT"
-	xidel --xml --xquery 'transform(/, function($e){if (name($e) = "source") then <source filename="'$FONT'">{$e/@* except $e/@filename, $e/*}</source> else $e})' build_data/FRBAC.designspace > build/FRBAC.designspace
+	xidel --xml --xquery 'transform(/, function($e){if (name($e) = "source") then <source filename="'$PWD/build/$FONT'">{$e/@* except $e/@filename, $e/*}</source> else $e})' build_data/FRBAC.designspace > "$DESIGNSPACE"
 	# ufonormalizer build/"$FONT"
-	$PYTHON -m fontmake --keep-overlaps --verbose DEBUG -m build/FRBAC.designspace --output-path "$OTF" -o variable $ARGS
+	$PYTHON -m fontmake --verbose DEBUG -u "build/$FONT" --output-path "$OTF_NOVF" -o ttf $ARG
+	$PYTHON -m fontmake --keep-overlaps --verbose DEBUG -m "$DESIGNSPACE" --output-path "$OTF" -o variable-cff2 $ARGS
+	rm "$DESIGNSPACE"
 }
 make_combined $FONT_GA $FONT_GA_OTF
 make_combined $FONT_G $FONT_G_OTF

@@ -4,7 +4,7 @@ lookup LatnMedi {
 } LatnMedi;
 
 lookup LatnFina {
-    #lookupflag IgnoreMarks;
+    lookupflag IgnoreMarks;
     sub a by a.low tail.lowwide;
     sub b by b.low tail.high;
     sub c by c.low tail.low;
@@ -43,7 +43,7 @@ lookup LatnFina {
 } LatnFina;
 
 lookup LatnIsolFina {
-    #lookupflag IgnoreMarks;
+    lookupflag IgnoreMarks;
     sub a by a tail.lowwide;
     sub b by b tail.high;
     sub c by c tail.low;
@@ -149,7 +149,7 @@ feature ccmp {
 
     lookup ccmp1_9 {
         lookupflag IgnoreMarks;
-        sub [tail.low tail.lowwide tail.high]' lookup LatnNullTail quotesingle @Latn_lower;
+        sub [tail.low tail.lowwide tail.high]' lookup LatnNullTail [quotesingle quoteright] @Latn_lower;
     } ccmp1_9;
 
     lookup ccmp1_10 {

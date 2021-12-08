@@ -26,6 +26,7 @@ colrcpal:
 	parallel --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
 	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-{1}.ufo {2}
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{2}-GuidelinesArrows{1}.otf build/$(FONTFAMILY)-{1}.ufo
+	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{2}-GuidelinesArrows{1}_NOVF.ttf build/$(FONTFAMILY)-{1}.ufo
 	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{2}-GuidelinesArrows{1}.otf
 	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{2}-Guidelines{1}.otf
 	'
@@ -35,5 +36,6 @@ colrcpal:
 debug-colrcpal:
 	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-Regular.ufo 400
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrowsRegular.otf build/$(FONTFAMILY)-Regular.ufo
+	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrowsRegular_NOVF.ttf build/$(FONTFAMILY)-Regular.ufo
 	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-GuidelinesArrowsRegular.otf
 	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-GuidelinesRegular.otf

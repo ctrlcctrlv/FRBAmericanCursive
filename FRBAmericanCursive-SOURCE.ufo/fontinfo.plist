@@ -4,71 +4,67 @@
 <dict>
 	<key>ascender</key>
 	<integer>650</integer>
-	<key>descender</key>
-	<integer>-350</integer>
-	<key>xHeight</key>
-	<integer>264</integer>
 	<key>capHeight</key>
 	<integer>540</integer>
-	<key>openTypeOS2TypoDescender</key>
-	<integer>-350</integer>
 	<key>copyright</key>
 	<string>Copyright 2021 Fredrick R. Brennan</string>
+	<key>descender</key>
+	<integer>-350</integer>
 	<key>familyName</key>
 	<string>FRB American Cursive</string>
 	<key>guidelines</key>
 	<array>
 		<dict>
 			<key>angle</key>
-			<real>0.0</real>
+			<real>0</real>
 			<key>x</key>
-			<real>500.0</real>
+			<real>500</real>
 			<key>y</key>
-			<real>-291.0</real>
+			<real>-291</real>
 		</dict>
 		<dict>
 			<key>angle</key>
-			<real>0.0</real>
+			<real>0</real>
 			<key>x</key>
-			<real>500.0</real>
+			<real>500</real>
 			<key>y</key>
 			<real>171.16</real>
 		</dict>
 		<dict>
 			<key>angle</key>
-			<real>0.0</real>
+			<real>0</real>
 			<key>x</key>
-			<real>500.0</real>
+			<real>500</real>
 			<key>y</key>
 			<real>76.6639</real>
 		</dict>
 		<dict>
 			<key>angle</key>
-			<real>0.0</real>
+			<real>0</real>
 			<key>x</key>
-			<real>500.0</real>
+			<real>500</real>
 			<key>y</key>
 			<real>540.953</real>
 		</dict>
 		<dict>
 			<key>angle</key>
-			<real>0.0</real>
+			<real>0</real>
 			<key>x</key>
-			<real>625.0</real>
+			<real>625</real>
 			<key>y</key>
 			<real>264.48</real>
 		</dict>
 		<dict>
 			<key>angle</key>
-			<real>0.0</real>
+			<real>0</real>
 			<key>x</key>
-			<real>625.0</real>
+			<real>625</real>
 			<key>y</key>
 			<real>0.271484</real>
 		</dict>
 	</array>
 	<key>italicAngle</key>
-	<real>-25.0</real>
+	<real>-25</real>
 	<key>openTypeHeadCreated</key>
 	<string>2021/01/04 01:14:38</string>
 	<key>openTypeHheaAscender</key>
@@ -81,7 +77,7 @@
 	<string>                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;
+ Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -151,12 +147,14 @@ modification follow.
 (Due to the technical limitations of the `name` table, it is impossible
 to put the full license text here. Please see the LICENSE file in the
 archive for the full terms and conditions, or visit
-&lt;https://www.gnu.org/licenses/gpl-3.0.txt&gt;.)"
+&lt;https://www.gnu.org/licenses/gpl-3.0.txt>.)"
 	</string>
 	<key>openTypeNameLicenseURL</key>
 	<string>https://www.gnu.org/licenses/gpl-3.0.txt</string>
 	<key>openTypeNameVersion</key>
 	<string>Version 1.2.1</string>
+	<key>openTypeOS2TypoDescender</key>
+	<integer>-350</integer>
 	<key>postscriptFontName</key>
 	<string>FRBAmericanCursive-Regular</string>
 	<key>postscriptFullName</key>
@@ -179,5 +177,7 @@ archive for the full terms and conditions, or visit
 	<integer>1</integer>
 	<key>versionMinor</key>
 	<integer>2</integer>
+	<key>xHeight</key>
+	<integer>264</integer>
 </dict>
 </plist>

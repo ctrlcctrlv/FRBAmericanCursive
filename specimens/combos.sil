@@ -1,7 +1,7 @@
 \begin[papersize=1.4ft x 0.8ft]{document}
     \script[src=packages/color-fonts]
     \script[src=packages/rules]
-    \font[filename=dist/FRBAmericanCursive-400-GuidelinesArrowsRegular.otf,size=1.5em]{
+    \font[filename=dist/FRBAmericanCursive-400-GuidelinesArrowsRegular_NOVF.ttf,size=1.5em]{
         \par aa ab ac ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az
         \par ba bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz
         \par ca cb cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct cu cv cw cx cy cz
