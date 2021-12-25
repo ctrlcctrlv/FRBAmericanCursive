@@ -29,12 +29,12 @@ Like all my fonts except my earliest work, no non-free software was used at any 
 
 Warning: FRB American Cursive generates *a lot* of files during compilation. On my machine, these files required a combined 1.3GB of space. You have been warned.
 
-### Needed pip (Python 3) packages
+### Needed pip (Python 3 PyPI) packages
 
 * ufo-extractor
 * defcon
 * beziers.py
-* fontFeatures
+* fez-language
 * fonttools
 * afdko
 

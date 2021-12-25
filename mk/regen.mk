@@ -15,7 +15,11 @@ regen-from-deprecated-fontforge-files:
 	fontforge -lang=py -c 'f=fontforge.open("patterns.sfd");f.generate("patterns.ufo")'
 	sfdnormalize patterns.sfd patterns_temp.sfd && mv patterns_temp.sfd patterns.sfd
 
-# Regenerate the OpenType classes used in the feature files. You need this if you add glyphs to the SFD and want them to be shaped properly based on their names.
-.PHONY: fee-classes
-fee-classes:
-	fee2fea dist/$(FONTFAMILY)-1000-Ultra.otf fea/classes.fee --omit-gdef > fea/classes.fea
+.PHONY: fez-classes
+fez-classes:
+	rm -rf /tmp/fezinput.ufo
+	cp -r $(FONTFAMILY)-SOURCE.ufo/ /tmp/fezinput.ufo
+	rm /tmp/fezinput.ufo/features.fea
+	fontmake --keep-overlaps -u /tmp/fezinput.ufo -o otf --output-path build/fezinput.otf
+	rm -rf /tmp/fezinput.ufo
+	fez2fea build/fezinput.otf fea/classes.fez --omit-gdef > fea/classes.fea

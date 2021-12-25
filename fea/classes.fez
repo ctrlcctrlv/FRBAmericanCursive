@@ -1,12 +1,17 @@
 #DefineClass @lower = /^([a-z]|cyr_[a-z_]+)$/;
 # Latn
 
+DefineClass @Latn_alt_all = /^[a-z]\.alt$/;
+DefineClass @Latn_alt_high = /^[a-z]\.high\.alt$/;
+DefineClass @Latn_alt_low = /^[a-z]\.low\.alt$/;
+DefineClass @Latn_alt_lh = @Latn_alt_low~low;
+DefineClass @Latn_alt_p = @Latn_alt_all - @Latn_alt_lh;
 DefineClass @Latn_lower = /^[a-z]$/;
 DefineClass @Latn_lower = [@Latn_lower dotlessi dotlessj germandbls thorn oslash ae oe ccedilla eth];
 DefineClass @Latn_lower_low = @Latn_lower.low;
 DefineClass @Latn_lower_high = @Latn_lower.high;
 
-DefineClass @Latn_upper = /^[A-Z]+[A-Za-z]*$/;
+DefineClass @Latn_upper = /^[A-Z]+[A-Za-z]*(\.alt)?$/;
 DefineClass @Latn_upper_rhigh = /^[A-Z]+[A-Za-z]*\.rhigh$/;
 DefineClass @Latn_upper_high = @Latn_upper_rhigh~rhigh;
 DefineClass @Latn_upper_rlow = /^[A-Z]+[A-Za-z]*\.rlow$/;
@@ -30,11 +35,11 @@ DefineClass @Latn_upper_joinable = @Latn_upper_rlowlow~rlowlow;
 DefineClass @Latn_upper_joinable_rlow = @Latn_upper_joinable.rlow; 
 
 # Cyrl
-DefineClass @Cyrl_lower = /^cyr_[a-z_]+$$/ - (cyr_hard_sign | cyr_soft_sign | cyr_yu);
+DefineClass @Cyrl_lower = /^cyr_[a-z_]+$/ - (cyr_hard_sign | cyr_soft_sign | cyr_yu);
 DefineClass @Cyrl_lower_low = @Cyrl_lower.low;
 DefineClass @Cyrl_lower_high = @Cyrl_lower.high;
 
-DefineClass @Cyrl_upper = /^cyr_[A-Z_]+$/;
+DefineClass @Cyrl_upper = /^cyr_[A-Z_]+(\.alt)?$/;
 DefineClass @Cyrl_upper_rhigh = /^cyr_[A-Z_]+.rhigh$/;
 DefineClass @Cyrl_upper_high = @Cyrl_upper_rhigh~rhigh;
 DefineClass @Cyrl_upper_rlow = /^cyr_[A-Z_]+.rlow$/;
@@ -51,3 +56,7 @@ DefineClass @Cyrl_all_signs = @Cyrl_signs | @Cyrl_signs_finalow | @Cyrl_signs_fi
 DefineClass @Cyrl_all_lower = @Cyrl_lower | @Cyrl_lower_low | @Cyrl_lower_high;
 DefineClass @Cyrl_lower_no_veo = @Cyrl_all_lower - (@cyr_ve | @cyr_o);
 DefineClass @Cyrl_all = @Cyrl_all_lower | @Cyrl_upper;
+
+# Misc
+DefineClass @to_salt = /^.*\.alt$/;
+DefineClass @salt = @to_salt~alt;

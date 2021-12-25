@@ -59,11 +59,11 @@ lookup combstroke {
   sub cyr_be.low by cyr_be.low __combstroke1;
   sub cyr_BE.rhigh by cyr_BE.rhigh __combstroke1 __combstroke2;
   sub cyr_che.alt by cyr_che.alt __combstroke1;
-  sub cyr_che.alt.high by cyr_che.alt.high __combstroke1;
-  sub cyr_che.alt.low by cyr_che.alt.low __combstroke1;
   sub cyr_che by cyr_che __combstroke1;
   sub cyr_CHE by cyr_CHE __combstroke1;
+  sub cyr_che.high.alt by cyr_che.high.alt __combstroke1;
   sub cyr_che.high by cyr_che.high __combstroke1;
+  sub cyr_che.low.alt by cyr_che.low.alt __combstroke1;
   sub cyr_che.low by cyr_che.low __combstroke1;
   sub cyr_CHE.rlow by cyr_CHE.rlow __combstroke1;
   sub cyr_de by cyr_de __combstroke1 __combstroke2;
@@ -309,8 +309,6 @@ lookup combstroke {
   sub N.rlow by N.rlow __combstroke1;
   sub numbersign by numbersign __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub o.alt by o.alt __combstroke1;
-  sub o.alt.high by o.alt.high __combstroke1 __combstroke2;
-  sub o.alt.low by o.alt.low __combstroke1 __combstroke2;
   sub oe by oe __combstroke1;
   sub OE by OE __combstroke1;
   sub oe.high by oe.high __combstroke1;
@@ -318,7 +316,9 @@ lookup combstroke {
   sub OE.rlow by OE.rlow __combstroke1;
   sub o by o __combstroke1;
   sub O by O __combstroke1;
+  sub o.high.alt by o.high.alt __combstroke1 __combstroke2;
   sub o.high by o.high __combstroke1 __combstroke2;
+  sub o.low.alt by o.low.alt __combstroke1 __combstroke2;
   sub o.low by o.low __combstroke1 __combstroke2;
   sub one by one __combstroke1;
   sub O.rhigh by O.rhigh __combstroke1;
