@@ -30,8 +30,8 @@ for glyph in glyphs:
     elif not glyph+"_guidelines" in ga_ttfglyphs:
         continue
     else:
-        COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph, 0xFFFF), (glyph+"_beginnings", 1), (glyph+"_endings", 2), (glyph+"_arrows", 1)]
-        COLR_Gv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph, 0xFFFF)]
+        COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 3), (glyph, 0xFFFF), (glyph+"_beginnings", 1), (glyph+"_endings", 2), (glyph+"_arrows", 1)]
+        COLR_Gv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 3), (glyph, 0xFFFF)]
 
     COLR_GA[glyph] = COLR_GAv
     COLR_G[glyph] = COLR_Gv
@@ -41,6 +41,8 @@ C_O_L_R_G = buildCOLR(COLR_G)
 
 # guidelines
 BABYBLUE = (0, 178, 194)
+## baseline guideline
+DEEPPURPLE = (0xE9, 0x1E, 0x85)
 # glyph
 BLACK = (0, 0, 0)
 # beginnings
@@ -52,7 +54,7 @@ CYAN = (0, 255, 255)
 YELLOW = (255, 202, 243)
 GREY = (50, 50, 50)
 
-palette = [BABYBLUE, RED, CYAN]
+palette = [BABYBLUE, RED, CYAN, DEEPPURPLE]
 CPAL_palette = [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette]
 C_P_A_L_ = buildCPAL([CPAL_palette])
 

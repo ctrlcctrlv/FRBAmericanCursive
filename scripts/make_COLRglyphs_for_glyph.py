@@ -45,9 +45,6 @@ with open(gliffn) as f:
     lasts = [c[-1] for c in glyph.contours]
     glyph.clearContours()
 
-    p.moveTo((0, 0))
-    p.lineTo((glyph.width, 0))
-    p.endPath()
     p.moveTo((0, capheight))
     p.lineTo((glyph.width, capheight))
     p.endPath()
@@ -80,6 +77,22 @@ with open(gliffn) as f:
             print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke PaP --pattern patterns.ufo/glyphs/dot.glif --path {} --out {} -m repeated --sx 0.5 --sy 0.5 --spacing 30 --stretch spacing".format(tempf, xhf), **SUBPROCESS_KWARGS)
+    glyph.clearContours()
+
+    p.moveTo((0, 0))
+    p.lineTo((glyph.width, 0))
+    p.endPath()
+
+    glf = builddir+glifLib.glyphNameToFileName(glifname+"_baseline", None)
+    tempf = tempfile.mkstemp()[1]
+    with open(tempf, "w+") as f:
+        print(glyph.dumpToGLIF(), file=f)
+    if glyph.width <= 0:
+        glyph.clearContours()
+        with open(glf, "w+") as f:
+            print(glyph.dumpToGLIF(), file=f)
+    else:
+        subprocess.run("MFEKstroke CWS -i {} -o {} -w 30".format(tempf, glf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
 
     for pt in firsts:

@@ -19,7 +19,7 @@ ARGS=`./scripts/fontmake_args.sh`
 for f in build/{COLR_glyphs,"$FONT"/COLR_glyphs}/*; do
 	fn=`basename "$f"`
 	cp "$f" build/"$FONT_GA"/glyphs/"$fn";
-	if [[ $fn =~ "_guidelines" || $fn =~ "_xheight" ]]; then
+	if [[ $fn =~ "_guidelines" || $fn =~ "_xheight" || $fn =~ "_baseline" ]]; then
 		cp "$f" build/"$FONT_G"/glyphs/"$fn";
 	fi
 done
