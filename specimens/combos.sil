@@ -1,6 +1,12 @@
 \begin[papersize=1.4ft x 0.8ft]{document}
     \script[src=packages/color-fonts]
+    \script[src=packages/complex-spaces]
     \script[src=packages/rules]
+    \neverindent\nofolios
+    \set[parameter=shaper.spacestretchfactor,value=0]
+    \set[parameter=shaper.spaceenlargementfactor,value=1]
+    %\set[parameter=shaper.variablespaces,value=false]
+    %\set[parameter=typesetter.obeyspaces,value=true]
     \font[filename=dist/FRBAmericanCursive-400-GuidelinesArrowsRegular_NOVF.ttf,size=1.5em]{
         \par aa ab ac ad ae af ag ah ai aj ak al am an ao ap aq ar as at au av aw ax ay az
         \par ba bb bc bd be bf bg bh bi bj bk bl bm bn bo bp bq br bs bt bu bv bw bx by bz
@@ -149,7 +155,6 @@
         \par 70 71 72 73 74 75 76 77 78 79 70 71 72 73 74 75 76 77 78 79
         \par 80 81 82 83 84 85 86 87 88 89 80 81 82 83 84 85 86 87 88 89
         \par 90 91 92 93 94 95 96 97 98 99 90 91 92 93 94 95 96 97 98 99
-        \eject
         \eject
         \par аа аб ав аг ад ае аж аз аи ай ак ал ам ан ао ап ар ас ат ау аф ах ац ач аш ащ аъ аы аь аэ аю ая
         \par ба бб бв бг бд бе бж бз би бй бк бл бм бн бо бп бр бс бт бу бф бх бц бч бш бщ бъ бы бь бэ бю бя
