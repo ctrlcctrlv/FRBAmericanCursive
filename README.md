@@ -55,7 +55,7 @@ Warning: FRB American Cursive generates *a lot* of files during compilation. On 
 * ftdump (`freetype2-demos`)
 
 #### For physics
-FRB American Cursive v2 optionally requires a physics simulator to figure out the correct placement of its stroke numbers. This saves a lot of time for the designer, but can be a bit cumbersome to set up, so building is possible without it. v2 uses the Java version of [Processing](https://processing.org/) plus [toxiclibs](https://toxiclibs.org) as its physics engine; you'll also need to install [geomerative](http://www.ricardmarxer.com/geomerative/geomerative-39.zip) to `sketchbook/libraries`. This might change in future releases.
+FRB American Cursive v2 optionally requires a physics simulator to figure out the correct placement of its stroke numbers. This saves a lot of time for the designer, but can be a bit cumbersome to set up, so building is possible without it. v2 uses the Java version of [Processing](https://processing.org/) plus [toxiclibs](https://toxiclibs.org) as its physics engine; you'll also need to install [geomerative](http://www.ricardmarxer.com/geomerative/geomerative-39.zip) to `sketchbook/libraries`. This might change in future releases. For your convenince, my entire Processing `sketchbook/` directory can be downloaded from [ctrlcctrlv/FRBAmericanCursive-processing-sketchbook](https://github.com/ctrlcctrlv/FRBAmericanCursive-processing-sketchbook).
 
 <sub>&dagger; These should be standard on most Linux distributions and on Windows under MSYS2.</sub>
 <sub>&Dagger; These are Rust projects and need to be compiled by <kbd>cargo</kbd> and installed into your <kbd>PATH</kbd>.</sub>
