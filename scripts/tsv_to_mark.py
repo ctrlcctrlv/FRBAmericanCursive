@@ -27,6 +27,7 @@ with open(csv_fn) as csvf:
             anchor_offset_y = 0
         elif len(row) == 5:
             (glyph, x, y, mark_class, anchor_offset_y) = row
+            anchor_offset_y = int(anchor_offset_y)
         else:
             continue
 
@@ -38,8 +39,8 @@ with open(csv_fn) as csvf:
             (offset_x, offset_y) = (0, 0)
 
         if mark_class not in handled_classes:
-            print("    markClass @{0}_marks <anchor {1} {2}> @{0};".format(mark_class, 0, anchor_offset_y))
+            print("    markClass @{0}_marks <anchor {1} {2}> @{0};".format(mark_class, offset_x, anchor_offset_y+offset_y))
             handled_classes.append(mark_class)
-        print("    position base {} <anchor {} {}> mark @{};".format(glyph, x+offset_x, y+offset_y, mark_class))
+        print("    position base {} <anchor {} {}> mark @{};".format(glyph, x, y, mark_class))
 
 print("} mark;")
