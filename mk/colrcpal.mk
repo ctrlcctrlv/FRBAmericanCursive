@@ -28,7 +28,6 @@ colrcpal:
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf build/$(FONTFAMILY)-{1}.ufo
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}_NOVF.otf build/$(FONTFAMILY)-{1}.ufo
 	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf
-	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{3}-Guidelines{1}.otf
 	'
 
 # Build one color font for debugging purposes.
@@ -39,4 +38,3 @@ debug-colrcpal:
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf build/$(FONTFAMILY)-$(STYLENAME).ufo
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME)_NOVF.otf build/$(FONTFAMILY)-$(STYLENAME).ufo
 	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf
-	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-Guidelines$(STYLENAME).otf
