@@ -746,10 +746,14 @@
 	<string>quotedblright.glif</string>
 	<key>quoteleft</key>
 	<string>quoteleft.glif</string>
+	<key>quoteleft.0len</key>
+	<string>quoteleft.0len.glif</string>
 	<key>quoteright</key>
 	<string>quoteright.glif</string>
 	<key>quotesingle</key>
 	<string>quotesingle.glif</string>
+	<key>quotesingle.0len</key>
+	<string>quotesingle.0len.glif</string>
 	<key>r</key>
 	<string>r.glif</string>
 	<key>r.high</key>

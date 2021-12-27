@@ -102,7 +102,8 @@ void outputGlyph() {
   int i = 0;
   for (VerletParticle2D p : mps) {
     i++;
-    println(outglyph + "\t" + (int)(p.x - (WIDTH/3)) + "\t" + -(int)(p.y - (HEIGHT/2)) + "\tstroke" + i);
+    // -650 = ascender
+    println(outglyph + "\t" + (int)(p.x - (WIDTH/3)) + "\t" + (int)((-p.y) - (HEIGHT/2)) + "\tstroke" + i + "\t-1300");
   }
 }
 

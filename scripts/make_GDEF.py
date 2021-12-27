@@ -17,7 +17,7 @@ for i in range(0, 10):
 f = ufoLib.UFOReaderWriter(ufo_fn)
 sorted_glyphs = list_glyphs(f)
 for g, _ in sorted_glyphs.items():
-    if g.startswith("__combstroke"):
+    if g.startswith("__combstroke") or ".0len" in g:
         continue
     if g not in top_marks:
         gdefsimple.append(g)
@@ -27,6 +27,6 @@ print("@GDEFSimple = [{}];".format(" ".join(gdefsimple)))
 
 print("""
 table GDEF {
-    GlyphClassDef @GDEFSimple,,[@top_marks @stroke_marks],;
+    GlyphClassDef @GDEFSimple,,[@top_marks @stroke_marks quotesingle.0len quoteleft.0len],;
 } GDEF;
 """)

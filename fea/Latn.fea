@@ -102,6 +102,13 @@ lookup LatnNullTail {
     sub tail.high by NULL;
 } LatnNullTail;
 
+feature cv01 {
+    lookup cv01_1 {
+        sub quotesingle by quotesingle.0len;
+        sub quoteleft by quoteleft.0len;
+    } cv01_1;
+} cv01;
+
 feature ccmp {
     lookup ccmp1_1 {
         lookupflag IgnoreMarks;
@@ -156,5 +163,4 @@ feature ccmp {
         pos quotesingle [m v] -110;
     } ccmp1_10;
 } ccmp;
-
 # vim: set ts=4 sw=4 expandtab:

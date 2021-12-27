@@ -8,8 +8,10 @@ fontfamily = os.environ["FONTFAMILY"]
 
 print(r"""
 \begin[papersize=1.4ft x 0.8ft]{{document}}
+    \script[src=packages/complex-spaces]
     \script[src=packages/color-fonts]
     \script[src=packages/rules]
+    \set[parameter=shaper.spaceenlargementfactor,value=1]
     \font[filename=dist/{}-400-GuidelinesArrowsRegular_NOVF.ttf,size=1.5em]{{""".format(fontfamily)[1:])
 
 combos_from_string=lambda s: [list(zip(e*len(s), s)) for e in s]

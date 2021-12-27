@@ -11,8 +11,8 @@ PROCESSING := /home/fred/Downloads/processing-4.0b2/processing-java
 all:
 	make regen
 	make monoline
-	make physics
 	make patterned
+	make physics
 	make colrcpal
 	make specimens
 

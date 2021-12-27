@@ -8,8 +8,15 @@ specimens-harfbuzz:
 
 .PHONY: specimens-sile
 specimens-sile:
+	make -j2 specimens-sile-combos specimens-sile-wholefont
+
+.PHONY: specimens-sile-combos
+specimens-sile-combos:
 	./scripts/letter_combos.py > specimens/combos.sil
 	sile specimens/combos.sil
+
+.PHONY: specimens-sile-wholefont
+specimens-sile-wholefont:
 	./scripts/each_font_specimen.sh
 
 .PHONY: specimens

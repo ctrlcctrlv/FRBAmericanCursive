@@ -3,9 +3,9 @@ rm -f /tmp/eachfont${FONTFAMILY}-*.pdf specimens/${FONTFAMILY}-specimen.pdf
 
 echo ${FONTFAMILY_H}
 
-find dist -type f -iname "*.ttf" | parallel --bar "
+find dist -type f -iname "*_NOVF.otf" | sort -V | parallel --jobs 200% --bar "
 	export STYLE=\`ftdump -n {}|grep family|head -n1|sed \"s/.*${FONTFAMILY_H} *//;s/\s+$//\"\` &&
-	(sed \"s/&&FONT&&/{/}/g; s/&&STYLE&&/\$STYLE/\" < specimens/eachfont.sil) > /tmp/eachfont{/}.sil &&
+	(sed \"s/&&FONT&&/{/}/g; s/&&PAGE&&/{#}/g; s/&&STYLE&&/\$STYLE/\" < specimens/eachfont.sil) > /tmp/eachfont{/}.sil &&
 	sile /tmp/eachfont{/}.sil
 "
 

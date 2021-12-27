@@ -1,13 +1,18 @@
 \begin[papersize=8in x 3in]{document}
+\script[src=packages/complex-spaces]
 \script[src=packages/color-fonts]
+\script[src=packages/frametricks]
+\set[parameter=shaper.spaceenlargementfactor,value=1]
 \script{
 SILE.settings.set("document.spaceskip", SILE.length("1spc"))
 SILE.settings.set("shaper.spacestretchfactor",  0)
 SILE.settings.set("shaper.spaceshrinkfactor",  0)
-}
+SILE.scratch.counters.folio.value = &&PAGE&&
+mcursorX, mcursorY = SILE.outputter:getCursor()
+contents = [[\typeset-into[frame=content]{
 \font[filename=dist/&&FONT&&]
-\neverindent\nofolios
-\par \font[size=3em]{FRB American Cursive}
+\neverindent
+\par \font[size=3em,features=+ss01]{FRB American Cursive}
 \bigskip
 \par &&STYLE&&
 \bigskip
@@ -18,5 +23,13 @@ SILE.settings.set("shaper.spaceshrinkfactor",  0)
 \par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
 \font[family=TT2020Base]
-\par &&FONT&&
+\par &&FONT&&}]]
+SILE.doTexlike(contents)
+SILE.typesetter:typeset("")
+SILE.outputter:setCursor(mcursorX, mcursorY)
+SILE.typesetter.frame.state.cursorX = mcursorX
+SILE.typesetter.frame.state.cursorY = mcursorY
+--SILE.shaper = SILE.shapers.harfbuzz()
+--SILE.doTexlike(contents)
+}
 \end{document}

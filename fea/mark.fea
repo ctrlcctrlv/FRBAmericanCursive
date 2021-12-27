@@ -1,5 +1,5 @@
 feature mark {
-    markClass @top_marks <anchor 0 -350> @top;
+    markClass @top_marks <anchor 0 0> @top;
     position base a <anchor 343 400> mark @top;
     position base A <anchor 531 650> mark @top;
     position base A.alt <anchor 532 650> mark @top;

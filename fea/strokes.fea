@@ -349,8 +349,10 @@ lookup combstroke {
   sub quotedbl by quotedbl __combstroke1 __combstroke2;
   sub quotedblleft by quotedblleft __combstroke1 __combstroke2;
   sub quotedblright by quotedblright __combstroke1 __combstroke2;
+  sub quoteleft.0len by quoteleft.0len __combstroke1;
   sub quoteleft by quoteleft __combstroke1;
   sub quoteright by quoteright __combstroke1;
+  sub quotesingle.0len by quotesingle.0len __combstroke1;
   sub quotesingle by quotesingle __combstroke1;
   sub r by r __combstroke1;
   sub R by R __combstroke1;

@@ -18,8 +18,13 @@ all-physics-files:
 	make colrglyphs colrglyphs-ufo
 	make physics-files
 
+FORCE := $(if $(FORCE),$(FORCE),n)
+
 .PHONY: compile-processing
 compile-processing:
+ifeq ($(FORCE),y)
+	rm -rf /tmp/AnchorPhysics
+endif
 	$(PROCESSING) --sketch=$$PWD/scripts/AnchorPhysics --output=/tmp/AnchorPhysics --export
 
 .PHONY: processing-physics
@@ -32,7 +37,7 @@ processing-physics:
 	TEMPTSV=`mktemp --suffix=.tsv`;
 	echo Writing "$$TEMPTSV";
 	find ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -iname "*.glif" -and -not -iname "space.glif" -printf "%f\\n" | xargs basename -a -s.glif | sort > glyphs.txt;
-	/tmp/AnchorPhysics/AnchorPhysics | sed -e "/^Finished\./d" > "$$TEMPTSV";
+	test -z "$(SKIP_PROCESSING)" && (/tmp/AnchorPhysics/AnchorPhysics | sed -e "/^Finished\./d" > "$$TEMPTSV");
 	$(PYTHON) ../../scripts/tsv_to_mark.py "$$TEMPTSV" > strokes_mark.fea;
 	'
 
