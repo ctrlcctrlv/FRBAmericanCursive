@@ -1,5 +1,15 @@
 ArrowPathBold	60	700
 ArrowPath	35	400
+DashedLight	24	300
+DashedThin	12	100
+DashedBold	60	700
+DashedRegular	35	400
+DashedMedium	42	500
+DashedExtrabold	75	800
+DashedExtralight	19	200
+DashedSemibold	50	600
+DashedBlack	90	900
+DashedUltra	101	1000
 DottedLight	24	300
 DottedThin	12	100
 DottedBold	60	700
