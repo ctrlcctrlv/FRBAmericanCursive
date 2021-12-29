@@ -1,0 +1,3 @@
+feature salt {
+    sub @to_salt by @salt;
+} salt;
