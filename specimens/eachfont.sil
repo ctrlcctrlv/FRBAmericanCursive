@@ -1,35 +1,54 @@
 \begin[papersize=8in x 3in]{document}
+% Note: This file is intended to be compiled by scripts/each_font_specimen.sh which expects you to also have installed pdftk
 \script[src=packages/complex-spaces]
 \script[src=packages/color-fonts]
 \script[src=packages/frametricks]
+\script[src=packages/rebox]
+\set[parameter=font.family,value=TT2020Base,makedefault=true]
+\frame[id=specimen,left=5%pw,right=95%pw,top=5%ph,bottom=top(footnotes)]
+\frame[id=specimen_overlay,left=5%pw,right=95%pw,top=5%ph,bottom=top(footnotes)]
+\frame[id=arrows,left=5%pw,right=95%pw,top=5.22%ph,bottom=top(footnotes)]
 \set[parameter=shaper.spaceenlargementfactor,value=1]
 \script{
 SILE.settings.set("document.spaceskip", SILE.length("1spc"))
 SILE.settings.set("shaper.spacestretchfactor",  0)
 SILE.settings.set("shaper.spaceshrinkfactor",  0)
 SILE.scratch.counters.folio.value = &&PAGE&&
-mcursorX, mcursorY = SILE.outputter:getCursor()
-contents = [[\typeset-into[frame=content]{
-\font[filename=dist/&&FONT&&]
-\neverindent
-\par \font[size=3em,features=+ss01]{FRB American Cursive}
+wrapper = "\\typeset-into[frame=%s]{%s\n%s}"
+font_dist = [[\font[filename=dist/]] .. ("&&FONT&&"):gsub("Arrows","") .. ']'
+font_arrows = [[\font[filename=dist/&&FONTFAMILY&&-&&OS2WEIGHT&&-JustArrows&&WEIGHT&&.otf]%]]
+content_inner = [[\neverindent
+\par \font[size=3em,%s]{FRB American Cursive}
 \bigskip
 \par &&STYLE&&
 \bigskip
 \par Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
 \par abcdefghijklmnopqrstuvwxyz
-\par 1234567890 !@#$\%&*() []{};':",./ \\
+\par 1234567890 !@#$\%%&*() []{};':",./ \\
 \par The quick brown fox jumps over the lazy dog.
 \par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
-\font[family=TT2020Base]
-\par &&FONT&&}]]
+]]
+if string.find("&&FONT&&", "Arrows") then
+    content_inner = string.format(content_inner, "features=+ss01")
+else
+    content_inner = string.format(content_inner, "")
+end
+contents = wrapper:format("specimen", font_dist, content_inner)
+contents_overlay = wrapper:format("specimen_overlay", font_dist, content_inner)
+contents_arrows = wrapper:format("arrows", font_arrows, content_inner)
 SILE.doTexlike(contents)
-SILE.typesetter:typeset("")
-SILE.outputter:setCursor(mcursorX, mcursorY)
-SILE.typesetter.frame.state.cursorX = mcursorX
-SILE.typesetter.frame.state.cursorY = mcursorY
---SILE.shaper = SILE.shapers.harfbuzz()
---SILE.doTexlike(contents)
+SILE.shaper = SILE.shapers.harfbuzz()
+SILE.doTexlike(contents_overlay)
+if string.find("&&FONT&&", "Arrows") then
+SILE.outputter:pushColor({r = 1, g= 0, b = 0 })
+SILE.shaper = SILE.shapers.harfbuzz()
+SILE.doTexlike(contents_arrows)
+SILE.outputter:popColor()
+end
+}
+\frame[id=fontname,left=5%pw,right=95%pw,top=75%ph,bottom=top(folio)]
+\typeset-into[frame=fontname]{
+\noindent\font[family=TT2020Base]{&&FONT&&}
 }
 \end{document}
