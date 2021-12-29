@@ -21,6 +21,23 @@ As far as I know, this is the most technically advanced educational cursive font
 
 The fonts are free software. They are free for personal and commercial use. Much ink has been spilled about "the death of cursive" in the US, but few have taken the time to analyze the fact that all of the educational cursive computer fonts are proprietary. (Especially high quality ones, with OpenType substitution to make a flawlessly connecting word.)
 
+## Notes on proprietary software
+### Adobe product advisory
+
+Several Adobe products, among them Illustrator CC and InDesign CC, as of December 2021 require manual intervention to get the fonts to display properly.
+
+The screenshot below, via user @mouad1990, shows how to fix this problem. **This is a bug in Adobe's software, no change to the font itself is possible to fix this unfortunately.** Earlier Adobe products, such as Illustrator CS5 and below, my not work at all.
+
+![](https://raw.githubusercontent.com/ctrlcctrlv/FRBAmericanCursive/v2/doc/indesign_composer.png)
+
+### Other proprietary software
+
+Much proprietary software is known to have unsolvable issues with these fonts. The OpenType standards these fonts use are not new, yet in the interests of profit, as the are most often used for what the tech industry calls “complex scripts”, support is lacking or non-existent for OpenType. When it exists, sometimes it is enabled only for the aforementioned scripts so that companies can charge money for “advanced” font rendering. For example, even in Windows 10, neither Microsoft Paint nor Windows’ WordPad can render the fonts correctly. **Only Microsoft can fix this issue.** Pressure must begin to be put to bear on Microsoft, Apple, etc. to fix their products so that they follow the specifications.
+
+FRB American Cursive is only officially supported when used with HarfBuzz, the standard shaper on GNU/Linux, and FreeType, the standard font rasterizer on GNU/Linux. HarfBuzz may also be found in both the Firefox and Chrome web browsers on all platforms. **All rendering outside of FreeType+HarfBuzz is best effort. Issues only affecting proprietary shapers/rasterizers will not be fixed if they will degrade the experience of FreeType+HarfBuzz users. Investigation of issues outside FreeType+HarfBuzz falls to users.**
+
+GIMP uses FreeType+HarfBuzz on all platforms, and is the recommended way to rasterize the fonts.
+
 ## Building
 
 This isn't your grandmother's Fontographer font. It is best to think of it as a software project and a font family combined. Over 500 lines of just my own code make the final font files. So, building is complex. Take a look at `Makefile` first, if you'd wish to take the plunge, it shows which fonts use which scripts.
