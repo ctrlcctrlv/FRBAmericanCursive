@@ -1,23 +1,30 @@
 #!/usr/bin/env python3
+import itertools
 import unicodedata
 from fontTools import ufoLib
 import sys, shutil
 
 # Find glyphs in this range with at least one combining character, create characters for them with systematic uniXXXX names
 CCMP_REPLACEMENTS = {"i": "dotlessi", "j": "dotlessj"}
+KNOWN_GOOD = """ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵ"""
 def ccmp_placeholders(f):
     placeholders = dict()
-    for i in range(0xc0, 0x17f+1):
+    for i in set( [ord(c) for c in KNOWN_GOOD] + list(range(0xc0, 0x17f+1))+list(range(0x1a0, 0x1b0+1)) ):
         c = chr(i)
         decomp = [int(e, 16) for e in unicodedata.decomposition(c).split() if e != "<compat>"]
-        if not any(["M" in unicodedata.category(chr(u)) for u in decomp]):
+        inner_d = [[int(e, 16) for e in unicodedata.decomposition(chr(d)).split()] for d in decomp]
+        decomp2 = list(itertools.chain(*[e if len(e) > 0 else [decomp[i]] for i, e in enumerate(inner_d)]))
+        #decomp2 = [int(e, 16) for e in list(itertools.chain(*[unicodedata.decomposition(chr(d)).split() for d in decomp])) if e != "<compat>"]
+        if any(["M" in unicodedata.category(chr(u)) for u in decomp2]):
+            decomp = decomp2
+        elif not any(["M" in unicodedata.category(chr(u)) for u in decomp]):
             continue
         try:
             cm = f.getCharacterMapping()
             decomp_glyphs = [cm[u][0] for u in decomp]
         except:
             continue
-        decomp_glyphs = [CCMP_REPLACEMENTS[gn] if gn in CCMP_REPLACEMENTS else gn for gn in decomp_glyphs]
+        decomp_glyphs = [CCMP_REPLACEMENTS[gn] if (gn in CCMP_REPLACEMENTS and not "underdotcomb" in decomp_glyphs) else gn for gn in decomp_glyphs]
         placeholders[i] = decomp_glyphs
     return placeholders
 

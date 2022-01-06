@@ -556,6 +556,12 @@
 	<string>dagger.glif</string>
 	<key>daggerdbl</key>
 	<string>daggerdbl.glif</string>
+	<key>dcroat</key>
+	<string>dcroat.glif</string>
+	<key>dcroat.high</key>
+	<string>dcroat.high.glif</string>
+	<key>dcroat.low</key>
+	<string>dcroat.low.glif</string>
 	<key>degree</key>
 	<string>degree.glif</string>
 	<key>dieresis</key>
@@ -694,6 +700,8 @@
 	<string>k.low.glif</string>
 	<key>l</key>
 	<string>l.glif</string>
+	<key>l.alt</key>
+	<string>l.alt.glif</string>
 	<key>l.high</key>
 	<string>l.high.glif</string>
 	<key>l.low</key>
@@ -906,10 +914,10 @@
 	<string>u.high.glif</string>
 	<key>u.low</key>
 	<string>u.low.glif</string>
+	<key>underdotcomb</key>
+	<string>underdotcomb.glif</string>
 	<key>underscore</key>
 	<string>underscore.glif</string>
-	<key>uni00AD</key>
-	<string>uni00A_D_.glif</string>
 	<key>uni0302</key>
 	<string>uni0302.glif</string>
 	<key>uni0304</key>
@@ -940,6 +948,8 @@
 	<string>v.high.glif</string>
 	<key>v.low</key>
 	<string>v.low.glif</string>
+	<key>viethorncomb</key>
+	<string>viethorncomb.glif</string>
 	<key>w</key>
 	<string>w.glif</string>
 	<key>w.high</key>

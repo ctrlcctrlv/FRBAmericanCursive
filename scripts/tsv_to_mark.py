@@ -14,7 +14,7 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__), *("..", "build
     r = csv.reader(numbers_tsvf, delimiter="\t")
     for i, row in enumerate(r): NUMBERS_OFFSETS["stroke{}".format(i)] = (row[0], row[1])
 
-print("feature mark {")
+rules = list()
 
 with open(csv_fn) as csvf:
     r = csv.reader(csvf, delimiter="\t")
@@ -42,8 +42,11 @@ with open(csv_fn) as csvf:
             (offset_x, offset_y) = (0, 0)
 
         if mark_class not in handled_classes:
-            print("    markClass @{0}_marks <anchor {1} {2}> @{0};".format(mark_class, offset_x, anchor_offset_y+offset_y))
+            print("markClass @{0}_marks <anchor {1} {2}> @{0};".format(mark_class, offset_x, anchor_offset_y+offset_y))
             handled_classes.append(mark_class)
-        print("    position base {} <anchor {} {}> mark @{};".format(glyph, x, y, mark_class))
+        rules.append("position base {} <anchor {} {}> mark @{};".format(glyph, x, y, mark_class))
 
+print("\nfeature mark {")
+for rule in rules:
+    print(" "*4 + rule)
 print("} mark;")

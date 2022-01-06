@@ -40,6 +40,12 @@ lookup LatnFina {
     sub oe by oe.low tail.low;
     sub ccedilla by ccedilla.low tail.lowwide;
     sub eth by eth.high tail.high;
+    sub dcroat by dcroat.low tail.lowwide;
+    sub e.alt by e.low tail.low;
+    sub f.alt by f.low tail.low;
+    sub l.alt by l.low tail.lowwide;
+    sub o.alt by o.low.alt tail.high;
+    sub t.alt by t.low tail.lowwide;
 } LatnFina;
 
 lookup LatnIsolFina {
@@ -78,7 +84,13 @@ lookup LatnIsolFina {
     sub ae by ae tail.low;
     sub oe by oe tail.low;
     sub ccedilla by ccedilla tail.lowwide;
-    sub eth by eth.high tail.high;
+    sub eth by eth tail.high;
+    sub dcroat by dcroat tail.lowwide;
+    sub e.alt by e tail.low;
+    sub f.alt by f tail.low;
+    sub l.alt by l tail.lowwide;
+    sub o.alt by o.alt tail.high;
+    sub t.alt by t tail.lowwide;
 } LatnIsolFina;
 
 lookup LatnHigh {
