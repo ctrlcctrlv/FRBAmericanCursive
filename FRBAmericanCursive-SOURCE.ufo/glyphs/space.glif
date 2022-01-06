@@ -2,4 +2,6 @@
 <glyph name="space" format="2">
   <advance width="400"/>
   <unicode hex="0020"/>
+  <unicode hex="D" />
+  <unicode hex="A0" />
 </glyph>

@@ -11,5 +11,7 @@ monoline:
 # Makes a single monoline font, Regular weight. For debugging.
 .PHONY: debug-font
 debug-font:
-	./scripts/prepare_ufo.py Regular 35 400
-	./scripts/gen_monoline.sh Regular 35 400
+	./scripts/prepare_ufo.py Regular 400
+	UFO="build/$(FONTFAMILY)-Regular.ufo"
+	./scripts/fudge_fontinfo.py "$$UFO" "$(FONTFAMILY)" "$(FONTFAMILY_H)" Regular 400
+	./scripts/gen_monoline.sh Regular 35 400 $(FONTFAMILY)

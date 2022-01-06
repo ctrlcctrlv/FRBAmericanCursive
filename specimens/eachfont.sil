@@ -18,7 +18,7 @@ wrapper = "\\typeset-into[frame=%s]{%s\n%s}"
 font_dist = [[\font[filename=dist/]] .. ("&&FONT&&"):gsub("Arrows","") .. ']'
 font_arrows = [[\font[filename=dist/&&FONTFAMILY&&-&&OS2WEIGHT&&-JustArrows&&WEIGHT&&.otf]%]]
 content_inner = [[\neverindent
-\par \font[size=3em,%s]{FRB American Cursive}
+\par \font[size=3em,%s]{&&FONTFAMILY_H&&}
 \bigskip
 \par &&STYLE&&
 \bigskip

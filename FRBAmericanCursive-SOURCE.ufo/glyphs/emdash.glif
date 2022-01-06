@@ -2,6 +2,7 @@
 <glyph name="emdash" format="2">
   <advance width="923"/>
   <unicode hex="2014"/>
+  <unicode hex="2015"/>
   <outline>
     <contour>
       <point x="75" y="142" type="move"/>

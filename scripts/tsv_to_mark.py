@@ -33,6 +33,9 @@ with open(csv_fn) as csvf:
 
         (x, y) = (int(x), int(y))
 
+        if glyph == "_notdef":
+            glyph = ".notdef"
+
         if mark_class in NUMBERS_OFFSETS:
             (offset_x, offset_y) = [int(i) for i in NUMBERS_OFFSETS[mark_class]]
         else:

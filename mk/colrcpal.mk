@@ -4,7 +4,7 @@
 
 .PHONY: colrglyphs
 colrglyphs:
-	set -- `MFEKmetadata FRBAmericanCursive-SOURCE.ufo arbitrary -k capHeight -k openTypeOS2TypoDescender -k xHeight`
+	set -- `MFEKmetadata $(FONTFAMILY)-SOURCE.ufo arbitrary -k capHeight -k openTypeOS2TypoDescender -k xHeight`
 	./scripts/list_glyphs.py $(FONTFAMILY)-SOURCE.ufo | C=$$1 D=$$2 X=$$3 parallel --bar './scripts/make_COLRglyphs_for_glyph.py {} $(FONTFAMILY)-SOURCE.ufo $$C $$D $$X'
 
 .PHONY: colrglyphs-ufo
@@ -22,19 +22,23 @@ colrglyphs-ufo:
 # Build the color fonts.
 .PHONY: colrcpal
 colrcpal:
-	if [ ! -d "build/COLR_glyphs" ]; then make colrglyphs colrglyphs-ufo; fi # may have been made by physics
+	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then make colrglyphs colrglyphs-ufo; fi # may have been made by physics
 	parallel --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
 	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-{1}.ufo {3}
-	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf build/$(FONTFAMILY)-{1}.ufo
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}_NOVF.otf build/$(FONTFAMILY)-{1}.ufo
-	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf
+	if [[ -f build_data/$(FONTFAMILY)_buildVF ]]; then
+		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf build/$(FONTFAMILY)-{1}.ufo
+		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf
+	fi
 	'
 
 # Build one color font for debugging purposes.
 .PHONY: debug-colrcpal
 debug-colrcpal:
-	if [ ! -d "build/COLR_glyphs" ]; then make colrglyphs colrglyphs-ufo; fi # may have been made by physics
+	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then make colrglyphs colrglyphs-ufo; fi # may have been made by physics
 	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-$(STYLENAME).ufo 400
-	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf build/$(FONTFAMILY)-$(STYLENAME).ufo
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME)_NOVF.otf build/$(FONTFAMILY)-$(STYLENAME).ufo
-	./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf
+	if [[ -f build_data/$(FONTFAMILY)_buildVF ]]; then
+		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf build/$(FONTFAMILY)-$(STYLENAME).ufo
+		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf
+	fi

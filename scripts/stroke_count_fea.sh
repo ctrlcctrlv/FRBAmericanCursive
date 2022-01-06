@@ -4,6 +4,9 @@ echo lookup combstroke {
 while read -a line; do
 	GLIF=${line[0]}
 	COUNT=${line[1]}
+    if [[ "$GLIF" =~ "notdef" ]]; then
+        GLIF=".notdef"
+    fi
 	printf "  sub $GLIF by $GLIF"
 	for i in `seq 1 $COUNT`; do
 		printf " __combstroke$i"

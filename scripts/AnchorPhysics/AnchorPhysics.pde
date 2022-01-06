@@ -26,6 +26,7 @@ import toxi.physics2d.behaviors.*;
 import toxi.physics2d.constraints.*;
 import geomerative.*;
 import java.util.*;
+import java.lang.System;
 
 int WIDTH  = 1920;
 int HEIGHT = 980;
@@ -114,7 +115,7 @@ boolean nextGlyph() {
   mps = new ArrayList<VerletParticle2D>();
 
   String SVGHOMEUFO = "physics_SVGs/";
-  String SVGHOME = "../physics_SVGs/";
+  String SVGHOME = "../" + System.getenv("FONTFAMILY") + "_physics_SVGs/";
   if (glyphs_array.size() == 0) { return false; }
   glyph = glyphs_array.remove(0);
   arrow = RG.loadShape(SVGHOMEUFO+glyph+"_arrows_internal.svg");

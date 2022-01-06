@@ -1,6 +1,7 @@
 lookup combstroke {
   sub A.alt by A.alt __combstroke1;
   sub acutecomb by acutecomb __combstroke1;
+  sub acute by acute __combstroke1;
   sub ae by ae __combstroke1;
   sub AE by AE __combstroke1;
   sub ae.high by ae.high __combstroke1;
@@ -47,7 +48,9 @@ lookup combstroke {
   sub c.low by c.low __combstroke1 __combstroke2;
   sub colon by colon __combstroke1 __combstroke2;
   sub comma by comma __combstroke1;
+  sub copyright by copyright __combstroke1 __combstroke2;
   sub C.rlow by C.rlow __combstroke1 __combstroke2;
+  sub currency by currency __combstroke1 __combstroke2 __combstroke3 __combstroke4 __combstroke5;
   sub cyr_a by cyr_a __combstroke1;
   sub cyr_A by cyr_A __combstroke1;
   sub cyr_a.high by cyr_a.high __combstroke1;
@@ -214,6 +217,7 @@ lookup combstroke {
   sub d by d __combstroke1 __combstroke2;
   sub D by D __combstroke1;
   sub d.high by d.high __combstroke1 __combstroke2 __combstroke3;
+  sub dieresis by dieresis __combstroke1 __combstroke2;
   sub divide by divide __combstroke1 __combstroke2 __combstroke3;
   sub d.low by d.low __combstroke1 __combstroke2 __combstroke3;
   sub dollar by dollar __combstroke1 __combstroke2 __combstroke3;
@@ -227,7 +231,9 @@ lookup combstroke {
   sub e by e __combstroke1;
   sub E by E __combstroke1 __combstroke2;
   sub e.high by e.high __combstroke1;
+  sub eight.dnom by eight.dnom __combstroke1;
   sub eight by eight __combstroke1;
+  sub eight.numr by eight.numr __combstroke1;
   sub ellipsis by ellipsis __combstroke1 __combstroke2 __combstroke3;
   sub e.low by e.low __combstroke1;
   sub emdash by emdash __combstroke1;
@@ -245,9 +251,14 @@ lookup combstroke {
   sub f by f __combstroke1;
   sub F by F __combstroke1 __combstroke2 __combstroke3;
   sub f.high by f.high __combstroke1;
+  sub five.dnom by five.dnom __combstroke1;
   sub five by five __combstroke1;
+  sub five.numr by five.numr __combstroke1;
   sub f.low by f.low __combstroke1;
+  sub four.dnom by four.dnom __combstroke1 __combstroke2;
   sub four by four __combstroke1 __combstroke2;
+  sub four.numr by four.numr __combstroke1 __combstroke2;
+  sub fraction by fraction __combstroke1;
   sub F.rlow by F.rlow __combstroke1 __combstroke2 __combstroke3;
   sub germandbls.fina by germandbls.fina __combstroke1;
   sub germandbls by germandbls __combstroke1;
@@ -292,7 +303,9 @@ lookup combstroke {
   sub l.high by l.high __combstroke1;
   sub _Lira by _Lira __combstroke1 __combstroke2 __combstroke3;
   sub l.low by l.low __combstroke1;
+  sub logicalnot by logicalnot __combstroke1;
   sub L.rlow by L.rlow __combstroke1;
+  sub macron by macron __combstroke1;
   sub _MathPi by _MathPi __combstroke1 __combstroke2 __combstroke3;
   sub m by m __combstroke1;
   sub M by M __combstroke1;
@@ -304,8 +317,11 @@ lookup combstroke {
   sub n by n __combstroke1;
   sub N by N __combstroke1;
   sub n.high by n.high __combstroke1;
+  sub nine.dnom by nine.dnom __combstroke1;
   sub nine by nine __combstroke1;
+  sub nine.numr by nine.numr __combstroke1;
   sub n.low by n.low __combstroke1;
+  sub .notdef by .notdef __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub N.rlow by N.rlow __combstroke1;
   sub numbersign by numbersign __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub o.alt by o.alt __combstroke1;
@@ -320,7 +336,11 @@ lookup combstroke {
   sub o.high by o.high __combstroke1 __combstroke2;
   sub o.low.alt by o.low.alt __combstroke1 __combstroke2;
   sub o.low by o.low __combstroke1 __combstroke2;
+  sub one.dnom by one.dnom __combstroke1;
   sub one by one __combstroke1;
+  sub one.numr by one.numr __combstroke1;
+  sub ordfeminine by ordfeminine __combstroke1 __combstroke2;
+  sub ordmasculine by ordmasculine __combstroke1 __combstroke2;
   sub O.rhigh by O.rhigh __combstroke1;
   sub oslash by oslash __combstroke1 __combstroke2;
   sub Oslash by Oslash __combstroke1 __combstroke2;
@@ -338,6 +358,7 @@ lookup combstroke {
   sub p.high by p.high __combstroke1 __combstroke2;
   sub p.low by p.low __combstroke1 __combstroke2;
   sub plus by plus __combstroke1 __combstroke2;
+  sub plusminus by plusminus __combstroke1 __combstroke2 __combstroke3;
   sub P.rhigh by P.rhigh __combstroke1;
   sub q by q __combstroke1;
   sub Q by Q __combstroke1;
@@ -354,6 +375,7 @@ lookup combstroke {
   sub quoteright by quoteright __combstroke1;
   sub quotesingle.0len by quotesingle.0len __combstroke1;
   sub quotesingle by quotesingle __combstroke1;
+  sub registered by registered __combstroke1 __combstroke2;
   sub r by r __combstroke1;
   sub R by R __combstroke1;
   sub r.high by r.high __combstroke1;
@@ -364,11 +386,15 @@ lookup combstroke {
   sub _Rupee by _Rupee __combstroke1 __combstroke2;
   sub section by section __combstroke1 __combstroke2;
   sub semicolon by semicolon __combstroke1 __combstroke2;
+  sub seven.dnom by seven.dnom __combstroke1;
   sub seven by seven __combstroke1;
+  sub seven.numr by seven.numr __combstroke1;
   sub s by s __combstroke1;
   sub S by S __combstroke1;
   sub s.high by s.high __combstroke1;
+  sub six.dnom by six.dnom __combstroke1;
   sub six by six __combstroke1;
+  sub six.numr by six.numr __combstroke1;
   sub slash by slash __combstroke1;
   sub s.low by s.low __combstroke1;
   sub space by space;
@@ -385,11 +411,15 @@ lookup combstroke {
   sub Thorn by Thorn __combstroke1;
   sub thorn.high by thorn.high __combstroke1;
   sub thorn.low by thorn.low __combstroke1;
+  sub three.dnom by three.dnom __combstroke1 __combstroke2;
   sub three by three __combstroke1 __combstroke2;
+  sub three.numr by three.numr __combstroke1 __combstroke2;
   sub tildecomb by tildecomb __combstroke1;
   sub t.low by t.low __combstroke1 __combstroke2;
   sub T.rhigh by T.rhigh __combstroke1 __combstroke2;
+  sub two.dnom by two.dnom __combstroke1 __combstroke2;
   sub two by two __combstroke1 __combstroke2;
+  sub two.numr by two.numr __combstroke1 __combstroke2;
   sub u.alt by u.alt __combstroke1;
   sub u by u __combstroke1;
   sub U by U __combstroke1;
@@ -430,7 +460,9 @@ lookup combstroke {
   sub y.high by y.high __combstroke1;
   sub y.low by y.low __combstroke1;
   sub Y.rlow by Y.rlow __combstroke1;
+  sub zero.dnom by zero.dnom __combstroke1;
   sub zero by zero __combstroke1;
+  sub zero.numr by zero.numr __combstroke1;
   sub z by z __combstroke1;
   sub Z by Z __combstroke1;
   sub z.high by z.high __combstroke1;

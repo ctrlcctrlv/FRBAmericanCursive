@@ -7,9 +7,11 @@ DefineClass @Latn_alt_low = /^[a-z]\.low\.alt$/;
 DefineClass @Latn_alt_lh = @Latn_alt_low~low;
 DefineClass @Latn_alt_p = @Latn_alt_all - @Latn_alt_lh;
 DefineClass @Latn_lower = /^[a-z]$/;
-DefineClass @Latn_lower = [@Latn_lower dotlessi dotlessj germandbls thorn oslash ae oe ccedilla eth];
+DefineClass @Latn_lower = [@Latn_alt_lh @Latn_lower dotlessi dotlessj germandbls thorn oslash ae oe ccedilla eth];
 DefineClass @Latn_lower_low = @Latn_lower.low;
+DefineClass @Latn_lower_low = [@Latn_alt_low @Latn_lower_low];
 DefineClass @Latn_lower_high = @Latn_lower.high;
+DefineClass @Latn_lower_high = [@Latn_alt_high @Latn_lower_high];
 
 DefineClass @Latn_upper = /^[A-Z]+[A-Za-z]*(\.alt)?$/;
 DefineClass @Latn_upper_rhigh = /^[A-Z]+[A-Za-z]*\.rhigh$/;
@@ -58,5 +60,8 @@ DefineClass @Cyrl_lower_no_veo = @Cyrl_all_lower - (@cyr_ve | @cyr_o);
 DefineClass @Cyrl_all = @Cyrl_all_lower | @Cyrl_upper;
 
 # Misc
-DefineClass @to_salt = /^.*\.alt$/;
-DefineClass @salt = @to_salt~alt;
+DefineClass @salt = /^.*\.alt$/;
+DefineClass @to_salt = @salt~alt;
+DefineClass @numr = /^.*\.numr$/;
+DefineClass @to_numr = @numr~numr;
+DefineClass @dnom = @to_numr.dnom;

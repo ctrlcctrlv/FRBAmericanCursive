@@ -16,7 +16,7 @@ cp -r build/"$FONT" build/"$FONT_G"
 
 ARGS=`./scripts/fontmake_args.sh`
 
-for f in build/{COLR_glyphs,"$FONT"/COLR_glyphs}/*; do
+for f in build/{"$FONTFAMILY"_COLR_glyphs,"$FONT"/COLR_glyphs}/*; do
 	fn=`basename "$f"`
 	cp "$f" build/"$FONT_GA"/glyphs/"$fn";
 	if [[ $fn =~ "_guidelines" || $fn =~ "_xheight" || $fn =~ "_baseline" ]]; then
@@ -29,15 +29,17 @@ function make_combined() {
 	OTF="$2"
 	NAME_PREPEND="$3"
 	OTF_NOVF="${OTF%%.otf}_NOVF.otf"
-	DESIGNSPACE=`mktemp --suffix=.designspace`
 	echo "Writing to $FONT $OTF"
 	./scripts/regen_glyphs_plist.py build/"$FONT"/glyphs
-	./scripts/fudge_fontinfo.py build/"$FONT" "$FONTFAMILY" "$FONTFAMILY_H" "${NAMEDWEIGHT}" "$OS2WEIGHT"
-	xidel --xml --xquery 'transform(/, function($e){if (name($e) = "source") then <source filename="'$PWD/build/$FONT'">{$e/@* except $e/@filename, $e/*}</source> else $e})' build_data/FRBAC.designspace > "$DESIGNSPACE"
+	./scripts/fudge_fontinfo.py build/"$FONT" "$FONTFAMILY" "$FONTFAMILY_H" "${NAME_PREPEND}${NAMEDWEIGHT}" "$OS2WEIGHT"
 	# ufonormalizer build/"$FONT"
 	$PYTHON -m fontmake --keep-overlaps --verbose DEBUG -u "build/$FONT" --output-path "$OTF_NOVF" -o otf $ARGS
-	$PYTHON -m fontmake --keep-overlaps --verbose DEBUG -m "$DESIGNSPACE" --output-path "$OTF" -o variable-cff2 $ARGS
-	rm "$DESIGNSPACE"
+    if [[ -f build_data/"$FONTFAMILY"_buildVF ]]; then
+        DESIGNSPACE=`mktemp --suffix=.designspace`
+        xidel --xml --xquery 'transform(/, function($e){if (name($e) = "source") then <source filename="'$PWD/build/$FONT'">{$e/@* except $e/@filename, $e/*}</source> else $e})' build_data/FRBAC.designspace > "$DESIGNSPACE"
+        $PYTHON -m fontmake --keep-overlaps --verbose DEBUG -m "$DESIGNSPACE" --output-path "$OTF" -o variable-cff2 $ARGS
+        rm "$DESIGNSPACE"
+    fi
 }
 make_combined $FONT_GA $FONT_GA_OTF GuidelinesArrows
 make_combined $FONT_G $FONT_G_OTF Guidelines

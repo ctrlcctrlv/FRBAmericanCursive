@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>.notdef</key>
+	<string>_notdef.glif</string>
 	<key>A</key>
 	<string>A_.glif</string>
 	<key>A.alt</key>
@@ -160,6 +162,8 @@
 	<string>a.high.glif</string>
 	<key>a.low</key>
 	<string>a.low.glif</string>
+	<key>acute</key>
+	<string>acute.glif</string>
 	<key>acutecomb</key>
 	<string>acutecomb.glif</string>
 	<key>ae</key>
@@ -218,6 +222,10 @@
 	<string>colon.glif</string>
 	<key>comma</key>
 	<string>comma.glif</string>
+	<key>copyright</key>
+	<string>copyright.glif</string>
+	<key>currency</key>
+	<string>currency.glif</string>
 	<key>cyr_A</key>
 	<string>cyr_A_.glif</string>
 	<key>cyr_A.rlow</key>
@@ -550,6 +558,8 @@
 	<string>daggerdbl.glif</string>
 	<key>degree</key>
 	<string>degree.glif</string>
+	<key>dieresis</key>
+	<string>dieresis.glif</string>
 	<key>divide</key>
 	<string>divide.glif</string>
 	<key>dollar</key>
@@ -568,18 +578,28 @@
 	<string>dotlessj.low.glif</string>
 	<key>e</key>
 	<string>e.glif</string>
+	<key>e.alt</key>
+	<string>e.alt.glif</string>
 	<key>e.high</key>
 	<string>e.high.glif</string>
 	<key>e.low</key>
 	<string>e.low.glif</string>
 	<key>eight</key>
 	<string>eight.glif</string>
+	<key>eight.dnom</key>
+	<string>eight.dnom.glif</string>
+	<key>eight.numr</key>
+	<string>eight.numr.glif</string>
 	<key>ellipsis</key>
 	<string>ellipsis.glif</string>
 	<key>emdash</key>
 	<string>emdash.glif</string>
+	<key>emspace</key>
+	<string>emspace.glif</string>
 	<key>endash</key>
 	<string>endash.glif</string>
+	<key>enspace</key>
+	<string>enspace.glif</string>
 	<key>equal</key>
 	<string>equal.glif</string>
 	<key>eth</key>
@@ -594,14 +614,30 @@
 	<string>exclamdown.glif</string>
 	<key>f</key>
 	<string>f.glif</string>
+	<key>f.alt</key>
+	<string>f.alt.glif</string>
 	<key>f.high</key>
 	<string>f.high.glif</string>
 	<key>f.low</key>
 	<string>f.low.glif</string>
+	<key>figurespace</key>
+	<string>figurespace.glif</string>
 	<key>five</key>
 	<string>five.glif</string>
+	<key>five.dnom</key>
+	<string>five.dnom.glif</string>
+	<key>five.numr</key>
+	<string>five.numr.glif</string>
 	<key>four</key>
 	<string>four.glif</string>
+	<key>four.dnom</key>
+	<string>four.dnom.glif</string>
+	<key>four.numr</key>
+	<string>four.numr.glif</string>
+	<key>fourperemspace</key>
+	<string>fourperemspace.glif</string>
+	<key>fraction</key>
+	<string>fraction.glif</string>
 	<key>g</key>
 	<string>g.glif</string>
 	<key>g.high</key>
@@ -632,6 +668,8 @@
 	<string>h.high.glif</string>
 	<key>h.low</key>
 	<string>h.low.glif</string>
+	<key>hairspace</key>
+	<string>hairspace.glif</string>
 	<key>hookabovecomb</key>
 	<string>hookabovecomb.glif</string>
 	<key>hyphen</key>
@@ -662,12 +700,16 @@
 	<string>l.low.glif</string>
 	<key>less</key>
 	<string>less.glif</string>
+	<key>logicalnot</key>
+	<string>logicalnot.glif</string>
 	<key>m</key>
 	<string>m.glif</string>
 	<key>m.high</key>
 	<string>m.high.glif</string>
 	<key>m.low</key>
 	<string>m.low.glif</string>
+	<key>macron</key>
+	<string>macron.glif</string>
 	<key>mu</key>
 	<string>mu.glif</string>
 	<key>multiply</key>
@@ -680,6 +722,12 @@
 	<string>n.low.glif</string>
 	<key>nine</key>
 	<string>nine.glif</string>
+	<key>nine.dnom</key>
+	<string>nine.dnom.glif</string>
+	<key>nine.numr</key>
+	<string>nine.numr.glif</string>
+	<key>nldr</key>
+	<string>nldr.glif</string>
 	<key>numbersign</key>
 	<string>numbersign.glif</string>
 	<key>o</key>
@@ -702,6 +750,14 @@
 	<string>oe.low.glif</string>
 	<key>one</key>
 	<string>one.glif</string>
+	<key>one.dnom</key>
+	<string>one.dnom.glif</string>
+	<key>one.numr</key>
+	<string>one.numr.glif</string>
+	<key>ordfeminine</key>
+	<string>ordfeminine.glif</string>
+	<key>ordmasculine</key>
+	<string>ordmasculine.glif</string>
 	<key>oslash</key>
 	<string>oslash.glif</string>
 	<key>oslash.high</key>
@@ -722,12 +778,24 @@
 	<string>parenright.glif</string>
 	<key>percent</key>
 	<string>percent.glif</string>
+	<key>percent.alt</key>
+	<string>percent.alt.glif</string>
 	<key>period</key>
 	<string>period.glif</string>
 	<key>periodcentered</key>
 	<string>periodcentered.glif</string>
+	<key>permille</key>
+	<string>permille.glif</string>
 	<key>plus</key>
 	<string>plus.glif</string>
+	<key>plusminus</key>
+	<string>plusminus.glif</string>
+	<key>prime</key>
+	<string>prime.glif</string>
+	<key>primedbl</key>
+	<string>primedbl.glif</string>
+	<key>puncspace</key>
+	<string>puncspace.glif</string>
 	<key>q</key>
 	<string>q.glif</string>
 	<key>q.high</key>
@@ -760,6 +828,8 @@
 	<string>r.high.glif</string>
 	<key>r.low</key>
 	<string>r.low.glif</string>
+	<key>registered</key>
+	<string>registered.glif</string>
 	<key>s</key>
 	<string>s.glif</string>
 	<key>s.high</key>
@@ -772,8 +842,16 @@
 	<string>semicolon.glif</string>
 	<key>seven</key>
 	<string>seven.glif</string>
+	<key>seven.dnom</key>
+	<string>seven.dnom.glif</string>
+	<key>seven.numr</key>
+	<string>seven.numr.glif</string>
 	<key>six</key>
 	<string>six.glif</string>
+	<key>six.dnom</key>
+	<string>six.dnom.glif</string>
+	<key>six.numr</key>
+	<string>six.numr.glif</string>
 	<key>slash</key>
 	<string>slash.glif</string>
 	<key>space</key>
@@ -786,8 +864,12 @@
 	<string>t.alt.glif</string>
 	<key>t.high</key>
 	<string>t.high.glif</string>
+	<key>t.high.alt</key>
+	<string>t.high.alt.glif</string>
 	<key>t.low</key>
 	<string>t.low.glif</string>
+	<key>t.low.alt</key>
+	<string>t.low.alt.glif</string>
 	<key>tail.high</key>
 	<string>tail.high.glif</string>
 	<key>tail.low</key>
@@ -802,10 +884,20 @@
 	<string>thorn.low.glif</string>
 	<key>three</key>
 	<string>three.glif</string>
+	<key>three.dnom</key>
+	<string>three.dnom.glif</string>
+	<key>three.numr</key>
+	<string>three.numr.glif</string>
+	<key>threeperemspace</key>
+	<string>threeperemspace.glif</string>
 	<key>tildecomb</key>
 	<string>tildecomb.glif</string>
 	<key>two</key>
 	<string>two.glif</string>
+	<key>two.dnom</key>
+	<string>two.dnom.glif</string>
+	<key>two.numr</key>
+	<string>two.numr.glif</string>
 	<key>u</key>
 	<string>u.glif</string>
 	<key>u.alt</key>
@@ -876,5 +968,11 @@
 	<string>z.low.glif</string>
 	<key>zero</key>
 	<string>zero.glif</string>
+	<key>zero.dnom</key>
+	<string>zero.dnom.glif</string>
+	<key>zero.numr</key>
+	<string>zero.numr.glif</string>
+	<key>zwsp</key>
+	<string>zwsp.glif</string>
 </dict>
 </plist>

@@ -22,7 +22,7 @@ desc=float(desc)
 xheight=float(xheight)
 
 gliffn = "{}/glyphs/{}".format(font, glifLib.glyphNameToFileName(glifname, None))
-builddir = "build/COLR_glyphs/"
+builddir = "build/{}_COLR_glyphs/".format(os.environ["FONTFAMILY"])
 try:
     os.mkdir(builddir)
 except OSError:
@@ -38,7 +38,7 @@ def drawSquare(p, pt):
 with open(gliffn) as f:
     glyph = RGlyph()
     xml = f.read()
-    glyph._loadFromGLIF(xml)
+    glyph._loadFromGLIF(xml, validate=False)
     p = glyph.getPen()
     pp = glyph.getPointPen()
     firsts = [c[0] for c in glyph.contours]
@@ -53,7 +53,7 @@ with open(gliffn) as f:
     p.endPath()
 
     glf = builddir+glifLib.glyphNameToFileName(glifname+"_guidelines", None)
-    tempf = tempfile.mkstemp()[1]
+    tempf = tempfile.mkstemp(suffix=".glif")[1]
     with open(tempf, "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
     if glyph.width <= 0:

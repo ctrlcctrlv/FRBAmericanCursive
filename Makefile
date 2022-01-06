@@ -1,6 +1,8 @@
 SHELL = /bin/bash
 .EXPORT_ALL_VARIABLES:
 PRODUCTION := $(if $(PRODUCTION),$(PRODUCTION),n)
+#FONTFAMILY := FRBAmericanPrint
+#FONTFAMILY_H := FRB American Print
 FONTFAMILY := FRBAmericanCursive
 FONTFAMILY_H := FRB American Cursive
 PYTHON := $(if $(PYTHON),$(PYTHON),python3)
@@ -14,6 +16,7 @@ all:
 	make patterned
 	make physics
 	make colrcpal
+	make justarrows
 	make specimens
 
 include mk/*.mk

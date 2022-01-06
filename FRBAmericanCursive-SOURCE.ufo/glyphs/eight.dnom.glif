@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<glyph name="eight.dnom" format="2">
+  <advance width="329"/>
+  <unicode hex="2088"/>
+  <outline>
+    <contour>
+      <point x="296.399" y="23.4004" type="move" smooth="yes"/>
+      <point x="291.449" y="27.7998"/>
+      <point x="253.015" y="53.6738"/>
+      <point x="197.399" y="53.0996" type="curve" smooth="yes"/>
+      <point x="167.151" y="52.7881"/>
+      <point x="145.22" y="40.8408"/>
+      <point x="132.832" y="25.4082" type="curve" smooth="yes"/>
+      <point x="91.0029" y="-26.7061"/>
+      <point x="182.55" y="-90.0869"/>
+      <point x="182.55" y="-176.8" type="curve" smooth="yes"/>
+      <point x="182.55" y="-223"/>
+      <point x="136.113" y="-246.1"/>
+      <point x="102.25" y="-246.1" type="curve" smooth="yes"/>
+      <point x="71.2324" y="-246.1"/>
+      <point x="50" y="-218.131"/>
+      <point x="50" y="-188.35" type="curve" smooth="yes"/>
+      <point x="50" y="-108.6"/>
+      <point x="281.583" y="10.3643"/>
+      <point x="334.35" y="44.8496" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

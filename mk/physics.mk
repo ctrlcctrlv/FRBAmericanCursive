@@ -1,6 +1,6 @@
 .PHONY: physics-files-per-ufo
 physics-files-per-ufo:
-	rm -r build/$(UFO)/physics_SVGs
+	rm -fr build/$(UFO)/physics_SVGs
 	mkdir -p build/$(UFO)/physics_SVGs
 	ls build/$(UFO)/glyphs/*.glif | parallel '$(GLIF2SVG) -o build/$(UFO)/physics_SVGs/{/.}.svg {}'
 	ls build/$(UFO)/COLR_glyphs/*_arrows.glif | parallel --bar '$(GLIF2SVG) --fontinfo=build/BUILD.ufo/fontinfo.plist -o build/$(UFO)/physics_SVGs/{/.}.svg {}'
@@ -8,9 +8,9 @@ physics-files-per-ufo:
 
 .PHONY: physics-files
 physics-files:
-	rm -r build/physics_SVGs
-	mkdir -p build/physics_SVGs
-	ls build/BUILD.ufo/glyphs/*.glif | parallel --bar '$(GLIF2SVG) -o build/physics_SVGs/{/.}_internal.svg {}'
+	rm -fr build/$(FONTFAMILY)_physics_SVGs
+	mkdir -p build/$(FONTFAMILY)_physics_SVGs
+	ls build/BUILD.ufo/glyphs/*.glif | parallel --bar '$(GLIF2SVG) -o build/$(FONTFAMILY)_physics_SVGs/{/.}_internal.svg {}'
 	parallel --bar -a build_data/monoline.tsv --colsep '\t' 'make UFO=$(FONTFAMILY)-{1}.ufo physics-files-per-ufo'
 
 .PHONY: all-physics-files
@@ -34,7 +34,7 @@ processing-physics:
 	[[ ! -d /tmp/AnchorPhysics ]] && make compile-processing
 	cat build_data/monoline$(DEBUG).tsv | sort -r | parallel -u --jobs $$JOBS --colsep '\t' '
 	cd build/$(FONTFAMILY)-{1}.ufo;
-	TEMPTSV=`mktemp --suffix=.tsv`;
+	TEMPTSV=/tmp/$(FONTFAMILY)-{1}-physics.tsv;
 	echo Writing "$$TEMPTSV";
 	find ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -iname "*.glif" -and -not -iname "space.glif" -printf "%f\\n" | xargs basename -a -s.glif | sort > glyphs.txt;
 	test -z "$(SKIP_PROCESSING)" && (/tmp/AnchorPhysics/AnchorPhysics | sed -e "/^Finished\./d" > "$$TEMPTSV");

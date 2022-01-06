@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="primedbl" format="2">
+  <advance width="466"/>
+  <unicode hex="2033"/>
+  <outline>
+    <contour>
+      <point x="336" y="540.953" type="move"/>
+      <point x="199" y="391" type="line"/>
+    </contour>
+    <contour>
+      <point x="466" y="540.953" type="move"/>
+      <point x="329" y="391" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,3 +1,5 @@
+# ☞ MFEKstroke DASH mode is used to generate dashed and dotted glyphs. If working on a new font, you may want to control the args in `scripts/patterned_args.sh`.
+
 BUILD_DATA := build_data/dotted.tsv
 WIDTH_MINIMUM := 50.0
 
@@ -14,10 +16,10 @@ patterned-dashed:
 patterned-dotted-dashed:
 	# Build dotted or dashed
 	cat $(BUILD_DATA) | parallel --bar --jobs 7 --colsep '\t' '
-		GLYPHS=`find $(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -not -name contents.plist -not -name space.glif` 
+		GLYPHS=`find $(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -iname '*.glif' -and -not -name space.glif` 
 		ASTERISK='*'
 		WIDTHADJ=`perl -e "\\$$calc = {2}$${ASTERISK}1.5; \\$$calc = (\\$$calc >= $(WIDTH_MINIMUM) ? \\$$calc : $(WIDTH_MINIMUM)); print \\"\\$$calc\\";"`
-		CULLAREA=`perl -e "print ({2} >= $(WIDTH_MINIMUM) ? 0.3 : 0.7);"`
+		CULLAREA=`perl -e "print ({2} >= $(WIDTH_MINIMUM) ? 0.25 : 0.5);"`
 		DASHDESC="$(DASHLEN) $$WIDTHADJ"
 		#DASHDESC="{2} {2}"
 		STYLENAME=$(PREPENDNAME){1} WIDTH={2} CULLWIDTH=$$WIDTHADJ OS2WEIGHT={3} DASHDESC="$$DASHDESC" GLYPHS="$$GLYPHS" CULLAREA=$$CULLAREA make patterned-dotted-template
@@ -34,10 +36,11 @@ patterned-dotted-template:
 	cp -r build/$(FONTFAMILY)-`./scripts/os2weight_to_namedweight.py $(OS2WEIGHT)`.ufo "$$UFO"
 	./scripts/fudge_fontinfo.py "$$UFO" "$(FONTFAMILY)" "$(FONTFAMILY_H)" $(STYLENAME) $(OS2WEIGHT)
 	CULLAREA=`perl -e 'use Math::Trig; print pi() * (($(WIDTH) / 2.0) ** 2.0) * $(CULLAREA)'`
-	CULLWIDTHADJ=`perl -e 'print ($(WIDTH) * 0.65) + ($(WIDTH) >= $(WIDTH_MINIMUM) ? 0 : $(CULLWIDTH))'`
-	parallel --bar "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) -c -W $$CULLWIDTHADJ -a $$CULLAREA -l" <<< "$$GLYPHS"
-	ARGS=`./scripts/fontmake_args.sh`
-	$(PYTHON) -m fontmake --keep-overlaps --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`\n'
+	CULLWIDTHADJ=`perl -e 'print ($(WIDTH_MINIMUM) * 0.9) + ($(WIDTH) >= $(WIDTH_MINIMUM) ? 0 : ($(WIDTH_MINIMUM) - $(WIDTH)) * 2.0)'`
+	patterned_ARGS=$$(eval "echo `./scripts/patterned_args.sh`")
+	parallel --bar "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
+	fontmake_ARGS=`./scripts/fontmake_args.sh`
+	$(PYTHON) -m fontmake --keep-overlaps --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$fontmake_ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`'"$$patterned_ARGS"'\n'
 
 .PHONY .ONESHELL: patterned-apb
 patterned-apb:

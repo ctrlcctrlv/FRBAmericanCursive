@@ -44,7 +44,7 @@
 			<key>angle</key>
 			<real>0</real>
 			<key>name</key>
-			<string>Unnamed 2</string>
+			<string>high join</string>
 		</dict>
 		<dict>
 			<key>x</key>
@@ -54,7 +54,7 @@
 			<key>angle</key>
 			<real>0</real>
 			<key>name</key>
-			<string>Unnamed 3</string>
+			<string>low join</string>
 		</dict>
 		<dict>
 			<key>x</key>
@@ -80,7 +80,7 @@
 	<key>italicAngle</key>
 	<real>-25</real>
 	<key>openTypeOS2VendorID</key>
-	<string>QQQQ</string>
+	<string>MFEK</string>
 	<key>openTypeHeadCreated</key>
 	<string>2021/01/04 01:14:38</string>
 	<key>openTypeNameLicense</key>

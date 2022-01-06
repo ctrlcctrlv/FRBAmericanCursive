@@ -4,16 +4,23 @@ regen:
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
 	for f in numbers.ufo/glyphs/__combstroke[0123456789].glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
-	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
 	./scripts/tsv_to_mark.py build_data/top.tsv > fea/mark.fea
+	# OpenType GDEF table
+	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
+	make fez-classes
+
+.PHONY: regen-stroke-count
+regen-stroke-count:
 	./scripts/stroke_count_fea.sh > fea/strokes.fea
 
 .PHONY: regen-from-deprecated-fontforge-files
 regen-from-deprecated-fontforge-files:
-	./scripts/regenerate_ufo_glyphs_from_sfd.py
 	# Patterns
 	fontforge -lang=py -c 'f=fontforge.open("patterns.sfd");f.generate("patterns.ufo")'
 	sfdnormalize patterns.sfd patterns_temp.sfd && mv patterns_temp.sfd patterns.sfd
+	# Numbers
+	fontforge -lang=py -c 'f=fontforge.open("numbers.sfd");f.generate("numbers.ufo")'
+	sfdnormalize numbers.sfd numbers_temp.sfd && mv numbers_temp.sfd numbers.sfd
 
 .PHONY: fez-classes
 fez-classes:

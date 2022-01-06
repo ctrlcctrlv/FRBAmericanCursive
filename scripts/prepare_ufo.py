@@ -33,5 +33,9 @@ ufo = ufoLib.UFOReaderWriter(outname)
 build_ccmp.create_and_build_placeholders(ufo)
 
 subprocess.run("./scripts/add_marks_from_data.py {}".format(outname), shell=True, executable="/bin/bash")
-shutil.copy("fea/features.fea", outname+"/features.fea")
+try:
+    shutil.copy("fea/{}_features.fea".format(os.environ["FONTFAMILY"]), outname+"/features.fea")
+except OSError:
+    print("Warning: Failed to copy features.", file=sys.stderr)
+    pass
 subprocess.run("./scripts/reset_features_include_path.py {} {}".format(outname, outname.split("/")[1]), shell=True, executable="/bin/bash")

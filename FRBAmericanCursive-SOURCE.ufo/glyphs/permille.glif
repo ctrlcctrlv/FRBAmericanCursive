@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="permille" format="2">
+  <advance width="776"/>
+  <unicode hex="2030"/>
+  <outline>
+    <contour>
+      <point x="633" y="530" type="move"/>
+      <point x="97" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="365.45462" y="97.272705" type="curve"/>
+      <point x="398.18192" y="151.81818"/>
+      <point x="445.36374" y="164.54547"/>
+      <point x="482.63644" y="162.7273" type="curve"/>
+      <point x="519.0023" y="160.95335"/>
+      <point x="541.06946" y="132.65205"/>
+      <point x="507.27286" y="71.81818" type="curve"/>
+      <point x="480.0001" y="22.727234"/>
+      <point x="440.0001" y="0.9090576"/>
+      <point x="401.81827" y="2.727234" type="curve"/>
+      <point x="363.63644" y="4.54541"/>
+      <point x="332.72733" y="42.727234"/>
+    </contour>
+    <contour>
+      <point x="221.00006" y="473.091" type="curve"/>
+      <point x="253.72736" y="527.6365"/>
+      <point x="300.90918" y="540.3638"/>
+      <point x="338.1819" y="538.5456" type="curve"/>
+      <point x="374.54776" y="536.7716"/>
+      <point x="396.6149" y="508.47037"/>
+      <point x="362.8183" y="447.63647" type="curve"/>
+      <point x="335.54553" y="398.54553"/>
+      <point x="295.54553" y="376.72736"/>
+      <point x="257.3637" y="378.54553" type="curve"/>
+      <point x="219.18188" y="380.3637"/>
+      <point x="188.27277" y="418.54553"/>
+    </contour>
+    <contour>
+      <point x="605.4546" y="97.272705" type="curve"/>
+      <point x="638.1819" y="151.81818"/>
+      <point x="685.3638" y="164.54547"/>
+      <point x="722.6365" y="162.7273" type="curve"/>
+      <point x="759.0023" y="160.95335"/>
+      <point x="781.06946" y="132.65205"/>
+      <point x="747.2728" y="71.81818" type="curve"/>
+      <point x="720.00006" y="22.727234"/>
+      <point x="680.0001" y="0.9090576"/>
+      <point x="641.81824" y="2.727234" type="curve"/>
+      <point x="603.6364" y="4.54541"/>
+      <point x="572.7273" y="42.727234"/>
+    </contour>
+  </outline>
+</glyph>
