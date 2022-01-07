@@ -1,0 +1,36 @@
+feature mkmk {
+    lookup mkmk_above {
+        lookupflag MarkAttachmentType @top;
+        pos mark @top_marks <anchor 0 150> mark @top;
+    } mkmk_above;
+
+    lookup mkmk_hookabove {
+        pos @top_marks hookabovecomb' <160 -60 0 0>;
+    } mkmk_hookabove;
+
+    lookup mkmk_below {
+        lookupflag MarkAttachmentType @bottom;
+        pos mark @bottom_marks <anchor 0 -175> mark @bottom;
+    } mkmk_below;
+} mkmk;
+
+lookup SHIFT_TOP_MARKS {
+    pos @top_marks <-80 0 0 0>;
+} SHIFT_TOP_MARKS;
+
+lookup SHIFT_TOP_MARKS_x2 {
+    pos @top_marks <-160 0 0 0>;
+} SHIFT_TOP_MARKS_x2;
+
+feature mark {
+    lookup contextual_viethorncomb {
+        ignore pos @O @top_marks' @top_marks';
+        ignore pos @o @top_marks' @top_marks';
+        # This works because viethorncomb is not a member of markClass @top_marks, it's the sole member of @viethorn_marks
+        pos @O [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS;
+        # Have double the effect on lowercase «o»'s …
+        pos @o [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS_x2 [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS_x2;
+        # … and triple on hookabovecomb.
+        pos @o [viethorncomb hookabovecomb]' lookup SHIFT_TOP_MARKS [viethorncomb hookabovecomb]' lookup SHIFT_TOP_MARKS;
+    } contextual_viethorncomb;
+} mark;

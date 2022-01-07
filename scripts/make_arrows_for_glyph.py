@@ -21,6 +21,8 @@ elif len(sys.argv) == 4:
 else:
     raise NotImplementedError
 
+print("Making arrows for {} {} {}".format(gliffn, finalfn, target_size), file=sys.stderr)
+
 # First we need to split the glyph into its constituent contours
 with open(gliffn, "rb") as f:
     dom = ElementTree(file=f)
@@ -40,7 +42,7 @@ split_glifs = list()
 for i, contour in enumerate(contours):
     root.find("outline").clear()
     root.find("outline").append(contour)
-    fn = tempfile.mkstemp()[1]
+    fn = tempfile.mkstemp(suffix=".glif")[1]
     with open(fn, "wb+") as f:
         dom.write(f)
     split_glifs.append(fn)

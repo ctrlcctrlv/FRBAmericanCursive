@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quotedbllownine" format="2">
+  <advance width="217"/>
+  <unicode hex="201E"/>
+  <outline>
+    <contour>
+      <point x="100.85159" y="149" type="move"/>
+      <point x="100.85159" y="149"/>
+      <point x="49.8721" y="109"/>
+      <point x="37.137695" y="79" type="curve"/>
+      <point x="24.403297" y="49"/>
+      <point x="39" y="8" type="curve"/>
+    </contour>
+    <contour>
+      <point x="200.85179" y="149" type="move"/>
+      <point x="200.85179" y="149"/>
+      <point x="149.8718" y="109"/>
+      <point x="137.1378" y="79" type="curve"/>
+      <point x="124.40379" y="49"/>
+      <point x="138.9998" y="8" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

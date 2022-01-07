@@ -86,6 +86,8 @@
 	<string>N_.rlow.glif</string>
 	<key>O</key>
 	<string>O_.glif</string>
+	<key>O.alt</key>
+	<string>O_.alt.glif</string>
 	<key>O.rhigh</key>
 	<string>O_.rhigh.glif</string>
 	<key>OE</key>
@@ -216,8 +218,12 @@
 	<string>ccedilla.high.glif</string>
 	<key>ccedilla.low</key>
 	<string>ccedilla.low.glif</string>
+	<key>cedilla</key>
+	<string>cedilla.glif</string>
 	<key>cent</key>
 	<string>cent.glif</string>
+	<key>circumflex</key>
+	<string>circumflex.glif</string>
 	<key>colon</key>
 	<string>colon.glif</string>
 	<key>comma</key>
@@ -738,6 +744,8 @@
 	<string>nldr.glif</string>
 	<key>numbersign</key>
 	<string>numbersign.glif</string>
+	<key>numero</key>
+	<string>numero.glif</string>
 	<key>o</key>
 	<string>o.glif</string>
 	<key>o.alt</key>
@@ -762,6 +770,10 @@
 	<string>one.dnom.glif</string>
 	<key>one.numr</key>
 	<string>one.numr.glif</string>
+	<key>onehalf</key>
+	<string>onehalf.glif</string>
+	<key>onequarter</key>
+	<string>onequarter.glif</string>
 	<key>ordfeminine</key>
 	<string>ordfeminine.glif</string>
 	<key>ordmasculine</key>
@@ -814,10 +826,16 @@
 	<string>question.glif</string>
 	<key>questiondown</key>
 	<string>questiondown.glif</string>
+	<key>quoteangleleft</key>
+	<string>quoteangleleft.glif</string>
+	<key>quoteangleright</key>
+	<string>quoteangleright.glif</string>
 	<key>quotedbl</key>
 	<string>quotedbl.glif</string>
 	<key>quotedblleft</key>
 	<string>quotedblleft.glif</string>
+	<key>quotedbllownine</key>
+	<string>quotedbllownine.glif</string>
 	<key>quotedblright</key>
 	<string>quotedblright.glif</string>
 	<key>quoteleft</key>
@@ -862,6 +880,8 @@
 	<string>six.numr.glif</string>
 	<key>slash</key>
 	<string>slash.glif</string>
+	<key>smalltilde</key>
+	<string>smalltilde.glif</string>
 	<key>space</key>
 	<string>space.glif</string>
 	<key>sterling</key>
@@ -872,12 +892,8 @@
 	<string>t.alt.glif</string>
 	<key>t.high</key>
 	<string>t.high.glif</string>
-	<key>t.high.alt</key>
-	<string>t.high.alt.glif</string>
 	<key>t.low</key>
 	<string>t.low.glif</string>
-	<key>t.low.alt</key>
-	<string>t.low.alt.glif</string>
 	<key>tail.high</key>
 	<string>tail.high.glif</string>
 	<key>tail.low</key>
@@ -898,6 +914,8 @@
 	<string>three.numr.glif</string>
 	<key>threeperemspace</key>
 	<string>threeperemspace.glif</string>
+	<key>threequarters</key>
+	<string>threequarters.glif</string>
 	<key>tildecomb</key>
 	<string>tildecomb.glif</string>
 	<key>two</key>
@@ -918,6 +936,8 @@
 	<string>underdotcomb.glif</string>
 	<key>underscore</key>
 	<string>underscore.glif</string>
+	<key>uni02DA</key>
+	<string>uni02D_A_.glif</string>
 	<key>uni0302</key>
 	<string>uni0302.glif</string>
 	<key>uni0304</key>

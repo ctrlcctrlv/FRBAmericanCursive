@@ -7,7 +7,7 @@
 	<key>descender</key>
 	<real>-350</real>
 	<key>openTypeOS2WinAscent</key>
-	<integer>650</integer>
+	<integer>667</integer>
 	<key>openTypeOS2WinDescent</key>
 	<integer>350</integer>
 	<key>openTypeHheaAscender</key>
@@ -21,7 +21,7 @@
 	<key>capHeight</key>
 	<integer>540</integer>
 	<key>copyright</key>
-	<string>Copyright 2021 Fredrick R. Brennan &lt;copypaste@kittens.ph></string>
+	<string>Copyright 2021 The FRB American Cursive Project Authors (https://github.com/ctrlcctrlv/FRBAmericanCursive)</string>
 	<key>familyName</key>
 	<string>FRB American Cursive</string>
 	<key>guidelines</key>
@@ -176,9 +176,9 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.</string>
 	<key>openTypeNameLicenseURL</key>
-	<string>http://scripts.sil.org/OFL</string>
+	<string>https://scripts.sil.org/OFL</string>
 	<key>openTypeNameVersion</key>
-	<string>Version 2.0</string>
+	<string>Version 2.0;Modular Font Editor K font №1</string>
 	<key>openTypeOS2TypoDescender</key>
 	<integer>-350</integer>
 	<key>postscriptFontName</key>
@@ -205,5 +205,11 @@ OTHER DEALINGS IN THE FONT SOFTWARE.</string>
 	<integer>0</integer>
 	<key>xHeight</key>
 	<integer>264</integer>
+	<key>openTypeOS2Selection</key>
+	<array>
+		<integer>7</integer>
+	</array>
+	<key>openTypeOS2Type</key>
+	<array/>
 </dict>
 </plist>

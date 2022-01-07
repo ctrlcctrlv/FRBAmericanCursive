@@ -24,7 +24,7 @@ content_inner = [[\neverindent
 \bigskip
 \par Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
 \par abcdefghijklmnopqrstuvwxyz
-\par 1234567890 !@#$\%%&*() []{};':",./ \\
+\par 1234567890 !@#$\%%&*() []{};':",./ \\ № ₿ ₱ ₹ †
 \par The quick brown fox jumps over the lazy dog.
 \par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!

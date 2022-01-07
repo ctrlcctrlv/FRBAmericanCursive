@@ -19,7 +19,6 @@
       <point x="441" y="77" type="curve"/>
     </contour>
     <contour>
-      <point x="400" y="404"/>
       <point x="400" y="414" type="curve"/>
       <point x="400" y="424"/>
       <point x="408" y="432"/>

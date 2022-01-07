@@ -41,10 +41,12 @@ lookup combstroke {
   sub ccedilla.high by ccedilla.high __combstroke1;
   sub ccedilla.low by ccedilla.low __combstroke1;
   sub Ccedilla.rlow by Ccedilla.rlow __combstroke1 __combstroke2 __combstroke3;
+  sub cedilla by cedilla __combstroke1;
   sub cent by cent __combstroke1 __combstroke2;
   sub c by c __combstroke1;
   sub C by C __combstroke1 __combstroke2;
   sub c.high by c.high __combstroke1 __combstroke2;
+  sub circumflex by circumflex __combstroke1;
   sub c.low by c.low __combstroke1 __combstroke2;
   sub colon by colon __combstroke1 __combstroke2;
   sub comma by comma __combstroke1;
@@ -80,7 +82,7 @@ lookup combstroke {
   sub cyr_ef.low by cyr_ef.low __combstroke1;
   sub cyr_EF.rlow by cyr_EF.rlow __combstroke1;
   sub cyr_e by cyr_e __combstroke1 __combstroke2;
-  sub cyr_E by cyr_E __combstroke1 __combstroke2;
+  sub cyr_E by cyr_E __combstroke1 __combstroke2 __combstroke3;
   sub cyr_e.high by cyr_e.high __combstroke1 __combstroke2;
   sub cyr_el by cyr_el __combstroke1;
   sub cyr_EL by cyr_EL __combstroke1;
@@ -102,7 +104,7 @@ lookup combstroke {
   sub cyr_ER by cyr_ER __combstroke1 __combstroke2;
   sub cyr_er.high by cyr_er.high __combstroke1;
   sub cyr_er.low by cyr_er.low __combstroke1;
-  sub cyr_E.rlow by cyr_E.rlow __combstroke1 __combstroke2;
+  sub cyr_E.rlow by cyr_E.rlow __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub cyr_ER.rlow by cyr_ER.rlow __combstroke1 __combstroke2 __combstroke3;
   sub cyr_es by cyr_es __combstroke1;
   sub cyr_ES by cyr_ES __combstroke1;
@@ -121,13 +123,13 @@ lookup combstroke {
   sub cyr_hard_sign.finahigh by cyr_hard_sign.finahigh __combstroke1;
   sub cyr_hard_sign.finalow by cyr_hard_sign.finalow __combstroke1;
   sub cyr_hard_sign by cyr_hard_sign __combstroke1;
-  sub cyr_HARD_SIGN by cyr_HARD_SIGN __combstroke1;
+  sub cyr_HARD_SIGN by cyr_HARD_SIGN __combstroke1 __combstroke2 __combstroke3;
   sub cyr_HA.rlow by cyr_HA.rlow __combstroke1 __combstroke2;
   sub cyr_ie by cyr_ie __combstroke1;
-  sub cyr_IE by cyr_IE __combstroke1;
+  sub cyr_IE by cyr_IE __combstroke1 __combstroke2;
   sub cyr_ie.high by cyr_ie.high __combstroke1;
   sub cyr_ie.low by cyr_ie.low __combstroke1;
-  sub cyr_IE.rlow by cyr_IE.rlow __combstroke1;
+  sub cyr_IE.rlow by cyr_IE.rlow __combstroke1 __combstroke2;
   sub cyr_i by cyr_i __combstroke1;
   sub cyr_I by cyr_I __combstroke1;
   sub cyr_i.high by cyr_i.high __combstroke1;
@@ -149,15 +151,15 @@ lookup combstroke {
   sub cyr_pe.low by cyr_pe.low __combstroke1;
   sub cyr_PE.rlow by cyr_PE.rlow __combstroke1 __combstroke2 __combstroke3;
   sub cyr_sha by cyr_sha __combstroke1;
-  sub cyr_SHA by cyr_SHA __combstroke1;
-  sub cyr_sha.high by cyr_sha.high __combstroke1;
-  sub cyr_sha.low by cyr_sha.low __combstroke1;
+  sub cyr_SHA by cyr_SHA __combstroke1 __combstroke2 __combstroke3;
+  sub cyr_sha.high by cyr_sha.high __combstroke1 __combstroke2 __combstroke3 __combstroke4;
+  sub cyr_sha.low by cyr_sha.low __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub cyr_SHA.rlow by cyr_SHA.rlow __combstroke1;
   sub cyr_shcha by cyr_shcha __combstroke1;
-  sub cyr_SHCHA by cyr_SHCHA __combstroke1;
+  sub cyr_SHCHA by cyr_SHCHA __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub cyr_shcha.high by cyr_shcha.high __combstroke1;
   sub cyr_shcha.low by cyr_shcha.low __combstroke1;
-  sub cyr_SHCHA.rlow by cyr_SHCHA.rlow __combstroke1;
+  sub cyr_SHCHA.rlow by cyr_SHCHA.rlow __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub cyr_short_i by cyr_short_i __combstroke1 __combstroke2;
   sub cyr_SHORT_I by cyr_SHORT_I __combstroke1 __combstroke2;
   sub cyr_short_i.high by cyr_short_i.high __combstroke1 __combstroke2;
@@ -193,7 +195,7 @@ lookup combstroke {
   sub cyr_ya.low by cyr_ya.low __combstroke1;
   sub cyr_YA.rlow by cyr_YA.rlow __combstroke1;
   sub cyr_yeru by cyr_yeru __combstroke1;
-  sub cyr_YERU by cyr_YERU __combstroke1;
+  sub cyr_YERU by cyr_YERU __combstroke1 __combstroke2 __combstroke3;
   sub cyr_yeru.high by cyr_yeru.high __combstroke1;
   sub cyr_yeru.low by cyr_yeru.low __combstroke1;
   sub cyr_YERU.rlow by cyr_YERU.rlow __combstroke1;
@@ -251,7 +253,7 @@ lookup combstroke {
   sub eth.high by eth.high __combstroke1 __combstroke2;
   sub eth.low by eth.low __combstroke1 __combstroke2;
   sub Eth.rhigh by Eth.rhigh __combstroke1 __combstroke2;
-  sub _Euro by _Euro __combstroke1 __combstroke2 __combstroke3;
+  sub _Euro by _Euro __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub exclamdown by exclamdown __combstroke1 __combstroke2;
   sub exclam by exclam __combstroke1 __combstroke2;
   sub f.alt by f.alt __combstroke1;
@@ -336,7 +338,9 @@ lookup combstroke {
   sub .notdef by .notdef __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub N.rlow by N.rlow __combstroke1;
   sub numbersign by numbersign __combstroke1 __combstroke2 __combstroke3 __combstroke4;
+  sub numero by numero __combstroke1 __combstroke2 __combstroke3 __combstroke4 __combstroke5 __combstroke6 __combstroke7;
   sub o.alt by o.alt __combstroke1;
+  sub O.alt by O.alt __combstroke1;
   sub oe by oe __combstroke1;
   sub OE by OE __combstroke1;
   sub oe.high by oe.high __combstroke1;
@@ -350,7 +354,9 @@ lookup combstroke {
   sub o.low by o.low __combstroke1 __combstroke2;
   sub one.dnom by one.dnom __combstroke1;
   sub one by one __combstroke1;
+  sub onehalf by onehalf;
   sub one.numr by one.numr __combstroke1;
+  sub onequarter by onequarter;
   sub ordfeminine by ordfeminine __combstroke1 __combstroke2;
   sub ordmasculine by ordmasculine __combstroke1 __combstroke2;
   sub O.rhigh by O.rhigh __combstroke1;
@@ -384,8 +390,11 @@ lookup combstroke {
   sub Q.rlow by Q.rlow __combstroke1;
   sub questiondown by questiondown __combstroke1 __combstroke2;
   sub question by question __combstroke1 __combstroke2;
+  sub quoteangleleft by quoteangleleft __combstroke1;
+  sub quoteangleright by quoteangleright __combstroke1;
   sub quotedbl by quotedbl __combstroke1 __combstroke2;
   sub quotedblleft by quotedblleft __combstroke1 __combstroke2;
+  sub quotedbllownine by quotedbllownine __combstroke1 __combstroke2;
   sub quotedblright by quotedblright __combstroke1 __combstroke2;
   sub quoteleft.0len by quoteleft.0len __combstroke1;
   sub quoteleft by quoteleft __combstroke1;
@@ -414,6 +423,7 @@ lookup combstroke {
   sub six.numr by six.numr __combstroke1;
   sub slash by slash __combstroke1;
   sub s.low by s.low __combstroke1;
+  sub smalltilde by smalltilde __combstroke1;
   sub space by space;
   sub S.rhigh by S.rhigh __combstroke1;
   sub sterling by sterling __combstroke1 __combstroke2;
@@ -423,7 +433,6 @@ lookup combstroke {
   sub t.alt by t.alt __combstroke1 __combstroke2;
   sub t by t __combstroke1 __combstroke2;
   sub T by T __combstroke1 __combstroke2;
-  sub t.high.alt by t.high.alt;
   sub t.high by t.high __combstroke1 __combstroke2;
   sub thorn by thorn __combstroke1;
   sub Thorn by Thorn __combstroke1;
@@ -433,8 +442,8 @@ lookup combstroke {
   sub three by three __combstroke1 __combstroke2;
   sub three.numr by three.numr __combstroke1 __combstroke2;
   sub threeperemspace by threeperemspace;
+  sub threequarters by threequarters;
   sub tildecomb by tildecomb __combstroke1;
-  sub t.low.alt by t.low.alt;
   sub t.low by t.low __combstroke1 __combstroke2;
   sub T.rhigh by T.rhigh __combstroke1 __combstroke2;
   sub two.dnom by two.dnom __combstroke1 __combstroke2;
@@ -447,6 +456,7 @@ lookup combstroke {
   sub u.low by u.low __combstroke1;
   sub underdotcomb by underdotcomb __combstroke1;
   sub underscore by underscore __combstroke1;
+  sub uni02DA by uni02DA __combstroke1;
   sub uni0302 by uni0302 __combstroke1;
   sub uni0304 by uni0304 __combstroke1;
   sub uni0305 by uni0305 __combstroke1;
@@ -497,9 +507,7 @@ feature ss01 {
 } ss01;
 
 feature ss02 {
-  sub __combstroke0 by NULL;
-  sub __combstroke0 by NULL;
-  sub __combstroke0 by NULL;
+  # sub __combstroke0 by NULL;
   sub __combstroke1 by NULL;
   sub __combstroke2 by NULL;
   sub __combstroke3 by NULL;
@@ -507,8 +515,8 @@ feature ss02 {
   sub __combstroke5 by NULL;
   sub __combstroke6 by NULL;
   sub __combstroke7 by NULL;
-  sub __combstroke8 by NULL;
-  sub __combstroke9 by NULL;
+  # sub __combstroke8 by NULL;
+  # sub __combstroke9 by NULL;
 } ss02;
 # 
 # conditionset big {

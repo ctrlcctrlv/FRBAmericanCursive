@@ -3,6 +3,7 @@
   <advance width="370"/>
   <unicode hex="2D"/>
   <unicode hex="AD"/>
+  <unicode hex="2212"/>
   <outline>
     <contour>
       <point x="75" y="142" type="move"/>

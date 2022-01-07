@@ -84,7 +84,7 @@ with open(gliffn) as f:
     p.endPath()
 
     glf = builddir+glifLib.glyphNameToFileName(glifname+"_baseline", None)
-    tempf = tempfile.mkstemp()[1]
+    tempf = tempfile.mkstemp(suffix=".glif")[1]
     with open(tempf, "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
     if glyph.width <= 0:

@@ -18,8 +18,8 @@ for cn in classes:
         all_marks.extend(marks)
 
 gdefsimple = list()
-strokemarks = ['@stroke{}_marks'.format(i) for i in range(0, 10)]
-for i in range(0, 10):
+strokemarks = ['@stroke{}_marks'.format(i) for i in range(1, 8)]
+for i in range(1, 8):
     print("@stroke{0}_marks = [__combstroke{0}];".format(i))
 f = ufoLib.UFOReaderWriter(ufo_fn)
 sorted_glyphs = list_glyphs(f)

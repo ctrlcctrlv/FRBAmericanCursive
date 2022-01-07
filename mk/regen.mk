@@ -3,7 +3,7 @@ regen:
 	mkdir -p build dist
 	./scripts/regen_glyphs_plist.py $(FONTFAMILY)-SOURCE.ufo/glyphs
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
-	for f in numbers.ufo/glyphs/__combstroke[0123456789].glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
+	for f in numbers.ufo/glyphs/__combstroke[1234567].glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
 	make rebuild-marks
 	# OpenType GDEF table
@@ -35,9 +35,20 @@ regen-patterns-and-numbers-from-fontforge-files:
 
 .PHONY: fez-classes
 fez-classes:
-	rm -rf /tmp/fezinput.ufo
-	cp -r $(FONTFAMILY)-SOURCE.ufo/ /tmp/fezinput.ufo
-	rm /tmp/fezinput.ufo/features.fea
-	fontmake --keep-overlaps -u /tmp/fezinput.ufo -o otf --output-path build/fezinput.otf
-	rm -rf /tmp/fezinput.ufo
-	fez2fea build/fezinput.otf fea/classes.fez --omit-gdef > fea/classes.fea
+	make FEZ=fea/classes.fez FEA=fea/classes.fea fez-source
+
+.ONESHELL .PHONY: fez-source
+fez-source:
+	if [[ -z '$(UFO)' ]]; then
+		UFO='$(FONTFAMILY)-SOURCE.ufo'
+	else
+		UFO='$(UFO)'
+	fi
+	TEMPUFO=`mktemp -u -d --suffix _fezinput.ufo`
+	TEMPOTF=`mktemp --suffix _fezinput.otf`
+	cp -r "$$UFO" "$$TEMPUFO"
+	rm "$$TEMPUFO"/features.fea
+	fontmake --verbose DEBUG -S --keep-overlaps -u "$$TEMPUFO" -o otf --output-path "$$TEMPOTF"
+	rm -rf "$$TEMPUFO"
+	fez2fea "$$TEMPOTF" '$(FEZ)' --omit-gdef > '$(FEA)'
+	rm "$$TEMPOTF"

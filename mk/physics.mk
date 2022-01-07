@@ -36,7 +36,7 @@ processing-physics:
 	cd build/$(FONTFAMILY)-{1}.ufo;
 	TEMPTSV=/tmp/$(FONTFAMILY)-{1}-physics.tsv;
 	echo Writing "$$TEMPTSV";
-	find ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -iname "*.glif" -and -not -iname "space.glif" -printf "%f\\n" | xargs basename -a -s.glif | sort > glyphs.txt;
+	grep -rl "point" ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif | xargs basename -a -s.glif | sort > glyphs.txt;
 	test -z "$(SKIP_PROCESSING)" && (/tmp/AnchorPhysics/AnchorPhysics | sed -e "/^Finished\./d" > "$$TEMPTSV");
 	$(PYTHON) ../../scripts/tsv_to_mark.py "$$TEMPTSV" > strokes_mark.fea;
 	'

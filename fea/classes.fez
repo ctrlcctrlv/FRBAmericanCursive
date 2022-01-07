@@ -25,6 +25,7 @@ DefineClass @Latn_all = @Latn_all_lower | @Latn_all_upper;
 
 DefineClass @b = b|/^b\..*/;
 DefineClass @o = o|/^o\..*/;
+DefineClass @O = O|/^O\..*/;
 DefineClass @v = v|/^v\..*/;
 DefineClass @w = w|/^w\..*/;
 DefineClass @eth = eth|/^eth\..*/;
@@ -65,3 +66,13 @@ DefineClass @to_salt = @salt~alt;
 DefineClass @numr = /^.*\.numr$/;
 DefineClass @to_numr = @numr~numr;
 DefineClass @dnom = @to_numr.dnom;
+
+Feature liga {
+    Routine {
+        Substitute period period period -> ellipsis;
+    };
+
+    Routine {
+        Substitute period period -> nldr;
+    };
+};

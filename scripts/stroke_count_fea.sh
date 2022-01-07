@@ -22,9 +22,7 @@ feature ss01 {
 } ss01;
 
 feature ss02 {
-  sub __combstroke0 by NULL;
-  sub __combstroke0 by NULL;
-  sub __combstroke0 by NULL;
+  # sub __combstroke0 by NULL;
   sub __combstroke1 by NULL;
   sub __combstroke2 by NULL;
   sub __combstroke3 by NULL;
@@ -32,8 +30,8 @@ feature ss02 {
   sub __combstroke5 by NULL;
   sub __combstroke6 by NULL;
   sub __combstroke7 by NULL;
-  sub __combstroke8 by NULL;
-  sub __combstroke9 by NULL;
+  # sub __combstroke8 by NULL;
+  # sub __combstroke9 by NULL;
 } ss02;
 # 
 # conditionset big {

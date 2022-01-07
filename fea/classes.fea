@@ -1,32 +1,33 @@
 @Latn_lower_alt_all = [e.alt f.alt l.alt o.alt t.alt u.alt];
-@Latn_lower_alt_high = [o.high.alt t.high.alt];
-@Latn_lower_alt_low = [o.low.alt t.low.alt];
-@Latn_lower_alt_lh = [o.alt t.alt];
-@Latn_lower_alt_p = [u.alt e.alt l.alt f.alt];
-@Latn_lower = [o.alt t.alt a b c d e f g h i j k l m n o p q r s t u v w x y z dotlessi dotlessj germandbls thorn oslash ae oe ccedilla eth dcroat];
-@Latn_lower_low = [o.low.alt t.low.alt a.low b.low c.low d.low e.low f.low g.low h.low i.low j.low k.low l.low m.low n.low o.low p.low q.low r.low s.low t.low u.low v.low w.low x.low y.low z.low dotlessi.low dotlessj.low germandbls.low thorn.low oslash.low ae.low oe.low ccedilla.low eth.low dcroat.low];
-@Latn_lower_high = [o.high.alt t.high.alt a.high b.high c.high d.high e.high f.high g.high h.high i.high j.high k.high l.high m.high n.high o.high p.high q.high r.high s.high t.high u.high v.high w.high x.high y.high z.high dotlessi.high dotlessj.high germandbls.high thorn.high oslash.high ae.high oe.high ccedilla.high eth.high dcroat.high];
-@Latn_upper = [A A.alt AE B C Ccedilla D E Eth F G H I J K L M N O OE Oslash P Q R S T Thorn U V W X Y Z];
+@Latn_lower_alt_high = [o.high.alt];
+@Latn_lower_alt_low = [o.low.alt];
+@Latn_lower_alt_lh = [o.alt];
+@Latn_lower_alt_p = [t.alt e.alt f.alt l.alt u.alt];
+@Latn_lower = [o.alt a b c d e f g h i j k l m n o p q r s t u v w x y z dotlessi dotlessj germandbls thorn oslash ae oe ccedilla eth dcroat];
+@Latn_lower_low = [o.low.alt a.low b.low c.low d.low e.low f.low g.low h.low i.low j.low k.low l.low m.low n.low o.low p.low q.low r.low s.low t.low u.low v.low w.low x.low y.low z.low dotlessi.low dotlessj.low germandbls.low thorn.low oslash.low ae.low oe.low ccedilla.low eth.low dcroat.low];
+@Latn_lower_high = [o.high.alt a.high b.high c.high d.high e.high f.high g.high h.high i.high j.high k.high l.high m.high n.high o.high p.high q.high r.high s.high t.high u.high v.high w.high x.high y.high z.high dotlessi.high dotlessj.high germandbls.high thorn.high oslash.high ae.high oe.high ccedilla.high eth.high dcroat.high];
+@Latn_upper = [A A.alt AE B C Ccedilla D E Eth F G H I J K L M N O O.alt OE Oslash P Q R S T Thorn U V W X Y Z];
 @Latn_upper_rhigh = [D.rhigh Eth.rhigh H.rhigh O.rhigh P.rhigh S.rhigh T.rhigh];
 @Latn_upper_high = [D Eth H O P S T];
 @Latn_upper_rlow = [A.rlow AE.rlow B.rlow C.rlow Ccedilla.rlow E.rlow F.rlow G.rlow I.rlow J.rlow K.rlow L.rlow M.rlow N.rlow OE.rlow Q.rlow R.rlow U.rlow X.rlow Y.rlow Z.rlow];
 @Latn_upper_low = [A AE B C Ccedilla E F G I J K L M N OE Q R U X Y Z];
-@Latn_all_lower = [oe ccedilla dotlessj.high t.high e z.low l t.low k.low y.low ccedilla.high u n v.low v e.alt dotlessi j.low g oe.low e.low t w germandbls thorn.high g.high b.low g.low q.low q i dcroat.low ccedilla.low dotlessj p c.low p.high z k.high s h.low dotlessj.low f.alt o.low x.low ae dcroat eth.low germandbls.low f m.low i.high d.low j oe.high s.low t.high.alt eth dcroat.high l.low x v.high dotlessi.high p.low c z.high h.high thorn.low r.high ae.high u.low m o.high.alt l.high oslash.low i.low l.alt e.high germandbls.high a.high r oslash.high f.high t.alt j.high w.high c.high n.high s.high x.high a.low b.high f.low ae.low u.high eth.high m.high y.high o dotlessi.low q.high t.low.alt o.low.alt d.high r.low d w.low b o.alt o.high h a n.low k oslash u.alt thorn y];
-@Latn_all_upper = [V N Q Y X A.alt I M.rlow O E.rlow H.rhigh OE E F G U.rlow T.rhigh J.rlow I.rlow S B J H K C L A U Thorn L.rlow P D Oslash C.rlow R.rlow K.rlow Eth.rhigh G.rlow Y.rlow AE.rlow S.rhigh T Eth O.rhigh W F.rlow A.rlow Z Ccedilla Z.rlow X.rlow B.rlow Ccedilla.rlow AE M D.rhigh R Q.rlow P.rhigh N.rlow OE.rlow];
-@Latn_all = [oe ccedilla dotlessj.high Q A.alt k.low O E.rlow y.low u n v.low v U.rlow dotlessi T.rhigh j.low I.rlow germandbls thorn.high J K L.rlow q i P D C.rlow G.rlow p.high z dotlessj.low f.alt ae dcroat eth.low germandbls.low f m.low i.high AE j oe.high R N.rlow v.high dotlessi.high thorn.low r.high u.low m G o.high.alt oslash.low i.low l.alt e.high a.high C c.high n.high L U b.high f.low ae.low R.rlow u.high Eth.rhigh m.high y.high dotlessi.low AE.rlow t.low.alt o.low.alt d.high F.rlow Eth w.low A.rlow Ccedilla Z.rlow o.alt h a oslash thorn y t.high e z.low l I M.rlow t.low ccedilla.high OE F e.alt oe.low g e.low t w H g.high b.low A g.low q.low Thorn dcroat.low ccedilla.low K.rlow dotlessj p c.low k.high s h.low S.rhigh W o.low x.low Ccedilla.rlow d.low s.low t.high.alt dcroat.high l.low eth D.rhigh Q.rlow x p.low c z.high V N Y X h.high ae.high H.rhigh E l.high J.rlow germandbls.high S r B oslash.high f.high t.alt j.high w.high s.high x.high a.low Oslash eth.high o q.high Y.rlow r.low T O.rhigh d Z b X.rlow B.rlow o.high n.low k M u.alt P.rhigh OE.rlow];
-@b = [b.high b.low b];
-@o = [o.alt o.low.alt o.high o o.high.alt o.low];
-@v = [v.high v v.low];
+@Latn_all_lower = [oslash.low g dcroat o.high a w.low oe t h.high o.low.alt f p.high dotlessi.low s dotlessj.high i v.high l.alt dotlessj t.low e w ae.low h.low ccedilla.high w.high b.low j.low oe.high k.low s.low ccedilla.low x.low q.low thorn.low k dotlessj.low m.low o.alt c n.low l oslash l.high oe.low d.high p f.low u i.low y.low j q.high y.high s.high g.high r u.alt h n.high germandbls b ccedilla q g.low r.high z l.low m.high ae.high o.high.alt p.low thorn eth.high dcroat.high n d.low e.low u.low i.high germandbls.low e.high x c.low v.low u.high eth t.alt dotlessi germandbls.high f.alt r.low b.high t.high thorn.high c.high f.high d dotlessi.high m a.low oslash.high o.low e.alt v x.high z.high y z.low a.high o eth.low dcroat.low k.high ae j.high];
+@Latn_all_upper = [F A.rlow B.rlow OE X.rlow M.rlow K.rlow Eth.rhigh G S P.rhigh N E.rlow A AE V P X G.rlow Q B I T.rhigh H.rhigh K H Oslash U AE.rlow Ccedilla.rlow C.rlow J Y Q.rlow T F.rlow D.rhigh Ccedilla R Thorn W R.rlow Z.rlow O.rhigh O.alt O Eth Y.rlow L.rlow OE.rlow U.rlow E S.rhigh N.rlow C L J.rlow Z I.rlow A.alt D M];
+@Latn_all = [oslash.low g OE X.rlow a Eth.rhigh t s S i t.low e w AE I AE.rlow b.low oe.high Y F.rlow k.low s.low k O dotlessj.low m.low o.alt l U.rlow d.high f.low J.rlow i.low j A.alt y.high q.high g.high M u.alt M.rlow K.rlow b q l.low m.high ae.high o.high.alt A V thorn eth.high dcroat.high B n e.low i.high H.rhigh e.high H x u.high v.low t.alt Oslash C.rlow r.low b.high thorn.high c.high Ccedilla W O.alt Eth L.rlow OE.rlow x.high y Z c.low D D.rhigh A.rlow dcroat o.high w.low oe h.high o.low.alt p.high f dotlessi.low dotlessj.high v.high l.alt P.rhigh N dotlessj E.rlow X P ae.low h.low ccedilla.high w.high j.low J T Thorn ccedilla.low R.rlow x.low q.low thorn.low O.rhigh c n.low oslash l.high S.rhigh oe.low p C L u y.low s.high r F h B.rlow n.high germandbls ccedilla g.low r.high z p.low G.rlow Q T.rhigh d.low u.low germandbls.low K U Ccedilla.rlow Q.rlow eth germandbls.high dotlessi f.alt t.high f.high R Z.rlow d dotlessi.high m a.low oslash.high Y.rlow o.low e.alt E N.rlow v z.high I.rlow z.low a.high o eth.low dcroat.low G k.high ae j.high];
+@b = [b.high b b.low];
+@o = [o o.high.alt o.low.alt o.alt o.high o.low];
+@O = [O.alt O O.rhigh];
+@v = [v.low v.high v];
 @w = [w.low w.high w];
-@eth = [eth.high eth.low eth];
-@bovw = [eth.high o.alt eth.low o.high o w b.high w.low eth b.low o.low.alt w.high o.low v.low o.high.alt v.high v b];
-@Latn_lower_no_bovw = [oe ccedilla dotlessj.high t.high e z.low l t.low k.low y.low ccedilla.high u n e.alt dotlessi j.low oe.low g e.low germandbls thorn.high t g.high g.low q.low q i dcroat.low ccedilla.low dotlessj p c.low p.high z k.high s h.low dotlessj.low f.alt x.low ae dcroat germandbls.low f m.low i.high d.low j oe.high s.low t.high.alt dcroat.high l.low x dotlessi.high p.low c z.high h.high thorn.low r.high ae.high u.low m l.high oslash.low i.low l.alt e.high germandbls.high a.high r oslash.high f.high t.alt j.high c.high n.high s.high x.high a.low f.low ae.low u.high m.high y.high dotlessi.low q.high t.low.alt d.high r.low d h a n.low k oslash u.alt thorn y];
+@eth = [eth eth.high eth.low];
+@bovw = [v.low eth b.high o.high w.low b o.low.alt o.alt o.low v.high v o.high.alt w eth.high o eth.low w.high b.low];
+@Latn_lower_no_bovw = [oslash.low g dcroat a oe t h.high p.high f dotlessi.low s dotlessj.high i l.alt dotlessj t.low e ae.low h.low ccedilla.high j.low oe.high k.low s.low ccedilla.low x.low q.low thorn.low k dotlessj.low m.low c n.low l oslash l.high oe.low d.high p f.low i.low u y.low j y.high q.high g.high s.high r u.alt h n.high germandbls ccedilla q dcroat.low g.low r.high z l.low m.high ae.high p.low thorn dcroat.high n e.low i.high d.low u.low e.high germandbls.low x u.high t.alt germandbls.high dotlessi f.alt r.low t.high thorn.high c.high f.high d dotlessi.high m a.low oslash.high e.alt x.high z.high y z.low a.high c.low k.high ae j.high];
 @Latn_upper_rlowlow = [B.rlowlow R.rlowlow];
 @Latn_upper_joinable = [B R];
 @Latn_upper_joinable_rlow = [B.rlow R.rlow];
-@Cyrl_lower = [cyr_ze cyr_shcha cyr_u cyr_short_i cyr_el cyr_e cyr_ghe cyr_es cyr_ha cyr_ya cyr_de cyr_ve cyr_sha cyr_che cyr_i cyr_ie cyr_zhe cyr_ka cyr_em cyr_er cyr_pe cyr_tse cyr_a cyr_o cyr_te cyr_be cyr_ef cyr_en cyr_yeru];
-@Cyrl_lower_low = [cyr_ze.low cyr_shcha.low cyr_u.low cyr_short_i.low cyr_el.low cyr_e.low cyr_ghe.low cyr_es.low cyr_ha.low cyr_ya.low cyr_de.low cyr_ve.low cyr_sha.low cyr_che.low cyr_i.low cyr_ie.low cyr_zhe.low cyr_ka.low cyr_em.low cyr_er.low cyr_pe.low cyr_tse.low cyr_a.low cyr_o.low cyr_te.low cyr_be.low cyr_ef.low cyr_en.low cyr_yeru.low];
-@Cyrl_lower_high = [cyr_ze.high cyr_shcha.high cyr_u.high cyr_short_i.high cyr_el.high cyr_e.high cyr_ghe.high cyr_es.high cyr_ha.high cyr_ya.high cyr_de.high cyr_ve.high cyr_sha.high cyr_che.high cyr_i.high cyr_ie.high cyr_zhe.high cyr_ka.high cyr_em.high cyr_er.high cyr_pe.high cyr_tse.high cyr_a.high cyr_o.high cyr_te.high cyr_be.high cyr_ef.high cyr_en.high cyr_yeru.high];
+@Cyrl_lower = [cyr_ghe cyr_er cyr_ha cyr_ef cyr_shcha cyr_en cyr_short_i cyr_el cyr_a cyr_be cyr_che cyr_sha cyr_pe cyr_ie cyr_i cyr_ze cyr_es cyr_e cyr_ve cyr_ya cyr_yeru cyr_em cyr_de cyr_o cyr_ka cyr_te cyr_zhe cyr_tse cyr_u];
+@Cyrl_lower_low = [cyr_ghe.low cyr_er.low cyr_ha.low cyr_ef.low cyr_shcha.low cyr_en.low cyr_short_i.low cyr_el.low cyr_a.low cyr_be.low cyr_che.low cyr_sha.low cyr_pe.low cyr_ie.low cyr_i.low cyr_ze.low cyr_es.low cyr_e.low cyr_ve.low cyr_ya.low cyr_yeru.low cyr_em.low cyr_de.low cyr_o.low cyr_ka.low cyr_te.low cyr_zhe.low cyr_tse.low cyr_u.low];
+@Cyrl_lower_high = [cyr_ghe.high cyr_er.high cyr_ha.high cyr_ef.high cyr_shcha.high cyr_en.high cyr_short_i.high cyr_el.high cyr_a.high cyr_be.high cyr_che.high cyr_sha.high cyr_pe.high cyr_ie.high cyr_i.high cyr_ze.high cyr_es.high cyr_e.high cyr_ve.high cyr_ya.high cyr_yeru.high cyr_em.high cyr_de.high cyr_o.high cyr_ka.high cyr_te.high cyr_zhe.high cyr_tse.high cyr_u.high];
 @Cyrl_upper = [cyr_A cyr_BE cyr_CHE cyr_DE cyr_E cyr_EF cyr_EL cyr_EM cyr_EN cyr_ER cyr_ES cyr_GHE cyr_HA cyr_HARD_SIGN cyr_I cyr_IE cyr_KA cyr_O cyr_PE cyr_SHA cyr_SHCHA cyr_SHORT_I cyr_SOFT_SIGN cyr_TE cyr_TSE cyr_U cyr_VE cyr_YA cyr_YERU cyr_YU cyr_ZE cyr_ZHE];
 @Cyrl_upper_rhigh = [cyr_BE.rhigh cyr_O.rhigh];
 @Cyrl_upper_high = [cyr_BE cyr_O];
@@ -35,15 +36,37 @@
 @Cyrl_signs_finalow = [cyr_hard_sign.finalow cyr_soft_sign.finalow cyr_yu.finalow];
 @Cyrl_signs_finahigh = [cyr_hard_sign.finahigh cyr_soft_sign.finahigh cyr_yu.finahigh];
 @Cyrl_signs = [cyr_hard_sign cyr_soft_sign cyr_yu];
-@cyr_ve = [cyr_o.high cyr_ve cyr_o.low];
-@cyr_o = [cyr_ve.high cyr_o cyr_ve.low];
-@Cyrl_all_signs = [cyr_soft_sign cyr_yu cyr_soft_sign.finalow cyr_hard_sign cyr_hard_sign.finalow cyr_hard_sign.finahigh cyr_soft_sign.finahigh cyr_yu.finahigh cyr_yu.finalow];
-@Cyrl_all_lower = [cyr_en.low cyr_ha.low cyr_ze cyr_a.low cyr_shcha cyr_ef.low cyr_u.high cyr_ka.high cyr_de.high cyr_er.low cyr_ha cyr_ya cyr_de cyr_ie.low cyr_ve.high cyr_ghe.low cyr_ghe.high cyr_sha.low cyr_em.high cyr_ef.high cyr_er.high cyr_yeru.low cyr_yeru.high cyr_e.high cyr_a.high cyr_che.high cyr_o.high cyr_zhe cyr_zhe.low cyr_shcha.low cyr_ka cyr_shcha.high cyr_de.low cyr_em cyr_es.low cyr_es.high cyr_er cyr_el.high cyr_sha.high cyr_o cyr_ya.high cyr_ze.high cyr_en.high cyr_ie.high cyr_ef cyr_i.high cyr_yeru cyr_e.low cyr_che.low cyr_te.high cyr_pe.high cyr_ha.high cyr_ze.low cyr_o.low cyr_u cyr_short_i cyr_el cyr_short_i.high cyr_e cyr_ghe cyr_i.low cyr_es cyr_ve.low cyr_be.low cyr_be.high cyr_ve cyr_em.low cyr_zhe.high cyr_sha cyr_che cyr_tse.high cyr_i cyr_ie cyr_el.low cyr_ya.low cyr_te.low cyr_ka.low cyr_pe.low cyr_u.low cyr_tse.low cyr_pe cyr_tse cyr_a cyr_te cyr_be cyr_short_i.low cyr_en];
-@Cyrl_lower_no_veo = [cyr_en.low cyr_ha.low cyr_ze cyr_a.low cyr_shcha cyr_ef.low cyr_u.high cyr_de.high cyr_er.low cyr_ha cyr_ya cyr_de cyr_ie.low cyr_ghe.low cyr_ghe.high cyr_sha.low cyr_em.high cyr_ef.high cyr_er.high cyr_yeru.low cyr_yeru.high cyr_e.high cyr_a.high cyr_che.high cyr_zhe cyr_zhe.low cyr_shcha.low cyr_ka cyr_shcha.high cyr_de.low cyr_em cyr_es.low cyr_en cyr_es.high cyr_er cyr_el.high cyr_sha.high cyr_ya.high cyr_ze.high cyr_en.high cyr_ie.high cyr_ef cyr_i.high cyr_yeru cyr_e.low cyr_che.low cyr_te.high cyr_pe.high cyr_ha.high cyr_ze.low cyr_u cyr_short_i cyr_el cyr_short_i.high cyr_e cyr_ghe cyr_i.low cyr_es cyr_be.low cyr_be.high cyr_em.low cyr_zhe.high cyr_sha cyr_che cyr_tse.high cyr_i cyr_ie cyr_el.low cyr_ya.low cyr_te.low cyr_ka.low cyr_pe.low cyr_u.low cyr_tse.low cyr_pe cyr_tse cyr_a cyr_te cyr_be cyr_short_i.low cyr_ka.high];
-@Cyrl_all = [cyr_en.low cyr_ha.low cyr_ES cyr_ze cyr_a.low cyr_shcha cyr_ef.low cyr_u.high cyr_EN cyr_de.high cyr_er.low cyr_ha cyr_ya cyr_VE cyr_de cyr_ie.low cyr_ve.high cyr_YU cyr_ghe.low cyr_ghe.high cyr_sha.low cyr_em.high cyr_ef.high cyr_CHE cyr_SHA cyr_er.high cyr_yeru.low cyr_yeru.high cyr_e.high cyr_U cyr_ZHE cyr_o.high cyr_a.high cyr_che.high cyr_zhe cyr_ZE cyr_ER cyr_zhe.low cyr_shcha.low cyr_ka cyr_shcha.high cyr_de.low cyr_em cyr_es.low cyr_en cyr_es.high cyr_er cyr_el.high cyr_SOFT_SIGN cyr_sha.high cyr_o cyr_EF cyr_ya.high cyr_ze.high cyr_en.high cyr_DE cyr_ie.high cyr_ef cyr_i.high cyr_yeru cyr_e.low cyr_KA cyr_che.low cyr_TSE cyr_te.high cyr_pe.high cyr_ha.high cyr_ze.low cyr_PE cyr_o.low cyr_u cyr_short_i cyr_el cyr_short_i.high cyr_e cyr_ghe cyr_i.low cyr_es cyr_ve.low cyr_be.low cyr_be.high cyr_EM cyr_EL cyr_ve cyr_IE cyr_em.low cyr_zhe.high cyr_sha cyr_che cyr_E cyr_tse.high cyr_i cyr_O cyr_ie cyr_el.low cyr_GHE cyr_HA cyr_ya.low cyr_te.low cyr_ka.low cyr_YERU cyr_pe.low cyr_SHCHA cyr_I cyr_u.low cyr_BE cyr_HARD_SIGN cyr_tse.low cyr_pe cyr_TE cyr_tse cyr_YA cyr_a cyr_te cyr_be cyr_A cyr_short_i.low cyr_ka.high cyr_SHORT_I];
-@salt = [A.alt cyr_che.alt cyr_che.high.alt cyr_che.low.alt e.alt f.alt l.alt o.alt o.high.alt o.low.alt percent.alt t.alt t.high.alt t.low.alt u.alt];
-@to_salt = [A cyr_che cyr_che.high cyr_che.low e f l o o.high o.low percent t t.high t.low u];
+@cyr_ve = [cyr_ve cyr_o.high cyr_o.low];
+@cyr_o = [cyr_ve.low cyr_ve.high cyr_o];
+@Cyrl_all_signs = [cyr_yu.finalow cyr_soft_sign cyr_soft_sign.finahigh cyr_hard_sign.finalow cyr_hard_sign.finahigh cyr_soft_sign.finalow cyr_yu cyr_hard_sign cyr_yu.finahigh];
+@Cyrl_all_lower = [cyr_ghe cyr_en.low cyr_ha cyr_em.high cyr_el.low cyr_ef cyr_shcha cyr_a.high cyr_ha.low cyr_che.high cyr_yeru.low cyr_ya.high cyr_te.high cyr_be cyr_che.low cyr_sha cyr_i.low cyr_de.high cyr_ze.low cyr_zhe.low cyr_sha.high cyr_e.low cyr_es cyr_ghe.low cyr_yeru.high cyr_ie.high cyr_i.high cyr_ie.low cyr_te.low cyr_el.high cyr_a.low cyr_o.low cyr_de cyr_ef.low cyr_es.high cyr_zhe cyr_tse cyr_e.high cyr_sha.low cyr_er cyr_ve.low cyr_ze.high cyr_em.low cyr_en cyr_short_i.low cyr_short_i cyr_el cyr_es.low cyr_ka.low cyr_tse.low cyr_pe.low cyr_a cyr_che cyr_be.high cyr_pe.high cyr_pe cyr_be.low cyr_shcha.high cyr_en.high cyr_ie cyr_short_i.high cyr_ve.high cyr_ef.high cyr_i cyr_ze cyr_zhe.high cyr_ka.high cyr_e cyr_tse.high cyr_ve cyr_ya cyr_ya.low cyr_ha.high cyr_ghe.high cyr_yeru cyr_shcha.low cyr_em cyr_de.low cyr_o.high cyr_u.low cyr_o cyr_ka cyr_te cyr_er.low cyr_u cyr_u.high cyr_er.high];
+@Cyrl_lower_no_veo = [cyr_ghe cyr_en.low cyr_ha cyr_em.high cyr_el.low cyr_ef cyr_a.high cyr_shcha cyr_ha.low cyr_che.high cyr_yeru.low cyr_ya.high cyr_te.high cyr_be cyr_che.low cyr_sha cyr_de.high cyr_i.low cyr_ze.low cyr_zhe.low cyr_sha.high cyr_e.low cyr_es cyr_ghe.low cyr_yeru.high cyr_ie.high cyr_i.high cyr_te.low cyr_el.high cyr_ie.low cyr_a.low cyr_de cyr_ef.low cyr_es.high cyr_zhe cyr_tse cyr_e.high cyr_sha.low cyr_er cyr_ze.high cyr_em.low cyr_en cyr_short_i.low cyr_es.low cyr_el cyr_short_i cyr_ka.low cyr_tse.low cyr_pe.low cyr_a cyr_che cyr_be.high cyr_pe.high cyr_shcha.high cyr_pe cyr_be.low cyr_en.high cyr_ie cyr_short_i.high cyr_ef.high cyr_i cyr_zhe.high cyr_ze cyr_ka.high cyr_e cyr_tse.high cyr_ya cyr_ha.high cyr_ya.low cyr_ghe.high cyr_yeru cyr_shcha.low cyr_em cyr_de.low cyr_u.low cyr_ka cyr_te cyr_er.low cyr_u cyr_u.high cyr_er.high];
+@Cyrl_all = [cyr_ghe cyr_en.low cyr_ha cyr_em.high cyr_el.low cyr_ef cyr_a.high cyr_shcha cyr_ha.low cyr_E cyr_BE cyr_che.high cyr_yeru.low cyr_ya.high cyr_ZHE cyr_EN cyr_U cyr_SOFT_SIGN cyr_te.high cyr_be cyr_che.low cyr_YERU cyr_sha cyr_de.high cyr_i.low cyr_KA cyr_ze.low cyr_HARD_SIGN cyr_zhe.low cyr_sha.high cyr_YU cyr_e.low cyr_YA cyr_es cyr_ghe.low cyr_yeru.high cyr_O cyr_ZE cyr_ie.high cyr_A cyr_i.high cyr_te.low cyr_el.high cyr_ie.low cyr_a.low cyr_o.low cyr_DE cyr_de cyr_ef.low cyr_es.high cyr_SHA cyr_IE cyr_zhe cyr_tse cyr_VE cyr_e.high cyr_EM cyr_sha.low cyr_er cyr_EL cyr_ve.low cyr_ze.high cyr_em.low cyr_en cyr_I cyr_short_i.low cyr_es.low cyr_el cyr_short_i cyr_ka.low cyr_tse.low cyr_pe.low cyr_TE cyr_a cyr_ER cyr_che cyr_be.high cyr_pe.high cyr_shcha.high cyr_pe cyr_be.low cyr_en.high cyr_ie cyr_short_i.high cyr_ve.high cyr_ef.high cyr_i cyr_CHE cyr_ES cyr_zhe.high cyr_ze cyr_ka.high cyr_e cyr_tse.high cyr_ve cyr_ya cyr_ha.high cyr_ya.low cyr_SHCHA cyr_HA cyr_EF cyr_ghe.high cyr_yeru cyr_shcha.low cyr_em cyr_de.low cyr_o.high cyr_u.low cyr_GHE cyr_TSE cyr_o cyr_ka cyr_SHORT_I cyr_te cyr_PE cyr_er.low cyr_u cyr_u.high cyr_er.high];
+@salt = [A.alt O.alt cyr_che.alt cyr_che.high.alt cyr_che.low.alt e.alt f.alt l.alt o.alt o.high.alt o.low.alt percent.alt t.alt u.alt];
+@to_salt = [A O cyr_che cyr_che.high cyr_che.low e f l o o.high o.low percent t u];
 @numr = [eight.numr five.numr four.numr nine.numr one.numr seven.numr six.numr three.numr two.numr zero.numr];
 @to_numr = [eight five four nine one seven six three two zero];
 @dnom = [eight.dnom five.dnom four.dnom nine.dnom one.dnom seven.dnom six.dnom three.dnom two.dnom zero.dnom];
+
+lookup FEZUnnamedRoutine0 {
+    lookupflag 0;
+    ;
+    sub period period period by ellipsis;
+} FEZUnnamedRoutine0;
+
+lookup FEZUnnamedRoutine1 {
+    lookupflag 0;
+    ;
+    sub period period by nldr;
+} FEZUnnamedRoutine1;
+
+feature liga {
+            lookup FEZUnnamedRoutine0;
+
+} liga;
+
+feature liga {
+            lookup FEZUnnamedRoutine1;
+
+} liga;
 

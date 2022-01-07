@@ -24,6 +24,24 @@ for f in build/{"$FONTFAMILY"_COLR_glyphs,"$FONT"/COLR_glyphs}/*; do
 	fi
 done
 
+<<'###BLOCK-COMMENT'
+set -x
+for f in build/"$FONT_GA"/glyphs/*.glif; do
+    fn=`basename -s.glif "$f"`
+	if [[ $fn =~ "_guidelines" || $fn =~ "_xheight" || $fn =~ "_baseline" || $fn =~ "_beginnings" || $fn =~ "_endings" || $fn =~ "_arrows" ]]; then
+        continue
+    fi
+    cp "$f" build/"$FONT_GA"/glyphs/"$fn".G_U_I_D_E_L_I_N_E_S_.glif
+done
+
+./scripts/regen_glyphs_plist.py build/"$FONT_GA"/glyphs
+
+TEMPFEA=`mktemp --suffix .fea`
+make UFO=build/"$FONT_GA" FEZ=fea/COLR_ss03.fez FEA="$TEMPFEA" fez-source
+cat "$TEMPFEA" >> build/"$FONT_GA"/features.fea
+set +x
+###BLOCK-COMMENT
+
 function make_combined() {
 	FONT="$1"
 	OTF="$2"

@@ -30,8 +30,8 @@ for glyph in glyphs:
     elif not glyph+"_guidelines" in ga_ttfglyphs:
         continue
     else:
-        COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 3), (glyph, 0xFFFF), (glyph+"_beginnings", 1), (glyph+"_endings", 2), (glyph+"_arrows", 1)]
-        COLR_Gv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 3), (glyph, 0xFFFF)]
+        COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF), (glyph+"_beginnings", 3), (glyph+"_endings", 4), (glyph+"_arrows", 1)]
+        COLR_Gv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF)]
 
     COLR_GA[glyph] = COLR_GAv
     COLR_G[glyph] = COLR_Gv
@@ -51,17 +51,21 @@ RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 CYAN = (0, 255, 255)
 # arrows
+BURGUNDY = (193, 30, 38)
+# misc
 YELLOW = (255, 202, 243)
 GREY = (50, 50, 50)
 
-palette = [BABYBLUE, RED, CYAN, DEEPPURPLE]
-CPAL_palette = [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette]
-C_P_A_L_ = buildCPAL([CPAL_palette])
+palette_GA = [BABYBLUE, BURGUNDY, DEEPPURPLE, CYAN, RED]
+palette_G = [BABYBLUE, BURGUNDY, DEEPPURPLE]
+CPAL_palette = lambda palette: [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette]
+C_P_A_L_GA = buildCPAL([CPAL_palette(palette_GA)])
+C_P_A_L_G = buildCPAL([CPAL_palette(palette_G)])
 
 ga_ttf["COLR"] = C_O_L_R_GA
-ga_ttf["CPAL"] = C_P_A_L_
+ga_ttf["CPAL"] = C_P_A_L_GA
 ga_ttf.save(ga_font)
 
 g_ttf["COLR"] = C_O_L_R_G
-g_ttf["CPAL"] = C_P_A_L_
+g_ttf["CPAL"] = C_P_A_L_G
 g_ttf.save(g_font)

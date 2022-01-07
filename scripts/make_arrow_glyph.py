@@ -8,7 +8,7 @@ MAXLEN = 300
 
 def run(reqlen):
     reqlen = float(reqlen)
-    with open("patterns.ufo/glyphs/line.glif", encoding="utf8") as f:
+    with open("patterns.ufo/glyphs/line.glif") as f:
         dom = ElementTree(file=f)
 
     for c in dom.getroot().find("outline").findall("contour"):

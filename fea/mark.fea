@@ -298,6 +298,7 @@ feature mark {
     position base o <anchor 206 250> mark @viethorn;
     position base O <anchor 437 530> mark @viethorn;
     position base o.alt <anchor 188 256> mark @viethorn;
+    position base O.alt <anchor 527 478> mark @viethorn;
     position base o.high <anchor 279 236> mark @viethorn;
     position base o.high.alt <anchor 229 253> mark @viethorn;
     position base o.low <anchor 337 252> mark @viethorn;

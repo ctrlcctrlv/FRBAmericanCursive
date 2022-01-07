@@ -2,6 +2,7 @@
 <glyph name="slash" format="2">
   <advance width="305"/>
   <unicode hex="002F"/>
+  <unicode hex="2215"/>
   <outline>
     <contour>
       <point x="532.62" y="540.953" type="move"/>
