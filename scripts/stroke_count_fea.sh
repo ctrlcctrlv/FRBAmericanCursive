@@ -18,10 +18,16 @@ echo '} combstroke;'
 cat << EOF
 
 feature ss01 {
+  featureNames {
+    name "Enable stroke order numbers";
+  };
   lookup combstroke;
 } ss01;
 
 feature ss02 {
+  featureNames {
+    name "Disable stroke numbers, even if enabled due to OPSZ";
+  };
   # sub __combstroke0 by NULL;
   sub __combstroke1 by NULL;
   sub __combstroke2 by NULL;
@@ -30,7 +36,7 @@ feature ss02 {
   sub __combstroke5 by NULL;
   sub __combstroke6 by NULL;
   sub __combstroke7 by NULL;
-  # sub __combstroke8 by NULL;
+  sub __combstroke8 by NULL;
   # sub __combstroke9 by NULL;
 } ss02;
 # 

@@ -17,7 +17,8 @@ if len(sys.argv) == 2:
     target_size = -25
 elif len(sys.argv) == 4:
     (_, gliffn, finalfn, target_size_i) = sys.argv
-    target_size = (int(target_size_i)/2)+25
+    target_size = float(target_size_i) / 2.0 - 12.5
+    target_size = -target_size;
 else:
     raise NotImplementedError
 
@@ -65,7 +66,7 @@ for length in split_glif_lengths:
 # Then we need to call MFEKstroke
 output_arrows = list()
 for i, arrow in enumerate(arrow_glyphs):
-    out = subprocess.run(["MFEKstroke", "PAP", "-m", "single", "--pattern", arrow, "--path", split_glifs[i], "--out", split_glifs[i]+"_arrow", "--noffset=-"+str(target_size), "--toffset=-5", "-s", "4", "--sx", "0.5", "--sy", "0.5"])
+    out = subprocess.run(["MFEKstroke", "PAP", "-m", "single", "--pattern", arrow, "--path", split_glifs[i], "--out", split_glifs[i]+"_arrow", "--noffset={}".format(target_size), "--toffset=-5", "-s", "4", "--sx", "0.5", "--sy", "0.5"])
     output_arrows.append(split_glifs[i]+"_arrow")
 
 # Then we need to join all the glif files

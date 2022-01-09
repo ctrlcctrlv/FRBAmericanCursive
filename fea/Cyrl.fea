@@ -67,13 +67,14 @@ feature ccmp {
     } ccmp2_3;
 
     lookup ccmp2_4 {
-        pos @Cyrl_all_signs 80 @Cyrl_all;
+        lookupflag IgnoreMarks;
+        sub @Cyrl_upper_high' lookup CyrlRhigh @Cyrl_lower_low' lookup CyrlHigh;
+        sub @Cyrl_upper_low' lookup CyrlRlow @Cyrl_lower_low;
     } ccmp2_4;
 
     lookup ccmp2_5 {
         lookupflag IgnoreMarks;
-        sub @Cyrl_upper_high' lookup CyrlRhigh @Cyrl_lower_low' lookup CyrlHigh;
-        sub @Cyrl_upper_low' lookup CyrlRlow @Cyrl_lower_low;
+        sub @tails' lookup NullTail @Cyrl_signs_finalow;
     } ccmp2_5;
 } ccmp;
 

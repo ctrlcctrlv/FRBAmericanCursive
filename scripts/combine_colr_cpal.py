@@ -33,6 +33,9 @@ for glyph in glyphs:
         COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF), (glyph+"_beginnings", 3), (glyph+"_endings", 4), (glyph+"_arrows", 1)]
         COLR_Gv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF)]
 
+    if not glyph+"_arrows" in ga_ttfglyphs:
+        COLR_GAv = COLR_Gv
+
     COLR_GA[glyph] = COLR_GAv
     COLR_G[glyph] = COLR_Gv
 
@@ -58,9 +61,10 @@ GREY = (50, 50, 50)
 
 palette_GA = [BABYBLUE, BURGUNDY, DEEPPURPLE, CYAN, RED]
 palette_G = [BABYBLUE, BURGUNDY, DEEPPURPLE]
-CPAL_palette = lambda palette: [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette]
-C_P_A_L_GA = buildCPAL([CPAL_palette(palette_GA)])
-C_P_A_L_G = buildCPAL([CPAL_palette(palette_G)])
+CPAL_palette_GA = [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette_GA]
+CPAL_palette_G = [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette_G]
+C_P_A_L_GA = buildCPAL([CPAL_palette_GA])
+C_P_A_L_G = buildCPAL([CPAL_palette_G])
 
 ga_ttf["COLR"] = C_O_L_R_GA
 ga_ttf["CPAL"] = C_P_A_L_GA

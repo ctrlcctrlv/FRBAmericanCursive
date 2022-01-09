@@ -23,7 +23,6 @@ colrglyphs-ufo:
 .PHONY: colrcpal
 colrcpal:
 	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then make colrglyphs colrglyphs-ufo; fi # may have been made by physics
-	rm -rf fea/$(FONTFAMILY)_COLR_ss03.fea
 	parallel --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
 	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-{1}.ufo {3}
 	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}_NOVF.otf build/$(FONTFAMILY)-{1}.ufo

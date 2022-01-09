@@ -26,16 +26,16 @@ plist = plistlib.load(plistf)
 plist["postscriptWeightName"] = namedweight
 plist["openTypeOS2WeightClass"] = os2weight
 plist["styleMapStyleName"] = "Bold Italic" if os2weight >= 700 else "Italic"
-smname = " "+namedweight_h.replace(realweight+" ", "").replace(realweight, "") if os2weight == 400 or os2weight == 700 else " "+namedweight_h
-smname = smname.strip()
-plist["styleMapFamilyName"] = "{}{}".format(familyname_h, smname)
-plist["familyName"] = "{}{}".format(familyname_h, smname)
+smname = namedweight_h.replace(realweight+" ", "").replace(realweight, "") if os2weight == 400 or os2weight == 700 else namedweight_h
+plist["styleMapFamilyName"] = "{} {}".format(familyname_h, smname).strip()
+plist["familyName"] = "{} {}".format(familyname_h, smname).strip()
 plist["styleName"] = namedweight_h
 plist["postscriptFontName"] = familyname + "-" + namedweight
 plist["postscriptFullName"] = familyname_h + " " + namedweight_h
 plist["postscriptWeightName"] = realweight
-plist["openTypeNamePreferredFamilyName"] = familyname_h
-plist["openTypeNamePreferredSubfamilyName"] = namedweight_h
+plist["openTypeNamePreferredFamilyName"] = familyname_h.strip()
+sfname = namedweight_h.replace(realweight, "") if os2weight == 400 else namedweight_h
+plist["openTypeNamePreferredSubfamilyName"] = sfname.strip()
 
 plistf.close()
 plistf = open(outname+"/fontinfo.plist", "wb+")

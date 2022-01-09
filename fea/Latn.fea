@@ -108,17 +108,37 @@ lookup LatnRlow {
     sub @Latn_upper_low by @Latn_upper_rlow;
 } LatnRlow;
 
-lookup LatnNullTail {
+lookup NullTail {
     sub tail.low by NULL;
     sub tail.lowwide by NULL;
     sub tail.high by NULL;
-} LatnNullTail;
+} NullTail;
 
 feature cv01 {
-    lookup cv01_1 {
+    cvParameters {
+        FeatUILabelNameID {
+            name "Make apostrophes float above words instead of breaking them";
+        };
+
+        # Some buggy software uses this as FeatUILabelNameID and glitches if it's
+        # NULL despite spec promises.
+        FeatUITooltipTextNameID {
+            name "Make apostrophes float above words instead of breaking them";
+        };
+
+        SampleTextNameID {
+            name "it's there's how's y'all you're they're";
+            name 3 1 0x040C "l’apostrophe qu’est presqu’île"; # Français
+        };
+
+        Character 0x27; # quotesingle
+        Character 0x2019; # quoteleft
+    };
+
+    lookup zerolengthapos {
         sub quotesingle by quotesingle.0len;
         sub quoteleft by quoteleft.0len;
-    } cv01_1;
+    } zerolengthapos;
 } cv01;
 
 feature ccmp {
@@ -168,7 +188,7 @@ feature ccmp {
 
     lookup ccmp1_9 {
         lookupflag IgnoreMarks;
-        sub [tail.low tail.lowwide tail.high]' lookup LatnNullTail [quotesingle quoteright] @Latn_lower;
+        sub @tails' lookup NullTail [quotesingle quoteright] @Latn_lower;
     } ccmp1_9;
 
     lookup ccmp1_10 {

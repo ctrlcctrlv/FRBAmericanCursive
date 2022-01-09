@@ -76,6 +76,26 @@
 			<key>name</key>
 			<string>x height</string>
 		</dict>
+		<dict>
+			<key>x</key>
+			<real>219</real>
+			<key>y</key>
+			<real>50</real>
+			<key>angle</key>
+			<real>0</real>
+			<key>name</key>
+			<string>dnom.top</string>
+		</dict>
+		<dict>
+			<key>x</key>
+			<real>401</real>
+			<key>y</key>
+			<real>550</real>
+			<key>angle</key>
+			<real>0</real>
+			<key>name</key>
+			<string>numr.top</string>
+		</dict>
 	</array>
 	<key>italicAngle</key>
 	<real>-25</real>

@@ -882,6 +882,8 @@
 	<string>slash.glif</string>
 	<key>smalltilde</key>
 	<string>smalltilde.glif</string>
+	<key>smalltildecomb</key>
+	<string>smalltildecomb.glif</string>
 	<key>space</key>
 	<string>space.glif</string>
 	<key>sterling</key>

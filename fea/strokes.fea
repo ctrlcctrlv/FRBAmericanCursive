@@ -338,7 +338,7 @@ lookup combstroke {
   sub .notdef by .notdef __combstroke1 __combstroke2 __combstroke3 __combstroke4;
   sub N.rlow by N.rlow __combstroke1;
   sub numbersign by numbersign __combstroke1 __combstroke2 __combstroke3 __combstroke4;
-  sub numero by numero __combstroke1 __combstroke2 __combstroke3 __combstroke4 __combstroke5 __combstroke6 __combstroke7;
+  sub numero by numero __combstroke1 __combstroke2 __combstroke3 __combstroke4 __combstroke5 __combstroke6 __combstroke7 __combstroke8;
   sub o.alt by o.alt __combstroke1;
   sub O.alt by O.alt __combstroke1;
   sub oe by oe __combstroke1;
@@ -423,6 +423,7 @@ lookup combstroke {
   sub six.numr by six.numr __combstroke1;
   sub slash by slash __combstroke1;
   sub s.low by s.low __combstroke1;
+  sub smalltildecomb by smalltildecomb __combstroke1;
   sub smalltilde by smalltilde __combstroke1;
   sub space by space;
   sub S.rhigh by S.rhigh __combstroke1;
@@ -503,10 +504,16 @@ lookup combstroke {
 } combstroke;
 
 feature ss01 {
+  featureNames {
+    name "Enable stroke order numbers";
+  };
   lookup combstroke;
 } ss01;
 
 feature ss02 {
+  featureNames {
+    name "Disable stroke numbers, even if enabled due to OPSZ";
+  };
   # sub __combstroke0 by NULL;
   sub __combstroke1 by NULL;
   sub __combstroke2 by NULL;
@@ -515,7 +522,7 @@ feature ss02 {
   sub __combstroke5 by NULL;
   sub __combstroke6 by NULL;
   sub __combstroke7 by NULL;
-  # sub __combstroke8 by NULL;
+  sub __combstroke8 by NULL;
   # sub __combstroke9 by NULL;
 } ss02;
 # 

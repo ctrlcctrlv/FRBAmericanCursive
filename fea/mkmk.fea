@@ -1,3 +1,16 @@
+lookup SHRINK_TILDE {
+    sub tildecomb by smalltildecomb;
+} SHRINK_TILDE;
+
+feature ccmp {
+    lookup smalltilde {
+        sub @top_marks tildecomb' lookup SHRINK_TILDE;
+        sub @Latn_all_lower tildecomb' lookup SHRINK_TILDE;
+        sub @Latn_all_lower viethorncomb tildecomb' lookup SHRINK_TILDE;
+        sub @Latn_all_lower tildecomb' lookup SHRINK_TILDE viethorncomb;
+    } smalltilde;
+} ccmp;
+
 feature mkmk {
     lookup mkmk_above {
         lookupflag MarkAttachmentType @top;
@@ -18,19 +31,13 @@ lookup SHIFT_TOP_MARKS {
     pos @top_marks <-80 0 0 0>;
 } SHIFT_TOP_MARKS;
 
-lookup SHIFT_TOP_MARKS_x2 {
-    pos @top_marks <-160 0 0 0>;
-} SHIFT_TOP_MARKS_x2;
-
 feature mark {
     lookup contextual_viethorncomb {
         ignore pos @O @top_marks' @top_marks';
         ignore pos @o @top_marks' @top_marks';
         # This works because viethorncomb is not a member of markClass @top_marks, it's the sole member of @viethorn_marks
         pos @O [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS;
-        # Have double the effect on lowercase «o»'s …
-        pos @o [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS_x2 [viethorncomb @top_marks]' lookup SHIFT_TOP_MARKS_x2;
-        # … and triple on hookabovecomb.
+        # double on hookabovecomb
         pos @o [viethorncomb hookabovecomb]' lookup SHIFT_TOP_MARKS [viethorncomb hookabovecomb]' lookup SHIFT_TOP_MARKS;
     } contextual_viethorncomb;
 } mark;

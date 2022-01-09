@@ -1,3 +1,15 @@
 feature salt {
     sub @to_salt by @salt;
 } salt;
+
+feature dnom {
+    sub @to_numr by @dnom;
+} dnom;
+
+feature numr {
+    sub @to_numr by @numr;
+} numr;
+
+feature frac {
+    sub slash by fraction;
+} frac;

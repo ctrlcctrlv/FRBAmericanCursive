@@ -11,29 +11,33 @@ with open("build_data/mark_classes.tsv") as f:
 
 all_marks = list()
 
+def dset(L):
+    L = list(dict.fromkeys(L))
+    L.sort()
+    return L
+
 for cn in classes:
     with open("build_data/{}_marks".format(cn)) as f:
-        marks = f.read().strip().split()
+        marks = dset([m.strip() for m in f.read().strip().split() if len(m) > 0])
         print("@{}_marks = [{}];".format(cn, ' '.join(marks)))
+        if len(marks) >= 2:
+            for mark in marks:
+                print("@{}_marks_minus_{} = [{}];".format(cn, mark.replace('.', '_'), ' '.join(dset(set(marks) - set([mark])))))
         all_marks.extend(marks)
 
 gdefsimple = list()
-strokemarks = ['@stroke{}_marks'.format(i) for i in range(1, 8)]
-for i in range(1, 8):
-    print("@stroke{0}_marks = [__combstroke{0}];".format(i))
 f = ufoLib.UFOReaderWriter(ufo_fn)
 sorted_glyphs = list_glyphs(f)
 for g, _ in sorted_glyphs.items():
-    if g.startswith("__combstroke") or ".0len" in g:
-        continue
     if g not in all_marks:
         gdefsimple.append(g)
 
-print("@stroke_marks = [{}];".format(" ".join(strokemarks)))
+print()
 print("@GDEFSimple = [{}];".format(" ".join(gdefsimple)))
+print("@GDEFMarks = [{}];".format(" ".join(["@{}_marks".format(cn) for cn in classes])))
+print("@GDEFLigat = [];")
 
 print("""
-table GDEF {{
-    GlyphClassDef @GDEFSimple,,[{} @stroke_marks quotesingle.0len quoteleft.0len],;
-}} GDEF;
-""".format(" ".join(["@{}_marks".format(cn) for cn in classes])))
+table GDEF {
+    GlyphClassDef @GDEFSimple,@GDEFLigat,@GDEFMarks,;
+} GDEF;""")

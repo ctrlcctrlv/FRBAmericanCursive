@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="nldr" format="2">
-  <advance width="301"/>
+  <advance width="208"/>
   <unicode hex="2025"/>
   <outline>
     <contour>
-      <point x="232" y="17" type="curve"/>
-      <point x="232" y="27"/>
-      <point x="240" y="35"/>
-      <point x="250" y="35" type="curve"/>
-      <point x="260" y="35"/>
-      <point x="268" y="27"/>
-      <point x="268" y="17" type="curve"/>
-      <point x="268" y="7"/>
-      <point x="260" y="-1"/>
-      <point x="250" y="-1" type="curve"/>
-      <point x="240" y="-1"/>
-      <point x="232" y="7"/>
+      <point x="162" y="17" type="curve"/>
+      <point x="162" y="27"/>
+      <point x="170" y="35"/>
+      <point x="180" y="35" type="curve"/>
+      <point x="190" y="35"/>
+      <point x="198" y="27"/>
+      <point x="198" y="17" type="curve"/>
+      <point x="198" y="7"/>
+      <point x="190" y="-1"/>
+      <point x="180" y="-1" type="curve"/>
+      <point x="170" y="-1"/>
+      <point x="162" y="7"/>
     </contour>
     <contour>
-      <point x="34" y="17" type="curve"/>
-      <point x="34" y="27"/>
-      <point x="42" y="35"/>
-      <point x="52" y="35" type="curve"/>
-      <point x="62" y="35"/>
-      <point x="70" y="27"/>
-      <point x="70" y="17" type="curve"/>
-      <point x="70" y="7"/>
-      <point x="62" y="-1"/>
-      <point x="52" y="-1" type="curve"/>
-      <point x="42" y="-1"/>
-      <point x="34" y="7"/>
+      <point x="9" y="17" type="curve"/>
+      <point x="9" y="27"/>
+      <point x="17" y="35"/>
+      <point x="27" y="35" type="curve"/>
+      <point x="37" y="35"/>
+      <point x="45" y="27"/>
+      <point x="45" y="17" type="curve"/>
+      <point x="45" y="7"/>
+      <point x="37" y="-1"/>
+      <point x="27" y="-1" type="curve"/>
+      <point x="17" y="-1"/>
+      <point x="9" y="7"/>
     </contour>
   </outline>
 </glyph>

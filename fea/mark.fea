@@ -35,6 +35,7 @@ feature mark {
     position base D.rhigh <anchor 606 650> mark @top;
     position base e <anchor 222 400> mark @top;
     position base E <anchor 412 650> mark @top;
+    position base e.alt <anchor 370 400> mark @top;
     position base e.high <anchor 201 400> mark @top;
     position base e.low <anchor 215 400> mark @top;
     position base E.rlow <anchor 423 650> mark @top;
@@ -80,6 +81,9 @@ feature mark {
     position base o <anchor 262 400> mark @top;
     position base O <anchor 530 650> mark @top;
     position base o.alt <anchor 240 400> mark @top;
+    position base O.alt <anchor 530 650> mark @top;
+    position base o.high.alt <anchor 277 400> mark @top;
+    position base o.low.alt <anchor 393 400> mark @top;
     position base o.high <anchor 277 400> mark @top;
     position base o.low <anchor 393 400> mark @top;
     position base O.rhigh <anchor 459 650> mark @top;
@@ -231,6 +235,9 @@ feature mark {
     position base O <anchor 171 -100> mark @bottom;
     position base o <anchor 19 -100> mark @bottom;
     position base o.alt <anchor 9 -100> mark @bottom;
+    position base O.alt <anchor 171 -100> mark @bottom;
+    position base o.high.alt <anchor 60 -100> mark @bottom;
+    position base o.low.alt <anchor 105 -100> mark @bottom;
     position base o.high <anchor 60 -100> mark @bottom;
     position base o.low <anchor 105 -100> mark @bottom;
     position base O.rhigh <anchor 160 -100> mark @bottom;

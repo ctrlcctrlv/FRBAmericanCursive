@@ -20,7 +20,7 @@ for m in marks:
     anchor.attrib["x"] = "0"
     anchor.attrib["y"] = "0"
     anchor.attrib["name"] = "_{}".format(markclass)
-    tree.find("unicode").addnext(anchor)
+    tree.append(anchor)
     with open(glif_fn, "wb+") as f:
         f.write(etree.tostring(tree, pretty_print=True, encoding="utf-8", xml_declaration=True))
 
@@ -36,6 +36,6 @@ for row in r:
     anchor.attrib["x"] = x
     anchor.attrib["y"] = y
     anchor.attrib["name"] = markclass
-    u = tree.find("advance").addnext(anchor)
+    u = tree.append(anchor)
     with open(glif_fn, "wb+") as f:
         f.write(etree.tostring(tree, pretty_print=True, encoding="utf-8", xml_declaration=True))

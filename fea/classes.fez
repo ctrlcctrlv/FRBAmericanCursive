@@ -24,7 +24,7 @@ DefineClass @Latn_all_upper = @Latn_upper | @Latn_upper_rhigh | @Latn_upper_rlow
 DefineClass @Latn_all = @Latn_all_lower | @Latn_all_upper;
 
 DefineClass @b = b|/^b\..*/;
-DefineClass @o = o|/^o\..*/;
+DefineClass @o = o|/^o(slash)?\..*/;
 DefineClass @O = O|/^O\..*/;
 DefineClass @v = v|/^v\..*/;
 DefineClass @w = w|/^w\..*/;
@@ -59,6 +59,8 @@ DefineClass @Cyrl_all_signs = @Cyrl_signs | @Cyrl_signs_finalow | @Cyrl_signs_fi
 DefineClass @Cyrl_all_lower = @Cyrl_lower | @Cyrl_lower_low | @Cyrl_lower_high;
 DefineClass @Cyrl_lower_no_veo = @Cyrl_all_lower - (@cyr_ve | @cyr_o);
 DefineClass @Cyrl_all = @Cyrl_all_lower | @Cyrl_upper;
+
+DefineClass @tails = /^tail\..*$/;
 
 # Misc
 DefineClass @salt = /^.*\.alt$/;

@@ -32,6 +32,7 @@ dotlessj.low	246	400	top
 D.rhigh	606	650	top
 e	222	400	top
 E	412	650	top
+e.alt	370	400	top
 e.high	201	400	top
 e.low	215	400	top
 E.rlow	423	650	top
@@ -77,6 +78,9 @@ N.rlow	430	650	top
 o	262	400	top
 O	530	650	top
 o.alt	240	400	top
+O.alt	530	650	top
+o.high.alt	277	400	top
+o.low.alt	393	400	top
 o.high	277	400	top
 o.low	393	400	top
 O.rhigh	459	650	top

@@ -1,21 +1,21 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="nine.numr" format="2">
-  <advance width="256"/>
+  <advance width="220"/>
   <unicode hex="2079"/>
   <outline>
     <contour>
-      <point x="260.449" y="543.2" type="move" smooth="yes"/>
-      <point x="260.449" y="543.2"/>
-      <point x="194.999" y="575.1"/>
-      <point x="108.649" y="508.55" type="curve" smooth="yes"/>
-      <point x="22.2988" y="442"/>
-      <point x="55.8496" y="390.85"/>
-      <point x="59.1494" y="387.55" type="curve" smooth="yes"/>
-      <point x="62.4492" y="384.25"/>
-      <point x="109.749" y="342.45"/>
-      <point x="217.549" y="456.3" type="curve"/>
-      <point x="260.449" y="541.55" type="line"/>
-      <point x="114.699" y="250.05" type="line"/>
+      <point x="440.449" y="543.2" type="move"/>
+      <point x="440.449" y="543.2"/>
+      <point x="374.99896" y="575.1"/>
+      <point x="288.649" y="508.55" type="curve"/>
+      <point x="202.29878" y="442"/>
+      <point x="235.84961" y="390.85"/>
+      <point x="239.1494" y="387.55" type="curve"/>
+      <point x="242.4492" y="384.25"/>
+      <point x="289.74902" y="342.45"/>
+      <point x="397.549" y="456.3" type="curve"/>
+      <point x="440.449" y="541.55" type="line"/>
+      <point x="294.699" y="250.05" type="line"/>
     </contour>
   </outline>
 </glyph>

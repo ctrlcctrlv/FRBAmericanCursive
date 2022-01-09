@@ -86,6 +86,9 @@ N.rlow	166	-100	bottom
 O	171	-100	bottom
 o	19	-100	bottom
 o.alt	9	-100	bottom
+O.alt	171	-100	bottom
+o.high.alt	60	-100	bottom
+o.low.alt	105	-100	bottom
 o.high	60	-100	bottom
 o.low	105	-100	bottom
 O.rhigh	160	-100	bottom
