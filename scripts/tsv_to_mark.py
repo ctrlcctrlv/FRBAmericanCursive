@@ -1,12 +1,33 @@
 #!/usr/bin/env python3
 import csv
+import io
 import os
 import sys
-from fontTools import ufoLib
+from pathlib import Path
+from fontTools.feaLib.parser import Parser
+from fontTools.feaLib.ast import *
+
+f = io.StringIO("""
+include(""" + Path(__file__).parent.parent.as_posix() + """/fea/classes.fea);
+include(""" + Path(__file__).parent.parent.as_posix() + """/fea/GDEF.fea);
+""")
+fea = FeatureFile()
+fea.statements.append(Comment("# Warning: Auto-generated file. See scripts/tsv_to_mark.py"))
+p = Parser(f, followIncludes=True, includeDir='.')
+ff = p.parse()
+glyphclasses = [c for c in ff.statements if isinstance(c, GlyphClassDefinition)]
+marks = [c for c in glyphclasses if c.name == "GDEFMarks"]
+assert len(marks) > 0, "No marks in GDEF.fea?"
+all_marks = marks[0].glyphSet()
+tails = [c for c in glyphclasses if c.name == "tails"]
+if len(tails) > 0:
+    all_tails = tails[0].glyphSet()
+
 
 _, csv_fn = sys.argv
+no_filter = "NOFILTER" in os.environ and os.environ["NOFILTER"].strip() == "1"
 
-handled_classes = list()
+handled_classes = dict()
 
 NUMBERS_OFFSETS={}
 
@@ -42,11 +63,31 @@ with open(csv_fn) as csvf:
             (offset_x, offset_y) = (0, 0)
 
         if mark_class not in handled_classes:
-            print("markClass @{0}_marks <anchor {1} {2}> @{0};".format(mark_class, offset_x, anchor_offset_y+offset_y))
-            handled_classes.append(mark_class)
-        rules.append("position base {} <anchor {} {}> mark @{};".format(glyph, x, y, mark_class))
+            mc = MarkClass(mark_class)
+            mc.addDefinition( MarkClassDefinition(mc, Anchor(offset_x, anchor_offset_y+offset_y), GlyphClass(next((c for c in glyphclasses if c.name == mark_class+"_marks"), None).glyphSet())) )
+            handled_classes[mark_class] = mc
+            fea.statements.append(mc)
+        if glyph in set(set(all_marks) - set(all_tails)):
+            pos = MarkMarkPosStatement(GlyphName(glyph), [(Anchor(x, y), MarkClass(mark_class))])
+        elif glyph not in all_tails:
+            pos = MarkBasePosStatement(GlyphName(glyph), [(Anchor(x, y), MarkClass(mark_class))])
+        else:
+            continue
+        rules.append(pos)
 
-print("\nfeature mark {")
-for rule in rules:
-    print(" "*4 + rule)
-print("} mark;")
+feature = FeatureBlock("mark")
+lookup = LookupBlock("mark_%s" % csv_fn[csv_fn.rindex('/')+1:csv_fn.rindex('.')])
+if not no_filter:
+    markFilteringSet = GlyphClass([g for g in [c.glyphSet() for c in handled_classes.values()] for g in g ])
+else:
+    markFilteringSet = None
+lookup.statements.append(LookupFlagStatement(value=0, markFilteringSet=markFilteringSet))
+lookup.statements += [rule for rule in rules if isinstance(rule, MarkBasePosStatement)]
+lookup_mark = LookupBlock("markmk_%s" % csv_fn[csv_fn.rindex('/')+1:csv_fn.rindex('.')])
+lookup_mark.statements = [rule for rule in rules if isinstance(rule, MarkMarkPosStatement)]
+feature.statements.append(lookup)
+if len(lookup_mark.statements) > 0:
+    feature.statements.append(lookup_mark)
+fea.statements.append(feature)
+
+print(fea.asFea())
