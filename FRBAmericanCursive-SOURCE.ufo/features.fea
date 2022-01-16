@@ -4,12 +4,14 @@ languagesystem cyrl dflt;
 
 include(../fea/GDEF.fea);
 include(../fea/classes.fea);
-include(../fea/mark.fea);
 include(../fea/ccmp.fea);
+include(strokes_mark.fea);
+include(../fea/mark.fea);
+include(../fea/mkmk.fea);
 include(../fea/frac.fea);
 include(../fea/Latn.fea);
 include(../fea/Cyrl.fea);
+include(../fea/salt.fea);
 include(../fea/strokes.fea);
-include(strokes_mark.fea);
 
 # vim: set ts=4 sw=4 expandtab:
