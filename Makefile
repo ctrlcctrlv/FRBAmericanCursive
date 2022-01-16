@@ -11,13 +11,13 @@ PROCESSING := /home/fred/Downloads/processing-4.0b2/processing-java
 
 .ONESHELL: all
 all:
-	make regen
-	make monoline
-	make patterned
-	make physics
-	make colrcpal
-	make just
-	make specimens
+	$(MAKE) regen
+	$(MAKE) monoline
+	$(MAKE) patterned
+	$(MAKE) physics
+	$(MAKE) colrcpal
+	$(MAKE) just
+	$(MAKE) specimens
 
 include mk/*.mk
 

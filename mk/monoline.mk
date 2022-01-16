@@ -13,4 +13,4 @@ monoline:
 # Makes a single monoline font, Regular weight. For debugging.
 .PHONY: debug-font
 debug-font:
-	make MONOLINE_SUFFIX=_debug monoline
+	$(MAKE) MONOLINE_SUFFIX=_debug monoline

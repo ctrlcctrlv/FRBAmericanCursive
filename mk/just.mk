@@ -1,7 +1,7 @@
 .PHONY: just
 just:
-	(for f in baseline beginnings endings guidelines xheight; do echo $$f; done) | parallel 'make REMOVE={} DEBUG=_debug just_each'
-	make REMOVE=arrows just_each
+	(for f in baseline beginnings endings guidelines xheight; do echo $$f; done) | parallel '$(MAKE) REMOVE={} DEBUG=_debug just_each'
+	$(MAKE) REMOVE=arrows just_each
 
 .PHONY: just_each
 just_each:

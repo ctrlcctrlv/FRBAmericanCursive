@@ -11,12 +11,12 @@ physics-files:
 	rm -fr build/$(FONTFAMILY)_physics_SVGs
 	mkdir -p build/$(FONTFAMILY)_physics_SVGs
 	ls build/BUILD.ufo/glyphs/*.glif | parallel --bar '$(GLIF2SVG) -o build/$(FONTFAMILY)_physics_SVGs/{/.}_internal.svg {}'
-	parallel --bar -a build_data/monoline.tsv --colsep '\t' 'make UFO=$(FONTFAMILY)-{1}.ufo physics-files-per-ufo'
+	parallel --bar -a build_data/monoline.tsv --colsep '\t' '$(MAKE) UFO=$(FONTFAMILY)-{1}.ufo physics-files-per-ufo'
 
 .PHONY: all-physics-files
 all-physics-files:
-	make colrglyphs colrglyphs-ufo
-	make physics-files
+	$(MAKE) colrglyphs colrglyphs-ufo
+	$(MAKE) physics-files
 
 FORCE := $(if $(FORCE),$(FORCE),n)
 
@@ -31,7 +31,7 @@ endif
 processing-physics:
 	# $(PROCESSING) --no-java --sketch=../../scripts/AnchorPhysics --run | sed -e "/^Finished\./d" > "$$TEMPTSV";
 	JOBS=`wc -l < build_data/monoline.tsv`
-	[[ ! -d /tmp/AnchorPhysics ]] && make compile-processing
+	[[ ! -d /tmp/AnchorPhysics ]] && $(MAKE) compile-processing
 	cat build_data/monoline$(DEBUG).tsv | sort -r | parallel -u --jobs $$JOBS --colsep '\t' '
 	cd build/$(FONTFAMILY)-{1}.ufo;
 	mkdir data
@@ -45,5 +45,5 @@ processing-physics:
 
 .PHONY: physics
 physics:
-	make all-physics-files
-	make processing-physics
+	$(MAKE) all-physics-files
+	$(MAKE) processing-physics

@@ -5,12 +5,12 @@ regen:
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
 	for f in numbers.ufo/glyphs/__combstroke[12345678]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
-	make rebuild-marks
+	$(MAKE) rebuild-marks
 	# OpenType GDEF table
 	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
-	make UFO=build/BUILD.ufo glif-refigure
-	make regen-stroke-count
-	make fez-classes
+	$(MAKE) UFO=build/BUILD.ufo glif-refigure
+	$(MAKE) regen-stroke-count
+	$(MAKE) fez-classes
 
 .PHONY: glif-refigure
 glif-refigure:
@@ -41,7 +41,7 @@ regen-patterns-and-numbers-from-fontforge-files:
 
 .PHONY: fez-classes
 fez-classes:
-	make FEZ=fea/classes.fez FEA=fea/classes.fea fez-source
+	$(MAKE) FEZ=fea/classes.fez FEA=fea/classes.fea fez-source
 
 .ONESHELL .PHONY: fez-source
 fez-source:

@@ -5,11 +5,11 @@ WIDTH_MINIMUM := 50.0
 
 .PHONY .ONESHELL: patterned-dotted
 patterned-dotted:
-	DASHLEN=0.00000001 PREPENDNAME=Dotted make patterned-dotted-dashed
+	DASHLEN=0.00000001 PREPENDNAME=Dotted $(MAKE) patterned-dotted-dashed
 
 .PHONY .ONESHELL: patterned-dashed
 patterned-dashed:
-	DASHLEN=20 PREPENDNAME=Dashed make patterned-dotted-dashed
+	DASHLEN=20 PREPENDNAME=Dashed $(MAKE) patterned-dotted-dashed
 
 # Build the patterned fonts...
 .PHONY .ONESHELL: patterned-dotted-dashed
@@ -22,12 +22,12 @@ patterned-dotted-dashed:
 		CULLAREA=`perl -e "print ({2} >= $(WIDTH_MINIMUM) ? 0.25 : 0.5);"`
 		DASHDESC="$(DASHLEN) $$WIDTHADJ"
 		#DASHDESC="{2} {2}"
-		STYLENAME=$(PREPENDNAME){1} WIDTH={2} CULLWIDTH=$$WIDTHADJ OS2WEIGHT={3} DASHDESC="$$DASHDESC" GLYPHS="$$GLYPHS" CULLAREA=$$CULLAREA make patterned-dotted-template
+		STYLENAME=$(PREPENDNAME){1} WIDTH={2} CULLWIDTH=$$WIDTHADJ OS2WEIGHT={3} DASHDESC="$$DASHDESC" GLYPHS="$$GLYPHS" CULLAREA=$$CULLAREA $(MAKE) patterned-dotted-template
 	'
 
 .PHONY .ONESHELL: patterned-dotted-debug
 patterned-dotted-debug:
-	make BUILD_DATA=build_data/dotted-debug.tsv patterned-dotted
+	$(MAKE) BUILD_DATA=build_data/dotted-debug.tsv patterned-dotted
 
 .PHONY .ONESHELL: patterned-dotted-template
 patterned-dotted-template:
@@ -39,19 +39,19 @@ patterned-dotted-template:
 	CULLWIDTHADJ=`perl -e 'print ($(WIDTH_MINIMUM) * 0.9) + ($(WIDTH) >= $(WIDTH_MINIMUM) ? 0 : ($(WIDTH_MINIMUM) - $(WIDTH)) * 2.0)'`
 	patterned_ARGS=$$(eval "echo `./scripts/patterned_args.sh`")
 	parallel --bar "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
-	make UFO=build/$(FONTFAMILY)-"$(STYLENAME)".ufo glif-refigure
+	$(MAKE) UFO=build/$(FONTFAMILY)-"$(STYLENAME)".ufo glif-refigure
 	fontmake_ARGS=`./scripts/fontmake_args.sh`
 	$(PYTHON) -m fontmake --keep-overlaps --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$fontmake_ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`'"$$patterned_ARGS"'\n'
 
 .PHONY .ONESHELL: patterned-apb
 patterned-apb:
 	GLYPHS=`find $(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -not -name contents.plist -not -name space.glif` 
-	make patterned-template STYLENAME=ArrowPathBold OS2WEIGHT=700 MFEKSTROKE_SCALE=0.4 PATTERN=patterns.ufo/glyphs/arrow2.glif GLYPHS="$$GLYPHS"
+	$(MAKE) patterned-template STYLENAME=ArrowPathBold OS2WEIGHT=700 MFEKSTROKE_SCALE=0.4 PATTERN=patterns.ufo/glyphs/arrow2.glif GLYPHS="$$GLYPHS"
 
 .PHONY .ONESHELL: patterned-ap
 patterned-ap:
 	GLYPHS=`find $(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -not -name contents.plist -not -name space.glif` 
-	make patterned-template STYLENAME=ArrowPath OS2WEIGHT=400 MFEKSTROKE_SCALE=0.2 PATTERN=patterns.ufo/glyphs/arrow2.glif GLYPHS="$$GLYPHS"
+	$(MAKE) patterned-template STYLENAME=ArrowPath OS2WEIGHT=400 MFEKSTROKE_SCALE=0.2 PATTERN=patterns.ufo/glyphs/arrow2.glif GLYPHS="$$GLYPHS"
 
 .PHONY .ONESHELL: patterned-template
 patterned-template:
@@ -65,4 +65,4 @@ patterned-template:
 
 .PHONY: patterned
 patterned:
-	make -j4 patterned-dotted patterned-dashed # patterned-apb patterned-ap
+	$(MAKE) -j4 patterned-dotted patterned-dashed # patterned-apb patterned-ap

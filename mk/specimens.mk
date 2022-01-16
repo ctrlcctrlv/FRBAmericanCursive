@@ -8,7 +8,7 @@ specimens-harfbuzz:
 
 .PHONY: specimens-sile
 specimens-sile:
-	make -j2 specimens-sile-combos specimens-sile-wholefont
+	$(MAKE) -j2 specimens-sile-combos specimens-sile-wholefont
 
 .PHONY: specimens-sile-combos
 specimens-sile-combos:
@@ -21,4 +21,4 @@ specimens-sile-wholefont:
 
 .PHONY: specimens
 specimens:
-	make -j2 specimens-sile specimens-harfbuzz
+	$(MAKE) -j2 specimens-sile specimens-harfbuzz
