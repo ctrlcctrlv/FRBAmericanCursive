@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 import csv
+import os
 import sys
 from fontTools import ufoLib
 from list_glyphs import list_glyphs
 
 _, ufo_fn = sys.argv
 
-with open("build_data/mark_classes.tsv") as f:
+with open("build_data/{}_mark_classes.tsv".format(os.environ["FONTFAMILY"])) as f:
     classes = [r.strip() for r in f.readlines()]
 
 all_marks = list()
@@ -36,6 +37,10 @@ print()
 print("@GDEFSimple = [{}];".format(" ".join(gdefsimple)))
 print("@GDEFMarks = [{}];".format(" ".join(["@{}_marks".format(cn) for cn in classes])))
 print("@GDEFLigat = [];")
+
+strokemarks = ['@stroke{}_marks'.format(i) for i in range(1, 9)]
+for i in range(1, 9):
+    print("@stroke{0}_marks = [__combstroke{0}];".format(i))
 
 print("""
 table GDEF {

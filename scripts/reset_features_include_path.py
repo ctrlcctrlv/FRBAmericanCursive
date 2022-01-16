@@ -14,7 +14,7 @@ with open(outname+"/features.fea", "r") as f:
     lines = f.readlines()
 with open(outname+"/features.fea", "w+") as f:
     for line in lines:
-        if "#strokes_mark.fea" in line:
-            print("include("+includename+"/strokes_mark.fea); #strokes_mark.fea", file=f)
+        if "${UFO}" in line:
+            print(line.replace("${UFO}", includename), file=f, end='')
         else:
-            print(line, file=f)
+            print(line, file=f, end='')

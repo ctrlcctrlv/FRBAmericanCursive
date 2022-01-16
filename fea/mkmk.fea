@@ -18,7 +18,7 @@ feature mkmk {
     } mkmk_above;
 
     lookup mkmk_hookabove {
-        pos @top_marks hookabovecomb' <160 -60 0 0>;
+        pos @top_marks_minus_uni0306 hookabovecomb' <160 -60 0 0>;
     } mkmk_hookabove;
 
     lookup mkmk_below {

@@ -49,8 +49,8 @@ SILE.doTexlike(contents_arrows)
 SILE.outputter:popColor()
 end--]]
 }
-\frame[id=fontname,left=5%pw,right=95%pw,top=75%ph,bottom=top(folio)]
+\frame[id=fontname,left=5%pw,right=95%pw,top=0%ph,bottom=top(folio)]
 \typeset-into[frame=fontname]{
-\noindent\font[family=TT2020Base]{&&FONT&&}
+\noindent\font[family=TT2020Base,size=5pt]{&&FONT&&}
 }
 \end{document}

@@ -14,10 +14,10 @@ import make_arrow_glyph
 if len(sys.argv) == 2:
     (_, gliffn) = sys.argv
     finalfn = None
-    target_size = -25
+    target_size = -20
 elif len(sys.argv) == 4:
     (_, gliffn, finalfn, target_size_i) = sys.argv
-    target_size = float(target_size_i) / 2.0 - 12.5
+    target_size = float(target_size_i) / 2.0 - 10.0
     target_size = -target_size;
 else:
     raise NotImplementedError

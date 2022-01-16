@@ -84,7 +84,7 @@ void setup() {
   RG.init(this);
   pnumbers = new PShape[]{loadShape(NUMHOME+"/__combstroke0_cairo.svg"), loadShape(NUMHOME+"/__combstroke1_cairo.svg"), loadShape(NUMHOME+"/__combstroke2_cairo.svg"), loadShape(NUMHOME+"/__combstroke3_cairo.svg"), loadShape(NUMHOME+"/__combstroke4_cairo.svg"), loadShape(NUMHOME+"/__combstroke5_cairo.svg"), loadShape(NUMHOME+"/__combstroke6_cairo.svg"), loadShape(NUMHOME+"/__combstroke7_cairo.svg"), loadShape(NUMHOME+"/__combstroke8_cairo.svg"), loadShape(NUMHOME+"/__combstroke9_cairo.svg")};
 
-  String[] lines = loadStrings("glyphs.txt");
+  String[] lines = loadStrings("data/glyphs.txt");
   glyphs_array = new ArrayList(Arrays.asList(lines));
 
   nextGlyph();

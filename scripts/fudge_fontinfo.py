@@ -35,6 +35,8 @@ plist["postscriptFullName"] = familyname_h + " " + namedweight_h
 plist["postscriptWeightName"] = realweight
 plist["openTypeNamePreferredFamilyName"] = familyname_h.strip()
 sfname = namedweight_h.replace(realweight, "") if os2weight == 400 else namedweight_h
+if len(sfname.strip()) == 0:
+    sfname = realweight
 plist["openTypeNamePreferredSubfamilyName"] = sfname.strip()
 
 plistf.close()

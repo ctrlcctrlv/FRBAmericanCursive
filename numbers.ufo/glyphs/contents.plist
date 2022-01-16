@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>__combstroke0</key>
-    <string>__combstroke0.glif</string>
-    <key>__combstroke1</key>
-    <string>__combstroke1.glif</string>
-    <key>__combstroke2</key>
-    <string>__combstroke2.glif</string>
-    <key>__combstroke3</key>
-    <string>__combstroke3.glif</string>
-    <key>__combstroke4</key>
-    <string>__combstroke4.glif</string>
-    <key>__combstroke5</key>
-    <string>__combstroke5.glif</string>
-    <key>__combstroke6</key>
-    <string>__combstroke6.glif</string>
-    <key>__combstroke7</key>
-    <string>__combstroke7.glif</string>
-    <key>__combstroke8</key>
-    <string>__combstroke8.glif</string>
-    <key>__combstroke9</key>
-    <string>__combstroke9.glif</string>
-    <key>NULL</key>
-    <string>N_U_L_L_.glif</string>
-  </dict>
+<dict>
+	<key>NULL</key>
+	<string>N_U_L_L_.glif</string>
+	<key>__combstroke0</key>
+	<string>__combstroke0.glif</string>
+	<key>__combstroke0.big</key>
+	<string>__combstroke0.big.glif</string>
+	<key>__combstroke1</key>
+	<string>__combstroke1.glif</string>
+	<key>__combstroke1.big</key>
+	<string>__combstroke1.big.glif</string>
+	<key>__combstroke2</key>
+	<string>__combstroke2.glif</string>
+	<key>__combstroke2.big</key>
+	<string>__combstroke2.big.glif</string>
+	<key>__combstroke3</key>
+	<string>__combstroke3.glif</string>
+	<key>__combstroke3.big</key>
+	<string>__combstroke3.big.glif</string>
+	<key>__combstroke4</key>
+	<string>__combstroke4.glif</string>
+	<key>__combstroke4.big</key>
+	<string>__combstroke4.big.glif</string>
+	<key>__combstroke5</key>
+	<string>__combstroke5.glif</string>
+	<key>__combstroke5.big</key>
+	<string>__combstroke5.big.glif</string>
+	<key>__combstroke6</key>
+	<string>__combstroke6.glif</string>
+	<key>__combstroke6.big</key>
+	<string>__combstroke6.big.glif</string>
+	<key>__combstroke7</key>
+	<string>__combstroke7.glif</string>
+	<key>__combstroke7.big</key>
+	<string>__combstroke7.big.glif</string>
+	<key>__combstroke8</key>
+	<string>__combstroke8.glif</string>
+	<key>__combstroke8.big</key>
+	<string>__combstroke8.big.glif</string>
+	<key>__combstroke9</key>
+	<string>__combstroke9.glif</string>
+	<key>__combstroke9.big</key>
+	<string>__combstroke9.big.glif</string>
+</dict>
 </plist>

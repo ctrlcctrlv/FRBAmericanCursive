@@ -37,7 +37,7 @@
     </contour>
     <contour>
       <point x="523.0001" y="0" type="move"/>
-      <point x="700.0001" y="410.00012" type="curve"/>
+      <point x="700.0001" y="410.00012" type="line"/>
       <point x="751" y="528.54565"/>
       <point x="787.5457" y="549.09106"/>
       <point x="830.2728" y="547.2728" type="curve"/>
@@ -77,6 +77,9 @@
       <point x="899.00037" y="0" type="line"/>
     </contour>
     <contour>
+      <point x="993.3335" y="21.333313" type="curve"/>
+      <point x="983.3335" y="21.333313"/>
+      <point x="975.3335" y="29.333313"/>
       <point x="975.3335" y="39.333313" type="curve"/>
       <point x="975.3335" y="49.333313"/>
       <point x="983.3335" y="57.333313"/>
@@ -86,9 +89,6 @@
       <point x="1011.3335" y="39.333313" type="curve"/>
       <point x="1011.3335" y="29.333313"/>
       <point x="1003.3335" y="21.333313"/>
-      <point x="993.3335" y="21.333313" type="curve"/>
-      <point x="983.3335" y="21.333313"/>
-      <point x="975.3335" y="29.333313"/>
     </contour>
   </outline>
 </glyph>

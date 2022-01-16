@@ -62,6 +62,7 @@ with open(gliffn) as f:
             print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke CWS -i {} -o {} -w 30".format(tempf, glf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKpathops REFIGURE -i {}".format(glf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
 
     p.moveTo((0, xheight))
@@ -77,6 +78,7 @@ with open(gliffn) as f:
             print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke PaP --pattern patterns.ufo/glyphs/dot.glif --path {} --out {} -m repeated --sx 0.5 --sy 0.5 --spacing 30 --stretch spacing".format(tempf, xhf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKpathops REFIGURE -i {}".format(xhf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
 
     p.moveTo((0, 0))
@@ -93,6 +95,7 @@ with open(gliffn) as f:
             print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke CWS -i {} -o {} -w 30".format(tempf, glf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKpathops REFIGURE -i {}".format(glf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
 
     for pt in firsts:

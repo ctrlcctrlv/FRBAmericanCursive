@@ -39,6 +39,7 @@ patterned-dotted-template:
 	CULLWIDTHADJ=`perl -e 'print ($(WIDTH_MINIMUM) * 0.9) + ($(WIDTH) >= $(WIDTH_MINIMUM) ? 0 : ($(WIDTH_MINIMUM) - $(WIDTH)) * 2.0)'`
 	patterned_ARGS=$$(eval "echo `./scripts/patterned_args.sh`")
 	parallel --bar "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
+	find build/$(FONTFAMILY)-"$(STYLENAME)".ufo/glyphs/*.glif | parallel --bar "MFEKpathops REFIGURE -i {}"
 	fontmake_ARGS=`./scripts/fontmake_args.sh`
 	$(PYTHON) -m fontmake --keep-overlaps --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$fontmake_ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`'"$$patterned_ARGS"'\n'
 

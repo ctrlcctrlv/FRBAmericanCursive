@@ -187,12 +187,8 @@ feature ccmp {
     } ccmp1_8;
 
     lookup ccmp1_9 {
-        lookupflag IgnoreMarks;
-        sub @tails' lookup NullTail [quotesingle quoteright] @Latn_lower;
+        lookupflag MarkAttachmentType @zerolen_marks;
+        sub @tails' lookup NullTail @quotes @Latn_all;
     } ccmp1_9;
-
-    lookup ccmp1_10 {
-        pos quotesingle [m v] -110;
-    } ccmp1_10;
 } ccmp;
 # vim: set ts=4 sw=4 expandtab:

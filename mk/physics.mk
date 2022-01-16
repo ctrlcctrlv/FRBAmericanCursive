@@ -34,11 +34,13 @@ processing-physics:
 	[[ ! -d /tmp/AnchorPhysics ]] && make compile-processing
 	cat build_data/monoline$(DEBUG).tsv | sort -r | parallel -u --jobs $$JOBS --colsep '\t' '
 	cd build/$(FONTFAMILY)-{1}.ufo;
+	mkdir data
 	TEMPTSV=/tmp/$(FONTFAMILY)-{1}-physics.tsv;
 	echo Writing "$$TEMPTSV";
-	grep -rl "point" ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif | xargs basename -a -s.glif | sort > glyphs.txt;
-	test -z "$(SKIP_PROCESSING)" && (/tmp/AnchorPhysics/AnchorPhysics | sed -e "/^Finished\./d" > "$$TEMPTSV");
-	$(PYTHON) ../../scripts/tsv_to_mark.py "$$TEMPTSV" > strokes_mark.fea;
+	if [[ ! -s data/glyphs.txt ]]; then (grep -rl "point" ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif | xargs basename -a -s.glif | sort > data/glyphs.txt); fi
+	if [[ -z "$(SKIP_PROCESSING)" ]]; then (/tmp/AnchorPhysics/AnchorPhysics | sed -n '/\t/p' > "$$TEMPTSV"); fi
+	if [[ -s "$$TEMPTSV" ]]; then cp "$$TEMPTSV" data/physics.tsv; fi
+	NOFILTER=1 $(PYTHON) ../../scripts/tsv_to_mark.py data/physics.tsv > strokes_mark.fea;
 	'
 
 .PHONY: physics

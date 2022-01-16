@@ -3,8 +3,9 @@ regen:
 	mkdir -p build dist
 	./scripts/regen_glyphs_plist.py $(FONTFAMILY)-SOURCE.ufo/glyphs
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
-	for f in numbers.ufo/glyphs/__combstroke[12345678].glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
+	for f in numbers.ufo/glyphs/__combstroke[12345678]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
+	find build/BUILD.ufo/glyphs/*.glif | parallel --bar "MFEKpathops REFIGURE -i {}"
 	make rebuild-marks
 	# OpenType GDEF table
 	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
@@ -13,12 +14,13 @@ regen:
 
 .PHONY: rebuild-marks
 rebuild-marks:
-	./scripts/tsv_to_mark.py build_data/top.tsv > fea/mark.fea
-	./scripts/tsv_to_mark.py build_data/bottom.tsv >> fea/mark.fea
-	./scripts/tsv_to_mark.py build_data/viethorn.tsv >> fea/mark.fea
-	./scripts/add_marks_from_data.py build/BUILD.ufo top
-	./scripts/add_marks_from_data.py build/BUILD.ufo bottom
-	./scripts/add_marks_from_data.py build/BUILD.ufo viethorn
+	rm -f fea/mark.fea
+	touch mark.fea
+	for class in `cat build_data/$(FONTFAMILY)_mark_classes.tsv`; do
+		if [[ ! -f build_data/$$class.tsv ]]; then continue; fi
+		./scripts/tsv_to_mark.py build_data/$$class.tsv >> fea/mark.fea
+		./scripts/add_marks_from_data.py build/BUILD.ufo $$class
+	done
 
 .PHONY: regen-stroke-count
 regen-stroke-count:

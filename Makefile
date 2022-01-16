@@ -16,7 +16,7 @@ all:
 	make patterned
 	make physics
 	make colrcpal
-	make justarrows
+	make just
 	make specimens
 
 include mk/*.mk

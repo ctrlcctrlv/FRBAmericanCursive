@@ -61,6 +61,7 @@ DefineClass @Cyrl_lower_no_veo = @Cyrl_all_lower - (@cyr_ve | @cyr_o);
 DefineClass @Cyrl_all = @Cyrl_all_lower | @Cyrl_upper;
 
 DefineClass @tails = /^tail\..*$/;
+DefineClass @quotes = /^quote.*$/;
 
 # Misc
 DefineClass @salt = /^.*\.alt$/;
@@ -68,13 +69,3 @@ DefineClass @to_salt = @salt~alt;
 DefineClass @numr = /^.*\.numr$/;
 DefineClass @to_numr = @numr~numr;
 DefineClass @dnom = @to_numr.dnom;
-
-Feature liga {
-    Routine {
-        Substitute period period period -> ellipsis;
-    };
-
-    Routine {
-        Substitute period period -> nldr;
-    };
-};

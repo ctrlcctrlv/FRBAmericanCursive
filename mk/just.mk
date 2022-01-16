@@ -1,14 +1,10 @@
-.PHONY: just_all
-just_all:
-	(for f in baseline beginnings endings guidelines xheight; do echo $$f; done) | parallel 'make REMOVE={} DEBUG=_debug just'
-	make justarrows
-
-.PHONY: justarrows
-justarrows:
-	make REMOVE=arrows just
-
 .PHONY: just
 just:
+	(for f in baseline beginnings endings guidelines xheight; do echo $$f; done) | parallel 'make REMOVE={} DEBUG=_debug just_each'
+	make REMOVE=arrows just_each
+
+.PHONY: just_each
+just_each:
 	parallel --bar -a build_data/monoline$(DEBUG).tsv --colsep '\t' '
 		UFO="build/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.ufo"
 		FN_EL=`echo $(REMOVE) | awk "{\\$$1=toupper(substr(\\$$1,0,1))substr(\\$$1,2)}1"`

@@ -1,4 +1,7 @@
 #!/bin/bash
+
+ARGS=`./scripts/fontmake_args.sh`
+
 if [[ -z $FONTFAMILY ]]; then
 	echo Must set FONTFAMILY >&2
 	exit 1
@@ -13,4 +16,5 @@ find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel --bar "MFEKstroke
 # Restroke glyphs which shouldn't have their internal contours removed
 #find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname 'zero.glif' -or -iname 'degree.glif' -or -iname 'uni030A_.glif' -or -iname 'O_slash*' | parallel MFEKstroke CWS -i {} -o build/$FONTFAMILY-"$NAMEDWEIGHT".ufo/glyphs/{/} -w "$WIDTH"
 # Generate OTF
-python3 -m fontmake --verbose DEBUG -u build/$FONTFAMILY-"$NAMEDWEIGHT".ufo --output-path dist/$FONTFAMILY-"$OS2WEIGHT"-"$NAMEDWEIGHT".otf -o otf --optimize-cff 2 --cff-round-tolerance 1
+find build/$FONTFAMILY-"$NAMEDWEIGHT".ufo/glyphs/*.glif | parallel --bar "MFEKpathops REFIGURE -i {}"
+python3 -m fontmake --verbose DEBUG -u build/$FONTFAMILY-"$NAMEDWEIGHT".ufo --output-path dist/$FONTFAMILY-"$OS2WEIGHT"-"$NAMEDWEIGHT".otf -o otf $ARGS

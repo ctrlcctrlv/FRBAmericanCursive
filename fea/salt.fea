@@ -13,3 +13,11 @@ feature numr {
 feature frac {
     sub slash by fraction;
 } frac;
+
+feature ss03 {
+  featureNames {
+    name "Disable tails after words";
+  };
+
+  lookup NullTail; # in Latn.fea
+} ss03;

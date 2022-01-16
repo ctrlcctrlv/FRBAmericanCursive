@@ -1,3 +1,7 @@
 #!/bin/bash
-ARGS='--optimize-cff 0 --cff-round-tolerance 0 --overlaps-backend pathops --keep-overlaps'
+if [[ $PRODUCTION =~ ^y(es)?$ ]]; then
+    ARGS='--optimize-cff 2 --cff-round-tolerance 0.05 --subroutinizer cffsubr'
+else
+    ARGS='--optimize-cff 0 --cff-round-tolerance 0 --keep-overlaps'
+fi
 echo "$ARGS"
