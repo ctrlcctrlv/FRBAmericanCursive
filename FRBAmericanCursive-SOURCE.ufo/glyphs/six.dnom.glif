@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="six.dnom" format="2">
-  <advance width="220"/>
+  <advance width="280"/>
   <unicode hex="2086"/>
   <outline>
     <contour>
-      <point x="116.477005" y="54.2002" type="move"/>
-      <point x="8.976997" y="4.7002"/>
-      <point x="-43" y="-110.928"/>
-      <point x="-43" y="-177.301" type="curve"/>
-      <point x="-43" y="-217.976"/>
-      <point x="-19.7715" y="-246.111"/>
-      <point x="32.684" y="-246.111" type="curve"/>
-      <point x="71.325" y="-246.111"/>
-      <point x="124.63699" y="-206.566"/>
-      <point x="124.63699" y="-154.2" type="curve"/>
-      <point x="124.63699" y="-136.1"/>
-      <point x="111.826004" y="-123.516"/>
-      <point x="94.886" y="-123.516" type="curve"/>
-      <point x="78.77699" y="-123.516"/>
-      <point x="16.677002" y="-136.304"/>
-      <point x="16.677002" y="-235.837" type="curve"/>
-      <point x="16.677002" y="-237.425"/>
-      <point x="16.677002" y="-239.013"/>
-      <point x="16.677002" y="-240.6" type="curve"/>
+      <point x="176.477" y="54.2002" type="move"/>
+      <point x="68.977" y="4.7002"/>
+      <point x="17" y="-110.928"/>
+      <point x="17" y="-177.301" type="curve"/>
+      <point x="17" y="-217.976"/>
+      <point x="40.2285" y="-246.111"/>
+      <point x="92.684" y="-246.111" type="curve"/>
+      <point x="131.325" y="-246.111"/>
+      <point x="184.637" y="-206.566"/>
+      <point x="184.637" y="-154.2" type="curve"/>
+      <point x="184.637" y="-136.1"/>
+      <point x="171.826" y="-123.516"/>
+      <point x="154.886" y="-123.516" type="curve"/>
+      <point x="138.777" y="-123.516"/>
+      <point x="76.677" y="-136.304"/>
+      <point x="76.677" y="-235.837" type="curve"/>
+      <point x="76.677" y="-237.425"/>
+      <point x="76.677" y="-239.013"/>
+      <point x="76.677" y="-240.6" type="curve"/>
     </contour>
   </outline>
 </glyph>

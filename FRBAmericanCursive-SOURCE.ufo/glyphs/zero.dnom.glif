@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zero.dnom" format="2">
-  <advance width="220"/>
+  <advance width="280"/>
   <unicode hex="2080"/>
   <outline>
     <contour>
-      <point x="117.87399" y="49.4395" type="move"/>
-      <point x="84.703995" y="49.4395"/>
-      <point x="27.463997" y="32.2119"/>
-      <point x="-22.597702" y="-69" type="curve"/>
-      <point x="-57.1953" y="-138.753"/>
-      <point x="-65.1953" y="-247.902"/>
-      <point x="9.983002" y="-247.902" type="curve"/>
-      <point x="41.059998" y="-247.902"/>
-      <point x="102.328995" y="-230.799"/>
-      <point x="157.252" y="-113.55" type="curve"/>
-      <point x="186.89801" y="-49.8535"/>
-      <point x="190.535" y="49.4395"/>
-      <point x="117.87399" y="49.4395" type="curve"/>
+      <point x="177.874" y="49.4395" type="move"/>
+      <point x="144.704" y="49.4395"/>
+      <point x="87.464" y="32.2119"/>
+      <point x="37.402298" y="-69" type="curve"/>
+      <point x="2.804699" y="-138.753"/>
+      <point x="-5.1952972" y="-247.902"/>
+      <point x="69.983" y="-247.902" type="curve"/>
+      <point x="101.06" y="-247.902"/>
+      <point x="162.329" y="-230.799"/>
+      <point x="217.252" y="-113.55" type="curve"/>
+      <point x="246.89801" y="-49.8535"/>
+      <point x="250.535" y="49.4395"/>
+      <point x="177.874" y="49.4395" type="curve"/>
     </contour>
   </outline>
 </glyph>
