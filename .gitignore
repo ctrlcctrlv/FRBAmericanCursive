@@ -13,3 +13,7 @@ py_environment/
 *.zip
 *.bak
 *.ufo/**/*.svg
+specimens/*.png
+specimens/*.pdf
+# as this font relies on glifjson and MFEKglif --export
+FRBAmericanPrint-SOURCE.ufo/glyphs/*.glif
