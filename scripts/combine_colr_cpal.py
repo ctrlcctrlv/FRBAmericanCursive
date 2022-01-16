@@ -25,12 +25,14 @@ COLR_GA = {}
 COLR_G = {}
 for glyph in glyphs:
     if glyph.startswith("__combstroke"):
-        COLR_GAv = [(glyph, 1)]
-        COLR_Gv = [(glyph, 1)]
+        if glyph.endswith(".big"):
+            continue
+        COLR_GAv = [(glyph+".big", 3), (glyph, 1)]
+        COLR_Gv = [(glyph+".big", 3), (glyph, 1)]
     elif not glyph+"_guidelines" in ga_ttfglyphs:
         continue
     else:
-        COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF), (glyph+"_beginnings", 3), (glyph+"_endings", 4), (glyph+"_arrows", 1)]
+        COLR_GAv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF), (glyph+"_beginnings", 4), (glyph+"_endings", 5), (glyph+"_arrows", 5)]
         COLR_Gv = [(glyph+"_guidelines", 0), (glyph+"_xheight", 0), (glyph+"_baseline", 2), (glyph, 0xFFFF)]
 
     if not glyph+"_arrows" in ga_ttfglyphs:
@@ -42,6 +44,8 @@ for glyph in glyphs:
 C_O_L_R_GA = buildCOLR(COLR_GA)
 C_O_L_R_G = buildCOLR(COLR_G)
 
+# outlines for numbers
+WHITE = (255, 255, 255)
 # guidelines
 BABYBLUE = (0, 178, 194)
 ## baseline guideline
@@ -59,8 +63,8 @@ BURGUNDY = (193, 30, 38)
 YELLOW = (255, 202, 243)
 GREY = (50, 50, 50)
 
-palette_GA = [BABYBLUE, BURGUNDY, DEEPPURPLE, CYAN, RED]
-palette_G = [BABYBLUE, BURGUNDY, DEEPPURPLE]
+palette_GA = [BABYBLUE, BURGUNDY, DEEPPURPLE, WHITE, CYAN, RED]
+palette_G = [BABYBLUE, BURGUNDY, DEEPPURPLE, WHITE]
 CPAL_palette_GA = [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette_GA]
 CPAL_palette_G = [(r/255., g/255., b/255., 1.0) for (r,g,b) in palette_G]
 C_P_A_L_GA = buildCPAL([CPAL_palette_GA])

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="__combstroke0" format="2">
+  <advance width="0"/>
+  <anchor x="0" y="14.4004" name="_stroke0"/>
+  <outline>
+    <contour>
+      <point x="47.6982" y="16" type="curve"/>
+      <point x="47.6982" y="-11.424139"/>
+      <point x="31.05375" y="-43.6982"/>
+      <point x="0" y="-43.6982" type="curve"/>
+      <point x="-31.05375" y="-43.6982"/>
+      <point x="-47.6982" y="-11.424139"/>
+      <point x="-47.6982" y="16" type="curve"/>
+      <point x="-47.6982" y="43.424133"/>
+      <point x="-31.053741" y="75.6982"/>
+      <point x="0" y="75.6982" type="curve"/>
+      <point x="31.053741" y="75.6982"/>
+      <point x="47.6982" y="43.424133"/>
+    </contour>
+    <contour>
+      <point x="2.7012005" y="16" type="curve"/>
+      <point x="2.7012005" y="28.549034"/>
+      <point x="1.2986923" y="30.701199"/>
+      <point x="0" y="30.701199" type="curve"/>
+      <point x="-1.2986943" y="30.701199"/>
+      <point x="-2.7012005" y="28.5489"/>
+      <point x="-2.7012005" y="16" type="curve"/>
+      <point x="-2.7012005" y="3.4509614"/>
+      <point x="-1.2986925" y="1.2988005"/>
+      <point x="0" y="1.2988005" type="curve"/>
+      <point x="1.2986943" y="1.2988005"/>
+      <point x="2.7012005" y="3.4510982"/>
+    </contour>
+  </outline>
+</glyph>

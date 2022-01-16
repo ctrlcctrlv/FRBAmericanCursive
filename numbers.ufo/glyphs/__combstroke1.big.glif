@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="__combstroke1" format="2">
+  <advance width="0"/>
+  <anchor x="0" y="0" name="_stroke1"/>
+  <outline>
+    <contour>
+      <point x="0.0000000000000053928292" y="-60.0986" type="curve"/>
+      <point x="12.368759" y="-60.0986"/>
+      <point x="22.49805" y="-49.968052"/>
+      <point x="22.49805" y="-37.5996" type="curve"/>
+      <point x="22.49805" y="37.5996" type="curve"/>
+      <point x="22.49805" y="49.968052"/>
+      <point x="12.368759" y="60.0986"/>
+      <point x="-0.0000000000000053928292" y="60.0986" type="curve"/>
+      <point x="-12.368759" y="60.0986"/>
+      <point x="-22.49805" y="49.968052"/>
+      <point x="-22.49805" y="37.5996" type="curve"/>
+      <point x="-22.49805" y="-37.5996" type="curve"/>
+      <point x="-22.49805" y="-49.968052"/>
+      <point x="-12.368759" y="-60.0986"/>
+    </contour>
+  </outline>
+</glyph>

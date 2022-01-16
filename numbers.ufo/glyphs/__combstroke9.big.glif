@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="__combstroke9" format="2">
+  <advance width="0"/>
+  <anchor x="0" y="9.25195" name="_stroke9"/>
+  <outline>
+    <contour>
+      <point x="42.0928" y="-26.748" type="curve"/>
+      <point x="42.0928" y="-39.116634"/>
+      <point x="31.962482" y="-49.2471"/>
+      <point x="19.5938" y="-49.2471" type="curve"/>
+      <point x="7.2253985" y="-49.2471"/>
+      <point x="-2.9042997" y="-39.116062"/>
+      <point x="-2.9042997" y="-26.748" type="curve"/>
+      <point x="-2.9042997" y="-26.748"/>
+      <point x="-2.9042997" y="-14.194986"/>
+      <point x="-2.9042997" y="-14.194986" type="curve"/>
+      <point x="-24.692287" y="-12.691192"/>
+      <point x="-42.0928" y="5.5940647"/>
+      <point x="-42.0928" y="27.7559" type="curve"/>
+      <point x="-42.0928" y="50.89413"/>
+      <point x="-23.125149" y="69.806595"/>
+      <point x="0" y="69.806595" type="curve"/>
+      <point x="23.125149" y="69.806595"/>
+      <point x="42.0928" y="50.89413"/>
+      <point x="42.0928" y="27.7559" type="curve"/>
+      <point x="42.0928" y="27.7559"/>
+      <point x="42.0928" y="-26.748"/>
+    </contour>
+    <contour>
+      <point x="2.9042997" y="27.7559" type="curve"/>
+      <point x="2.9042997" y="29.3531"/>
+      <point x="1.5972" y="30.702099"/>
+      <point x="0" y="30.702099" type="curve"/>
+      <point x="-1.5972" y="30.702099"/>
+      <point x="-2.9042997" y="29.3531"/>
+      <point x="-2.9042997" y="27.7559" type="curve"/>
+      <point x="-2.9042997" y="26.158699"/>
+      <point x="-1.5972" y="24.8096"/>
+      <point x="0" y="24.8096" type="curve"/>
+      <point x="1.5972" y="24.8096"/>
+      <point x="2.9042997" y="26.158699"/>
+    </contour>
+  </outline>
+</glyph>

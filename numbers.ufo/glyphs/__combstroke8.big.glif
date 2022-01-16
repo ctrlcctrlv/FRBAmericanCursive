@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="__combstroke8" format="2">
+  <advance width="0"/>
+  <anchor x="-0" y="8.90918" name="_stroke8"/>
+  <outline>
+    <contour>
+      <point x="10.455445" y="66.514404" type="curve"/>
+      <point x="13.920724" y="68.58298"/>
+      <point x="17.917622" y="69.708"/>
+      <point x="22.0039" y="69.708" type="curve"/>
+      <point x="34.37296" y="69.708"/>
+      <point x="44.5029" y="59.578056"/>
+      <point x="44.5029" y="47.209" type="curve"/>
+      <point x="44.5029" y="41.61314"/>
+      <point x="42.392097" y="36.165398"/>
+      <point x="38.616413" y="32.03404" type="curve"/>
+      <point x="26.449238" y="18.72191" type="curve"/>
+      <point x="28.426046" y="16.984507"/>
+      <point x="30.24219" y="15.055775"/>
+      <point x="31.849508" y="12.877302" type="curve"/>
+      <point x="36.594864" y="6.447319"/>
+      <point x="39.1074" y="-1.4265184"/>
+      <point x="39.1074" y="-9.40918" type="curve"/>
+      <point x="39.1074" y="-32.014668"/>
+      <point x="20.037716" y="-49.9092"/>
+      <point x="-2.28809" y="-49.9092" type="curve"/>
+      <point x="-25.254879" y="-49.9092"/>
+      <point x="-44.5039" y="-31.194635"/>
+      <point x="-44.5039" y="-8.10059" type="curve"/>
+      <point x="-44.5039" y="0.015942037"/>
+      <point x="-42.139194" y="7.0897436"/>
+      <point x="-38.12753" y="13.478202" type="curve"/>
+      <point x="-40.458332" y="18.512798"/>
+      <point x="-41.715797" y="24.032393"/>
+      <point x="-41.715797" y="29.6826" type="curve"/>
+      <point x="-41.715797" y="51.25624"/>
+      <point x="-23.719217" y="68.6104"/>
+      <point x="-2.29883" y="68.6104" type="curve"/>
+      <point x="2.0500329" y="68.6104"/>
+      <point x="6.3633404" y="67.8911"/>
+    </contour>
+  </outline>
+</glyph>
