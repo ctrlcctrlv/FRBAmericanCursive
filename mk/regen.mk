@@ -5,12 +5,16 @@ regen:
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
 	for f in numbers.ufo/glyphs/__combstroke[12345678]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
-	find build/BUILD.ufo/glyphs/*.glif | parallel --bar "MFEKpathops REFIGURE -i {}"
 	make rebuild-marks
 	# OpenType GDEF table
 	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
+	make UFO=build/BUILD.ufo glif-refigure
 	make regen-stroke-count
 	make fez-classes
+
+.PHONY: glif-refigure
+glif-refigure:
+	find '$(UFO)/glyphs/' -iname '*.glif' | parallel --bar "MFEKpathops REFIGURE -i {}"
 
 .PHONY: rebuild-marks
 rebuild-marks:
