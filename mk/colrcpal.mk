@@ -1,6 +1,4 @@
-# This won't work anymore because I manually added the OS2 weights to the .tsv and don't yet have an automatic way to derive them. File will need to be manually updated, which I think is fine.
-#build_data/colrcpal_fontlist.tsv:
-#	find build -type d -iname '*.ufo' -and -not -iname '*Guidelines*'| sed 's/.*-//;s/\.ufo$$//' > build_data/colrcpal_fontlist.tsv
+# COLR/CPAL font generation
 
 .PHONY: colrglyphs
 colrglyphs:
@@ -24,21 +22,19 @@ colrglyphs-ufo:
 colrcpal:
 	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then $(MAKE) colrglyphs colrglyphs-ufo; fi # may have been made by physics
 	parallel --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
-	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-{1}.ufo {3}
-	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}_NOVF.otf build/$(FONTFAMILY)-{1}.ufo
-	if [[ -f build_data/$(FONTFAMILY)_buildVF ]]; then
-		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf build/$(FONTFAMILY)-{1}.ufo
-		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.otf
-	fi
+		$(MAKE) STYLENAME={1} OS2WEIGHT={3} one-colrcpal
 	'
 
-# Build one color font for debugging purposes.
+.PHONY: one-colrcpal
+one-colrcpal:
+	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then $(MAKE) colrglyphs colrglyphs-ufo; fi # may have been made by physics
+	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-$(STYLENAME).ufo $(OS2WEIGHT)
+	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME)_NOVF.otf build/$(FONTFAMILY)-$(STYLENAME).ufo
+	if [[ -f build_data/$(FONTFAMILY)_buildVF ]]; then
+		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME).otf build/$(FONTFAMILY)-$(STYLENAME).ufo
+		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME).otf
+	fi
+
 .PHONY: debug-colrcpal
 debug-colrcpal:
-	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then $(MAKE) colrglyphs colrglyphs-ufo; fi # may have been made by physics
-	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-$(STYLENAME).ufo 400
-	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME)_NOVF.otf build/$(FONTFAMILY)-$(STYLENAME).ufo
-	if [[ -f build_data/$(FONTFAMILY)_buildVF ]]; then
-		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf build/$(FONTFAMILY)-$(STYLENAME).ufo
-		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-400-GuidelinesArrows$(STYLENAME).otf
-	fi
+	$(MAKE) STYLENAME=Regular OS2WEIGHT=400 one-colrcpal
