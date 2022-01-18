@@ -3,7 +3,7 @@ rm -f /tmp/eachfont${FONTFAMILY}-*.pdf specimens/${FONTFAMILY}-specimen.pdf
 
 echo ${FONTFAMILY_H}
 
-find dist -type f -iname "${FONTFAMILY}*_NOVF.otf" | sort -V | parallel --jobs 200% --bar "
+find dist -type f -iname "${FONTFAMILY}*_NOVF.otf" | sort -V | parallel --jobs 300% --bar "
     export OS2WEIGHT=\`./scripts/os2weight_of_font.py {}\`
     export WEIGHT=\`./scripts/os2weight_to_namedweight.py \$OS2WEIGHT\`
     export STYLE=\`ftdump -n {}|rg '(family:|style:)'|awk 'BEGIN {FS=\"              \"} {print \$2}'|awk 'BEGIN {FS=\"\\n\"; RS=\"\"} {print \$1\$2}'\`
@@ -11,4 +11,4 @@ find dist -type f -iname "${FONTFAMILY}*_NOVF.otf" | sort -V | parallel --jobs 2
 	sile /tmp/eachfont{/}.sil
 "
 
-pdftk `ls /tmp/eachfont${FONTFAMILY}-*.pdf|sort -V` cat output specimens/${FONTFAMILY}-specimen.pdf
+pdftk `find /tmp/ -iname "eachfont${FONTFAMILY}-*.pdf"|sort -V` cat output "specimens/${FONTFAMILY_H} specimen.pdf"

@@ -15,10 +15,10 @@ SILE.settings.set("shaper.spacestretchfactor",  0)
 SILE.settings.set("shaper.spaceshrinkfactor",  0)
 SILE.scratch.counters.folio.value = &&PAGE&&
 wrapper = "\\typeset-into[frame=%s]{%s\n%s}"
-font_dist = [[\font[filename=dist/]] .. ("&&FONT&&") .. ']'
+font_dist = [[\font[filename=dist/]] .. ("&&FONT&&") .. ',%s]'
 font_arrows = [[\font[filename=dist/&&FONTFAMILY&&-&&OS2WEIGHT&&-JustArrows&&WEIGHT&&.otf]%]]
 content_inner = [[\neverindent
-\par \font[size=3em,%s]{&&FONTFAMILY_H&&}
+\par \font[size=3em]{&&FONTFAMILY_H&&}
 \bigskip
 \par &&STYLE&&
 \bigskip
@@ -32,9 +32,9 @@ content_inner = [[\neverindent
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
 ]]
 if string.find("&&FONT&&", "Arrows") then
-    content_inner = string.format(content_inner, "features=+ss01")
+    font_dist = string.format(font_dist, "features=+ss01")
 else
-    content_inner = string.format(content_inner, "")
+    font_dist = string.format(font_dist, "")
 end
 contents = wrapper:format("specimen", font_dist, content_inner)
 contents_overlay = wrapper:format("specimen_overlay", font_dist, content_inner)
@@ -49,7 +49,7 @@ SILE.doTexlike(contents_arrows)
 SILE.outputter:popColor()
 end--]]
 }
-\frame[id=fontname,left=5%pw,right=95%pw,top=0%ph,bottom=top(folio)]
+\frame[id=fontname,left=5%pw,right=95%pw,top=1%ph,bottom=1% + height(folio)]
 \typeset-into[frame=fontname]{
 \noindent\font[family=TT2020Base,size=5pt]{&&FONT&&}
 }
