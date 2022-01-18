@@ -1,0 +1,99 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "onehalf",
+    "vec": [
+      {
+        "base": "one.numr",
+        "filename": null,
+        "xScale": {
+          "Float": 1.0
+        },
+        "xyScale": {
+          "Float": 0.0
+        },
+        "yxScale": {
+          "Float": 0.0
+        },
+        "yScale": {
+          "Float": 1.0
+        },
+        "xOffset": {
+          "Float": 0.0
+        },
+        "yOffset": {
+          "Float": 0.0
+        },
+        "identifier": null
+      },
+      {
+        "base": "fraction",
+        "filename": null,
+        "xScale": {
+          "Float": 1.0
+        },
+        "xyScale": {
+          "Float": 0.0
+        },
+        "yxScale": {
+          "Float": 0.0
+        },
+        "yScale": {
+          "Float": 1.0
+        },
+        "xOffset": {
+          "Integer": 280
+        },
+        "yOffset": {
+          "Float": 0.0
+        },
+        "identifier": null
+      },
+      {
+        "base": "two.dnom",
+        "filename": null,
+        "xScale": {
+          "Float": 1.0
+        },
+        "xyScale": {
+          "Float": 0.0
+        },
+        "yxScale": {
+          "Float": 0.0
+        },
+        "yScale": {
+          "Float": 1.0
+        },
+        "xOffset": {
+          "Integer": 280
+        },
+        "yOffset": {
+          "Float": 0.0
+        },
+        "identifier": null
+      }
+    ]
+  },
+  "flattened": null,
+  "component_rects": null,
+  "guidelines": [],
+  "width": 513,
+  "unicode": [
+    "½"
+  ],
+  "name": "onehalf",
+  "note": null,
+  "filename": null
+}

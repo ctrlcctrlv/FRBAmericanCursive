@@ -1,0 +1,30 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "fourperemspace",
+    "vec": []
+  },
+  "flattened": null,
+  "component_rects": null,
+  "guidelines": [],
+  "width": 231,
+  "unicode": [
+    " ",
+    " "
+  ],
+  "name": "fourperemspace",
+  "note": null,
+  "filename": null
+}
