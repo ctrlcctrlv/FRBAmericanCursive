@@ -47,6 +47,7 @@ String NUMHOME="../../numbers.ufo/glyphs/";
 PShape[] pnumbers;
 ArrayList<String> glyphs_array = new ArrayList<String>();
 String glyph;
+String outglyph;
 
 public void settings() {
   size(WIDTH, HEIGHT, P3D);
@@ -91,15 +92,6 @@ void setup() {
 }
 
 void outputGlyph() {
-  char[] outglyph_c = glyph.toCharArray();
-  String outglyph = "";
-  for (int i = 0; i < outglyph_c.length; i++) {
-    if (i != 0 && outglyph_c[i] == '_' && outglyph_c[i-1] >= 'A' && outglyph_c[i-1] <= 'Z') {
-      continue;
-    } else {
-      outglyph += outglyph_c[i];
-    }
-  }
   int i = 0;
   for (VerletParticle2D p : mps) {
     i++;
@@ -117,7 +109,9 @@ boolean nextGlyph() {
   String SVGHOMEUFO = "physics_SVGs/";
   String SVGHOME = "../" + System.getenv("FONTFAMILY") + "_physics_SVGs/";
   if (glyphs_array.size() == 0) { return false; }
-  glyph = glyphs_array.remove(0);
+  String[] glyph_l = split(glyphs_array.remove(0), "\t");
+  glyph = glyph_l[0];
+  outglyph = glyph_l[1];
   arrow = RG.loadShape(SVGHOMEUFO+glyph+"_arrows_internal.svg");
   arrow_points = arrow.getPoints();
   addMovingParticles();
