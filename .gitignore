@@ -17,3 +17,7 @@ specimens/*.png
 specimens/*.pdf
 # as this font relies on glifjson and MFEKglif --export
 FRBAmericanPrint-SOURCE.ufo/glyphs/*.glif
+# fea
+/fea/GDEF.fea
+/fea/mark.fea
+/fea/strokes.fea
