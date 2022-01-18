@@ -21,11 +21,11 @@ os2weight = int(os2weight)
 outname = "build/{}-{}.ufo".format(os.environ["FONTFAMILY"], namedweight)
 # This is a rudimentary cache.
 preserved = [Path(outname) / "data" / "glyphs.txt", Path(outname) / "data" / "physics.tsv"]
-tempfiles = {p: tempfile.NamedTemporaryFile(encoding="utf-8") for p in preserved}
+tempfiles = {p: tempfile.NamedTemporaryFile() for p in preserved}
 preserved_data = list()
 for path in preserved:
     if path.is_file():
-        with open(path, 'r', encoding="utf-8") as f:
+        with open(path, 'rb') as f:
             data = f.read()
         tempfiles[path].write(data)
     else:
@@ -41,5 +41,7 @@ shutil.copytree("build/BUILD.ufo", outname)
 ufo = ufoLib.UFOReaderWriter(outname)
 build_ccmp.create_and_build_placeholders(ufo)
 
-if glyphstxt_data is not None and len(glyphstxt_data) > 0:
-    shutil.copyfile(tempglyphstxt.name, glyphstxt)
+for path in preserved:
+    if path in tempfiles:
+        if Path(tempfiles[path].name).is_file():
+            shutil.copyfile(tempfiles[path].name, path)
