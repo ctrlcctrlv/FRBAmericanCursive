@@ -1,20 +1,34 @@
 .PHONY: regen
 regen:
 	mkdir -p build dist
-	./scripts/regen_glyphs_plist.py $(FONTFAMILY)-SOURCE.ufo/glyphs
+	$(MAKE) UFO=$(FONTFAMILY)-SOURCE.ufo glifjson2glif
+	cp $(FONTFAMILY)-SOURCE.ufo/metainfo.plist build/BUILD.ufo/metainfo.plist
+	MFEKmetadata $(FONTFAMILY)-SOURCE.ufo write_metainfo
+	MFEKmetadata build/BUILD.ufo write_metainfo
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
-	for f in numbers.ufo/glyphs/__combstroke[12345678]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
+	for f in numbers.ufo/glyphs/__combstroke[123456789]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
 	$(MAKE) rebuild-marks
 	# OpenType GDEF table
-	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
+	$(MAKE) rebuild-gdef
 	$(MAKE) UFO=build/BUILD.ufo glif-refigure
 	$(MAKE) regen-stroke-count
 	$(MAKE) fez-classes
 
+.PHONY: rebuild-gdef
+rebuild-gdef:
+	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
+
 .PHONY: glif-refigure
 glif-refigure:
-	find '$(UFO)/glyphs/' -iname '*.glif' | parallel --bar "MFEKpathops REFIGURE -i {}"
+	if [[ -z '$(UFO)' ]]; then UFO='$(UFO)'; else UFO=$(FONTFAMILY)-SOURCE.ufo; fi
+	find "$$UFO"/glyphs/ -iname '*.glif' | parallel --bar "MFEKpathops REFIGURE -i {}"
+
+.PHONY: glifjson2glif
+glifjson2glif:
+	if [[ -n '$(UFO)' ]]; then UFO='$(UFO)'; else UFO=$(FONTFAMILY)-SOURCE.ufo; fi
+	rm "$$UFO"/glyphs/*.glif
+	find "$$UFO"/glyphs/ -iname '*.glifjson' | parallel --bar "RUST_LOG=error MFEKglif --flatten --no-contour-ops {}"
 
 .PHONY: rebuild-marks
 rebuild-marks:
