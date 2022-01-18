@@ -1,19 +1,6 @@
 #!/bin/bash
 
-echo lookup combstroke {
-while read -a line; do
-	GLIF=${line[0]}
-	COUNT=${line[1]}
-    if [[ "$GLIF" =~ "notdef" ]]; then
-        GLIF=".notdef"
-    fi
-	printf "  sub $GLIF by $GLIF"
-	for i in `seq 1 $COUNT`; do
-		printf " __combstroke$i"
-	done
-	printf ';\n'
-done < <(xidel --input-format xml ${FONTFAMILY}-SOURCE.ufo/glyphs/*.glif -e 'string-join((replace(replace(file:name($path), "\.glif$", ""), "([A-Z])_", "$1"), count(//point[1])), '$'"\t"'')' --silent)
-echo '} combstroke;'
+./scripts/stroke_count_fea.py < <(xidel --input-format xml ${FONTFAMILY}-SOURCE.ufo/glyphs/*.glif -e 'string-join((//@name, '$'"\t"'', count(//point[1])))' --silent)
 
 cat << EOF
 
