@@ -1,0 +1,63 @@
+# Increment stroke marks
+lookup increment_mark {
+    sub @stroke1_marks by @stroke2_marks;
+    sub @stroke2_marks by @stroke3_marks;
+    sub @stroke3_marks by @stroke4_marks;
+    sub @stroke4_marks by @stroke5_marks;
+    sub @stroke5_marks by @stroke6_marks;
+    sub @stroke6_marks by @stroke7_marks;
+    sub @stroke7_marks by @stroke8_marks;
+    sub @stroke8_marks by @stroke9_marks;
+} increment_mark;
+
+lookup null_stroke {
+    sub __combstroke1 by NULL;
+    sub __combstroke2 by NULL;
+    sub __combstroke3 by NULL;
+    sub __combstroke4 by NULL;
+    sub __combstroke5 by NULL;
+    sub __combstroke6 by NULL;
+    sub __combstroke7 by NULL;
+    sub __combstroke8 by NULL;
+    sub __combstroke9 by NULL;
+} null_stroke;
+
+feature mark {
+    lookup null_tail_stroke {
+        lookupflag 0;
+        sub @tails @stroke_marks' lookup null_stroke;
+    } null_tail_stroke;
+
+    lookup contextual_strokenumberb {
+        lookupflag 0;
+        sub @stroke1_marks @GDEFMarks @stroke1_marks' lookup increment_mark;
+        sub @stroke2_marks @GDEFMarks @stroke2_marks' lookup increment_mark;
+        sub @stroke3_marks @GDEFMarks @stroke3_marks' lookup increment_mark;
+        sub @stroke4_marks @GDEFMarks @stroke4_marks' lookup increment_mark;
+        sub @stroke5_marks @GDEFMarks @stroke5_marks' lookup increment_mark;
+        sub @stroke6_marks @GDEFMarks @stroke6_marks' lookup increment_mark;
+        sub @stroke7_marks @GDEFMarks @stroke7_marks' lookup increment_mark;
+    } contextual_strokenumberb;
+
+    lookup contextual_strokenumber {
+        lookupflag UseMarkFilteringSet @stroke_marks; # doesn't include tails
+        sub @stroke1_marks @stroke1_marks' lookup increment_mark;
+        sub @stroke2_marks @stroke2_marks' lookup increment_mark;
+        sub @stroke3_marks @stroke3_marks' lookup increment_mark;
+        sub @stroke4_marks @stroke4_marks' lookup increment_mark;
+        sub @stroke5_marks @stroke5_marks' lookup increment_mark;
+        sub @stroke6_marks @stroke6_marks' lookup increment_mark;
+        sub @stroke7_marks @stroke7_marks' lookup increment_mark;
+    } contextual_strokenumber;
+
+    lookup contextual_strokenumber2 {
+        lookupflag UseMarkFilteringSet @stroke_marks; # doesn't include tails
+        sub @stroke2_marks @stroke1_marks' lookup increment_mark lookup increment_mark;
+        sub @stroke3_marks @stroke2_marks' lookup increment_mark lookup increment_mark;
+        sub @stroke4_marks @stroke3_marks' lookup increment_mark lookup increment_mark;
+        sub @stroke5_marks @stroke4_marks' lookup increment_mark lookup increment_mark;
+        sub @stroke6_marks @stroke5_marks' lookup increment_mark lookup increment_mark;
+        sub @stroke7_marks @stroke6_marks' lookup increment_mark lookup increment_mark;
+        sub @stroke8_marks @stroke7_marks' lookup increment_mark lookup increment_mark;
+    } contextual_strokenumber2;
+} mark;
