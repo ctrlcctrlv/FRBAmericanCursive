@@ -1,5 +1,6 @@
 feature ccmp {
     lookup ccmp_placeholders {
+        lookupflag 0;
         sub uni00CE by I uni0302;
         sub uni00CF by I uni0308;
         sub uni00D1 by N tildecomb;

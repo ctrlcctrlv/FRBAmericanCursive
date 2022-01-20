@@ -41,7 +41,6 @@ def create_and_build_placeholders(f):
     return placeholders
 
 if __name__ == "__main__":
-
     _, ufodir, outdir = sys.argv
 
     if ufodir != outdir:
@@ -54,6 +53,7 @@ if __name__ == "__main__":
     placeholders = create_and_build_placeholders(ufo)
     print("feature ccmp {")
     print("    lookup ccmp_placeholders {")
+    print("        lookupflag 0;")
     for (i, vals) in placeholders.items():
         print((" "*8)+"sub uni{:04X} by {};".format(i, " ".join(vals)))
     print("    } ccmp_placeholders;")
