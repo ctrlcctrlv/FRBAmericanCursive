@@ -43,13 +43,20 @@ print("@GDEFMarks = [{}];".format(" ".join(["@{}_marks".format(cn) for cn in cla
 for cn in classes:
     classesm = dset(set(classes) - set([cn]))
     print("@GDEFMarks_minus_{} = [{}];".format(cn, ' '.join(["@{}_marks".format(cn) for cn in classesm])))
-print("@GDEFLigat = [];")
+print("@GDEFLigat = [@tails];")
 
 strokemarks = ['@stroke{}_marks'.format(i) for i in range(1, 10)]
 for i in range(1, 10):
     print("@stroke{0}_marks = [__combstroke{0}];".format(i))
 
+for i, tail in enumerate(tails):
+    print("""
+# fake liga
+feature liga {{
+    sub __combstroke{0}.big __combstroke{0}.big by {1};
+}} liga;""".format(int(i)+1, tail))
+
 print("""
 table GDEF {
-    GlyphClassDef @GDEFSimple,@GDEFLigat,[@GDEFMarks @tails],;
+    GlyphClassDef @GDEFSimple,@GDEFLigat,@GDEFMarks,;
 } GDEF;""")

@@ -7,6 +7,8 @@ from pathlib import Path
 from fontTools.feaLib.parser import Parser
 from fontTools.feaLib.ast import *
 
+IGNORE_LIGATURES=0x4
+
 f = io.StringIO("""
 include(""" + Path(__file__).parent.parent.as_posix() + """/fea/classes.fea);
 include(""" + Path(__file__).parent.parent.as_posix() + """/fea/GDEF.fea);
@@ -29,7 +31,6 @@ if len(tails) > 0:
 
 
 _, csv_fn = sys.argv
-#no_filter = "NOFILTER" in os.environ and os.environ["NOFILTER"].strip() == "1"
 
 handled_classes = dict()
 
@@ -105,7 +106,7 @@ with open(csv_fn) as csvf:
         rules[mark_class].append(pos)
 
 feature = FeatureBlock("mark")
-featuremkmk = FeatureBlock("mkmk")
+featuremkmk = FeatureBlock("mark")
 lookup_filename_root = csv_fn[csv_fn.rindex('/')+1:csv_fn.rindex('.')]
 if len(handled_classes) == 1:
     lookup_names_append = {k: lookup_filename_root for k in handled_classes.keys()}
@@ -115,7 +116,7 @@ lookups = {k: LookupBlock("mark_"+lookup_names_append[k]) for k, c in handled_cl
 lookups_mark = {k: LookupBlock("markmk_"+lookup_names_append[k]) for k, c in handled_classes.items()}
 for k, hcv in handled_classes.items():
     markFilteringSet = GlyphClass(hcv.glyphSet())
-    lookups[k].statements.append(LookupFlagStatement(value=0, markFilteringSet=markFilteringSet))
+    lookups[k].statements.append(LookupFlagStatement(value=IGNORE_LIGATURES, markFilteringSet=markFilteringSet))
     lookups[k].statements += [rule for rule in rules[k] if isinstance(rule, MarkBasePosStatement)]
     feature.statements.append(lookups[k])
 for k, hcv in handled_classes.items():
@@ -123,10 +124,16 @@ for k, hcv in handled_classes.items():
         lmgc = list(all_stroke_marks)+rules_glyphs[k]
     else:
         lmgc = all_stroke_marks
-    lookups_mark[k].statements.append(LookupFlagStatement(value=0, markFilteringSet=GlyphClass(lmgc)))
+    if "stroke" in k:
+        lmgc = sorted(set(lmgc))[mc_to_int(k):]
+    lookups_mark[k].statements.append(LookupFlagStatement(value=IGNORE_LIGATURES, markFilteringSet=GlyphClass(lmgc)))
     lookups_mark[k].statements += [rule for rule in rules[k] if isinstance(rule, MarkMarkPosStatement)]
     if len(lookups_mark[k].statements) > 1:
         featuremkmk.statements.append(lookups_mark[k])
+    elif "stroke" in k:
+        lookups_mark[k].statements = [lookups_mark[k].statements[0]]+lookups_mark[next_mc(int_to_mc((mc_to_int(k)%2)))].statements[1:]
+        featuremkmk.statements.append(lookups_mark[k])
+featuremkmk.statements = reversed(featuremkmk.statements)
 fea.statements.append(featuremkmk)
 fea.statements.append(feature)
 
