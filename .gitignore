@@ -15,8 +15,9 @@ py_environment/
 *.ufo/**/*.svg
 specimens/*.png
 specimens/*.pdf
-# as this font relies on glifjson and MFEKglif --export
+# fonts rely on glifjson and MFEKglif --export
 FRBAmericanPrint-SOURCE.ufo/glyphs/*.glif
+FRBAmericanCursive-SOURCE.ufo/glyphs/*.glif
 # fea
 /fea/GDEF.fea
 /fea/mark.fea
