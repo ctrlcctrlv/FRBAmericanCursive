@@ -141,7 +141,7 @@
   "order": "Cubic",
   "anchors": [],
   "components": {
-    "root": "period",
+    "root": "underdotcomb",
     "vec": []
   },
   "flattened": null,
@@ -151,7 +151,7 @@
   "unicode": [
     "̣"
   ],
-  "name": "period",
+  "name": "underdotcomb",
   "note": null,
   "filename": null
 }

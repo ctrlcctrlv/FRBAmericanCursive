@@ -8,7 +8,7 @@
         {
           "inner": [
             {
-              "x": -1.0,
+              "x": 0.0,
               "y": 75.6641,
               "a": {
                 "At": [
@@ -82,12 +82,12 @@
     "root": "tail.lowwide",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 241,
   "unicode": [],
   "name": "tail.lowwide",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/tail.lowwide.glifjson"
 }

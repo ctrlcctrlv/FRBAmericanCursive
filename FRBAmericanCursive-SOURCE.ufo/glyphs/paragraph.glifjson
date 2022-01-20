@@ -147,8 +147,8 @@
               "y": 423.0,
               "a": {
                 "At": [
-                  155.234,
-                  327.0
+                  184.38614,
+                  389.5163
                 ]
               },
               "b": {
@@ -163,12 +163,32 @@
               "data": null
             },
             {
+              "x": 174.76155,
+              "y": 336.0,
+              "a": {
+                "At": [
+                  171.14949,
+                  290.99326
+                ]
+              },
+              "b": {
+                "At": [
+                  176.69617,
+                  360.10556
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
               "x": 210.0,
               "y": 264.48,
               "a": "Colocated",
               "b": {
                 "At": [
-                  175.603,
+                  187.60028,
                   264.48
                 ]
               },
@@ -227,6 +247,12 @@
                     "right_offset": 12.5,
                     "tangent_offset": 0.0,
                     "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
                   }
                 ],
                 "join_type": "Round",
@@ -250,8 +276,8 @@
     "root": "paragraph",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 630,
   "unicode": [
@@ -259,5 +285,5 @@
   ],
   "name": "paragraph",
   "note": null,
-  "filename": null
+  "filename": "/home/fred/Workspace/NotoHandAmericanCursive/FRBAmericanCursive-SOURCE.ufo/glyphs/paragraph.glifjson"
 }

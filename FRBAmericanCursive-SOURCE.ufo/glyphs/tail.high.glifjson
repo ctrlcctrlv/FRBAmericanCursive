@@ -8,7 +8,7 @@
         {
           "inner": [
             {
-              "x": -5.0,
+              "x": 0.0,
               "y": 170.0,
               "a": {
                 "At": [
@@ -82,12 +82,12 @@
     "root": "tail.high",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 157,
   "unicode": [],
   "name": "tail.high",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/tail.high.glifjson"
 }
