@@ -5,7 +5,7 @@ WIDTH_MINIMUM := 50.0
 
 .PHONY .ONESHELL: patterned-dotted
 patterned-dotted:
-	DASHLEN=0.00000001 PREPENDNAME=Dotted $(MAKE) patterned-dotted-dashed
+	DASHLEN=0 PREPENDNAME=Dotted $(MAKE) patterned-dotted-dashed
 
 .PHONY .ONESHELL: patterned-dashed
 patterned-dashed:
