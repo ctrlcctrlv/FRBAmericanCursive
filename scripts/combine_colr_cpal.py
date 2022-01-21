@@ -12,6 +12,7 @@ with open(plainufo+"/glyphs/contents.plist", "rb") as f:
 from fontTools.colorLib.builder import buildCOLR, buildCPAL
 from fontTools.ttLib.ttFont import TTFont
 from fontTools.ttLib.tables.otTables import Paint
+from lib.X_O_L_R_ import table_X_O_L_R_
 
 with open(ga_font, "rb") as f:
     ga_ttf = TTFont(f)
@@ -27,8 +28,8 @@ for glyph in glyphs:
     if glyph.startswith("__combstroke"):
         if glyph.endswith(".big"):
             continue
-        COLR_GAv = [(glyph+".big", 3), (glyph, 1)]
-        COLR_Gv = [(glyph+".big", 3), (glyph, 1)]
+        COLR_GAv = ([(glyph+".big", 3)]*4) + [(glyph, 1)]
+        COLR_Gv = COLR_GAv
     elif not glyph+"_guidelines" in ga_ttfglyphs:
         continue
     else:
@@ -72,8 +73,10 @@ C_P_A_L_G = buildCPAL([CPAL_palette_G])
 
 ga_ttf["COLR"] = C_O_L_R_GA
 ga_ttf["CPAL"] = C_P_A_L_GA
+ga_ttf["XOLR"] = table_X_O_L_R_(flags=0b010)
 ga_ttf.save(ga_font)
 
 g_ttf["COLR"] = C_O_L_R_G
 g_ttf["CPAL"] = C_P_A_L_G
+g_ttf["XOLR"] = table_X_O_L_R_(flags=0b010)
 g_ttf.save(g_font)

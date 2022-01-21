@@ -2,11 +2,13 @@
 
 .PHONY: colrglyphs
 colrglyphs:
+	if [[ -n '$(SKIP_COLRGLYPHS)' ]]; then exit 0; fi
 	set -- `MFEKmetadata $(FONTFAMILY)-SOURCE.ufo arbitrary -k capHeight -k openTypeOS2TypoDescender -k xHeight`
 	./scripts/list_glyphs.py $(FONTFAMILY)-SOURCE.ufo | C=$$1 D=$$2 X=$$3 parallel --bar './scripts/make_COLRglyphs_for_glyph.py {} $(FONTFAMILY)-SOURCE.ufo $$C $$D $$X'
 
 .PHONY: colrglyphs-ufo
 colrglyphs-ufo:
+	if [[ -n '$(SKIP_COLRGLYPHS)' ]]; then exit 0; fi
 	parallel -u -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
 	rm -fr build/$(FONTFAMILY)-{1}.ufo/{COLR_glyphs,arrow_glyphs}
 	mkdir -p build/$(FONTFAMILY)-{1}.ufo/{COLR_glyphs,arrow_glyphs}
