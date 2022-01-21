@@ -61,7 +61,7 @@ function make_combined() {
 	$PYTHON -m fontmake --verbose DEBUG -u "build/$FONT" --output-path "$OTF_NOVF" -o $OTF_SIMPLE $ARGS
     if [[ -f build_data/"$FONTFAMILY"_buildVF ]]; then
         DESIGNSPACE=`mktemp --suffix=.designspace`
-        xidel --xml --xquery 'transform(/, function($e){if (name($e) = "source") then <source filename="'$PWD/build/$FONT'">{$e/@* except $e/@filename, $e/*}</source> else $e})' build_data/FRBAC.designspace > "$DESIGNSPACE"
+        xidel --xml --xquery 'transform(/, function($e){if (name($e) = "source") then <source filename="'$PWD/build/$FONT'">{$e/@* except $e/@filename, $e/*}</source> else $e})' build_data/placeholder.designspace > "$DESIGNSPACE"
         $PYTHON -m fontmake --verbose DEBUG -m "$DESIGNSPACE" --output-path "$OTF" -o $OTF_VARIABLE $ARGS
         rm "$DESIGNSPACE"
     fi

@@ -19,7 +19,7 @@
 <rules processing="last">
     <rule name="named.rule.1">
         <condition minimum="48" maximum="48" name="Optical Size" />
-        <sub name="A" with="A.alt"/>
+        <sub name="__combstroke9.big" with="__combstroke9"/>
     </rule>
 </rules>
 </designspace>
