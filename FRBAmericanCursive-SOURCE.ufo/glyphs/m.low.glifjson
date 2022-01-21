@@ -182,48 +182,13 @@
             {
               "x": 316.0,
               "y": -14.0,
-              "a": {
-                "At": [
-                  315.763,
-                  -14.3643
-                ]
-              },
+              "a": "Colocated",
               "b": {
                 "At": [
                   330.784,
-                  8.66211
+                  8.662109
                 ]
               },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 315.635,
-              "y": -14.54,
-              "a": {
-                "At": [
-                  315.635,
-                  -14.54
-                ]
-              },
-              "b": {
-                "At": [
-                  315.635,
-                  -14.54
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 315.635,
-              "y": -14.5391,
-              "a": "Colocated",
-              "b": "Colocated",
               "name": null,
               "ptype": "Curve",
               "smooth": false,
@@ -234,18 +199,6 @@
             "VariableWidthStroke": {
               "data": {
                 "handles": [
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
                   {
                     "left_offset": 12.5,
                     "right_offset": 12.5,
@@ -467,12 +420,12 @@
     "root": "m.low",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 740,
   "unicode": [],
   "name": "m.low",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/m.low.glifjson"
 }
