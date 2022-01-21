@@ -139,7 +139,7 @@
             },
             {
               "x": 628.2,
-              "y": 270.181,
+              "y": 264.48,
               "a": "Colocated",
               "b": {
                 "At": [
@@ -215,8 +215,8 @@
     "root": "C",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 628,
   "unicode": [
@@ -224,5 +224,5 @@
   ],
   "name": "C",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/C_.glifjson"
 }

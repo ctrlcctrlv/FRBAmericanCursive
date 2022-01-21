@@ -115,11 +115,11 @@
         {
           "inner": [
             {
-              "x": 281.0,
+              "x": 261.0,
               "y": 368.0,
               "a": {
                 "At": [
-                  212.35294,
+                  192.35294,
                   368.23532
                 ]
               },
@@ -130,17 +130,17 @@
               "data": null
             },
             {
-              "x": 207.0,
+              "x": 187.0,
               "y": 474.0,
               "a": {
                 "At": [
-                  223.79265,
+                  203.79265,
                   516.00793
                 ]
               },
               "b": {
                 "At": [
-                  188.23529,
+                  168.23529,
                   427.05884
                 ]
               },
@@ -150,12 +150,12 @@
               "data": null
             },
             {
-              "x": 324.0,
+              "x": 304.0,
               "y": 540.953,
               "a": "Colocated",
               "b": {
                 "At": [
-                  271.625,
+                  251.625,
                   540.953
                 ]
               },
@@ -231,14 +231,14 @@
     "root": "cyr_GHE",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
-  "width": 503,
+  "width": 553,
   "unicode": [
     "Г"
   ],
   "name": "cyr_GHE",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/cyr_G_H_E_.glifjson"
 }

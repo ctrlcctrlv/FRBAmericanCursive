@@ -27,7 +27,7 @@
               "y": -3.0,
               "a": {
                 "At": [
-                  281.023,
+                  184.94417,
                   -3.0
                 ]
               },
@@ -43,18 +43,18 @@
               "data": null
             },
             {
-              "x": 606.652,
-              "y": 528.961,
+              "x": 334.36646,
+              "y": 265.00003,
               "a": {
                 "At": [
-                  517.587,
-                  275.379
+                  410.74377,
+                  397.31372
                 ]
               },
               "b": {
                 "At": [
-                  376.0,
-                  528.961
+                  257.212,
+                  131.34003
                 ]
               },
               "name": null,
@@ -63,18 +63,105 @@
               "data": null
             },
             {
-              "x": 449.984,
-              "y": 44.585,
+              "x": 606.652,
+              "y": 528.961,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  491.90976,
+                  528.961
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 606.652,
+              "y": 528.961,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 499.42126,
+              "y": 220.00003,
               "a": {
                 "At": [
-                  449.984,
-                  18.5957
+                  470.00003,
+                  128.75
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Line",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 448.75003,
+              "y": 48.75,
+              "a": {
+                "At": [
+                  440.11542,
+                  14.83181
                 ]
               },
               "b": {
                 "At": [
-                  449.984,
-                  84.0781
+                  461.26605,
+                  97.915
                 ]
               },
               "name": null,
@@ -157,12 +244,6 @@
                     "right_offset": 12.5,
                     "tangent_offset": 0.0,
                     "interpolation": "Linear"
-                  },
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
                   }
                 ],
                 "join_type": "Round",
@@ -186,12 +267,12 @@
     "root": "cyr_EL.rlow",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 633,
   "unicode": [],
   "name": "cyr_EL.rlow",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/cyr_E_L_.rlow.glifjson"
 }
