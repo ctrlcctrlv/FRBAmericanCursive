@@ -191,7 +191,13 @@ void draw() {
       line(aa.x, aa.y, bb.x, bb.y);
     }
   }
-  { outputGlyph(); if (!nextGlyph()) exit(); }
+  {
+    outputGlyph();
+    if (!nextGlyph()) {
+      exit();
+      return;
+    }
+  }
 }
 
 class AngleSpring2D extends VerletSpring2D {
