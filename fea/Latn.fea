@@ -109,6 +109,7 @@ lookup LatnRlow {
 } LatnRlow;
 
 lookup NullTail {
+    lookupflag 0;
     sub tail.low by NULL;
     sub tail.lowwide by NULL;
     sub tail.high by NULL;
