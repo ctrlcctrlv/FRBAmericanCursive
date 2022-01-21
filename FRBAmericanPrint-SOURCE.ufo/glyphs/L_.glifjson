@@ -19,11 +19,51 @@
             },
             {
               "x": 75.0,
+              "y": 396.0,
+              "a": {
+                "At": [
+                  75.0,
+                  209.76192
+                ]
+              },
+              "b": {
+                "At": [
+                  75.0,
+                  585.238
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 75.0,
               "y": 25.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
-              "ptype": "Line",
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 354.0,
+              "y": 25.0,
+              "a": {
+                "At": [
+                  464.17734,
+                  25.0
+                ]
+              },
+              "b": {
+                "At": [
+                  221.28647,
+                  25.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
               "smooth": false,
               "data": null
             },
@@ -33,7 +73,7 @@
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
-              "ptype": "Line",
+              "ptype": "Curve",
               "smooth": false,
               "data": null
             }
@@ -42,6 +82,18 @@
             "VariableWidthStroke": {
               "data": {
                 "handles": [
+                  {
+                    "left_offset": 25.0,
+                    "right_offset": 25.0,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 25.0,
+                    "right_offset": 25.0,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
                   {
                     "left_offset": 25.0,
                     "right_offset": 25.0,
@@ -88,8 +140,8 @@
     "root": "L",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 645,
   "unicode": [
@@ -97,5 +149,5 @@
   ],
   "name": "L",
   "note": null,
-  "filename": null
+  "filename": "/home/fred/Workspace/NotoHandAmericanCursive/FRBAmericanPrint-SOURCE.ufo/glyphs/L_.glifjson"
 }

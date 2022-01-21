@@ -263,12 +263,7 @@
             {
               "x": 82.0,
               "y": 772.0,
-              "a": {
-                "At": [
-                  82.0,
-                  772.0
-                ]
-              },
+              "a": "Colocated",
               "b": "Colocated",
               "name": null,
               "ptype": "Move",
@@ -351,8 +346,8 @@
     "root": "P",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 742,
   "unicode": [
@@ -360,5 +355,5 @@
   ],
   "name": "P",
   "note": null,
-  "filename": null
+  "filename": "/home/fred/Workspace/NotoHandAmericanCursive/FRBAmericanPrint-SOURCE.ufo/glyphs/P_.glifjson"
 }

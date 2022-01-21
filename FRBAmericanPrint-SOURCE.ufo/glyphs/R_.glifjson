@@ -19,11 +19,31 @@
             },
             {
               "x": 82.0,
+              "y": 425.7143,
+              "a": {
+                "At": [
+                  82.0,
+                  230.34851
+                ]
+              },
+              "b": {
+                "At": [
+                  82.0,
+                  602.9658
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 82.0,
               "y": 25.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
-              "ptype": "Line",
+              "ptype": "Curve",
               "smooth": false,
               "data": null
             }
@@ -32,6 +52,12 @@
             "VariableWidthStroke": {
               "data": {
                 "handles": [
+                  {
+                    "left_offset": 25.0,
+                    "right_offset": 25.0,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
                   {
                     "left_offset": 25.0,
                     "right_offset": 25.0,
