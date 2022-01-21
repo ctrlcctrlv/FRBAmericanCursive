@@ -37,7 +37,7 @@ processing-physics:
 	mkdir data
 	TEMPTSV=/tmp/$(FONTFAMILY)-{1}-physics.tsv;
 	echo Writing "$$TEMPTSV";
-	grep -rl "point" ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif | xargs xidel --silent -e '\''string-join((file:name($$path), "	", /glyph/@name))'\'' | sed -e "s/\.glif\b//g" | sort > data/glyphs.txt
+	grep -rl "<point" ../../$(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif | xargs xidel --silent -e '\''string-join((file:name($$path), "	", /glyph/@name))'\'' | sed -e "s/\.glif\b//g" | sort > data/glyphs.txt
 	if [[ -z "$(SKIP_PROCESSING)" ]]; then (/tmp/AnchorPhysics/AnchorPhysics | sed -n '/\t/p' > "$$TEMPTSV"); fi
 	if [[ -s "$$TEMPTSV" ]]; then cp "$$TEMPTSV" data/physics.tsv; fi
 	$(PYTHON) ../../scripts/tsv_to_mark.py data/physics.tsv > strokes_mark.fea;

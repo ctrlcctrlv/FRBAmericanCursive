@@ -2,18 +2,19 @@
 regen:
 	mkdir -p build dist
 	$(MAKE) UFO=$(FONTFAMILY)-SOURCE.ufo glifjson2glif
-	cp $(FONTFAMILY)-SOURCE.ufo/metainfo.plist build/BUILD.ufo/metainfo.plist
-	MFEKmetadata $(FONTFAMILY)-SOURCE.ufo write_metainfo
-	MFEKmetadata build/BUILD.ufo write_metainfo
+	$(MAKE) rebuild-ccmp
+	# OpenType GDEF table
+	$(MAKE) rebuild-gdef
+	$(MAKE) rebuild-marks
+	$(MAKE) UFO=build/BUILD.ufo glif-refigure
+	$(MAKE) rebuild-stroke-count
+	$(MAKE) fez-classes
+
+.PHONY: rebuild-ccmp
+rebuild-ccmp:
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
 	for f in numbers.ufo/glyphs/__combstroke[123456789]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
-	$(MAKE) rebuild-marks
-	# OpenType GDEF table
-	$(MAKE) rebuild-gdef
-	$(MAKE) UFO=build/BUILD.ufo glif-refigure
-	$(MAKE) regen-stroke-count
-	$(MAKE) fez-classes
 
 .PHONY: rebuild-gdef
 rebuild-gdef:
@@ -22,7 +23,8 @@ rebuild-gdef:
 .PHONY: glif-refigure
 glif-refigure:
 	if [[ -z '$(UFO)' ]]; then UFO='$(UFO)'; else UFO=$(FONTFAMILY)-SOURCE.ufo; fi
-	find "$$UFO"/glyphs/ -iname '*.glif' | parallel --bar "MFEKpathops REFIGURE -i {}"
+	if [[ -z '$(QUIET)' ]]; then BAR='--bar'; else BAR=''; fi
+	find "$$UFO"/glyphs/ -iname '*.glif' | parallel $$BAR "MFEKpathops REFIGURE -i {}"
 
 .PHONY: glifjson2glif
 glifjson2glif:
@@ -40,18 +42,9 @@ rebuild-marks:
 		./scripts/add_marks_from_data.py build/BUILD.ufo $$class
 	done
 
-.PHONY: regen-stroke-count
-regen-stroke-count:
+.PHONY: rebuild-stroke-count
+rebuild-stroke-count:
 	./scripts/stroke_count_fea.sh > fea/strokes.fea
-
-.PHONY: regen-patterns-and-numbers-from-fontforge-files
-regen-patterns-and-numbers-from-fontforge-files:
-	# Patterns
-	fontforge -lang=py -c 'f=fontforge.open("patterns.sfd");f.generate("patterns.ufo")'
-	sfdnormalize patterns.sfd patterns_temp.sfd && mv patterns_temp.sfd patterns.sfd
-	# Numbers
-	fontforge -lang=py -c 'f=fontforge.open("numbers.sfd");f.generate("numbers.ufo")'
-	sfdnormalize numbers.sfd numbers_temp.sfd && mv numbers_temp.sfd numbers.sfd
 
 .PHONY: fez-classes
 fez-classes:

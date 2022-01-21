@@ -15,7 +15,7 @@ patterned-dashed:
 .PHONY .ONESHELL: patterned-dotted-dashed
 patterned-dotted-dashed:
 	# Build dotted or dashed
-	cat $(BUILD_DATA) | parallel --bar --jobs 7 --colsep '\t' '
+	cat $(BUILD_DATA) | parallel --tag --ctag --linebuffer --bar --jobs 7 --colsep '\t' '
 		GLYPHS=`find $(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -iname '*.glif' -and -not -name space.glif` 
 		ASTERISK='*'
 		WIDTHADJ=`perl -e "\\$$calc = {2}$${ASTERISK}1.5; \\$$calc = (\\$$calc >= $(WIDTH_MINIMUM) ? \\$$calc : $(WIDTH_MINIMUM)); print \\"\\$$calc\\";"`
@@ -38,10 +38,9 @@ patterned-dotted-template:
 	CULLAREA=`perl -e 'use Math::Trig; print pi() * (($(WIDTH) / 2.0) ** 2.0) * $(CULLAREA)'`
 	CULLWIDTHADJ=`perl -e 'print ($(WIDTH_MINIMUM) * 0.9) + ($(WIDTH) >= $(WIDTH_MINIMUM) ? 0 : ($(WIDTH_MINIMUM) - $(WIDTH)) * 2.0)'`
 	patterned_ARGS=$$(eval "echo `./scripts/patterned_args.sh`")
-	parallel --bar "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
-	$(MAKE) UFO=build/$(FONTFAMILY)-"$(STYLENAME)".ufo glif-refigure
+	parallel --ctag --linebuffer "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
 	fontmake_ARGS=`./scripts/fontmake_args.sh`
-	$(PYTHON) -m fontmake --keep-overlaps --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$fontmake_ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`'"$$patterned_ARGS"'\n'
+	$(PYTHON) -m fontmake --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$fontmake_ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`'"$$patterned_ARGS"'\n'
 
 .PHONY .ONESHELL: patterned-apb
 patterned-apb:

@@ -22,8 +22,6 @@ elif len(sys.argv) == 4:
 else:
     raise NotImplementedError
 
-print("Making arrows for {} {} {}".format(gliffn, finalfn, target_size), file=sys.stderr)
-
 # First we need to split the glyph into its constituent contours
 with open(gliffn, "rb") as f:
     dom = ElementTree(file=f)

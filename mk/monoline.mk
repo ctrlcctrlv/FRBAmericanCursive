@@ -1,7 +1,7 @@
 # Build all the monoline fonts in dist/
 .PHONY: monoline
 monoline:
-	parallel --bar -a build_data/monoline$(MONOLINE_SUFFIX).tsv --colsep '\t' '
+	parallel --tag --ctag --linebuffer --bar -a build_data/monoline$(MONOLINE_SUFFIX).tsv --colsep '\t' '
 		UFO="build/$(FONTFAMILY)-{1}.ufo"
 		./scripts/prepare_ufo.py {1} {3}
 		cp fea/$(FONTFAMILY)_features.fea "$$UFO"/features.fea
