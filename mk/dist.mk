@@ -3,7 +3,7 @@ export ZIP_ARGS := -n woff2 -j
 
 .PHONY .ONESHELL: dist
 dist:
-	$(MAKE) -j2 dist-ttc dist-woff2
+	$(MAKE) -j2 dist-ttc dist-woff2 dist-ttfwoff2 dist-ttf
 	$(MAKE) dist-pack
 
 dist/%.ttfwoff2.zip:
@@ -23,7 +23,10 @@ dist/%.otf.7z:
 
 .PHONY: dist-pack
 dist-pack:
+	$(MAKE) dist/$(FONTFAMILY).ttfwoff2.zip
 	$(MAKE) dist/$(FONTFAMILY).woff2.zip
+	$(MAKE) dist/$(FONTFAMILY).otf.7z
+	$(MAKE) dist/$(FONTFAMILY).ttf.7z
 	$(MAKE) dist/$(FONTFAMILY).ttc.7z
 
 .PHONY: dist-woff2
