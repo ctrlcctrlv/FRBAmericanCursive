@@ -23,11 +23,7 @@ dist/%.otf.7z:
 
 .PHONY: dist-pack
 dist-pack:
-	$(MAKE) dist/$(FONTFAMILY).ttfwoff2.zip
-	$(MAKE) dist/$(FONTFAMILY).woff2.zip
-	$(MAKE) dist/$(FONTFAMILY).otf.7z
-	$(MAKE) dist/$(FONTFAMILY).ttf.7z
-	$(MAKE) dist/$(FONTFAMILY).ttc.7z
+	$(MAKE) -B -j8 dist/$(FONTFAMILY).ttfwoff2.zip dist/$(FONTFAMILY).woff2.zip dist/$(FONTFAMILY).otf.7z dist/$(FONTFAMILY).ttf.7z dist/$(FONTFAMILY).ttc.7z
 
 .PHONY: dist-woff2
 dist-woff2:
@@ -42,7 +38,7 @@ dist-ttfwoff2:
 .PHONY: dist-ttf
 dist-ttf:
 	@mkdir -p dist/ttf || true
-	find dist -iname '$(FONTFAMILY)*.otf' | parallel --ctag --linebuffer 'rm -f {.}.ttf ; otf2ttf {} {.}.ttf && ttfautohint {.}.ttf {.}_H.ttf && mv {.}_H.ttf dist/ttf/{/.}.ttf && rm {.}.ttf'
+	find dist -iname '$(FONTFAMILY)*.otf' | parallel --ctag --linebuffer 'rm -f {.}.ttf ; otf2ttf {} {.}.ttf && ttfautohint $(TTFAUTOHINT_FLAGS) {.}.ttf {.}_H.ttf && mv {.}_H.ttf dist/ttf/{/.}.ttf && rm {.}.ttf'
 
 .PHONY: dist-ttc
 dist-ttc:

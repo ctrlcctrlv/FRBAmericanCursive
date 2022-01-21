@@ -8,8 +8,11 @@ FONTFAMILY_H := FRB American Cursive
 PYTHON := $(if $(PYTHON),$(PYTHON),python3)
 GLIF2SVG := glif2svg-rs
 PROCESSING := /home/fred/Downloads/processing-4.0b2/processing-java
+export TTFAUTOHINT_FLAGS := -a sss -n -x 24 -t -c
 
-.ONESHELL: all
+include mk/*.mk
+
+.PHONY .ONESHELL: all
 all:
 	$(MAKE) regen
 	$(MAKE) monoline
@@ -19,8 +22,6 @@ all:
 	$(MAKE) just
 	$(MAKE) specimens
 	$(MAKE) dist
-
-include mk/*.mk
 
 .PHONY: clean
 clean:
