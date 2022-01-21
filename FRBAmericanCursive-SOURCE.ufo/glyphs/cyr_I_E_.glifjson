@@ -65,12 +65,7 @@
             {
               "x": 469.08,
               "y": 502.74,
-              "a": {
-                "At": [
-                  469.08,
-                  502.74
-                ]
-              },
+              "a": "Colocated",
               "b": "Colocated",
               "name": null,
               "ptype": "Move",
@@ -319,8 +314,8 @@
     "root": "cyr_IE",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 591,
   "unicode": [
@@ -328,5 +323,5 @@
   ],
   "name": "cyr_IE",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/cyr_I_E_.glifjson"
 }

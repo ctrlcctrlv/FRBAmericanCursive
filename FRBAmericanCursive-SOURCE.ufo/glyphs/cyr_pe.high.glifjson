@@ -12,14 +12,34 @@
               "y": 171.0,
               "a": {
                 "At": [
-                  93.4688,
+                  37.694416,
                   171.0
                 ]
               },
               "b": "Colocated",
               "name": null,
               "ptype": "Move",
-              "smooth": true,
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 93.0,
+              "y": 200.9657,
+              "a": {
+                "At": [
+                  130.59427,
+                  225.09006
+                ]
+              },
+              "b": {
+                "At": [
+                  67.592384,
+                  184.66154
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
               "data": null
             },
             {
@@ -33,13 +53,13 @@
               },
               "b": {
                 "At": [
-                  139.0,
+                  158.3576,
                   255.0
                 ]
               },
               "name": null,
               "ptype": "Curve",
-              "smooth": true,
+              "smooth": false,
               "data": null
             },
             {
@@ -59,147 +79,17 @@
               },
               "name": null,
               "ptype": "Curve",
-              "smooth": true,
+              "smooth": false,
               "data": null
             },
             {
               "x": 60.0,
               "y": -10.0,
-              "a": {
-                "At": [
-                  78.5282,
-                  13.8864
-                ]
-              },
-              "b": {
-                "At": [
-                  81.6211,
-                  20.8872
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 372.183,
-              "y": 254.985,
-              "a": {
-                "At": [
-                  390.0,
-                  254.985
-                ]
-              },
-              "b": {
-                "At": [
-                  248.884,
-                  254.985
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": true,
-              "data": null
-            },
-            {
-              "x": 405.05,
-              "y": 227.489,
-              "a": {
-                "At": [
-                  405.05,
-                  200.094
-                ]
-              },
-              "b": {
-                "At": [
-                  405.05,
-                  245.772
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": true,
-              "data": null
-            },
-            {
-              "x": 330.0,
-              "y": 94.0,
               "a": "Colocated",
               "b": {
                 "At": [
-                  332.879,
-                  98.3181
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 330.0,
-              "y": 94.0,
-              "a": {
-                "At": [
-                  330.0,
-                  94.0
-                ]
-              },
-              "b": "Colocated",
-              "name": null,
-              "ptype": "Line",
-              "smooth": true,
-              "data": null
-            },
-            {
-              "x": 300.961,
-              "y": 17.2761,
-              "a": {
-                "At": [
-                  300.961,
-                  -8.36985
-                ]
-              },
-              "b": {
-                "At": [
-                  300.961,
-                  47.8012
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": true,
-              "data": null
-            },
-            {
-              "x": 342.61,
-              "y": -9.72712,
-              "a": {
-                "At": [
-                  414.348,
-                  -7.98637
-                ]
-              },
-              "b": {
-                "At": [
-                  320.06,
-                  -10.2743
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": true,
-              "data": null
-            },
-            {
-              "x": 532.0,
-              "y": 76.6641,
-              "a": "Colocated",
-              "b": {
-                "At": [
-                  465.804,
-                  30.3134
+                  133.0,
+                  89.0
                 ]
               },
               "name": null,
@@ -236,6 +126,165 @@
                     "tangent_offset": 0.0,
                     "interpolation": "Linear"
                   },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 60.0,
+              "y": -10.0,
+              "a": {
+                "At": [
+                  132.0,
+                  74.0
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 372.183,
+              "y": 254.985,
+              "a": {
+                "At": [
+                  390.0,
+                  254.985
+                ]
+              },
+              "b": {
+                "At": [
+                  248.884,
+                  254.985
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 405.05,
+              "y": 227.489,
+              "a": {
+                "At": [
+                  405.05,
+                  200.094
+                ]
+              },
+              "b": {
+                "At": [
+                  405.05,
+                  245.772
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 338.45914,
+              "y": 93.34394,
+              "a": {
+                "At": [
+                  324.0,
+                  71.0
+                ]
+              },
+              "b": {
+                "At": [
+                  378.1463,
+                  154.67314
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 311.0,
+              "y": 16.0,
+              "a": {
+                "At": [
+                  311.0,
+                  -4.0
+                ]
+              },
+              "b": {
+                "At": [
+                  310.961,
+                  40.36985
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 342.61,
+              "y": -9.72712,
+              "a": {
+                "At": [
+                  414.348,
+                  -7.98637
+                ]
+              },
+              "b": {
+                "At": [
+                  330.61353,
+                  -10.018217
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 532.0,
+              "y": 76.6641,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  465.804,
+                  30.3134
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
                   {
                     "left_offset": 12.5,
                     "right_offset": 12.5,
@@ -306,12 +355,12 @@
     "root": "cyr_pe.high",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 532,
   "unicode": [],
   "name": "cyr_pe.high",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/cyr_pe.high.glifjson"
 }

@@ -12,13 +12,33 @@
               "y": 76.6641,
               "a": {
                 "At": [
-                  102.394295,
-                  148.36073
+                  44.174206,
+                  107.59495
                 ]
               },
               "b": "Colocated",
               "name": null,
               "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 123.0,
+              "y": 178.12346,
+              "a": {
+                "At": [
+                  171.65549,
+                  221.41702
+                ]
+              },
+              "b": {
+                "At": [
+                  86.082886,
+                  145.27469
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
               "smooth": false,
               "data": null
             },
@@ -33,7 +53,7 @@
               },
               "b": {
                 "At": [
-                  192.616,
+                  211.64044,
                   256.319
                 ]
               },
@@ -65,31 +85,11 @@
             {
               "x": 116.0,
               "y": -10.0,
-              "a": {
-                "At": [
-                  116.0,
-                  -10.0
-                ]
-              },
-              "b": {
-                "At": [
-                  125.778,
-                  3.96973
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 209.0,
-              "y": 116.0,
               "a": "Colocated",
               "b": {
                 "At": [
-                  183.31464,
-                  78.45985
+                  137.0,
+                  17.0
                 ]
               },
               "name": null,
@@ -153,12 +153,7 @@
             {
               "x": 116.0,
               "y": -10.0,
-              "a": {
-                "At": [
-                  116.0,
-                  -10.0
-                ]
-              },
+              "a": "Colocated",
               "b": "Colocated",
               "name": null,
               "ptype": "Move",
@@ -166,17 +161,17 @@
               "data": null
             },
             {
-              "x": 209.0,
+              "x": 213.0,
               "y": 116.0,
               "a": {
                 "At": [
-                  276.76205,
+                  280.76205,
                   215.03688
                 ]
               },
               "b": {
                 "At": [
-                  183.31464,
+                  187.31464,
                   78.45985
                 ]
               },
@@ -355,12 +350,12 @@
     "root": "n.low",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 560,
   "unicode": [],
   "name": "n.low",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/n.low.glifjson"
 }

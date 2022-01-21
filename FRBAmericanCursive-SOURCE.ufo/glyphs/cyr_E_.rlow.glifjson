@@ -361,12 +361,12 @@
     "root": "cyr_E.rlow",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 592,
   "unicode": [],
   "name": "cyr_E.rlow",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/cyr_E_.rlow.glifjson"
 }

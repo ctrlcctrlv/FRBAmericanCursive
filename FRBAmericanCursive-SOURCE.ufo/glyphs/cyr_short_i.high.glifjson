@@ -8,61 +8,6 @@
         {
           "inner": [
             {
-              "x": 243.999,
-              "y": 364.0,
-              "a": "Colocated",
-              "b": "Colocated",
-              "name": null,
-              "ptype": "Move",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 391.999,
-              "y": 364.0,
-              "a": "Colocated",
-              "b": "Colocated",
-              "name": null,
-              "ptype": "Line",
-              "smooth": false,
-              "data": null
-            }
-          ],
-          "operation": {
-            "VariableWidthStroke": {
-              "data": {
-                "handles": [
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  }
-                ],
-                "join_type": "Round",
-                "cap_start_type": "Circle",
-                "cap_end_type": "Circle",
-                "remove_internal": false,
-                "remove_external": false
-              }
-            }
-          }
-        },
-        {
-          "inner": [
-            {
               "x": -10.0,
               "y": 171.0,
               "a": {
@@ -306,6 +251,61 @@
               }
             }
           }
+        },
+        {
+          "inner": [
+            {
+              "x": 243.999,
+              "y": 364.0,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 391.999,
+              "y": 364.0,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Line",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
         }
       ],
       "operation": null,
@@ -319,12 +319,12 @@
     "root": "cyr_short_i.high",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 496,
   "unicode": [],
   "name": "cyr_short_i.high",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/cyr_short_i.high.glifjson"
 }
