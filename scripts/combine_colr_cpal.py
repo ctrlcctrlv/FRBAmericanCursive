@@ -27,7 +27,7 @@ COLR_G = {}
 for glyph in glyphs:
     if glyph.startswith("__combstroke"):
         if glyph.endswith(".big"):
-            continue
+            glyph = glyph[:glyph.rindex(".")]
         COLR_GAv = ([(glyph+".big", 3)]*4) + [(glyph, 1)]
         COLR_Gv = COLR_GAv
     elif not glyph+"_guidelines" in ga_ttfglyphs:
