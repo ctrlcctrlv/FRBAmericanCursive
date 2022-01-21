@@ -69,3 +69,4 @@ DefineClass @to_salt = @salt~alt;
 DefineClass @numr = /^.*\.numr$/;
 DefineClass @to_numr = @numr~numr;
 DefineClass @dnom = @to_numr.dnom;
+DefineClass @to_dnom = @dnom~dnom;
