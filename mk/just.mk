@@ -1,11 +1,11 @@
 .PHONY: just
 just:
-	(for f in baseline beginnings endings guidelines xheight; do echo $$f; done) | parallel '$(MAKE) REMOVE={} DEBUG=_debug just_each'
+	(for f in baseline beginnings endings guidelines xheight; do echo $$f; done) | parallel --ctag --linebuffer '$(MAKE) REMOVE={} DEBUG=_debug just_each'
 	$(MAKE) REMOVE=arrows just_each
 
 .PHONY: just_each
 just_each:
-	parallel --bar -a build_data/monoline$(DEBUG).tsv --colsep '\t' '
+	parallel --linebuffer -a build_data/monoline$(DEBUG).tsv --colsep '\t' '
 		UFO="build/$(FONTFAMILY)-{3}-GuidelinesArrows{1}.ufo"
 		FN_EL=`echo $(REMOVE) | awk "{\\$$1=toupper(substr(\\$$1,0,1))substr(\\$$1,2)}1"`
 		JAUFO="build/$(FONTFAMILY)-{3}-Just$${FN_EL}{1}.ufo"
@@ -20,6 +20,7 @@ just_each:
 			ARROWGLIF=$${f%%.glif}_$(REMOVE).glif
 			if [[ -f "$$ARROWGLIF" ]]; then
 				sed -i "s@<outline \?/>@<outline>\n    <component base=\"$$BASEGLIFNAME\" />\n  </outline>@" "$$f"
+				grep -rl "<outline" "$$f" || sed -i "s@</glyph>@<outline>\n    <component base=\"$$BASEGLIFNAME\" />\n  </outline></glyph>@" "$$f"
 			fi
 		done
 		./scripts/regen_glyphs_plist.py "$$JAUFO"/glyphs

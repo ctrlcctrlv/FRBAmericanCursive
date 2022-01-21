@@ -24,7 +24,7 @@ colrglyphs-ufo:
 .PHONY: colrcpal
 colrcpal:
 	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then $(MAKE) colrglyphs colrglyphs-ufo; fi # may have been made by physics
-	parallel --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
+	parallel --tag --ctag --linebuffer --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
 		$(MAKE) STYLENAME={1} OS2WEIGHT={3} one-colrcpal
 	'
 
