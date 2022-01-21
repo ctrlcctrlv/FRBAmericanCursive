@@ -13,7 +13,15 @@ WIDTH=$2
 OS2WEIGHT=$3
 
 #find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel --bar "MFEKstroke DASH -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -d 100000 0"
-find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel "MFEKstroke CWS -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -S"
+find build/BUILD.ufo/glyphs/ -iname '*.glif' | parallel --ctag --tag --linebuffer "
+MFEKstroke CWS -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -S
+if [[ ! -s build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} ]]; then
+    echo 'Warning: Dashing {/} ($FONTFAMILY-$NAMEDWEIGHT.ufo)'
+    MFEKstroke DASH -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -d 1000 0
+fi
+if [[ ! -s build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} ]]; then
+    echo 'Error: Even dashing failed!'
+fi
+"
 # Generate OTF
-make UFO=build/$FONTFAMILY-"$NAMEDWEIGHT".ufo QUIET=y glif-refigure
 python3 -m fontmake --verbose DEBUG -u build/$FONTFAMILY-"$NAMEDWEIGHT".ufo --output-path dist/$FONTFAMILY-"$OS2WEIGHT"-"$NAMEDWEIGHT".otf -o otf $ARGS
