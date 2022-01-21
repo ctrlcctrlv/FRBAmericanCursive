@@ -18,17 +18,9 @@ all:
 	$(MAKE) colrcpal
 	$(MAKE) just
 	$(MAKE) specimens
+	$(MAKE) dist
 
 include mk/*.mk
-
-.PHONY: dist
-dist:
-	rm -f $(FONTFAMILY).zip $(FONTFAMILY)\(woff2\).zip
-	find dist -iname *.otf | parallel --bar woff2_compress
-	zip $(FONTFAMILY).zip dist/*.otf
-	zip $(FONTFAMILY)\(woff2\).zip dist/*.woff2
-	# Not enough shared tables to be worth it, only `CPAL` and `post`.
-	# otf2otc -o dist/$(FONTFAMILY).otc dist/*.otf
 
 .PHONY: clean
 clean:
