@@ -7,10 +7,10 @@ dist:
 	$(MAKE) dist-pack
 
 dist/%.woff2.zip:
-	rm -f $@ && zip $(ZIP_ARGS) -r $@ `find dist/woff2 -iname '$(FONTFAMILY)*'`
+	rm -f $@ ; zip $(ZIP_ARGS) -r $@ `find dist/woff2 -iname '$(FONTFAMILY)*'`
 
 dist/%.ttc.7z:
-	rm -f $@ && 7z a $(7Z_ARGS) $@ `find dist/ttc -iname '$(FONTFAMILY)*'`
+	rm -f $@ ; 7z a $(7Z_ARGS) $@ `find dist/ttc -iname '$(FONTFAMILY)*'`
 
 .PHONY: dist-pack
 dist-pack:
@@ -19,10 +19,10 @@ dist-pack:
 
 .PHONY: dist-woff2
 dist-woff2:
-	-@mkdir dist/woff2
-	find dist -iname '$(FONTFAMILY)*.woff2' | parallel --ctag --linebuffer 'woff2_compress {} && mv {} dist/woff2/{}'
+	@mkdir -p dist/woff2 || true
+	find dist -iname '$(FONTFAMILY)*.otf' | parallel --ctag --linebuffer 'woff2_compress {} && mv {.}.woff2 dist/woff2/'
 
 .PHONY: dist-ttc
 dist-ttc:
-	-@mkdir dist/ttc
+	@mkdir -p dist/ttc || true
 	parallel --ctag --linebuffer < scripts/dist/ttc.sh
