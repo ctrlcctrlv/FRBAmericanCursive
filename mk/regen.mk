@@ -6,7 +6,7 @@ regen:
 	# OpenType GDEF table
 	$(MAKE) rebuild-gdef
 	$(MAKE) rebuild-marks
-	$(MAKE) UFO=build/BUILD.ufo glif-refigure
+	$(MAKE) rebuild-tailsfea
 	$(MAKE) rebuild-stroke-count
 	$(MAKE) fez-classes
 
@@ -19,6 +19,10 @@ rebuild-ccmp:
 .PHONY: rebuild-gdef
 rebuild-gdef:
 	./scripts/make_GDEF.py build/BUILD.ufo > fea/GDEF.fea
+
+.PHONY: rebuild-tailsfea
+rebuild-tailsfea:
+	./scripts/tails_fea.py > fea/tails.fea
 
 .PHONY: glif-refigure
 glif-refigure:
