@@ -21,23 +21,45 @@ colrglyphs-ufo:
 	#./scripts/tsv_to_mark.py build_data/strokes.tsv >> fea/mark.fea
 
 # Build the color fonts.
+
 .PHONY: colrcpal
 colrcpal:
+	$(MAKE) colrcpal-otf
+	$(MAKE) colrcpal-ttf
+
+.PHONY: colrcpal-otf
+colrcpal-otf:
+	$(MAKE) OTF_EXT=.otf colrcpal-impl
+
+.PHONY: colrcpal-ttf
+colrcpal-ttf:
+	$(MAKE) OTF_EXT=.ttf colrcpal-impl
+
+.PHONY: colrcpal-impl
+colrcpal-impl:
 	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then $(MAKE) colrglyphs colrglyphs-ufo; fi # may have been made by physics
 	parallel --tag --ctag --linebuffer --bar -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
-		$(MAKE) STYLENAME={1} OS2WEIGHT={3} one-colrcpal
+		$(MAKE) STYLENAME={1} OS2WEIGHT={3} OTF_EXT=$(OTF_EXT) one-colrcpal
 	'
 
 .PHONY: one-colrcpal
 one-colrcpal:
 	if [ ! -d "build/$(FONTFAMILY)_COLR_glyphs" ]; then $(MAKE) colrglyphs colrglyphs-ufo; fi # may have been made by physics
 	./scripts/make_combined_without_colr_cpal.sh $(FONTFAMILY)-$(STYLENAME).ufo $(OS2WEIGHT)
-	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME)_NOVF.otf build/$(FONTFAMILY)-$(STYLENAME).ufo
+	./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME)_NOVF$(OTF_EXT) build/$(FONTFAMILY)-$(STYLENAME).ufo
 	if [[ -f build_data/$(FONTFAMILY)_buildVF ]]; then
-		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME).otf build/$(FONTFAMILY)-$(STYLENAME).ufo
-		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME).otf
+		./scripts/combine_colr_cpal.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME)$(OTF_EXT) build/$(FONTFAMILY)-$(STYLENAME).ufo
+		./scripts/rewrite_feature_substitutions.py dist/$(FONTFAMILY)-$(OS2WEIGHT)-GuidelinesArrows$(STYLENAME)$(OTF_EXT)
+	fi
+	if  [[ "$(OTF_EXT)" =~ ".ttf" ]]; then
+		mkdir -p dist/ttf
+		mv dist/$(FONTFAMILY)-$(OS2WEIGHT)-{Guidelines,GuidelinesArrows}$(STYLENAME){,_NOVF}.ttf dist/ttf
 	fi
 
 .PHONY: debug-colrcpal
 debug-colrcpal:
-	$(MAKE) STYLENAME=Regular OS2WEIGHT=400 one-colrcpal
+	$(MAKE) STYLENAME=Regular OS2WEIGHT=400 OTF_EXT=.otf one-colrcpal
+
+.PHONY: debug-colrcpal-ttf
+debug-colrcpal-ttf:
+	$(MAKE) STYLENAME=Regular OS2WEIGHT=400 OTF_EXT=.ttf one-colrcpal
