@@ -10,8 +10,6 @@ GLIF2SVG := glif2svg-rs
 PROCESSING := /home/fred/Downloads/processing-4.0b2/processing-java
 export TTFAUTOHINT_FLAGS := -a sss -n -x 24 -t -c
 
-include mk/*.mk
-
 .PHONY .ONESHELL: all
 all:
 	$(MAKE) regen
@@ -22,6 +20,8 @@ all:
 	$(MAKE) just
 	$(MAKE) specimens
 	$(MAKE) dist
+
+include mk/*.mk
 
 .PHONY: clean
 clean:
