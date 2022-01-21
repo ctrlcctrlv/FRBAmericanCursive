@@ -18,7 +18,9 @@ specimens/*.pdf
 # fonts rely on glifjson and MFEKglif --export
 FRBAmericanPrint-SOURCE.ufo/glyphs/*.glif
 FRBAmericanCursive-SOURCE.ufo/glyphs/*.glif
-# fea
+# auto-generated fea
+/fea/classes.fea
 /fea/GDEF.fea
+/fea/ccmp.fea
 /fea/mark.fea
 /fea/strokes.fea
