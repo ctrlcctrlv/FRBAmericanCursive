@@ -10,7 +10,7 @@ colrglyphs:
 .PHONY: colrglyphs-ufo
 colrglyphs-ufo:
 	if [[ -n '$(SKIP_COLRGLYPHS_UFO)' ]]; then exit 0; fi
-	parallel -u -a build_data/colrcpal_fontlist.tsv --colsep '\t' '
+	parallel -u -a build_data/colrcpal_fontlist$(DEBUG).tsv --colsep '\t' '
 	rm -fr build/$(FONTFAMILY)-{1}.ufo/{COLR_glyphs,arrow_glyphs}
 	mkdir -p build/$(FONTFAMILY)-{1}.ufo/{COLR_glyphs,arrow_glyphs}
 	MAXLEN=`./scripts/make_arrow_glyph.py MAXLEN`
