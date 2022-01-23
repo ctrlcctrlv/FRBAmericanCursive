@@ -22,7 +22,8 @@ fi
 if [[ ! -s build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} ]]; then
     echo 'Error: Even dashing failed!'
 fi
-MFEKpathops BOOLEAN -p remove_interior -i build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/}
 "
+#MFEKpathops BOOLEAN -p remove_interior -i build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/}_o
+#(grep -q '<point' build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/}_o && mv build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/}_o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/}) || rm build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/}_o
 # Generate OTF
 python3 -m fontmake --verbose DEBUG -u build/$FONTFAMILY-"$NAMEDWEIGHT".ufo --output-path dist/$FONTFAMILY-"$OS2WEIGHT"-"$NAMEDWEIGHT".otf -o otf $ARGS

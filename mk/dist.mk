@@ -38,7 +38,7 @@ dist-ttfwoff2:
 .PHONY: dist-ttf
 dist-ttf:
 	@mkdir -p dist/ttf || true
-	find dist -iname '$(FONTFAMILY)*.otf' | parallel --ctag --linebuffer 'rm -f {.}.ttf ; otf2ttf {} {.}.ttf && ttfautohint $(TTFAUTOHINT_FLAGS) {.}.ttf {.}_H.ttf && mv {.}_H.ttf dist/ttf/{/.}.ttf && rm {.}.ttf'
+	find dist -iname '$(FONTFAMILY)*.otf' | parallel --ctag --linebuffer '$(MAKE) dist/{/.}.ttf'
 
 .PHONY: dist-ttc
 dist-ttc:

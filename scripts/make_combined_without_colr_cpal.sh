@@ -55,6 +55,9 @@ function make_combined() {
 	NAME_PREPEND="$3"
 	OTF_NOVF="dist/`basename ${OTF} ${OTF_EXT}`_NOVF$OTF_EXT"
 	echo "Writing to $FONT $OTF"
+	if [[ $OTF_EXT =~ ".ttf" ]]; then
+		find build/"$FONT"/glyphs -iname '*.glif' | parallel --ctags --linebuffer MFEKpathops REFIGURE -i
+	fi
 	./scripts/regen_glyphs_plist.py build/"$FONT"/glyphs
 	./scripts/fudge_fontinfo.py build/"$FONT" "$FONTFAMILY" "$FONTFAMILY_H" "${NAME_PREPEND}${NAMEDWEIGHT}" "$OS2WEIGHT"
 	# ufonormalizer build/"$FONT"
