@@ -9,7 +9,7 @@
           "inner": [
             {
               "x": 46.1582,
-              "y": 76.6641,
+              "y": 77.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
@@ -19,7 +19,7 @@
             },
             {
               "x": 208.158,
-              "y": 76.6641,
+              "y": 77.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
@@ -64,7 +64,7 @@
           "inner": [
             {
               "x": 91.0,
-              "y": 171.16,
+              "y": 171.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
@@ -74,7 +74,7 @@
             },
             {
               "x": 253.0,
-              "y": 171.16,
+              "y": 171.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,

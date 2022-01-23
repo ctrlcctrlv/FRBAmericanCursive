@@ -38,9 +38,9 @@
 		</dict>
 		<dict>
 			<key>x</key>
-			<real>500</real>
+			<real>0</real>
 			<key>y</key>
-			<real>171.16000366210938</real>
+			<real>171</real>
 			<key>angle</key>
 			<real>0</real>
 			<key>name</key>
@@ -48,9 +48,9 @@
 		</dict>
 		<dict>
 			<key>x</key>
-			<real>500</real>
+			<real>0</real>
 			<key>y</key>
-			<real>76.66390228271484</real>
+			<real>77</real>
 			<key>angle</key>
 			<real>0</real>
 			<key>name</key>
@@ -58,9 +58,9 @@
 		</dict>
 		<dict>
 			<key>x</key>
-			<real>500</real>
+			<real>0</real>
 			<key>y</key>
-			<real>540.9530029296875</real>
+			<real>540</real>
 			<key>angle</key>
 			<real>0</real>
 			<key>name</key>
@@ -70,7 +70,7 @@
 			<key>x</key>
 			<real>625</real>
 			<key>y</key>
-			<real>264.4800109863281</real>
+			<real>264</real>
 			<key>angle</key>
 			<real>0</real>
 			<key>name</key>
@@ -78,7 +78,7 @@
 		</dict>
 		<dict>
 			<key>x</key>
-			<real>219</real>
+			<real>0</real>
 			<key>y</key>
 			<real>50</real>
 			<key>angle</key>
@@ -88,7 +88,7 @@
 		</dict>
 		<dict>
 			<key>x</key>
-			<real>401</real>
+			<real>0</real>
 			<key>y</key>
 			<real>550</real>
 			<key>angle</key>

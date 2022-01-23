@@ -9,11 +9,11 @@
           "inner": [
             {
               "x": 0.0,
-              "y": 171.16,
+              "y": 171.0,
               "a": {
                 "At": [
-                  124.11,
-                  171.16
+                  64.82484,
+                  171.08357
                 ]
               },
               "b": "Colocated",
@@ -22,6 +22,82 @@
               "smooth": false,
               "data": null
             },
+            {
+              "x": 180.0,
+              "y": 278.59622,
+              "a": {
+                "At": [
+                  233.71353,
+                  342.50635
+                ]
+              },
+              "b": {
+                "At": [
+                  121.26742,
+                  208.71422
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 355.05,
+              "y": 547.2,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  289.34238,
+                  433.39124
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
             {
               "x": 355.05,
               "y": 547.2,
@@ -33,7 +109,7 @@
                 ]
               },
               "name": null,
-              "ptype": "Curve",
+              "ptype": "Move",
               "smooth": false,
               "data": null
             },
@@ -46,7 +122,42 @@
               "ptype": "Line",
               "smooth": false,
               "data": null
-            },
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
             {
               "x": 160.161,
               "y": 145.351,
@@ -58,7 +169,7 @@
               },
               "b": "Colocated",
               "name": null,
-              "ptype": "Line",
+              "ptype": "Move",
               "smooth": true,
               "data": null
             },
@@ -203,13 +314,13 @@
               "data": null
             },
             {
-              "x": 166.95,
-              "y": 145.351,
+              "x": 172.0,
+              "y": 166.0,
               "a": "Colocated",
               "b": {
                 "At": [
-                  166.95,
-                  145.351
+                  171.71669,
+                  123.98233
                 ]
               },
               "name": null,
@@ -222,24 +333,6 @@
             "VariableWidthStroke": {
               "data": {
                 "handles": [
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
                   {
                     "left_offset": 12.5,
                     "right_offset": 12.5,
@@ -322,12 +415,12 @@
     "root": "B.highfina",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 608,
   "unicode": [],
   "name": "B.highfina",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/B_.highfina.glifjson"
 }
