@@ -4,6 +4,9 @@
   <anchor x="-11.25" y="-3.59961" name="_stroke7"/>
   <outline>
     <contour>
+      <point x="-17.7734" y="-44.5957" type="line" smooth="yes"/>
+      <point x="-18.9307" y="-47.2578"/>
+      <point x="-21.585" y="-49.0986"/>
       <point x="-24.6504" y="-49.0986" type="curve" smooth="yes"/>
       <point x="-28.7939" y="-49.0986"/>
       <point x="-32.1484" y="-45.7441"/>
@@ -26,9 +29,6 @@
       <point x="15.5488" y="32.5781"/>
       <point x="15.3418" y="31.5566"/>
       <point x="14.9268" y="30.6045" type="curve" smooth="yes"/>
-      <point x="-17.7734" y="-44.5957" type="line" smooth="yes"/>
-      <point x="-18.9307" y="-47.2578"/>
-      <point x="-21.585" y="-49.0986"/>
     </contour>
   </outline>
 </glyph>
