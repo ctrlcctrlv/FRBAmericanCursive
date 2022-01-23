@@ -25,7 +25,7 @@ plist = plistlib.load(plistf)
 
 plist["postscriptWeightName"] = namedweight
 plist["openTypeOS2WeightClass"] = os2weight
-plist["styleMapStyleName"] = "Bold Italic" if os2weight >= 700 else "Italic"
+plist["styleMapStyleName"] = "bold italic" if os2weight >= 700 else "italic"
 smname = namedweight_h.replace(realweight+" ", "").replace(realweight, "") if os2weight == 400 or os2weight == 700 else namedweight_h
 plist["styleMapFamilyName"] = "{} {}".format(familyname_h, smname).strip()
 plist["familyName"] = "{} {}".format(familyname_h, smname).strip()
