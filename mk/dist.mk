@@ -3,7 +3,8 @@ export ZIP_ARGS := -n woff2 -j
 
 .PHONY .ONESHELL: dist
 dist:
-	$(MAKE) -j2 dist-ttc dist-woff2 dist-ttfwoff2 dist-ttf
+	$(MAKE) -j2 dist-ttc dist-woff2
+	$(MAKE) dist-ttf dist-ttfwoff2
 	$(MAKE) dist-pack
 
 dist/%.ttfwoff2.zip:

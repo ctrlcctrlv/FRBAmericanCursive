@@ -27,8 +27,8 @@ rebuild-tailsfea:
 .PHONY: glif-refigure
 glif-refigure:
 	if [[ -z '$(UFO)' ]]; then UFO='$(UFO)'; else UFO=$(FONTFAMILY)-SOURCE.ufo; fi
-	if [[ -z '$(QUIET)' ]]; then BAR='--bar'; else BAR=''; fi
-	find "$$UFO"/glyphs/ -iname '*.glif' | parallel $$BAR "MFEKpathops REFIGURE -i {}"
+	if [[ -z '$(QUIET)' ]]; then BAR='--ctag --linebuffer --bar'; else BAR=''; fi
+	find "$$UFO"/glyphs/ -iname '*.glif' | parallel $$BAR "MFEKpathops REFIGURE -1 -i {}"
 
 .PHONY: glifjson2glif
 glifjson2glif:

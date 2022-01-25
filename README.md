@@ -50,7 +50,6 @@ Warning: FRB American Cursive generates *a lot* of files during compilation. On 
 
 * ufo-extractor
 * defcon
-* beziers.py
 * fez-language
 * fonttools
 * afdko

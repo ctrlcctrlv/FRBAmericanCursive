@@ -29,7 +29,7 @@
               "b": {
                 "At": [
                   308.62,
-                  478.54
+                  480.54
                 ]
               },
               "name": null,
@@ -226,33 +226,12 @@
               "ptype": "Curve",
               "smooth": false,
               "data": null
-            },
-            {
-              "x": 456.48,
-              "y": 126.468,
-              "a": "Colocated",
-              "b": {
-                "At": [
-                  274.849,
-                  135.815
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
             }
           ],
           "operation": {
             "VariableWidthStroke": {
               "data": {
                 "handles": [
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
                   {
                     "left_offset": 12.5,
                     "right_offset": 12.5,
@@ -316,6 +295,71 @@
               }
             }
           }
+        },
+        {
+          "inner": [
+            {
+              "x": 46.2803,
+              "y": 266.76,
+              "a": {
+                "At": [
+                  154.153,
+                  168.327
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 456.48,
+              "y": 126.468,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  274.849,
+                  135.815
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
         }
       ],
       "operation": null,
@@ -329,8 +373,8 @@
     "root": "T",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 617,
   "unicode": [
@@ -338,5 +382,5 @@
   ],
   "name": "T",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/T_.glifjson"
 }

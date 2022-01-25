@@ -18,23 +18,33 @@
               "data": null
             },
             {
+              "x": 129.0,
+              "y": 123.16939,
+              "a": {
+                "At": [
+                  201.26724,
+                  192.17026
+                ]
+              },
+              "b": {
+                "At": [
+                  63.05725,
+                  60.207157
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
               "x": 277.0,
               "y": 264.48,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
-              "ptype": "Line",
+              "ptype": "Curve",
               "smooth": false,
-              "data": null
-            },
-            {
-              "x": 39.0,
-              "y": -268.0,
-              "a": "Colocated",
-              "b": "Colocated",
-              "name": null,
-              "ptype": "Line",
-              "smooth": true,
               "data": null
             }
           ],
@@ -79,15 +89,60 @@
         {
           "inner": [
             {
+              "x": 277.0,
+              "y": 264.48,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
               "x": 39.0,
               "y": -268.0,
               "a": "Colocated",
               "b": "Colocated",
               "name": null,
-              "ptype": "Move",
+              "ptype": "Line",
               "smooth": true,
               "data": null
-            },
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
             {
               "x": 193.0,
               "y": 77.0,
@@ -99,7 +154,7 @@
               },
               "b": "Colocated",
               "name": null,
-              "ptype": "Line",
+              "ptype": "Move",
               "smooth": true,
               "data": null
             },
@@ -203,12 +258,6 @@
             "VariableWidthStroke": {
               "data": {
                 "handles": [
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
                   {
                     "left_offset": 12.5,
                     "right_offset": 12.5,

@@ -8,7 +8,8 @@ FONTFAMILY_H := FRB American Cursive
 PYTHON := $(if $(PYTHON),$(PYTHON),python3)
 GLIF2SVG := glif2svg-rs
 PROCESSING := /home/fred/Downloads/processing-4.0b2/processing-java
-TTFAUTOHINT_FLAGS := -a $(shell cat build_data/$(FONTFAMILY)_ttfautohint-a) -n -W -t -c -p
+TTFAUTOHINT_FLAGS := -a $(shell cat build_data/$(FONTFAMILY)_ttfautohint-a) -n -W -t -c -p -G 48
+AFDKO_ENV_ACTIVATE := /home/fred/Workspace/afdko/afdko_env/bin/activate
 
 .PHONY .ONESHELL: all
 all:

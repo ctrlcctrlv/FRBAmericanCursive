@@ -119,7 +119,7 @@
               "b": {
                 "At": [
                   66.0486,
-                  217.171
+                  217.17102
                 ]
               },
               "name": null,
@@ -280,12 +280,7 @@
             {
               "x": 154.0,
               "y": 0.0,
-              "a": {
-                "At": [
-                  93.0,
-                  0.0
-                ]
-              },
+              "a": "Colocated",
               "b": {
                 "At": [
                   214.0,
@@ -296,33 +291,12 @@
               "ptype": "Curve",
               "smooth": true,
               "data": null
-            },
-            {
-              "x": 10.0,
-              "y": 77.0,
-              "a": "Colocated",
-              "b": {
-                "At": [
-                  25.71428,
-                  35.714264
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
             }
           ],
           "operation": {
             "VariableWidthStroke": {
               "data": {
                 "handles": [
-                  {
-                    "left_offset": 12.5,
-                    "right_offset": 12.5,
-                    "tangent_offset": 0.0,
-                    "interpolation": "Linear"
-                  },
                   {
                     "left_offset": 12.5,
                     "right_offset": 12.5,

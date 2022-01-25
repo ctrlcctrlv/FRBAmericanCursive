@@ -14,7 +14,7 @@ OS2WEIGHT=$3
 
 #find $FONTFAMILY-SOURCE.ufo/glyphs/ -iname '*.glif' | parallel --bar "MFEKstroke DASH -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -d 100000 0"
 find build/BUILD.ufo/glyphs/ -iname '*.glif' -and -not -iname '__combstroke*' | parallel --ctag --tag --linebuffer "
-MFEKstroke CWS -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -S
+MFEKstroke CWS -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH
 if [[ ! -s build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} ]]; then
     echo 'Warning: Dashing {/} ($FONTFAMILY-$NAMEDWEIGHT.ufo)'
     MFEKstroke DASH -i {} -o build/$FONTFAMILY-$NAMEDWEIGHT.ufo/glyphs/{/} -w $WIDTH -d 1000 0

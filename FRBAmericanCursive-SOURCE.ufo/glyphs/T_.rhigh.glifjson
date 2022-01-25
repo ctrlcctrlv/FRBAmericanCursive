@@ -29,7 +29,7 @@
               "b": {
                 "At": [
                   308.62,
-                  478.54
+                  480.54
                 ]
               },
               "name": null,
@@ -210,31 +210,11 @@
             {
               "x": 46.2803,
               "y": 266.76,
-              "a": {
-                "At": [
-                  187.386,
-                  141.63
-                ]
-              },
+              "a": "Colocated",
               "b": {
                 "At": [
                   46.2803,
                   129.96
-                ]
-              },
-              "name": null,
-              "ptype": "Curve",
-              "smooth": false,
-              "data": null
-            },
-            {
-              "x": 727.0,
-              "y": 171.0,
-              "a": "Colocated",
-              "b": {
-                "At": [
-                  413.0,
-                  171.16
                 ]
               },
               "name": null,
@@ -300,6 +280,65 @@
                     "right_offset": 12.5,
                     "tangent_offset": 0.0,
                     "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 46.2803,
+              "y": 266.76,
+              "a": {
+                "At": [
+                  187.386,
+                  141.63
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 727.0,
+              "y": 171.0,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  413.0,
+                  171.16
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
                   },
                   {
                     "left_offset": 12.5,
@@ -329,12 +368,12 @@
     "root": "T.rhigh",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 727,
   "unicode": [],
   "name": "T.rhigh",
   "note": null,
-  "filename": null
+  "filename": "FRBAmericanCursive-SOURCE.ufo/glyphs/T_.rhigh.glifjson"
 }
