@@ -52,9 +52,9 @@ for cn in classes:
         all_marks.extend(list(marks.glyphSet()))
         classes_gcd.extend(gcd)
 
-fea.statements.append(Comment("\nBegin minus classes\n"))
+fea.statements.append(Comment("#\n# Begin minus classes\n#"))
 fea.statements.extend(fea_minus.statements)
-fea.statements.append(Comment("\nEnd minus classes\n"))
+fea.statements.append(Comment("#\n# End minus classes\n#"))
 
 all_marks_gn = [g.glyph for g in all_marks]
 gdefsimple = list()
@@ -75,13 +75,13 @@ tails_gcd = GlyphClassDefinition("tails", GlyphClass(tails))
 fea.statements.append(tails_gcd)
 by_encoding_gcd = GlyphClassDefinition("by_encoding", GlyphClass(by_encoding))
 fea.statements.append(by_encoding_gcd)
-fea.statements.append(Comment("Begin GDEF classes"))
+fea.statements.append(Comment("# Begin GDEF classes"))
 fealen = len(fea.statements)
 fea.statements.append(GlyphClassDefinition("GDEFSimple", GlyphClass([GlyphName(g) for g in sorted([g.glyph for g in gdefsimple])+[GlyphName("@by_encoding")]])))
 fea.statements.append(GlyphClassDefinition("GDEFMarks", GlyphClass([GlyphName("@"+gcd.name) for gcd in classes_gcd])))
 fea.statements.append(GlyphClassDefinition("GDEFLigat", GlyphClass([GlyphName("@tails")])))
 fea.statements.append(GlyphClassDefinition("GDEFComponent", GlyphClass([])))
-fea.statements.append(Comment("End GDEF classes"))
+fea.statements.append(Comment("# End GDEF classes"))
 for cn in sorted(classes):
     classesm = set(classes) - set([cn])
     fea.statements.append(GlyphClassDefinition("GDEFMarks_minus_"+cn, GlyphClass([GlyphName("@"+cn+"_marks") for cn in sorted(classesm)])))
