@@ -12,8 +12,8 @@ include(../fea/frac.fea);
 include(../fea/Latn.fea);
 include(../fea/Cyrl.fea);
 include(../fea/salt.fea);
+include(../fea/tails.fea);
 include(../fea/strokes.fea);
 include(../fea/strokes_increment.fea);
-include(../fea/tails.fea);
 
 # vim: set ts=4 sw=4 expandtab:
