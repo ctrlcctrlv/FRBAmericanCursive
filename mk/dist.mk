@@ -3,9 +3,10 @@ export ZIP_ARGS := -n woff2 -j
 
 .PHONY .ONESHELL: dist
 dist:
-	$(MAKE) -j2 dist-ttc dist-woff2
-	$(MAKE) dist-ttf dist-ttfwoff2
-	$(MAKE) dist-pack
+	$(MAKE) -j2 -B dist-ttc dist-woff2
+	$(MAKE) -B dist-ttf
+	$(MAKE) -B dist-ttfwoff2
+	$(MAKE) -B dist-pack
 
 dist/%.ttfwoff2.zip:
 	rm -f $@ ; zip $(ZIP_ARGS) -r $@ `find dist/ttfwoff2 -iname '$(FONTFAMILY)*'`
