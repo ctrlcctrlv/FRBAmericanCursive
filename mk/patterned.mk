@@ -16,7 +16,7 @@ patterned-dashed:
 patterned-dotted-dashed:
 	# Build dotted or dashed
 	cat $(BUILD_DATA) | parallel --tag --ctag --linebuffer --bar --jobs 7 --colsep '\t' '
-		GLYPHS=`find $(FONTFAMILY)-SOURCE.ufo/glyphs/ -type f -iname '*.glif' -and -not -name space.glif` 
+		GLYPHS=`grep -rl "<point" $(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif`
 		ASTERISK='*'
 		WIDTHADJ=`perl -e "\\$$calc = {2}$${ASTERISK}1.5; \\$$calc = (\\$$calc >= $(WIDTH_MINIMUM) ? \\$$calc : $(WIDTH_MINIMUM)); print \\"\\$$calc\\";"`
 		CULLAREA=`perl -e "print ({2} >= $(WIDTH_MINIMUM) ? 0.25 : 0.5);"`
@@ -37,8 +37,8 @@ patterned-dotted-template:
 	./scripts/fudge_fontinfo.py "$$UFO" "$(FONTFAMILY)" "$(FONTFAMILY_H)" $(STYLENAME) $(OS2WEIGHT)
 	CULLAREA=`perl -e 'use Math::Trig; print pi() * (($(WIDTH) / 2.0) ** 2.0) * $(CULLAREA)'`
 	CULLWIDTHADJ=`perl -e 'print ($(WIDTH_MINIMUM) * 0.9) + ($(WIDTH) >= $(WIDTH_MINIMUM) ? 0 : ($(WIDTH_MINIMUM) - $(WIDTH)) * 2.0)'`
-	patterned_ARGS=$$(eval "echo `./scripts/patterned_args.sh`")
-	parallel --ctag --linebuffer "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
+	patterned_ARGS=$$(eval "env echo `./scripts/patterned_args.sh`")
+	parallel "MFEKstroke DASH -o $$UFO/glyphs/{/} -i $(FONTFAMILY)-SOURCE.ufo/glyphs/{/} -d $(DASHDESC) -w $(WIDTH) $$patterned_ARGS" <<< "$$GLYPHS"
 	fontmake_ARGS=`./scripts/fontmake_args.sh`
 	$(PYTHON) -m fontmake --verbose DEBUG -u "$$UFO" --output-path dist/$(FONTFAMILY)-$(OS2WEIGHT)-$(STYLENAME).otf -o otf $$fontmake_ARGS && printf '\033[1;31m Generated '"$$UFO"'\033[0m w/ dash desc == `$(DASHDESC)`'"$$patterned_ARGS"'\n'
 
