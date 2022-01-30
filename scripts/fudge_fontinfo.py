@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import plistlib
-import sys
+import os, sys
 
 import re
 
@@ -25,7 +25,12 @@ plist = plistlib.load(plistf)
 
 plist["postscriptWeightName"] = namedweight
 plist["openTypeOS2WeightClass"] = os2weight
-plist["styleMapStyleName"] = "bold italic" if os2weight >= 700 else "italic"
+if os.environ["REGULAR_IS_ITALIC"].strip() == "1":
+    plist["styleMapStyleName"] = "bold italic" if os2weight >= 700 else "italic"
+elif os.environ["REGULAR_IS_ITALIC"].strip() == "0":
+    plist["styleMapStyleName"] = "bold" if os2weight >= 700 else "regular"
+else:
+    raise ValueError("REGULAR_IS_ITALIC not 0/1")
 smname = namedweight_h.replace(realweight+" ", "").replace(realweight, "") if os2weight == 400 or os2weight == 700 else namedweight_h
 plist["styleMapFamilyName"] = "{} {}".format(familyname_h, smname).strip()
 plist["familyName"] = "{} {}".format(familyname_h, smname).strip()

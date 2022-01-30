@@ -1,10 +1,15 @@
 SHELL = /bin/bash
 .EXPORT_ALL_VARIABLES:
 PRODUCTION := $(if $(PRODUCTION),$(PRODUCTION),n)
+
 #FONTFAMILY := FRBAmericanPrint
 #FONTFAMILY_H := FRB American Print
+#REGULAR_IS_ITALIC := 0
+
 FONTFAMILY := FRBAmericanCursive
 FONTFAMILY_H := FRB American Cursive
+REGULAR_IS_ITALIC := 1
+
 PYTHON := $(if $(PYTHON),$(PYTHON),python3)
 GLIF2SVG := glif2svg-rs
 PROCESSING := /home/fred/Downloads/processing-4.0b2/processing-java
