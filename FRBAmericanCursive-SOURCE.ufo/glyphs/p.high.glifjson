@@ -25,16 +25,81 @@
             {
               "x": 232.0,
               "y": 256.0,
-              "a": {
-                "At": [
-                  213.48,
-                  215.05
-                ]
-              },
+              "a": "Colocated",
               "b": {
                 "At": [
                   136.0,
                   178.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 232.0,
+              "y": 256.0,
+              "a": {
+                "At": [
+                  222.85872,
+                  235.7875
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 99.87092,
+              "y": -29.0,
+              "a": {
+                "At": [
+                  31.308998,
+                  -163.05562
+                ]
+              },
+              "b": {
+                "At": [
+                  166.69708,
+                  101.66177
                 ]
               },
               "name": null,
@@ -53,7 +118,7 @@
               },
               "b": {
                 "At": [
-                  1.96157,
+                  -48.47864,
                   -293.465
                 ]
               },
@@ -163,13 +228,13 @@
               "data": null
             },
             {
-              "x": 127.0,
-              "y": 31.0,
+              "x": 130.0,
+              "y": 30.0,
               "a": "Colocated",
               "b": {
                 "At": [
-                  142.002,
-                  14.4193
+                  145.002,
+                  13.4193
                 ]
               },
               "name": null,
@@ -255,12 +320,12 @@
         {
           "inner": [
             {
-              "x": 127.0,
-              "y": 31.0,
+              "x": 130.0,
+              "y": 30.0,
               "a": {
                 "At": [
-                  158.197,
-                  -1.02096
+                  161.197,
+                  -2.0209599
                 ]
               },
               "b": "Colocated",
@@ -270,17 +335,17 @@
               "data": null
             },
             {
-              "x": 266.795,
+              "x": 276.795,
               "y": -13.008,
               "a": {
                 "At": [
-                  394.174,
+                  404.174,
                   -13.008
                 ]
               },
               "b": {
                 "At": [
-                  209.301,
+                  219.301,
                   -13.008
                 ]
               },
@@ -355,8 +420,8 @@
     "root": "p.high",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 596,
   "unicode": [],

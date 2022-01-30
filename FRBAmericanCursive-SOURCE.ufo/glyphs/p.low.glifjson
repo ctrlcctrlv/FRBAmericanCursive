@@ -12,8 +12,8 @@
               "y": 77.0,
               "a": {
                 "At": [
-                  129.32,
-                  167.215
+                  119.0,
+                  136.0
                 ]
               },
               "b": "Colocated",
@@ -23,22 +23,67 @@
               "data": null
             },
             {
-              "x": 294.0,
+              "x": 284.0,
               "y": 256.0,
-              "a": {
-                "At": [
-                  239.442,
-                  139.0
-                ]
-              },
+              "a": "Colocated",
               "b": {
                 "At": [
-                  294.0,
-                  256.0
+                  193.0,
+                  180.0
                 ]
               },
               "name": null,
               "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 284.0,
+              "y": 256.0,
+              "a": {
+                "At": [
+                  229.442,
+                  139.0
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
               "smooth": false,
               "data": null
             },
@@ -68,7 +113,7 @@
               "a": {
                 "At": [
                   -71.4929,
-                  -180.665
+                  -224.76448
                 ]
               },
               "b": {
@@ -83,18 +128,38 @@
               "data": null
             },
             {
-              "x": 241.0,
-              "y": 120.0,
+              "x": 8.0,
+              "y": -128.004,
               "a": {
                 "At": [
-                  317.398,
-                  211.157
+                  73.67744,
+                  -55.119293
                 ]
               },
               "b": {
                 "At": [
-                  115.227,
-                  -30.0704
+                  -39.00315,
+                  -180.16513
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 241.0,
+              "y": 120.0,
+              "a": {
+                "At": [
+                  320.90433,
+                  208.09964
+                ]
+              },
+              "b": {
+                "At": [
+                  163.0,
+                  34.0
                 ]
               },
               "name": null,
@@ -163,12 +228,12 @@
               "data": null
             },
             {
-              "x": 189.0,
+              "x": 182.0,
               "y": 31.0,
               "a": "Colocated",
               "b": {
                 "At": [
-                  204.002,
+                  197.002,
                   14.4194
                 ]
               },
@@ -255,11 +320,11 @@
         {
           "inner": [
             {
-              "x": 189.0,
+              "x": 182.0,
               "y": 31.0,
               "a": {
                 "At": [
-                  220.082,
+                  213.082,
                   -0.903187
                 ]
               },
@@ -355,8 +420,8 @@
     "root": "p.low",
     "vec": []
   },
-  "flattened": null,
-  "component_rects": null,
+  "flattened": [],
+  "component_rects": [],
   "guidelines": [],
   "width": 658,
   "unicode": [],
