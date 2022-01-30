@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./scripts/stroke_count_fea.py < <(xidel --input-format xml ${FONTFAMILY}-SOURCE.ufo/glyphs/*.glif -e 'string-join((//@name, '$'"\t"'', count(//point[1])))' --silent)
+./scripts/stroke_count_fea.py < <(xidel --input-format xml ${FONTFAMILY}-SOURCE.ufo/glyphs/*.glif -e 'string-join((/glyph/@name, '$'"\t"'', count(//point[1])))' --silent)
 
 cat << EOF
 

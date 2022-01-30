@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import io
+import sys
 from pathlib import Path
 from fontTools.feaLib.parser import Parser
 from fontTools.feaLib.ast import *
@@ -25,7 +26,10 @@ all_simple = simple[0].glyphSet()
 lookup = LookupBlock("combstroke")
 try:
     while (line := input()):
+        print(line, file=sys.stderr)
         glif, count = line.split()
+        if int(count) == 0:
+            continue
         if glif in all_tails:
             continue
         if glif in all_marks:
