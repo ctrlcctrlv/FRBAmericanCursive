@@ -54,6 +54,10 @@ Warning: FRB American Cursive generates *a lot* of files during compilation. On 
 * fonttools
 * afdko
 
+```bash
+pip install ufo-extractor defcon fez-language fonttools afdko
+```
+
 ### Needed software
 
 * GNU Parallel
@@ -61,6 +65,7 @@ Warning: FRB American Cursive generates *a lot* of files during compilation. On 
 * MFEKmetadata&Dagger; (used to build arrows)
 * MFEKstroke&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
 * MFEKglif&Dagger; (to edit glyphs)
+* MFEKglif2svg⹋
 * [Xidel](https://github.com/benibela/xidel)
 
 #### For specimens
@@ -75,6 +80,7 @@ FRB American Cursive v2 optionally requires a physics simulator to figure out th
 
 <sub>&dagger; These should be standard on most Linux distributions and on Windows under MSYS2.</sub>
 <sub>&Dagger; These are Rust projects and need to be compiled by <kbd>cargo</kbd> and installed into your <kbd>PATH</kbd>.</sub>
+<sub>Must be installed to `$PATH` as `glif2svg-rs`.</sub>
 
 ### Build process
 
