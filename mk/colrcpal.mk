@@ -5,7 +5,7 @@ PERCENT := %
 colrglyphs:
 	if [[ -n '$(SKIP_COLRGLYPHS)' ]]; then exit 0; fi
 	set -- `MFEKmetadata $(FONTFAMILY)-SOURCE.ufo arbitrary -k capHeight -k openTypeOS2TypoDescender -k xHeight`
-	./scripts/list_glyphs.py $(FONTFAMILY)-SOURCE.ufo | C=$$1 D=$$2 X=$$3 parallel --ctag --linebuffer --bar --jobs 1000$(PERCENT) './scripts/make_COLRglyphs_for_glyph.py {} $(FONTFAMILY)-SOURCE.ufo $$C $$D $$X'
+	./scripts/list_glyphs.py $(FONTFAMILY)-SOURCE.ufo | C=$$1 D=$$2 X=$$3 parallel --ctag --linebuffer --bar './scripts/make_COLRglyphs_for_glyph.py {} $(FONTFAMILY)-SOURCE.ufo $$C $$D $$X'
 
 .PHONY: colrglyphs-ufo
 colrglyphs-ufo:

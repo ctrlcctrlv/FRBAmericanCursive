@@ -14,6 +14,7 @@ regen:
 rebuild-ccmp:
 	./scripts/build_ccmp.py $(FONTFAMILY)-SOURCE.ufo build/BUILD.ufo > fea/ccmp.fea
 	for f in numbers.ufo/glyphs/__combstroke[123456789]*.glif; do cp "$$f" build/BUILD.ufo/glyphs/; done
+	for f in numbers.ufo/glyphs/*.glif; do glif2svg-rs -M "$$f" "$${f$(PERCENT)$(PERCENT).glif}.svg"; done
 	./scripts/regen_glyphs_plist.py build/BUILD.ufo/glyphs
 
 .PHONY: rebuild-gdef

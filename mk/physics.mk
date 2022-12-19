@@ -29,7 +29,7 @@ endif
 
 .PHONY: processing-physics
 processing-physics:
-	# $(PROCESSING) --no-java --sketch=../../scripts/AnchorPhysics --run | sed -e "/^Finished\./d" > "$$TEMPTSV";
+	$(PROCESSING) --no-java --sketch=../../scripts/AnchorPhysics --run | sed -e "/^Finished\./d" > "$$TEMPTSV";
 	JOBS=`wc -l < build_data/monoline.tsv`
 	[[ ! -d /tmp/AnchorPhysics ]] && $(MAKE) compile-processing
 	cat build_data/monoline$(DEBUG).tsv | sort -r | parallel -u --jobs $$JOBS --colsep '\t' '

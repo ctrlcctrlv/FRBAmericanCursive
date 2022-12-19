@@ -83,7 +83,7 @@ void drawSVG(String filename, float radius) {
 
 void setup() {
   RG.init(this);
-  pnumbers = new PShape[]{loadShape(NUMHOME+"/__combstroke0_cairo.svg"), loadShape(NUMHOME+"/__combstroke1_cairo.svg"), loadShape(NUMHOME+"/__combstroke2_cairo.svg"), loadShape(NUMHOME+"/__combstroke3_cairo.svg"), loadShape(NUMHOME+"/__combstroke4_cairo.svg"), loadShape(NUMHOME+"/__combstroke5_cairo.svg"), loadShape(NUMHOME+"/__combstroke6_cairo.svg"), loadShape(NUMHOME+"/__combstroke7_cairo.svg"), loadShape(NUMHOME+"/__combstroke8_cairo.svg"), loadShape(NUMHOME+"/__combstroke9_cairo.svg")};
+  pnumbers = new PShape[]{loadShape(NUMHOME+"/__combstroke0.svg"), loadShape(NUMHOME+"/__combstroke1.svg"), loadShape(NUMHOME+"/__combstroke2.svg"), loadShape(NUMHOME+"/__combstroke3.svg"), loadShape(NUMHOME+"/__combstroke4.svg"), loadShape(NUMHOME+"/__combstroke5.svg"), loadShape(NUMHOME+"/__combstroke6.svg"), loadShape(NUMHOME+"/__combstroke7.svg"), loadShape(NUMHOME+"/__combstroke8.svg"), loadShape(NUMHOME+"/__combstroke9.svg")};
 
   String[] lines = loadStrings("data/glyphs.txt");
   glyphs_array = new ArrayList(Arrays.asList(lines));
