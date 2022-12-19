@@ -6,7 +6,7 @@ import sys, shutil
 
 # Find glyphs in this range with at least one combining character, create characters for them with systematic uniXXXX names
 CCMP_REPLACEMENTS = {"i": "dotlessi", "j": "dotlessj"}
-KNOWN_GOOD = """ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵ"""
+KNOWN_GOOD = """ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵŞş"""
 def ccmp_placeholders(f):
     placeholders = dict()
     for i in set( [ord(c) for c in KNOWN_GOOD] + list(range(0xc0, 0x17f+1))+list(range(0x1a0, 0x1b0+1)) ):
@@ -24,7 +24,7 @@ def ccmp_placeholders(f):
             decomp_glyphs = [cm[u][0] for u in decomp]
         except:
             continue
-        decomp_glyphs = [CCMP_REPLACEMENTS[gn] if (gn in CCMP_REPLACEMENTS and not "underdotcomb" in decomp_glyphs) else gn for gn in decomp_glyphs]
+        decomp_glyphs = [CCMP_REPLACEMENTS[gn] if (gn in CCMP_REPLACEMENTS and not "underdotcomb" in decomp_glyphs and not "cedillacomb" in decomp_glyphs) else gn for gn in decomp_glyphs]
         placeholders[i] = decomp_glyphs
     return placeholders
 
