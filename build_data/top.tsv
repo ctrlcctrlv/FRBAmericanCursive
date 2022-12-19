@@ -36,6 +36,12 @@ e.alt	370	400	top
 e.high	201	400	top
 e.low	215	400	top
 E.rlow	423	650	top
+cyr_ie	222	400	top
+cyr_IE	412	650	top
+cyr_ie	370	400	top
+cyr_ie.high	201	400	top
+cyr_ie.low	215	400	top
+cyr_IE.rlow	423	650	top
 f	388	650	top
 F	537	650	top
 f.high	352	650	top

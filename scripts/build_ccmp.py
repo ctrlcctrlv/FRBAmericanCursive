@@ -6,7 +6,7 @@ import sys, shutil
 
 # Find glyphs in this range with at least one combining character, create characters for them with systematic uniXXXX names
 CCMP_REPLACEMENTS = {"i": "dotlessi", "j": "dotlessj"}
-KNOWN_GOOD = """ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵŞş"""
+KNOWN_GOOD = """ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵŞşЁё"""
 def ccmp_placeholders(f):
     placeholders = dict()
     for i in set( [ord(c) for c in KNOWN_GOOD] + list(range(0xc0, 0x17f+1))+list(range(0x1a0, 0x1b0+1)) ):
