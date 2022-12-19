@@ -9,48 +9,22 @@
 \frame[id=specimen_overlay,left=5%pw,right=95%pw,top=5%ph,bottom=top(footnotes)]
 \frame[id=arrows,left=5%pw,right=95%pw,top=5.22%ph,bottom=top(footnotes)]
 \set[parameter=shaper.spaceenlargementfactor,value=1]
-\script{
-SILE.settings.set("document.spaceskip", SILE.length("1spc"))
-SILE.settings.set("shaper.spacestretchfactor",  0)
-SILE.settings.set("shaper.spaceshrinkfactor",  0)
-SILE.scratch.counters.folio.value = &&PAGE&&
-wrapper = "\\typeset-into[frame=%s]{%s\n%s}"
-font_dist = [[\font[filename=dist/]] .. ("&&FONT&&") .. ',%s]'
-font_arrows = [[\font[filename=dist/&&FONTFAMILY&&-&&OS2WEIGHT&&-JustArrows&&WEIGHT&&.otf]%]]
-content_inner = [[\neverindent
-\par \font[size=3em]{&&FONTFAMILY_H&&}
+\frame[id=fontname,left=5%pw,right=95%pw,top=1%ph,bottom=1% + height(folio)]
+\typeset-into[frame=fontname]{
+\noindent\font[family=TT2020Base,size=5pt]{&&FONT&&}
+\begin[filename=dist/&&FONT&&]{font}
+\par \font[features=+ss01,size=3em]{&&FONTFAMILY_H&&}
 \bigskip
-\par &&STYLE&&
+\par \font[features=+ss01]{&&STYLE&&}
 \bigskip
 \par Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
 \par ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọ
 \par ÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵ
 \par abcdefghijklmnopqrstuvwxyz
-\par 1234567890 !@#$\%%&*() []{};':",./ \\ № ₿ ₱ ₹ †
+\par 1234567890 !@#$\%&*() []{};':",./ \\ № ₿ ₱ ₹ †
 \par The quick brown fox jumps over the lazy dog.
 \par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
-]]
-if string.find("&&FONT&&", "Arrows") then
-    font_dist = string.format(font_dist, "features=+ss01")
-else
-    font_dist = string.format(font_dist, "")
-end
-contents = wrapper:format("specimen", font_dist, content_inner)
-contents_overlay = wrapper:format("specimen_overlay", font_dist, content_inner)
-contents_arrows = wrapper:format("arrows", font_arrows, content_inner)
-SILE.doTexlike(contents)
---[[SILE.shaper = SILE.shapers.harfbuzz()
-SILE.doTexlike(contents_overlay)
-if string.find("&&FONT&&", "Arrows") then
-SILE.outputter:pushColor({r = 1, g= 0, b = 0 })
-SILE.shaper = SILE.shapers.harfbuzz()
-SILE.doTexlike(contents_arrows)
-SILE.outputter:popColor()
-end--]]
-}
-\frame[id=fontname,left=5%pw,right=95%pw,top=1%ph,bottom=1% + height(folio)]
-\typeset-into[frame=fontname]{
-\noindent\font[family=TT2020Base,size=5pt]{&&FONT&&}
+\end{font}
 }
 \end{document}
