@@ -60,18 +60,18 @@ pip install ufo-extractor defcon fez-language fonttools afdko
 
 ### Needed software
 
-* GNU Parallel
+* GNU [`parallel`](https://www.gnu.org/software/parallel/) (requires a Perl interpreter)
 * GNU `bash`, `find`, `make`, and `sed`&dagger;
-* MFEKmetadata&Dagger; (used to build arrows)
-* MFEKstroke&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
-* MFEKglif&Dagger; (to edit glyphs)
-* MFEKglif2svg⹋
+* [MFEKmetadata](https://github.com/MFEK/metadata)&Dagger; (used to build arrows)
+* [MFEKstroke](https://github.com/MFEK/stroke)&Dagger; (before v1.2 only used to build a few font features but now used to build every font)
+* [MFEKglif](https://github.com/MFEK/glif)&Dagger; (to edit glyphs)
+* [MFEKglif2svg](https://github.com/MFEK/glif2svg)&Dagger;⹋
 * [Xidel](https://github.com/benibela/xidel)
 
 #### For specimens
-* SILE
-* PDFtk
-* ImageMagick
+* [SILE](https://github.com/sile-typesetter/sile)
+* [PDFtk](https://gitlab.com/pdftk-java/pdftk)
+* [ImageMagick](https://imagemagick.org/index.php)
 * hb-view (`harfbuzz`)
 * ftdump (`freetype2-demos`)
 
@@ -79,10 +79,29 @@ pip install ufo-extractor defcon fez-language fonttools afdko
 FRB American Cursive v2 optionally requires a physics simulator to figure out the correct placement of its stroke numbers. This saves a lot of time for the designer, but can be a bit cumbersome to set up, so building is possible without it. v2 uses the Java version of [Processing](https://processing.org/) plus [toxiclibs](https://toxiclibs.org) as its physics engine; you'll also need to install [geomerative](http://www.ricardmarxer.com/geomerative/geomerative-39.zip) to `sketchbook/libraries`. This might change in future releases. For your convenince, my entire Processing `sketchbook/` directory can be downloaded from [ctrlcctrlv/FRBAmericanCursive-processing-sketchbook](https://github.com/ctrlcctrlv/FRBAmericanCursive-processing-sketchbook).
 
 <sub>&dagger; These should be standard on most Linux distributions and on Windows under MSYS2.</sub>
-<sub>&Dagger; These are Rust projects and need to be compiled by <kbd>cargo</kbd> and installed into your <kbd>PATH</kbd>.</sub>
+<sub>&Dagger; These are Rust projects and need to be compiled by <kbd>cargo build --release</kbd> and installed into your <kbd>PATH</kbd>.</sub>
 <sub>Must be installed to `$PATH` as `glif2svg-rs`.</sub>
 
 ### Build process
+
+The Makefiles in v2 are a bit unique as we want to build a Print and a Cursive with near-identical steps.
+
+Calling:
+
+```bash
+make -j1 all-fonts
+```
+
+Will build both (takes a long time even if everything is right.)
+
+To build one or the other:
+
+```bash
+make -f Makefile.PRINT
+```
+```bash
+make -f Makefile.CURSIVE
+```
 
 On `make`, this is the general flow:
 
