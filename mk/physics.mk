@@ -31,8 +31,9 @@ endif
 processing-physics:
 	$(PROCESSING) --no-java --sketch=../../scripts/AnchorPhysics --run | sed -e "/^Finished\./d" > "$$TEMPTSV";
 	JOBS=`wc -l < build_data/monoline.tsv`
+	JOBS2RUN=$$(bc <<< "scale = 0;$$JOBS/1.5"|sed -e 's/\..*//')
 	[[ ! -d /tmp/AnchorPhysics ]] && $(MAKE) compile-processing
-	cat build_data/monoline$(DEBUG).tsv | sort -r | parallel -u --jobs $$JOBS --colsep '\t' '
+	cat build_data/monoline$(DEBUG).tsv | sort -r | parallel -u --jobs $$JOBS2RUN --colsep '\t' '
 	cd build/$(FONTFAMILY)-{1}.ufo;
 	mkdir data
 	TEMPTSV=/tmp/$(FONTFAMILY)-{1}-physics.tsv;

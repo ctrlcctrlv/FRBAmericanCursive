@@ -11,6 +11,8 @@ MAKE := $(MAKE) -f main.mk
 
 .PHONY .ONESHELL: all
 all:
+	ulimit -Sn 1048576
+	ulimit -Hn 1048576
 	$(MAKE) regen
 	$(MAKE) monoline
 	$(MAKE) patterned
