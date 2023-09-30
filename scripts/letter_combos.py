@@ -8,9 +8,11 @@ fontfamily = os.environ["FONTFAMILY"]
 
 print(r"""
 \begin[papersize=1.4ft x 0.8ft]{{document}}
+    \script[src=packages/complex-spaces]
     \script[src=packages/color-fonts]
     \script[src=packages/rules]
-    \font[filename=dist/{}-400-GuidelinesArrowsRegular.otf,size=1.5em]{{""".format(fontfamily)[1:])
+    \set[parameter=shaper.spaceenlargementfactor,value=1]
+    \font[filename=dist/{}-400-GuidelinesArrowsRegular_NOVF.otf,size=1.4em]{{""".format(fontfamily)[1:])
 
 combos_from_string=lambda s: [list(zip(e*len(s), s)) for e in s]
 lets=combos_from_string(string.ascii_lowercase)
@@ -39,21 +41,17 @@ dcombos_nL = [[pop_front_or(args, "") for j in range(2)] for i in range(math.cei
 for a1, a2 in dcombos_nL:
     print(((" "*8)+PAR)+("\n"+((" "*8)+PAR)).join([z[0]+" "+z[1] for z in zip(dcombos_n(a1), dcombos_n(a2))]))
 print((" "*8)+EJECT)
-print((" "*8)+EJECT)
 cyrl_lower="".join([chr(c) for c in list(range(0x430, 0x44F+1))])
 cyrl_upper=cyrl_lower.upper()
 cyrl_lets=combos_from_string(cyrl_lower)
 cyrl_combos = combos_gen(lambda f: f, lambda s: s, cyrl_lets)
 print(((" "*8)+PAR)+("\n"+((" "*8)+PAR)).join(cyrl_combos))
-print((" "*8)+HRULE)
 print((" "*8)+PAR+(" ".join(cyrl_lower)))
 print((" "*8)+EJECT)
 print(((" "*8)+PAR)+("\n"+((" "*8)+PAR)).join(combos_gen(lambda f: f.upper(), lambda s: s, cyrl_lets)))
-print((" "*8)+HRULE)
 print((" "*8)+PAR+(" ".join(cyrl_upper)))
 print((" "*8)+EJECT)
 print(((" "*8)+PAR)+("\n"+((" "*8)+PAR)).join([c.upper() for c in cyrl_combos]))
-print((" "*8)+HRULE)
 miscs=list("~¡¢£¥¦§«­°µ¶·»¿ÆÇ×ØÞßæçð÷øþıŒœȷ !@#$")+[r"\%"]+list("^&*(){}<>?/")
 print((" "*8)+PAR+(" ".join(miscs)))
 

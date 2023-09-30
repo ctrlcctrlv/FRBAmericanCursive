@@ -1,0 +1,284 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [
+        {
+          "inner": [
+            {
+              "x": 413.0,
+              "y": 540.953,
+              "a": {
+                "At": [
+                  413.0,
+                  550.953
+                ]
+              },
+              "b": {
+                "At": [
+                  413.0,
+                  530.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 431.0,
+              "y": 558.953,
+              "a": {
+                "At": [
+                  441.0,
+                  558.953
+                ]
+              },
+              "b": {
+                "At": [
+                  421.0,
+                  558.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 449.0,
+              "y": 540.953,
+              "a": {
+                "At": [
+                  449.0,
+                  530.953
+                ]
+              },
+              "b": {
+                "At": [
+                  449.0,
+                  550.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 431.0,
+              "y": 522.953,
+              "a": {
+                "At": [
+                  421.0,
+                  522.953
+                ]
+              },
+              "b": {
+                "At": [
+                  441.0,
+                  522.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 229.0,
+              "y": 540.953,
+              "a": {
+                "At": [
+                  229.0,
+                  550.953
+                ]
+              },
+              "b": {
+                "At": [
+                  229.0,
+                  530.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 247.0,
+              "y": 558.953,
+              "a": {
+                "At": [
+                  257.0,
+                  558.953
+                ]
+              },
+              "b": {
+                "At": [
+                  237.0,
+                  558.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 265.0,
+              "y": 540.953,
+              "a": {
+                "At": [
+                  265.0,
+                  530.953
+                ]
+              },
+              "b": {
+                "At": [
+                  265.0,
+                  550.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 247.0,
+              "y": 522.953,
+              "a": {
+                "At": [
+                  237.0,
+                  522.953
+                ]
+              },
+              "b": {
+                "At": [
+                  257.0,
+                  522.953
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        }
+      ],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "dieresis",
+    "vec": []
+  },
+  "flattened": null,
+  "component_rects": null,
+  "guidelines": [],
+  "width": 554,
+  "unicode": [
+    "¨"
+  ],
+  "name": "dieresis",
+  "note": null,
+  "filename": null
+}

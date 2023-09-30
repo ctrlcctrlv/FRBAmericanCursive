@@ -1,0 +1,157 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [
+        {
+          "inner": [
+            {
+              "x": 239.45456,
+              "y": 473.0,
+              "a": {
+                "At": [
+                  239.45456,
+                  504.0
+                ]
+              },
+              "b": {
+                "At": [
+                  239.45456,
+                  442.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 295.45456,
+              "y": 529.0,
+              "a": {
+                "At": [
+                  326.45456,
+                  529.0
+                ]
+              },
+              "b": {
+                "At": [
+                  264.45456,
+                  529.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 351.45456,
+              "y": 473.0,
+              "a": {
+                "At": [
+                  351.45456,
+                  442.0
+                ]
+              },
+              "b": {
+                "At": [
+                  351.45456,
+                  504.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 295.45456,
+              "y": 417.0,
+              "a": {
+                "At": [
+                  264.45456,
+                  417.0
+                ]
+              },
+              "b": {
+                "At": [
+                  326.45456,
+                  417.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        }
+      ],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "uni02DA",
+    "vec": []
+  },
+  "flattened": null,
+  "component_rects": null,
+  "guidelines": [],
+  "width": 380,
+  "unicode": [
+    "˚"
+  ],
+  "name": "uni02DA",
+  "note": null,
+  "filename": null
+}

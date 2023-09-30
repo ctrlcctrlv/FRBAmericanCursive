@@ -1,22 +1,30 @@
-ArrowPathBold	700
-ArrowPath	400
-DottedLight	300
-DottedThin	100
-DottedBold	700
-DottedRegular	400
-DottedMedium	500
-DottedExtrabold	800
-DottedExtralight	200
-DottedSemibold	600
-DottedBlack	900
-DottedUltra	1000
-Semibold	600
-Thin	100
-Extrabold	800
-Light	300
-Regular	400
-Extralight	200
-Medium	500
-Bold	700
-Black	900
-Ultra	1000
+DashedLight	24	300
+DashedThin	12	100
+DashedBold	60	700
+DashedRegular	35	400
+DashedMedium	42	500
+DashedExtrabold	75	800
+DashedExtralight	19	200
+DashedSemibold	50	600
+DashedBlack	90	900
+DashedUltra	101	1000
+DottedLight	24	300
+DottedThin	12	100
+DottedBold	60	700
+DottedRegular	35	400
+DottedMedium	42	500
+DottedExtrabold	75	800
+DottedExtralight	19	200
+DottedSemibold	50	600
+DottedBlack	90	900
+DottedUltra	101	1000
+Semibold	50	600
+Thin	12	100
+Extrabold	75	800
+Light	24	300
+Regular	35	400
+Extralight	19	200
+Medium	42	500
+Bold	60	700
+Black	90	900
+Ultra	101	1000

@@ -1,0 +1,20 @@
+# This file is not a duplicate to the source features.fea file. This one is meant to have its ${UFO} substituted, to save on costly recalculation/copying of strokes_mark contents.
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem cyrl dflt;
+
+include(../fea/GDEF.fea);
+include(../fea/classes.fea);
+include(../fea/Latn.fea);
+include(../fea/Cyrl.fea);
+include(../fea/ccmp.fea);
+include(../fea/mark.fea);
+include(../fea/mkmk.fea);
+include(${UFO}/strokes_mark.fea);
+include(../fea/frac.fea);
+include(../fea/salt.fea);
+include(../fea/tails.fea);
+include(../fea/strokes.fea);
+include(../fea/strokes_increment.fea);
+
+# vim: set ts=4 sw=4 expandtab:

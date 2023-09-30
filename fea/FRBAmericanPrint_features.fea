@@ -1,0 +1,11 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem cyrl dflt;
+
+include(../fea/GDEF.fea);
+include(../fea/classes.fea);
+include(../fea/ccmp.fea);
+include(../fea/strokes.fea);
+include(${UFO}/strokes_mark.fea); #strokes_mark.fea
+
+# vim: set ts=4 sw=4 expandtab:

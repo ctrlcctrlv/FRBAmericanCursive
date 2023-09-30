@@ -1,0 +1,17 @@
+feature numr {
+    lookup numr1 {
+        sub @to_numr by @numr;
+    } numr1;
+} numr;
+
+feature dnom {
+    lookup dnom1 {
+        sub @to_numr by @dnom;
+    } dnom1;
+} dnom;
+
+feature frac {
+    lookup frac1 {
+        sub slash by fraction;
+    } frac1;
+} frac;

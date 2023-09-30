@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="NULL" format="2">
+  <advance width="0"/>
+  <anchor x="0" y="0" name="stroke0"/>
+  <anchor x="100" y="100" name="stroke1"/>
+  <anchor x="200" y="200" name="stroke2"/>
+  <anchor x="300" y="300" name="stroke3"/>
+  <anchor x="400" y="400" name="stroke4"/>
+  <anchor x="500" y="500" name="stroke5"/>
+  <anchor x="600" y="600" name="stroke6"/>
+  <anchor x="700" y="700" name="stroke7"/>
+  <anchor x="800" y="800" name="stroke8"/>
+  <anchor x="900" y="900" name="stroke9"/>
+</glyph>

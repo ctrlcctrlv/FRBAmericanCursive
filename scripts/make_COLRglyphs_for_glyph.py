@@ -9,19 +9,20 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from glyph import Glyph
+from lib.glyph import Glyph
 from fontTools.ufoLib import glifLib
 from fontTools.pens.recordingPen import RecordingPen
 from fontParts.fontshell.glyph import RGlyph
 
 radius = 5
 
-_, glifname, font = sys.argv
+_, glifname, font, capheight, desc, xheight = sys.argv
+capheight=float(capheight)
+desc=float(desc)
+xheight=float(xheight)
 
 gliffn = "{}/glyphs/{}".format(font, glifLib.glyphNameToFileName(glifname, None))
-plist = open("{}/fontinfo.plist".format(font)).read().encode("utf-8")
-fontinfo = plistlib.loads(plist)
-builddir = "build/COLR_glyphs/"
+builddir = "build/{}_COLR_glyphs/".format(os.environ["FONTFAMILY"])
 try:
     os.mkdir(builddir)
 except OSError:
@@ -31,48 +32,70 @@ def drawSquare(p, pt):
     p.moveTo((pt.x - (radius / 2), pt.y - (radius / 2)))
     p.lineTo((pt.x + (radius / 2), pt.y - (radius / 2)))
     p.lineTo((pt.x + (radius / 2), pt.y + (radius / 2)))
+    p.lineTo((pt.x - (radius / 2), pt.y + (radius / 2)))
     p.closePath()
 
 with open(gliffn) as f:
     glyph = RGlyph()
     xml = f.read()
-    glyph._loadFromGLIF(xml)
+    glyph._loadFromGLIF(xml, validate=False)
     p = glyph.getPen()
     pp = glyph.getPointPen()
     firsts = [c[0] for c in glyph.contours]
     lasts = [c[-1] for c in glyph.contours]
     glyph.clearContours()
-    p.moveTo((0, 0))
-    p.lineTo((glyph.width, 0))
-    p.closePath()
-    p.moveTo((0, fontinfo["capHeight"]))
-    p.lineTo((glyph.width, fontinfo["capHeight"]))
-    p.closePath()
-    p.moveTo((0, -fontinfo["openTypeOS2TypoDescender"]))
-    p.lineTo((glyph.width, -fontinfo["openTypeOS2TypoDescender"]))
-    p.closePath()
+
+    p.moveTo((0, capheight))
+    p.lineTo((glyph.width, capheight))
+    p.endPath()
+    p.moveTo((0, desc))
+    p.lineTo((glyph.width, desc))
+    p.endPath()
 
     glf = builddir+glifLib.glyphNameToFileName(glifname+"_guidelines", None)
-    tempf = tempfile.mkstemp()[1]
+    tempf = tempfile.mkstemp(suffix=".glif")[1]
     with open(tempf, "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
-    if glyph.width == 0:
-        shutil.copyfile(tempf, glf)
+    if glyph.width <= 0:
+        glyph.clearContours()
+        with open(glf, "w+") as f:
+            print(glyph.dumpToGLIF(), file=f)
     else:
         subprocess.run("MFEKstroke CWS -i {} -o {} -w 30".format(tempf, glf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKpathops REFIGURE -i {}".format(glf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
 
-    p.moveTo((0, fontinfo["xHeight"]))
-    p.lineTo((glyph.width, fontinfo["xHeight"]))
-    p.closePath()
+    p.moveTo((0, xheight))
+    p.lineTo((glyph.width-30, xheight))
+    p.endPath()
 
     xhf = builddir+glifLib.glyphNameToFileName(glifname+"_xheight", None)
     with open(tempf, "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
-    if glyph.width == 0:
-        shutil.copyfile(tempf, glf)
+    if glyph.width <= 30:
+        glyph.clearContours()
+        with open(xhf, "w+") as f:
+            print(glyph.dumpToGLIF(), file=f)
     else:
-        subprocess.run("MFEKstroke PAP --pattern patterns.ufo/glyphs/dot.glif --path {} --out {} -m repeated --sx 0.1 --sy 0.1 --spacing 30 -s 3 --simplify false".format(tempf, xhf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKstroke PaP --pattern patterns.ufo/glyphs/dot.glif --path {} --out {} -m repeated --sx 0.5 --sy 0.5 --spacing 30 --stretch spacing".format(tempf, xhf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKpathops REFIGURE -i {}".format(xhf), **SUBPROCESS_KWARGS)
+    glyph.clearContours()
+
+    p.moveTo((0, 0))
+    p.lineTo((glyph.width, 0))
+    p.endPath()
+
+    glf = builddir+glifLib.glyphNameToFileName(glifname+"_baseline", None)
+    tempf = tempfile.mkstemp(suffix=".glif")[1]
+    with open(tempf, "w+") as f:
+        print(glyph.dumpToGLIF(), file=f)
+    if glyph.width <= 0:
+        glyph.clearContours()
+        with open(glf, "w+") as f:
+            print(glyph.dumpToGLIF(), file=f)
+    else:
+        subprocess.run("MFEKstroke CWS -i {} -o {} -w 30".format(tempf, glf), **SUBPROCESS_KWARGS)
+        subprocess.run("MFEKpathops REFIGURE -i {}".format(glf), **SUBPROCESS_KWARGS)
     glyph.clearContours()
 
     for pt in firsts:
@@ -88,6 +111,3 @@ with open(gliffn) as f:
     with open(builddir+glifLib.glyphNameToFileName(glifname+"_endings", None), "w+") as f:
         print(glyph.dumpToGLIF(), file=f)
     glyph.clearContours()
-
-print(glifname)
-subprocess.run(r"""python3 ./scripts/make_arrows_for_glyph.py {} {}""".format(gliffn, builddir+glifLib.glyphNameToFileName(glifname+"_arrows", None)), **SUBPROCESS_KWARGS)

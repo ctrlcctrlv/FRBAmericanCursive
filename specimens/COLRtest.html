@@ -4,17 +4,30 @@
 <style>
 @font-face {
     font-family: "FRBAC_GAR";
-    src: url("dist/FRBAmericanCursive-GuidelinesArrows-Regular.otf");
+    /*src: url("../dist/FRBAmericanCursive-400-GuidelinesArrowsRegular.otf");*/
+    src: url("../dist/FRBAmericanCursive-400-GuidelinesArrowsRegular_NOVF.otf");
 }
 
 body {
+    font-family: "FRBAC_GAR", "Noto Serif CJK TC", serif; font-size: 24px;
+}
+
+.r { color: #770000; }
+.g { color: #007700; }
+.b { color: #000077; }
+
+#sel {
     font-family: "FRBAC_GAR", "Noto Serif CJK TC", serif;
-    font-size: 10em
+    font-size: 64px;
+    color: #007700;
 }
 </style>
 </head>
 
 <body>
-FRB American Cursive
+<span class="r">F</span><span class="g">R</span><span class="b">B</span> American Cursive
+<br/>
+<br/>
+<span id="sel"> ₿2 this</span>
 </body>
 </html>

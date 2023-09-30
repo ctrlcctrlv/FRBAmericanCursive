@@ -4,7 +4,7 @@ lookup LatnMedi {
 } LatnMedi;
 
 lookup LatnFina {
-    #lookupflag IgnoreMarks;
+    lookupflag IgnoreMarks;
     sub a by a.low tail.lowwide;
     sub b by b.low tail.high;
     sub c by c.low tail.low;
@@ -40,10 +40,16 @@ lookup LatnFina {
     sub oe by oe.low tail.low;
     sub ccedilla by ccedilla.low tail.lowwide;
     sub eth by eth.high tail.high;
+    sub dcroat by dcroat.low tail.lowwide;
+    sub e.alt by e.low tail.low;
+    sub f.alt by f.low tail.low;
+    sub l.alt by l.low tail.lowwide;
+    sub o.alt by o.low.alt tail.high;
+    sub t.alt by t.low tail.lowwide;
 } LatnFina;
 
 lookup LatnIsolFina {
-    #lookupflag IgnoreMarks;
+    lookupflag IgnoreMarks;
     sub a by a tail.lowwide;
     sub b by b tail.high;
     sub c by c tail.low;
@@ -78,7 +84,13 @@ lookup LatnIsolFina {
     sub ae by ae tail.low;
     sub oe by oe tail.low;
     sub ccedilla by ccedilla tail.lowwide;
-    sub eth by eth.high tail.high;
+    sub eth by eth tail.high;
+    sub dcroat by dcroat tail.lowwide;
+    sub e.alt by e tail.low;
+    sub f.alt by f tail.low;
+    sub l.alt by l tail.lowwide;
+    sub o.alt by o.alt tail.high;
+    sub t.alt by t tail.lowwide;
 } LatnIsolFina;
 
 lookup LatnHigh {
@@ -96,11 +108,39 @@ lookup LatnRlow {
     sub @Latn_upper_low by @Latn_upper_rlow;
 } LatnRlow;
 
-lookup LatnNullTail {
+lookup NullTail {
+    lookupflag 0;
     sub tail.low by NULL;
     sub tail.lowwide by NULL;
     sub tail.high by NULL;
-} LatnNullTail;
+} NullTail;
+
+feature cv01 {
+    cvParameters {
+        FeatUILabelNameID {
+            name "Make apostrophes float above words instead of breaking them";
+        };
+
+        # Some buggy software uses this as FeatUILabelNameID and glitches if it's
+        # NULL despite spec promises.
+        FeatUITooltipTextNameID {
+            name "Make apostrophes float above words instead of breaking them";
+        };
+
+        SampleTextNameID {
+            name "it's there's how's y'all you're they're";
+            name 3 1 0x040C "l’apostrophe qu’est presqu’île"; # Français
+        };
+
+        Character 0x27; # quotesingle
+        Character 0x2019; # quoteleft
+    };
+
+    lookup zerolengthapos {
+        sub quotesingle by quotesingle.0len;
+        sub quoteleft by quoteleft.0len;
+    } zerolengthapos;
+} cv01;
 
 feature ccmp {
     lookup ccmp1_1 {
@@ -148,13 +188,8 @@ feature ccmp {
     } ccmp1_8;
 
     lookup ccmp1_9 {
-        lookupflag IgnoreMarks;
-        sub [tail.low tail.lowwide tail.high]' lookup LatnNullTail quotesingle @Latn_lower;
+        lookupflag MarkAttachmentType @zerolen_marks;
+        sub @tails' lookup NullTail @quotes @Latn_all;
     } ccmp1_9;
-
-    lookup ccmp1_10 {
-        pos quotesingle [m v] -110;
-    } ccmp1_10;
 } ccmp;
-
 # vim: set ts=4 sw=4 expandtab:

@@ -1,0 +1,387 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [
+        {
+          "inner": [
+            {
+              "x": 81.8828,
+              "y": 171.0,
+              "a": {
+                "At": [
+                  156.0,
+                  205.62
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 262.05,
+              "y": 342.2,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  234.162,
+                  297.181
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": -3.0,
+              "y": -205.0,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Line",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 67.1611,
+              "y": -59.6494,
+              "a": {
+                "At": [
+                  231.186,
+                  280.155
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Line",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 397.351,
+              "y": 336.12,
+              "a": {
+                "At": [
+                  484.56,
+                  336.12
+                ]
+              },
+              "b": {
+                "At": [
+                  288.338,
+                  336.12
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 513.63,
+              "y": 234.375,
+              "a": {
+                "At": [
+                  513.63,
+                  103.561
+                ]
+              },
+              "b": {
+                "At": [
+                  513.63,
+                  277.98
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 331.942,
+              "y": 74.4902,
+              "a": {
+                "At": [
+                  305.738,
+                  74.4902
+                ]
+              },
+              "b": {
+                "At": [
+                  361.013,
+                  74.4902
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 281.069,
+              "y": 103.561,
+              "a": {
+                "At": [
+                  285.984,
+                  114.1
+                ]
+              },
+              "b": {
+                "At": [
+                  270.921,
+                  81.8008
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 318.64,
+              "y": 125.362,
+              "a": {
+                "At": [
+                  386.343,
+                  125.362
+                ]
+              },
+              "b": {
+                "At": [
+                  299.643,
+                  125.362
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 404.617,
+              "y": 1.81543,
+              "a": {
+                "At": [
+                  404.79,
+                  -77.04
+                ]
+              },
+              "b": {
+                "At": [
+                  404.487,
+                  60.96
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 252.0,
+              "y": -129.0,
+              "a": {
+                "At": [
+                  128.452,
+                  -129.0
+                ]
+              },
+              "b": {
+                "At": [
+                  331.942,
+                  -129.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 106.65,
+              "y": -5.45215,
+              "a": {
+                "At": [
+                  122.0,
+                  -34.0
+                ]
+              },
+              "b": {
+                "At": [
+                  106.65,
+                  -54.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 250.197,
+              "y": -63.5928,
+              "a": {
+                "At": [
+                  337.0,
+                  -63.5928
+                ]
+              },
+              "b": {
+                "At": [
+                  159.0,
+                  -63.5928
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": true,
+              "data": null
+            },
+            {
+              "x": 560.0,
+              "y": 77.0,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  431.581,
+                  -13.2559
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        }
+      ],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "germandbls",
+    "vec": []
+  },
+  "flattened": null,
+  "component_rects": null,
+  "guidelines": [],
+  "width": 560,
+  "unicode": [
+    "ß"
+  ],
+  "name": "germandbls",
+  "note": null,
+  "filename": null
+}

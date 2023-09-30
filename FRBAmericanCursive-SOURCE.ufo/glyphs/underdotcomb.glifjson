@@ -1,0 +1,157 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [
+        {
+          "inner": [
+            {
+              "x": -17.551018,
+              "y": 0.22447968,
+              "a": {
+                "At": [
+                  -17.551018,
+                  10.22448
+                ]
+              },
+              "b": {
+                "At": [
+                  -17.551018,
+                  -9.77552
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 0.44898224,
+              "y": 18.22448,
+              "a": {
+                "At": [
+                  10.448982,
+                  18.22448
+                ]
+              },
+              "b": {
+                "At": [
+                  -9.551018,
+                  18.22448
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 18.448982,
+              "y": 0.22447968,
+              "a": {
+                "At": [
+                  18.448982,
+                  -9.77552
+                ]
+              },
+              "b": {
+                "At": [
+                  18.448982,
+                  10.22448
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 0.44898224,
+              "y": -17.77552,
+              "a": {
+                "At": [
+                  -9.551018,
+                  -17.77552
+                ]
+              },
+              "b": {
+                "At": [
+                  10.448982,
+                  -17.77552
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        }
+      ],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "underdotcomb",
+    "vec": []
+  },
+  "flattened": null,
+  "component_rects": null,
+  "guidelines": [],
+  "width": 0,
+  "unicode": [
+    "̣"
+  ],
+  "name": "underdotcomb",
+  "note": null,
+  "filename": null
+}

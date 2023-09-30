@@ -1,22 +1,30 @@
 \begin[papersize=8in x 3in]{document}
+% Note: This file is intended to be compiled by scripts/each_font_specimen.sh which expects you to also have installed pdftk
+\script[src=packages/complex-spaces]
 \script[src=packages/color-fonts]
-\script{
-SILE.settings.set("document.spaceskip", SILE.length("1spc"))
-SILE.settings.set("shaper.spacestretchfactor",  0)
-SILE.settings.set("shaper.spaceshrinkfactor",  0)
-}
-\font[filename=dist/&&FONT&&]
-\neverindent\nofolios
-\par \font[size=3em]{FRB American Cursive}
+\script[src=packages/frametricks]
+\script[src=packages/rebox]
+\set[parameter=font.family,value=TT2020Base,makedefault=true]
+\frame[id=specimen,left=5%pw,right=95%pw,top=5%ph,bottom=top(footnotes)]
+\frame[id=specimen_overlay,left=5%pw,right=95%pw,top=5%ph,bottom=top(footnotes)]
+\frame[id=arrows,left=5%pw,right=95%pw,top=5.22%ph,bottom=top(footnotes)]
+\set[parameter=shaper.spaceenlargementfactor,value=1]
+\frame[id=fontname,left=5%pw,right=95%pw,top=1%ph,bottom=1% + height(folio)]
+\typeset-into[frame=fontname]{
+\noindent\font[family=TT2020Base,size=5pt]{&&FONT&&}
+\begin[filename=dist/&&FONT&&]{font}
+\par \font[features=+ss01,size=3em]{&&FONTFAMILY_H&&}
 \bigskip
-\par &&STYLE&&
+\par \font[features=+ss01]{&&STYLE&&}
 \bigskip
 \par Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+\par ÁáÀàẢảÃãẠạĂăẮắẰằẲẳẴẵẶặÂâẤấẦầẨẩẪẫẬậĐđÉéÈèẺẻẼẽẸẹÊêẾếỀềỂểỄễỆệÍíÌìỈỉĨĩỊịÓóÒòỎỏÕõỌọ
+\par ÔôỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợÚúÙùỦủŨũỤụƯưỨứỪừỬửỮữỰựÝýỲỳỶỷỸỹỴỵ
 \par abcdefghijklmnopqrstuvwxyz
-\par 1234567890 !@#$\%&*() []{};':",./ \\
+\par 1234567890 !@#$\%&*() []{};':",./ \\ № ₿ ₱ ₹ †
 \par The quick brown fox jumps over the lazy dog.
 \par Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj. 
 \par В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
-\font[family=TT2020Base]
-\par &&FONT&&
+\end{font}
+}
 \end{document}

@@ -1,0 +1,7 @@
+.EXPORT_ALL_VARIABLES:
+
+FONTFAMILY := FRBAmericanPrint
+FONTFAMILY_H := FRB American Print
+REGULAR_IS_ITALIC := 0
+
+include main.mk

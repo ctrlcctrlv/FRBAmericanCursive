@@ -1,0 +1,26 @@
+__pycache__/
+py_environment/
+# nuitka
+*.bin/
+*.build/
+*.dist/
+#
+/inspiration/
+/build/
+/dist/
+.build/
+.dist/
+*.zip
+*.bak
+*.ufo/**/*.svg
+specimens/*.png
+specimens/*.pdf
+# fonts rely on glifjson and MFEKglif --export
+FRBAmericanPrint-SOURCE.ufo/glyphs/*.glif
+FRBAmericanCursive-SOURCE.ufo/glyphs/*.glif
+# auto-generated fea
+/fea/classes.fea
+/fea/GDEF.fea
+/fea/ccmp.fea
+/fea/mark.fea
+/fea/strokes.fea

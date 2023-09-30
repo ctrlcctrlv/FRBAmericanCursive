@@ -1,0 +1,880 @@
+{
+  "layers": [
+    {
+      "name": "Layer 0",
+      "visible": true,
+      "color": null,
+      "outline": [
+        {
+          "inner": [
+            {
+              "x": 65.53845,
+              "y": 520.6699,
+              "a": {
+                "At": [
+                  84.08421,
+                  537.1891
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 136.09097,
+              "y": 543.81836,
+              "a": {
+                "At": [
+                  158.61542,
+                  543.077
+                ]
+              },
+              "b": {
+                "At": [
+                  106.22211,
+                  544.8014
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 194.3873,
+              "y": 501.53857,
+              "a": {
+                "At": [
+                  211.6667,
+                  468.3334
+                ]
+              },
+              "b": {
+                "At": [
+                  181.69232,
+                  527.6924
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 277.07697,
+              "y": 456.15393,
+              "a": {
+                "At": [
+                  348.33337,
+                  456.66678
+                ]
+              },
+              "b": {
+                "At": [
+                  249.10446,
+                  456.56528
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 414.0,
+              "y": 543.0,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  385.18195,
+                  509.27283
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 138.33336,
+              "y": 145.00002,
+              "a": {
+                "At": [
+                  88.33591,
+                  147.23233
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 40.000008,
+              "y": 86.66667,
+              "a": {
+                "At": [
+                  23.790207,
+                  48.78556
+                ]
+              },
+              "b": {
+                "At": [
+                  53.59836,
+                  118.445015
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 103.00006,
+              "y": 0.0,
+              "a": {
+                "At": [
+                  165.72142,
+                  1.8023417
+                ]
+              },
+              "b": {
+                "At": [
+                  45.000008,
+                  -1.6666718
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 312.091,
+              "y": 190.90915,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  252.00006,
+                  36.0
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 454.0,
+              "y": 543.0,
+              "a": {
+                "At": [
+                  455.39172,
+                  533.0973
+                ]
+              },
+              "b": "Colocated",
+              "name": "all points are communists",
+              "ptype": "Line",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 486.9116,
+              "y": 284.0,
+              "a": {
+                "At": [
+                  504.67447,
+                  144.21393
+                ]
+              },
+              "b": {
+                "At": [
+                  470.207,
+                  415.45798
+                ]
+              },
+              "name": "i exist due to booleanOperations bug(s)",
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 523.0,
+              "y": 0.0,
+              "a": {
+                "At": [
+                  521.6083,
+                  9.90268
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 700.0001,
+              "y": 410.00012,
+              "a": {
+                "At": [
+                  751.0,
+                  528.54565
+                ]
+              },
+              "b": "Colocated",
+              "name": "we also all enjoy universal health care",
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 850.2728,
+              "y": 547.2728,
+              "a": {
+                "At": [
+                  889.3287,
+                  545.61084
+                ]
+              },
+              "b": {
+                "At": [
+                  807.5457,
+                  549.09106
+                ]
+              },
+              "name": "#karlmarx",
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 896.27295,
+              "y": 453.81824,
+              "a": {
+                "At": [
+                  882.84174,
+                  430.3959
+                ]
+              },
+              "b": {
+                "At": [
+                  932.27295,
+                  505.45465
+                ]
+              },
+              "name": "hashtags solve nothing beyond lessening the anxiety of the bourgeoisie",
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 833.9093,
+              "y": 409.09097,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  860.273,
+                  416.3637
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 940.3336,
+              "y": 262.77783,
+              "a": {
+                "At": [
+                  925.20013,
+                  287.40002
+                ]
+              },
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 868.9856,
+              "y": 307.55383,
+              "a": {
+                "At": [
+                  819.0467,
+                  308.38644
+                ]
+              },
+              "b": {
+                "At": [
+                  902.20013,
+                  307.00006
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 748.0,
+              "y": 211.0,
+              "a": {
+                "At": [
+                  725.22253,
+                  139.88898
+                ]
+              },
+              "b": {
+                "At": [
+                  770.79224,
+                  282.15704
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 809.51843,
+              "y": 63.104187,
+              "a": {
+                "At": [
+                  885.22266,
+                  62.111206
+                ]
+              },
+              "b": {
+                "At": [
+                  747.438,
+                  63.918465
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 938.7145,
+              "y": 181.00003,
+              "a": {
+                "At": [
+                  946.72015,
+                  217.12357
+                ]
+              },
+              "b": {
+                "At": [
+                  928.7848,
+                  141.1741
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 941.3336,
+              "y": 260.77783,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  944.76196,
+                  242.85715
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 667.00024,
+              "y": 0.000061035156,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 899.00037,
+              "y": 0.0,
+              "a": "Colocated",
+              "b": "Colocated",
+              "name": null,
+              "ptype": "Line",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 941.3336,
+              "y": 260.77783,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  944.76196,
+                  242.85715
+                ]
+              },
+              "name": null,
+              "ptype": "Move",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 1068.0001,
+              "y": 171.0,
+              "a": "Colocated",
+              "b": {
+                "At": [
+                  993.0001,
+                  170.16
+                ]
+              },
+              "name": "thus saith the Preacher—fred sucks at type design",
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        },
+        {
+          "inner": [
+            {
+              "x": 993.3335,
+              "y": 21.333313,
+              "a": {
+                "At": [
+                  983.3335,
+                  21.333313
+                ]
+              },
+              "b": {
+                "At": [
+                  1003.3335,
+                  21.333313
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 975.3335,
+              "y": 39.333313,
+              "a": {
+                "At": [
+                  975.3335,
+                  49.333313
+                ]
+              },
+              "b": {
+                "At": [
+                  975.3335,
+                  29.333313
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 993.3335,
+              "y": 57.333313,
+              "a": {
+                "At": [
+                  1003.3335,
+                  57.333313
+                ]
+              },
+              "b": {
+                "At": [
+                  983.3335,
+                  57.333313
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            },
+            {
+              "x": 1011.3335,
+              "y": 39.333313,
+              "a": {
+                "At": [
+                  1011.3335,
+                  29.333313
+                ]
+              },
+              "b": {
+                "At": [
+                  1011.3335,
+                  49.333313
+                ]
+              },
+              "name": null,
+              "ptype": "Curve",
+              "smooth": false,
+              "data": null
+            }
+          ],
+          "operation": {
+            "VariableWidthStroke": {
+              "data": {
+                "handles": [
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  },
+                  {
+                    "left_offset": 12.5,
+                    "right_offset": 12.5,
+                    "tangent_offset": 0.0,
+                    "interpolation": "Linear"
+                  }
+                ],
+                "join_type": "Round",
+                "cap_start_type": "Circle",
+                "cap_end_type": "Circle",
+                "remove_internal": false,
+                "remove_external": false
+              }
+            }
+          }
+        }
+      ],
+      "operation": null,
+      "images": []
+    }
+  ],
+  "history": [],
+  "order": "Cubic",
+  "anchors": [],
+  "components": {
+    "root": "numero",
+    "vec": []
+  },
+  "flattened": [],
+  "component_rects": [],
+  "guidelines": [],
+  "width": 1068,
+  "unicode": [
+    "№"
+  ],
+  "name": "numero",
+  "note": null,
+  "filename": null
+}

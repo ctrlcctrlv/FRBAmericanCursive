@@ -1,0 +1,41 @@
+feature salt {
+    sub @to_salt by @salt;
+} salt;
+
+feature dnom {
+    sub @to_numr by @dnom;
+} dnom;
+
+feature numr {
+    sub @to_numr by @numr;
+} numr;
+
+feature frac {
+    lookup frac1_1 {
+        sub slash by fraction;
+    } frac1_1;
+    lookup frac_numr {
+        rsub fraction @to_numr' by @numr;
+    } frac_numr;
+    lookup frac_numr2 {
+        rsub @numr @to_numr' by @numr;
+    } frac_numr2;
+    lookup frac_dnom {
+        sub fraction @to_dnom' by @dnom;
+    } frac_dnom;
+    lookup frac_dnom2 {
+        sub @dnom @to_dnom' by @dnom;
+    } frac_dnom2;
+} frac;
+
+feature ss03 {
+    featureNames {
+        name "Disable tails after words";
+    };
+
+    lookup NullTail2 {
+        sub tail.low by NULL;
+        sub tail.lowwide by NULL;
+        sub tail.high by NULL;
+    } NullTail2;
+} ss03;

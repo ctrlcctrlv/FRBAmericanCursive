@@ -1,0 +1,48 @@
+languagesystem DFLT dflt;
+
+
+# GPOS 
+
+
+lookup markMarkPositioninglookup0 {
+  lookupflag 0;
+  markClass [\__combstroke9 ] <anchor 0 9> @stroke9;
+  markClass [\__combstroke8 ] <anchor -0 9> @stroke8;
+  markClass [\__combstroke7 ] <anchor -11 -4> @stroke7;
+  markClass [\__combstroke6 ] <anchor -0 10> @stroke6;
+  markClass [\__combstroke5 ] <anchor 0 6> @stroke5;
+  markClass [\__combstroke4 ] <anchor 0 9> @stroke4;
+  markClass [\__combstroke3 ] <anchor -27 12> @stroke3;
+  markClass [\__combstroke2 ] <anchor 0 0> @stroke2;
+  markClass [\__combstroke1 ] <anchor 0 0> @stroke1;
+  markClass [\__combstroke0 ] <anchor 0 14> @stroke0;
+  pos base [\NULL ] <anchor 0 0> mark @stroke0
+	<anchor 100 100> mark @stroke1
+	<anchor 200 200> mark @stroke2
+	<anchor 300 300> mark @stroke3
+	<anchor 400 400> mark @stroke4
+	<anchor 500 500> mark @stroke5
+	<anchor 600 600> mark @stroke6
+	<anchor 700 700> mark @stroke7
+	<anchor 800 800> mark @stroke8
+	<anchor 900 900> mark @stroke9;
+} markMarkPositioninglookup0;
+
+feature mark {
+
+ script DFLT;
+     language dflt ;
+      lookup markMarkPositioninglookup0;
+} mark;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
+
+@GDEF_Simple = [\NULL ];
+@GDEF_Mark = [\__combstroke0 \__combstroke1 \__combstroke2 \__combstroke3 
+	\__combstroke4 \__combstroke5 \__combstroke6 \__combstroke7 \__combstroke8 
+	\__combstroke9 ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, , @GDEF_Mark, ;
+
+} GDEF;
+

@@ -1,0 +1,7 @@
+.EXPORT_ALL_VARIABLES:
+
+FONTFAMILY := FRBAmericanCursive
+FONTFAMILY_H := FRB American Cursive
+REGULAR_IS_ITALIC := 1
+
+include main.mk
