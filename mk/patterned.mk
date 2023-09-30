@@ -15,7 +15,7 @@ patterned-dashed:
 .PHONY .ONESHELL: patterned-dotted-dashed
 patterned-dotted-dashed:
 	# Build dotted or dashed
-	cat $(BUILD_DATA) | parallel --tag --ctag --linebuffer --bar --jobs 7 --colsep '\t' '
+	cat $(BUILD_DATA) | parallel --tag --ctag --linebuffer --bar --jobs `nproc` --colsep '\t' '
 		GLYPHS=`grep -rl "<point" $(FONTFAMILY)-SOURCE.ufo/glyphs/*.glif`
 		ASTERISK='*'
 		WIDTHADJ=`perl -e "\\$$calc = {2}$${ASTERISK}1.5; \\$$calc = (\\$$calc >= $(WIDTH_MINIMUM) ? \\$$calc : $(WIDTH_MINIMUM)); print \\"\\$$calc\\";"`
