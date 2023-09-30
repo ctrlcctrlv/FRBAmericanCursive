@@ -6,9 +6,9 @@ regen:
 	# OpenType GDEF table
 	$(MAKE) rebuild-gdef
 	$(MAKE) rebuild-marks
-	$(MAKE) rebuild-tailsfea
 	$(MAKE) rebuild-stroke-count
 	$(MAKE) fez-classes
+	$(MAKE) rebuild-tailsfea
 
 .PHONY: rebuild-ccmp
 rebuild-ccmp:
